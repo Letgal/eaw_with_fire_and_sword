@@ -1,0 +1,90 @@
+add_namespace = WFAS_gryphia
+
+country_event = {
+	id = WFAS_gryphia.1 # 50 Years of Hetman’s Rule
+	title = WFAS_gryphia.1.t
+	desc = WFAS_gryphia.1.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.1.a
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = WFAS_gryphia.2 # Gathering the Siches
+	title = WFAS_gryphia.2.t
+	desc = WFAS_gryphia.2.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.2.a
+		set_variable = { GRY_raid_target = BRF }
+	}
+	option = {
+		name = WFAS_gryphia.2.b
+		set_variable = { GRY_raid_target = GRW }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.3 # Calas Bulba Dies in Raid!
+	title = WFAS_gryphia.3.t
+	desc = WFAS_gryphia.3.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.3.a
+		add_stability = -0.2
+		kill_character = GRY_hetman_calas_bulba
+	}
+}
+country_event = {
+	id = WFAS_gryphia.4 # The Raid Outcome
+	title = WFAS_gryphia.4.t
+	desc = WFAS_gryphia.4.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.4.a
+		trigger = { check_variable = { GRY_raid_target = BRF } }
+		add_timed_idea = { idea = wfas_GRY_spoils_of_war_BRF_temp months = 4 }
+		clear_variable = GRY_raid_target
+	}
+	option = {
+		name = WFAS_gryphia.4.b
+		trigger = { check_variable = { GRY_raid_target = GRW } }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = GRW
+		}
+		clear_variable = GRY_raid_target
+	}
+}
+
+country_event = {
+	id = WFAS_gryphia.5 # Chorna Rada
+	title = WFAS_gryphia.5.t
+	desc = WFAS_gryphia.5.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.5.a
+	}
+}

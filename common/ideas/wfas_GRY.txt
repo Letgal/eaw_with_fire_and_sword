@@ -1,0 +1,8 @@
+ideas = {
+	country = {
+		wfas_GRY_spoils_of_war_BRF_temp = {
+			picture = capital_outflow
+			modifier = { consumer_goods_factor = -0.2 }
+		}
+	}
+}

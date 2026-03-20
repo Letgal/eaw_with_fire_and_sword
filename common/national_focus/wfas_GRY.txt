@@ -1,0 +1,57 @@
+focus_tree = {
+	id = GRY_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			original_tag = GRY
+			NOT = { has_country_flag = GRY_neutral_rebellion }
+		}
+	}
+	continuous_focus_position = { x = 0 y = 0 }
+
+	focus = {
+		id = GRY_great_anniversary
+		icon = GFX_focus_GRY_great_anniversary
+		x = 8
+		y = 0
+		cost = 2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = { country_event = WFAS_gryphia.1 days = 1 random_hours = 6 }
+	}
+	focus = {
+		id = GRY_gather_the_siches
+		icon = GFX_focus_GRY_gather_the_siches
+		prerequisite = { focus = GRY_great_anniversary }
+		relative_position_id = GRY_great_anniversary
+		x = 0
+		y = 1
+		cost = 2
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = { country_event = WFAS_gryphia.2 days = 1 random_hours = 6 }
+	}
+	focus = {
+		id = GRY_the_raid
+		icon = GFX_focus_GRY_the_raid
+		prerequisite = { focus = GRY_gather_the_siches }
+		relative_position_id = GRY_gather_the_siches
+		x = 0
+		y = 1
+		cost = 3
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		select_effect = { country_event = WFAS_gryphia.3 days = 12 random_days = 4 }
+		completion_reward = { country_event = WFAS_gryphia.4 days = 1 random_hours = 6 }
+	}
+	focus = {
+		id = GRY_chorna_rada_wfas
+		icon = GFX_focus_GRY_chorna_rada
+		prerequisite = { focus = GRY_the_raid }
+		relative_position_id = GRY_the_raid
+		x = 0
+		y = 1
+		cost = 20
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { country_event = WFAS_gryphia.5 days = 1 random_hours = 6 }
+	}
+}

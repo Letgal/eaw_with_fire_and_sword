@@ -1,0 +1,143 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_focus_GRY_great_anniversary
+		texturefile = gfx/interface/goals/GRY/GRY_NearEnd_of_perfect_hetmanstvo.dds
+		# by StasJesus
+	}
+	spriteType = {
+		name = GFX_focus_GRY_gather_the_siches
+		texturefile = gfx/interface/goals/GRY/GRY_Call_of_Ctulhu.dds
+		# by StasJesus
+	}
+	spriteType = {
+		name = GFX_focus_GRY_the_raid
+		texturefile = gfx/interface/goals/GRY/GRY_Bylo_vashe_stalo_nashe_V2.dds
+		# by StasJesus
+	}
+	spriteType = {
+		name = GFX_focus_GRY_chorna_rada
+		texturefile = gfx/interface/goals/GRY/GRY_Blek_rada.dds
+		# by StasJesus
+	}
+
+	spriteType = {
+		name = GFX_focus_GRY_great_anniversary_shine
+		texturefile = gfx/interface/goals/GRY/GRY_NearEnd_of_perfect_hetmanstvo.dds
+		effectFile = gfx/FX/buttonstate.lua
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_NearEnd_of_perfect_hetmanstvo.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_NearEnd_of_perfect_hetmanstvo.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = GFX_focus_GRY_gather_the_siches_shine
+		texturefile = gfx/interface/goals/GRY/GRY_Call_of_Ctulhu.dds
+		effectFile = gfx/FX/buttonstate.lua
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Call_of_Ctulhu.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Call_of_Ctulhu.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = GFX_focus_GRY_the_raid_shine
+		texturefile = gfx/interface/goals/GRY/GRY_Bylo_vashe_stalo_nashe_V2.dds
+		effectFile = gfx/FX/buttonstate.lua
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Bylo_vashe_stalo_nashe_V2.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Bylo_vashe_stalo_nashe_V2.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = GFX_focus_GRY_chorna_rada_shine
+		texturefile = gfx/interface/goals/GRY/GRY_Blek_rada.dds
+		effectFile = gfx/FX/buttonstate.lua
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Blek_rada.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Blek_rada.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

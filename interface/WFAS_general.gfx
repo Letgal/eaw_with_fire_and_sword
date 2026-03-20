@@ -1,0 +1,28 @@
+spriteTypes = {
+	# (!) Stolen from my RCW mod :)
+	#spriteType = {
+	#	name = "GFX_frontend_mod_banner"
+	#	texturefile = "gfx/interface/wfas_banner.dds"
+	#}
+	#spriteType = {
+	#	name = "GFX_frontend_mod_alpha"
+	#	texturefile = "gfx/interface/wfas_banner_alpha.dds"
+	#}
+
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_LAND_DOCTRINE"
+		texturefile = "gfx/interface/focusview/filter/land_doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_NAVAL_DOCTRINE"
+		texturefile = "gfx/interface/focusview/filter/naval_doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_AIR_DOCTRINE"
+		texturefile = "gfx/interface/focusview/filter/air_doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_NO_EFFECTS"
+		texturefile = "gfx/interface/focusview/filter/no_fx.dds"
+	}
+}
