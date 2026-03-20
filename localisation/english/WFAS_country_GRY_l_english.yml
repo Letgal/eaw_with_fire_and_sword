@@ -1,15 +1,19 @@
 ﻿l_english:
+### FOCUSES ###
  GRY_great_anniversary: "50 Years of Hetman’s Rule"
- GRY_great_anniversary_desc: "50 Years of Hetman’s Rule."
+ GRY_great_anniversary_desc: "Celebrate the happy 50 years of $GRY_hetman_calas_bulba$’s rule."
  GRY_gather_the_siches: "Gather the Siches"
- GRY_gather_the_siches_desc: "Gather the Siches."
+ GRY_gather_the_siches_desc: "Gather the siches for a raid."
  GRY_the_raid: "The Raid"
- GRY_the_raid_desc: "The Raid."
+ GRY_the_raid_desc: "Conduct a raid on either [BRF.GetNameDef] or [GRW.GetNameDef]."
  GRY_chorna_rada_wfas: "Chorna Rada"
- GRY_chorna_rada_wfas_desc: "Chorna Rada."
+ GRY_chorna_rada_wfas_desc: "Assemble and convene the Chorna Rada."
 
+### IDEAS ###
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
+ wfas_GRY_ruina: "Ruina"
 
+### EVENTS ###
  WFAS_gryphia.1.t: "$GRY_great_anniversary$"
  WFAS_gryphia.1.d: "$GRY_great_anniversary$. All is good in [ROOT.GetNameDef]."
  WFAS_gryphia.1.a: "Yay."
@@ -19,15 +23,14 @@
  WFAS_gryphia.2.a: "[BRF.GetName]."
  WFAS_gryphia.2.b: "[GRW.GetName]."
 
- WFAS_gryphia.3.t: "[GRY.GetLeader] Dies in Raid!"
- WFAS_gryphia.3.d: "[GRY.GetLeader] dies! This is a dark day for our glorious nation!"
+ WFAS_gryphia.3.t: "[ROOT.GetLeader] Dies in Raid!"
+ WFAS_gryphia.3.d: "[ROOT.GetLeader] dies! This is a dark day for our glorious nation!"
  WFAS_gryphia.3.a: "Alas!"
 
- WFAS_gryphia.4.t: "The Raid Outcome"
- WFAS_gryphia.4.d: "Complete success."
- WFAS_gryphia.4.a: "Hurrah!"
+ WFAS_gryphia.4.t: "Raid Outcome"
+ WFAS_gryphia.4.d: "Naturally, the raid was a complete success cuz we're cool B)"
+ WFAS_gryphia.4.a: "Still sad about the old hetman tho..."
 
  WFAS_gryphia.5.t: "$GRY_chorna_rada_wfas$"
  WFAS_gryphia.5.d: "$GRY_chorna_rada_wfas$."
- WFAS_gryphia.5.a: "Option 1"
- WFAS_gryphia.5.b: "Option 2"
+ WFAS_gryphia.5.a: "Proceed."

@@ -1,5 +1,5 @@
 focus_tree = {
-	id = GRY_focus
+	id = wfas_GRY_focus
 
 	country = {
 		factor = 0
@@ -18,7 +18,7 @@ focus_tree = {
 		y = 0
 		cost = 2
 		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = { country_event = WFAS_gryphia.1 days = 1 random_hours = 6 }
+		completion_reward = { country_event = { id = WFAS_gryphia.1 hours = 12 random_hours = 12 } }
 	}
 	focus = {
 		id = GRY_gather_the_siches
@@ -29,7 +29,7 @@ focus_tree = {
 		y = 1
 		cost = 2
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = { country_event = WFAS_gryphia.2 days = 1 random_hours = 6 }
+		completion_reward = { country_event = { id = WFAS_gryphia.2 hours = 12 random_hours = 12 } }
 	}
 	focus = {
 		id = GRY_the_raid
@@ -40,8 +40,8 @@ focus_tree = {
 		y = 1
 		cost = 3
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		select_effect = { country_event = WFAS_gryphia.3 days = 12 random_days = 4 }
-		completion_reward = { country_event = WFAS_gryphia.4 days = 1 random_hours = 6 }
+		select_effect = { country_event = { id = WFAS_gryphia.3 days = 12 random_days = 4 } }
+		completion_reward = { country_event = WFAS_gryphia.4 } # no delay. ~ L.H.
 	}
 	focus = {
 		id = GRY_chorna_rada_wfas
@@ -52,6 +52,11 @@ focus_tree = {
 		y = 1
 		cost = 20
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { country_event = WFAS_gryphia.5 days = 1 random_hours = 6 }
+		select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
+		completion_reward = {
+			custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
+			effect_tooltip = { country_event = WFAS_gryphia.5 }
+			#country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 }
+		}
 	}
 }

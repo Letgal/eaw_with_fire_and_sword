@@ -4,5 +4,9 @@ ideas = {
 			picture = capital_outflow
 			modifier = { consumer_goods_factor = -0.2 }
 		}
+		wfas_GRY_ruina = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = { stability_weekly = -0.005 }
+		}
 	}
 }

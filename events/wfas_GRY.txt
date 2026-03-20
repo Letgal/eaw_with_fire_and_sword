@@ -45,7 +45,18 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.3.a
 		add_stability = -0.2
-		kill_character = GRY_hetman_calas_bulba
+		hidden_effect = {
+			add_country_leader_role = {
+				character = GRY_interim_government
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = oligarchism
+					traits = { provisional }
+				}
+			}
+		}
+		kill_country_leader = yes
+		add_ideas = wfas_GRY_ruina
 	}
 }
 country_event = {
@@ -64,7 +75,7 @@ country_event = {
 		clear_variable = GRY_raid_target
 	}
 	option = {
-		name = WFAS_gryphia.4.b
+		name = WFAS_gryphia.4.a
 		trigger = { check_variable = { GRY_raid_target = GRW } }
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -76,7 +87,7 @@ country_event = {
 }
 
 country_event = {
-	id = WFAS_gryphia.5 # Chorna Rada
+	id = WFAS_gryphia.5 # Chorna Rada Intro
 	title = WFAS_gryphia.5.t
 	desc = WFAS_gryphia.5.d
 	picture = GFX_event_griffon_mountain
