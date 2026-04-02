@@ -59,4 +59,20 @@ focus_tree = {
 			#country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 }
 		}
 	}
+	focus = {
+		id = GRY_vereskopadsky_wins
+		icon = GFX_focus_GRY_vereskopadsky_wins
+		prerequisite = { focus = GRY_chorna_rada_wfas }
+		relative_position_id = GRY_chorna_rada_wfas
+		x = 0
+		y = 1
+		cost = 5
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
+		#completion_reward = {
+		#	custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
+		#	effect_tooltip = { country_event = WFAS_gryphia.5 }
+		#	#country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 }
+		#}
+	}
 }

@@ -1,15 +1,19 @@
 ﻿l_english:
 ### FOCUSES ###
- GRY_great_anniversary: "50 Years of Hetman’s Rule"
- GRY_great_anniversary_desc: "Celebrate the happy 50 years of $GRY_hetman_calas_bulba$’s rule."
+ GRY_great_anniversary: "50 Years of Hetman's Rule"
+ GRY_great_anniversary_desc: "Celebrate the happy 50 years of $GRY_hetman_calas_bulba$'s rule."
  GRY_gather_the_siches: "Gather the Siches"
  GRY_gather_the_siches_desc: "Gather the siches for a raid."
  GRY_the_raid: "The Raid"
  GRY_the_raid_desc: "Conduct a raid on either [BRF.GetNameDef] or [GRW.GetNameDef]."
  GRY_chorna_rada_wfas: "Chorna Rada"
  GRY_chorna_rada_wfas_desc: "Assemble and convene the Chorna Rada."
+ GRY_vereskopadsky_wins: "Vereskopadsky Wins"
+ GRY_vereskopadsky_wins_desc: "Placeholder"
 
 ### IDEAS ###
+ wfas_GRY_disunited_tribes: "Disunited Tribes"
+ wfas_GRY_independent_siches: "Independent Siches"
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
  wfas_GRY_ruina: "Ruina"
 

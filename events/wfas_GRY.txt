@@ -1,7 +1,7 @@
 add_namespace = WFAS_gryphia
 
 country_event = {
-	id = WFAS_gryphia.1 # 50 Years of Hetman’s Rule
+	id = WFAS_gryphia.1 # 50 Years of Hetman's Rule
 	title = WFAS_gryphia.1.t
 	desc = WFAS_gryphia.1.d
 	picture = GFX_event_griffon_mountain

@@ -19,6 +19,12 @@ spriteTypes = {
 		texturefile = gfx/interface/goals/GRY/GRY_Blek_rada.dds
 		# by StasJesus
 	}
+	spriteType = {
+		name = GFX_focus_GRY_vereskopadsky_wins
+		texturefile = gfx/interface/goals/GRY/GRY_Veresk_trap.dds
+		# by StasJesus
+	}
+
 
 	spriteType = {
 		name = GFX_focus_GRY_great_anniversary_shine
@@ -128,6 +134,36 @@ spriteTypes = {
 		}
 		animation = {
 			animationmaskfile = gfx/interface/goals/GRY/GRY_Blek_rada.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = GFX_focus_vereskopadsky_wins_shine
+		texturefile = gfx/interface/goals/GRY/GRY_Veresk_trap.dds
+		effectFile = gfx/FX/buttonstate.lua
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Veresk_trap.dds
+			animationtexturefile = gfx/interface/goals/shine_overlay.dds
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = gfx/interface/goals/GRY/GRY_Veresk_trap.dds
 			animationtexturefile = gfx/interface/goals/shine_overlay.dds
 			animationrotation = 90.0
 			animationlooping = no
