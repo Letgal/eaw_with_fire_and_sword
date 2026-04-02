@@ -56,7 +56,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
 			effect_tooltip = { country_event = WFAS_gryphia.5 }
-			#country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 }
+			hidden_effect = { country_event = { id = WFAS_gryphia.13 } }
 		}
 	}
 	focus = {
@@ -68,6 +68,12 @@ focus_tree = {
 		y = 1
 		cost = 5
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			if = {
+				limit = { GRY_pavel_vereskopadsky = { has_character_flag = in_coma } }
+				GRY_pavel_vereskopadsky = { NOT = { has_character_flag = in_coma } }
+			}
+		}
 		#select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
 		#completion_reward = {
 		#	custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT

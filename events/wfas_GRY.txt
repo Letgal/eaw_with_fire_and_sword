@@ -87,7 +87,7 @@ country_event = {
 }
 
 country_event = {
-	id = WFAS_gryphia.5 # Chorna Rada Intro
+	id = WFAS_gryphia.5 # Chorna Rada 1. Intro
 	title = WFAS_gryphia.5.t
 	desc = WFAS_gryphia.5.d
 	picture = GFX_event_griffon_mountain
@@ -97,5 +97,139 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.5.a
+		hidden_effect = { country_event = { id = WFAS_gryphia.6 days = 18 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.6 # Chorna Rada 2. Harmonist Agitation
+	title = WFAS_gryphia.6.t
+	desc = WFAS_gryphia.6.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.6.a
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		hidden_effect = { country_event = { id = WFAS_gryphia.7 days = 12 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.7 # Chorna Rada 3. Supremacist Agitation
+	title = WFAS_gryphia.7.t
+	desc = WFAS_gryphia.7.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.7.a
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		hidden_effect = { country_event = { id = WFAS_gryphia.8 days = 12 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.8 # Chorna Rada 4. Socialist Movement
+	title = WFAS_gryphia.8.t
+	desc = WFAS_gryphia.8.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.8.a
+		add_ideas = wfas_GRY_socialist_propaganda
+		hidden_effect = { country_event = { id = WFAS_gryphia.9 days = 12 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.9 # Chorna Rada 5. Attempt on Vereskopadsky
+	title = WFAS_gryphia.9.t
+	desc = WFAS_gryphia.9.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.9.a
+		add_popularity = { ideology = neutrality popularity = -0.2 }
+		GRY_pavel_vereskopadsky = { set_character_flag = in_coma }
+		hidden_effect = { country_event = { id = WFAS_gryphia.10 days = 18 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.10 # Chorna Rada 6. Choice 1
+	title = WFAS_gryphia.10.t
+	desc = WFAS_gryphia.10.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.10.a
+		add_ideas = wfas_GRY_pleased_burghers
+		hidden_effect = { country_event = { id = WFAS_gryphia.11 days = 18 } }
+	}
+	option = {
+		name = WFAS_gryphia.10.b
+		add_ideas = wfas_GRY_pleased_cossacks
+		hidden_effect = { country_event = { id = WFAS_gryphia.11 days = 18 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.11 # Chorna Rada 7. Agitation in Capital
+	title = WFAS_gryphia.11.t
+	desc = WFAS_gryphia.11.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.11.a
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		hidden_effect = { country_event = { id = WFAS_gryphia.12 days = 24 } }
+	}
+	option = {
+		name = WFAS_gryphia.11.b
+		add_popularity = { ideology = democratic popularity = -0.1 }
+		hidden_effect = { country_event = { id = WFAS_gryphia.12 days = 24 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.12 # Chorna Rada 8. Trade on Evi
+	title = WFAS_gryphia.12.t
+	desc = WFAS_gryphia.12.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.12.a
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+	option = {
+		name = WFAS_gryphia.12.b
+		add_popularity = { ideology = fascism popularity = -0.1 }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.13 # Chorna Rada 8. End
+	title = WFAS_gryphia.13.t
+	desc = WFAS_gryphia.13.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.13.a
+		#
 	}
 }

@@ -16,6 +16,9 @@
  wfas_GRY_independent_siches: "Independent Siches"
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
  wfas_GRY_ruina: "Ruina"
+ wfas_GRY_socialist_propaganda: "Socialist Propaganda"
+ wfas_GRY_pleased_burghers: "Pleased Burghers"
+ wfas_GRY_pleased_cossacks: "Pleased Cossacks"
 
 ### EVENTS ###
  WFAS_gryphia.1.t: "$GRY_great_anniversary$"
@@ -35,6 +38,41 @@
  WFAS_gryphia.4.d: "Naturally, the raid was a complete success cuz we're cool B)"
  WFAS_gryphia.4.a: "Still sad about the old hetman tho..."
 
- WFAS_gryphia.5.t: "$GRY_chorna_rada_wfas$"
- WFAS_gryphia.5.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.5.t: "$GRY_chorna_rada_wfas$ Intro"
+ WFAS_gryphia.5.d: "$GRY_chorna_rada_wfas$ intro."
  WFAS_gryphia.5.a: "Proceed."
+
+ WFAS_gryphia.6.t: "$GRY_chorna_rada_wfas$ – Harmonist Agitation"
+ WFAS_gryphia.6.d: "Harmonist agitation."
+ WFAS_gryphia.6.a: "Proceed."
+
+ WFAS_gryphia.7.t: "$GRY_chorna_rada_wfas$ – Supremacist Agitation"
+ WFAS_gryphia.7.d: "Supremacist agitation."
+ WFAS_gryphia.7.a: "Proceed."
+
+ WFAS_gryphia.8.t: "$GRY_chorna_rada_wfas$ – Socialist Movement"
+ WFAS_gryphia.8.d: "Socialist movement is organized."
+ WFAS_gryphia.8.a: "Proceed."
+
+ WFAS_gryphia.9.t: "Attempt on Vereskopadsky"
+ WFAS_gryphia.9.d: "Attempt on Vereskopadsky."
+ WFAS_gryphia.9.a: "Proceed."
+
+ WFAS_gryphia.10.t: "$GRY_chorna_rada_wfas$ – Choice 1"
+ WFAS_gryphia.10.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.10.a: "$wfas_GRY_pleased_burghers$."
+ WFAS_gryphia.10.b: "$wfas_GRY_pleased_cossacks$."
+
+ WFAS_gryphia.11.t: "$GRY_chorna_rada_wfas$ – Agitation in Capital"
+ WFAS_gryphia.11.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.11.a: "+ Supremacy."
+ WFAS_gryphia.11.b: "– Harmony."
+
+ WFAS_gryphia.12.t: "$GRY_chorna_rada_wfas$ – Trade on Evi"
+ WFAS_gryphia.12.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.12.a: "+ Harmony."
+ WFAS_gryphia.12.a: "– Supremacy."
+
+ WFAS_gryphia.13.t: "$GRY_chorna_rada_wfas$ End"
+ WFAS_gryphia.13.d: "$GRY_chorna_rada_wfas$ end."
+ WFAS_gryphia.13.a: "End."
