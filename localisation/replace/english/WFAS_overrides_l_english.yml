@@ -1,0 +1,14 @@
+﻿l_english:
+### PLACE NAMES ###
+ ## LUSHI
+  STATE_591: "Talvona" # Talvona
+  STATE_593: "Greifem" # Gryphem
+  STATE_607: "Cessabit" # Cessabit
+  STATE_608: "Lüscheland" # Lushland
+  STATE_632: "Dratsch" # Draksland
+
+  VICTORY_POINTS_8003: "Lümien" # Lumium
+  VICTORY_POINTS_12040: "Schmallengen" # Saiburg
+  VICTORY_POINTS_8026: "Hertau" # Origako
+  VICTORY_POINTS_11912: "Selnau" # Mitoriv
+  VICTORY_POINTS_7204: "Dratschenburg" # Drakburg
