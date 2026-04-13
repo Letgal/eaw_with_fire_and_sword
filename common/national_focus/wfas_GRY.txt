@@ -14,8 +14,6 @@ focus_tree = {
 	focus = {
 		id = GRY_great_anniversary
 		icon = GFX_focus_GRY_great_anniversary
-		x = 8
-		y = 0
 		cost = 2
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = { country_event = { id = WFAS_gryphia.1 hours = 12 random_hours = 12 } }
@@ -60,25 +58,159 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = GRY_hryfnytsky_wins
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_chorna_rada_wfas }
+		mutually_exclusive = { focus = GRY_vereskopadsky_wins focus = GRY_kravelets_wins }
+		relative_position_id = GRY_chorna_rada_wfas
+		x = -4
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { always = no }
+		completion_reward = {
+			custom_effect_tooltip = GRY_hryfnytsky_wins_tt
+			effect_tooltip = { set_politics = { ruling_party = democratic } }
+		}
+	}
+	focus = {
+		id = GRY_placate_the_nationalists
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_hryfnytsky_wins }
+		relative_position_id = GRY_hryfnytsky_wins
+		x = -2
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = { has_idea = wfas_GRY_ruina_1 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_1 add_idea = wfas_GRY_ruina_2 }
+			}
+			else_if = {
+				limit = { has_idea = wfas_GRY_ruina_2 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
+			}
+			#country_event = 0
+		}
+	}
+	focus = {
+		id = GRY_fight_the_red_menace
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_hryfnytsky_wins }
+		relative_position_id = GRY_hryfnytsky_wins
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = { # (!)
+				remove_idea = GRY_communist_rebels
+				add_idea = GRY_communist_rebels
+				days = 70
+			}
+		}
+	}
+	focus = {
+		id = GRY_promises_to_the_people
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_hryfnytsky_wins }
+		relative_position_id = GRY_hryfnytsky_wins
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = { has_idea = wfas_GRY_ruina_1 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_1 add_idea = wfas_GRY_ruina_2 }
+			}
+			else_if = {
+				limit = { has_idea = wfas_GRY_ruina_2 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
+			}
+			#country_event = 0
+		}
+	}
+	focus = {
+		id = GRY_hetmans_coronation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_placate_the_nationalists }
+		prerequisite = { focus = GRY_fight_the_red_menace }
+		prerequisite = { focus = GRY_promises_to_the_people }
+		mutually_exclusive = { focus = GRY_preparation_for_the_election }
+		relative_position_id = GRY_fight_the_red_menace
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.05
+			#country_event = 0
+		}
+	}
+	focus = {
+		id = GRY_preparation_for_the_election
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_placate_the_nationalists }
+		prerequisite = { focus = GRY_fight_the_red_menace }
+		prerequisite = { focus = GRY_promises_to_the_people }
+		mutually_exclusive = { focus = GRY_hetmans_coronation }
+		relative_position_id = GRY_fight_the_red_menace
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_STABILITY }
+		available = { always = no }
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.05
+			#country_event = 0
+		}
+	}
+	focus = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_vereskopadsky_wins
 		prerequisite = { focus = GRY_chorna_rada_wfas }
+		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_kravelets_wins }
 		relative_position_id = GRY_chorna_rada_wfas
 		x = 0
 		y = 1
 		cost = 5
-		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			if = {
 				limit = { GRY_pavel_vereskopadsky = { has_character_flag = in_coma } }
 				GRY_pavel_vereskopadsky = { NOT = { has_character_flag = in_coma } }
+				else = { always = no }
 			}
 		}
 		#select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
+		completion_reward = { custom_effect_tooltip = GRY_vereskopadsky_wins_tt }
 		#completion_reward = {
 		#	custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
 		#	effect_tooltip = { country_event = WFAS_gryphia.5 }
 		#	#country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 }
 		#}
+	}
+	focus = {
+		id = GRY_kravelets_wins
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_chorna_rada_wfas }
+		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_vereskopadsky_wins }
+		relative_position_id = GRY_chorna_rada_wfas
+		x = 4
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { always = no }
+		completion_reward = {
+			custom_effect_tooltip = GRY_kravelets_wins_tt
+			effect_tooltip = { set_politics = { ruling_party = fascism } }
+		}
 	}
 }

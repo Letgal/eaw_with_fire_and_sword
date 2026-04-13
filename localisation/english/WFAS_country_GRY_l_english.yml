@@ -8,8 +8,28 @@
  GRY_the_raid_desc: "Conduct a raid on either [BRF.GetNameDef] or [GRW.GetNameDef]."
  GRY_chorna_rada_wfas: "Chorna Rada"
  GRY_chorna_rada_wfas_desc: "Assemble and convene the Chorna Rada."
- GRY_vereskopadsky_wins: "Vereskopadsky Wins"
- GRY_vereskopadsky_wins_desc: "Placeholder"
+
+ ## 
+  GRY_hryfnytsky_wins: "Hryfnytsky Wins"
+  GRY_hryfnytsky_wins_desc: "Placeholder"
+  GRY_placate_the_nationalists: "Placate the Nationalists"
+  GRY_placate_the_nationalists_desc: ""
+  GRY_fight_the_red_menace: "Fight the Red Menace"
+  GRY_fight_the_red_menace_desc: ""
+  GRY_promises_to_the_people: "Promises to the People"
+  GRY_promises_to_the_people_desc: ""
+  GRY_hetmans_coronation: "Hetman's Coronation"
+  GRY_hetmans_coronation_desc: ""
+  GRY_preparation_for_the_election: "Preparation for the Election"
+  GRY_preparation_for_the_election_desc: ""
+
+ ##
+  GRY_vereskopadsky_wins: "Vereskopadsky Wins"
+  GRY_vereskopadsky_wins_desc: "Placeholder"
+
+ ##
+  GRY_kravelets_wins: "Kravelets Wins"
+  GRY_kravelets_wins_desc: "Placeholder"
 
 ### IDEAS ###
  wfas_GRY_disunited_tribes: "Disunited Tribes"
@@ -77,3 +97,8 @@
  WFAS_gryphia.13.t: "$GRY_chorna_rada_wfas$ End"
  WFAS_gryphia.13.d: "$GRY_chorna_rada_wfas$ end."
  WFAS_gryphia.13.a: "End."
+
+### TOOLTIPS ###
+ GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
+ GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
+ GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
