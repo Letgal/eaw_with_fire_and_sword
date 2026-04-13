@@ -56,7 +56,8 @@
 
  WFAS_gryphia.9.t: "Attempt on Vereskopadsky"
  WFAS_gryphia.9.d: "Attempt on Vereskopadsky."
- WFAS_gryphia.9.a: "Proceed."
+ WFAS_gryphia.9.a: "Give support to Hryfnytsky."
+ WFAS_gryphia.9.b: "Give support to Kravelets."
 
  WFAS_gryphia.10.t: "$GRY_chorna_rada_wfas$ – Choice 1"
  WFAS_gryphia.10.d: "$GRY_chorna_rada_wfas$."
@@ -71,7 +72,7 @@
  WFAS_gryphia.12.t: "$GRY_chorna_rada_wfas$ – Trade on Evi"
  WFAS_gryphia.12.d: "$GRY_chorna_rada_wfas$."
  WFAS_gryphia.12.a: "+ Harmony."
- WFAS_gryphia.12.a: "– Supremacy."
+ WFAS_gryphia.12.b: "– Supremacy."
 
  WFAS_gryphia.13.t: "$GRY_chorna_rada_wfas$ End"
  WFAS_gryphia.13.d: "$GRY_chorna_rada_wfas$ end."

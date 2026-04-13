@@ -48,6 +48,9 @@ bookmarks = {
 				GRU_the_knights_resurgent
 			}
 		}
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
 		"GRW"={
 			history = "GRW_GATHERING_STORM_DESC"
 			ideology = communism
