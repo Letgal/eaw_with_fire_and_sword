@@ -1,9 +1,5 @@
 ﻿l_english:
 ### VICTORY POINTS ###
- ## “MISSING” FROM EAW
- VICTORY_POINTS_4167: "$STATE_593$" # Greifem / Gryphem
- VICTORY_POINTS_5071: "$STATE_591$" # Talvona
-
  ## NEW IN WFAS
  VICTORY_POINTS_438: "Laschendorf" # or Buschendorf
  VICTORY_POINTS_10765: "Tschornau"
