@@ -60,20 +60,15 @@ focus_tree = {
 	focus = {
 		id = GRY_hryfnytsky_wins
 		icon = GFX_goal_unknown
+		allow_branch = { NOT = { has_completed_focus = GRY_vereskopadsky_wins has_completed_focus = GRY_kravelets_wins } }
 		prerequisite = { focus = GRY_chorna_rada_wfas }
 		mutually_exclusive = { focus = GRY_vereskopadsky_wins focus = GRY_kravelets_wins }
 		relative_position_id = GRY_chorna_rada_wfas
-		x = -4
+		x = -2
 		y = 1
 		offset = {
 			x = 2
-			trigger = {
-				NOT = {
-					has_completed_focus = GRY_hryfnytsky_wins
-					has_completed_focus = GRY_vereskopadsky_wins
-					has_completed_focus = GRY_kravelets_wins
-				}
-			}
+			trigger = { has_completed_focus = GRY_hryfnytsky_wins }
 		}
 		cost = 5
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -120,8 +115,8 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			swap_ideas = { # (!)
-				remove_idea = GRY_communist_rebels
-				add_idea = GRY_communist_rebels
+				remove_idea = wfas_GRY_socialist_movement
+				add_idea = wfas_GRY_socialist_movement_temp
 				days = 70
 			}
 		}
@@ -154,7 +149,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GRY_placate_the_nationalists }
 		prerequisite = { focus = GRY_fight_the_red_menace }
-		prerequisite = { focus = GRY_promises_to_the_people }
+		prerequisite = { focus = GRY_placate_the_nobility }
 		mutually_exclusive = { focus = GRY_preparation_for_the_election }
 		relative_position_id = GRY_fight_the_red_menace
 		x = -1
@@ -172,7 +167,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GRY_placate_the_nationalists }
 		prerequisite = { focus = GRY_fight_the_red_menace }
-		prerequisite = { focus = GRY_promises_to_the_people }
+		prerequisite = { focus = GRY_placate_the_nobility }
 		mutually_exclusive = { focus = GRY_hetmans_coronation }
 		relative_position_id = GRY_fight_the_red_menace
 		x = 1
@@ -189,6 +184,7 @@ focus_tree = {
 	focus = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_vereskopadsky_wins
+		allow_branch = { NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_kravelets_wins } }
 		prerequisite = { focus = GRY_chorna_rada_wfas }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_kravelets_wins }
 		relative_position_id = GRY_chorna_rada_wfas
@@ -217,20 +213,15 @@ focus_tree = {
 	focus = {
 		id = GRY_kravelets_wins
 		icon = GFX_goal_unknown
+		allow_branch = { NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_vereskopadsky_wins } }
 		prerequisite = { focus = GRY_chorna_rada_wfas }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_vereskopadsky_wins }
 		relative_position_id = GRY_chorna_rada_wfas
-		x = 4
+		x = 2
 		y = 1
 		offset = {
 			x = -2
-			trigger = {
-				NOT = {
-					has_completed_focus = GRY_hryfnytsky_wins
-					has_completed_focus = GRY_vereskopadsky_wins
-					has_completed_focus = GRY_kravelets_wins
-				}
-			}
+			trigger = { has_completed_focus = GRY_kravelets_wins }
 		}
 		cost = 5
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }

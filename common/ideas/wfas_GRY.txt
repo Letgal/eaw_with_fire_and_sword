@@ -5,7 +5,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				#mobilization_speed = 0
-				recruitable_population_factor = -0.2
+				conscription_factor = -0.2
 				production_speed_buildings_factor = -0.1
 			}
 		}
@@ -14,7 +14,7 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
-				recruitable_population_factor = -0.1
+				conscription_factor = -0.1
 			}
 		}
 		wfas_GRY_spoils_of_war_BRF_temp = {
@@ -37,6 +37,11 @@ ideas = {
 			modifier = { stability_weekly = -0.002 }
 		}
 		wfas_GRY_socialist_movement = {
+			picture = jap_the_unthinkable_option
+		}
+		wfas_GRY_socialist_movement_temp = {
+			# (*) swap on temp idea
+			name = wfas_GRY_socialist_movement
 			picture = jap_the_unthinkable_option
 		}
 		wfas_GRY_pleased_burghers = {
