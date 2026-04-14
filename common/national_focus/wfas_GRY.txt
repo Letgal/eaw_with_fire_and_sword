@@ -65,10 +65,21 @@ focus_tree = {
 		relative_position_id = GRY_chorna_rada_wfas
 		x = -4
 		y = 1
+		offset = {
+			x = 2
+			trigger = {
+				NOT = {
+					has_completed_focus = GRY_hryfnytsky_wins
+					has_completed_focus = GRY_vereskopadsky_wins
+					has_completed_focus = GRY_kravelets_wins
+				}
+			}
+		}
 		cost = 5
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { always = no }
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = GRY_hryfnytsky_wins_tt
 			effect_tooltip = { set_politics = { ruling_party = democratic } }
 		}
@@ -76,6 +87,7 @@ focus_tree = {
 	focus = {
 		id = GRY_placate_the_nationalists
 		icon = GFX_goal_unknown
+		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = -2
@@ -98,6 +110,7 @@ focus_tree = {
 	focus = {
 		id = GRY_fight_the_red_menace
 		icon = GFX_goal_unknown
+		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = 0
@@ -114,8 +127,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GRY_promises_to_the_people
+		id = GRY_placate_the_nobility
 		icon = GFX_goal_unknown
+		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = 2
@@ -185,12 +199,15 @@ focus_tree = {
 		available = {
 			if = {
 				limit = { GRY_pavel_vereskopadsky = { has_character_flag = in_coma } }
-				GRY_pavel_vereskopadsky = { NOT = { has_character_flag = in_coma } }
+				NOT = { GRY_pavel_vereskopadsky = { has_character_flag = in_coma } }
 				else = { always = no }
 			}
 		}
 		#select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
-		completion_reward = { custom_effect_tooltip = GRY_vereskopadsky_wins_tt }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = GRY_vereskopadsky_wins_tt
+		}
 		#completion_reward = {
 		#	custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
 		#	effect_tooltip = { country_event = WFAS_gryphia.5 }
@@ -205,10 +222,21 @@ focus_tree = {
 		relative_position_id = GRY_chorna_rada_wfas
 		x = 4
 		y = 1
+		offset = {
+			x = -2
+			trigger = {
+				NOT = {
+					has_completed_focus = GRY_hryfnytsky_wins
+					has_completed_focus = GRY_vereskopadsky_wins
+					has_completed_focus = GRY_kravelets_wins
+				}
+			}
+		}
 		cost = 5
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { always = no }
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = GRY_kravelets_wins_tt
 			effect_tooltip = { set_politics = { ruling_party = fascism } }
 		}

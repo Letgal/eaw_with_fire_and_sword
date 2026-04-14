@@ -2,9 +2,20 @@ ideas = {
 	country = {
 		wfas_GRY_disunited_tribes = {
 			picture = generic_disjointed_gov
+			modifier = {
+				stability_factor = -0.1
+				#mobilization_speed = 0
+				recruitable_population_factor = -0.2
+				production_speed_buildings_factor = -0.1
+			}
 		}
 		wfas_GRY_independent_siches = {
 			picture = generic_disjointed_gov
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				recruitable_population_factor = -0.1
+			}
 		}
 		wfas_GRY_spoils_of_war_BRF_temp = {
 			picture = capital_outflow
@@ -25,8 +36,8 @@ ideas = {
 			picture = ENG_the_war_to_end_all_wars
 			modifier = { stability_weekly = -0.002 }
 		}
-		wfas_GRY_socialist_propaganda = {
-			#picture = generic_disjointed_gov
+		wfas_GRY_socialist_movement = {
+			picture = jap_the_unthinkable_option
 		}
 		wfas_GRY_pleased_burghers = {
 			#picture = generic_disjointed_gov

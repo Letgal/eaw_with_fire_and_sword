@@ -16,8 +16,8 @@
   GRY_placate_the_nationalists_desc: ""
   GRY_fight_the_red_menace: "Fight the Red Menace"
   GRY_fight_the_red_menace_desc: ""
-  GRY_promises_to_the_people: "Promises to the People"
-  GRY_promises_to_the_people_desc: ""
+  GRY_placate_the_nobility: "Placate the Nobility"
+  GRY_placate_the_nobility_desc: ""
   GRY_hetmans_coronation: "Hetman's Coronation"
   GRY_hetmans_coronation_desc: ""
   GRY_preparation_for_the_election: "Preparation for the Election"
@@ -36,7 +36,7 @@
  wfas_GRY_independent_siches: "Independent Siches"
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
  wfas_GRY_ruina: "Ruina"
- wfas_GRY_socialist_propaganda: "Socialist Propaganda"
+ wfas_GRY_socialist_movement: "Socialist Movement"
  wfas_GRY_pleased_burghers: "Pleased Burghers"
  wfas_GRY_pleased_cossacks: "Pleased Cossacks"
 
@@ -47,8 +47,8 @@
 
  WFAS_gryphia.2.t: "Gathering the Siches"
  WFAS_gryphia.2.d: "Gathering the siches for a raid."
- WFAS_gryphia.2.a: "[BRF.GetName]."
- WFAS_gryphia.2.b: "[GRW.GetName]."
+ WFAS_gryphia.2.a: "Raid [BRF.GetNameDef]."
+ WFAS_gryphia.2.b: "Raid [GRW.GetNameDef]."
 
  WFAS_gryphia.3.t: "[ROOT.GetLeader] Dies in Raid!"
  WFAS_gryphia.3.d: "[ROOT.GetLeader] dies! This is a dark day for our glorious nation!"
@@ -96,9 +96,11 @@
 
  WFAS_gryphia.13.t: "$GRY_chorna_rada_wfas$ End"
  WFAS_gryphia.13.d: "$GRY_chorna_rada_wfas$ end."
- WFAS_gryphia.13.a: "End."
+ WFAS_gryphia.13.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
+ WFAS_gryphia.13.b: "[GRY_borad_grifnitsky.GetName] wins."
+ WFAS_gryphia.13.c: "[GRY_yeven_krawvelets.GetName] wins."
 
 ### TOOLTIPS ###
- GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
+ GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O

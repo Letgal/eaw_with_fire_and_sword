@@ -56,7 +56,7 @@ country_event = {
 			}
 		}
 		kill_country_leader = yes
-		add_ideas = wfas_GRY_ruina
+		add_ideas = wfas_GRY_ruina_1
 	}
 }
 country_event = {
@@ -77,6 +77,13 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.4.a
 		trigger = { check_variable = { GRY_raid_target = GRW } }
+		GRW = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = GRW
+			}
+		}
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 500
@@ -111,6 +118,7 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.6.a
+		add_stability = -0.025
 		add_popularity = { ideology = democratic popularity = 0.05 }
 		hidden_effect = { country_event = { id = WFAS_gryphia.7 days = 12 } }
 	}
@@ -126,6 +134,7 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.7.a
+		add_stability = -0.025
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		hidden_effect = { country_event = { id = WFAS_gryphia.8 days = 12 } }
 	}
@@ -141,7 +150,8 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.8.a
-		add_ideas = wfas_GRY_socialist_propaganda
+		add_stability = -0.025
+		swap_ideas = { remove_idea = GRY_communist_rebels add_idea = wfas_GRY_socialist_movement }
 		hidden_effect = { country_event = { id = WFAS_gryphia.9 days = 12 } }
 	}
 }
@@ -155,8 +165,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		GRY_pavel_vereskopadsky = { set_character_flag = in_coma }
-		add_popularity = { ideology = neutrality popularity = -0.2 }
+		hidden_effect = {
+			GRY_pavel_vereskopadsky = { set_character_flag = in_coma }
+			add_popularity = { ideology = neutrality popularity = -0.2 }
+		}
 	}
 
 	option = {
@@ -250,7 +262,21 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		trigger = { NOT = { GRY_pavel_vereskopadsky = { has_character_flag = in_coma } } }
 		name = WFAS_gryphia.13.a
-		#
+		custom_effect_tooltip = GRY_vereskopadsky_wins_tt
+		complete_national_focus = GRY_vereskopadsky_wins
+	}
+	option = {
+		name = WFAS_gryphia.13.b
+		custom_effect_tooltip = GRY_hryfnytsky_wins_tt
+		set_politics = { ruling_party = democratic }
+		complete_national_focus = GRY_hryfnytsky_wins
+	}
+	option = {
+		name = WFAS_gryphia.13.c
+		custom_effect_tooltip = GRY_kravelets_wins_tt
+		set_politics = { ruling_party = fascism }
+		complete_national_focus = GRY_kravelets_wins
 	}
 }
