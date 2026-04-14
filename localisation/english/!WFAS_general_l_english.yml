@@ -1,6 +1,6 @@
 ﻿l_english:
 ### FOCUS FILTERS ###
- FOCUS_FILTER_NO_EFFECTS: "No Effects" # (!) Stolen from my RCW mod :)
+ FOCUS_FILTER_NO_EFFECTS: "No Effects" # (*) stolen from my RCW mod :)
 
 ### TOOLTIPS ###
- has_happened_tt: "§HHas happened:§!\n" # (!) Stolen from my RCW mod :)
+ has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)

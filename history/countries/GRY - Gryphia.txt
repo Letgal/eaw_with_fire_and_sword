@@ -39,7 +39,7 @@ set_politics = {
 set_country_flag = has_custom_advisors
 
 add_ideas = {
-	wfas_GRY_disunited_tribes # (!) Added with WFAS
+	wfas_GRY_disunited_tribes # (WFAS +)
 	wfas_GRY_independent_siches
 
 	agrarian_society

@@ -286,7 +286,7 @@ ideas = {
 	}
 	country = {
 		prywhen_civil_war = {
-			# (!) Tweaked for WFAS (PCW module)
+			# (WFAS PCWM ~)
 			available = {
 				is_subject = no
 			}

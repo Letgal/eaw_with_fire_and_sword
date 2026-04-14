@@ -1,5 +1,5 @@
 spriteTypes = {
-	# (!) Stolen from my RCW mod :)
+	# (*) stolen from my RCW mod :)
 	#spriteType = {
 	#	name = "GFX_frontend_mod_banner"
 	#	texturefile = "gfx/interface/wfas_banner.dds"

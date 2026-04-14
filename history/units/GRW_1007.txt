@@ -115,7 +115,7 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8 }
 
-	# (!) Added for WFAS (PCW module)
+	# (WFAS PCWM +)
 	division = {
 		name = "Revolutionary Militia"
 		location = 7168 

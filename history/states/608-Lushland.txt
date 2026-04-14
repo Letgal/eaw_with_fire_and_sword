@@ -6,7 +6,7 @@ state={
 		1945 3320 4908 4977 7920 7935 8003 8012 10765 10853
 	}
 
-	manpower=766900 # (WFAS-changed) from 756900
+	manpower=766900 # (WFAS ~) from 756900
 	state_category=large_town
 	buildings_max_level_factor=1.00
 
@@ -15,7 +15,7 @@ state={
 		add_core_of = LUS
 
 		victory_points = { 8003 15 }
-		victory_points = { 10765 1 } # (WFAS-new)
+		victory_points = { 10765 1 } # (WFAS +)
 
 		buildings = {
 			infrastructure = 2

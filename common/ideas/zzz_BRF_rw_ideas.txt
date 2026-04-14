@@ -179,7 +179,7 @@ ideas = {
 		}
 		
 		BRF_ground_stand = { 
-			# (!) Tweaked for WFAS (PCW module)
+			# (WFAS PCWM ~)
 			picture = YUG_federal_defense_council
 			available = { 
 				has_war_with = GRW

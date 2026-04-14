@@ -7,7 +7,7 @@ bookmarks = {
 		default_country = "GRY"
 		default = yes
 
-		# (!) Changed for WFAS to present current and future scope countries
+		# (WFAS ~) to present current and future scope countries
 		"GRY"={
 			history = "GRY_GATHERING_STORM_DESC"
 			ideology = neutrality

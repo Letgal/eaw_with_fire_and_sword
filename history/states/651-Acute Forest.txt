@@ -17,7 +17,7 @@ state={
 
 		victory_points = { 4592 1 }
 
-		# (!) Added for WFAS (PCW module)
+		# (WFAS PCWM +)
 		BRF = {
 			set_province_controller = 7670
 			set_province_controller = 10317

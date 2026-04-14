@@ -6,7 +6,7 @@ state={
 		438 4814 4830 7175 7204 7221 7780 11992 12570
 	}
 
-	manpower=144509 # (WFAS-changed) from 124509
+	manpower=144509 # (WFAS ~) from 124509
 	state_category=rural
 	buildings_max_level_factor=1.00
 
@@ -14,7 +14,7 @@ state={
 		owner = LUS
 		add_core_of = LUS
 		victory_points = { 7204 3 }
-		victory_points = { 438 1 } # (WFAS-new)
+		victory_points = { 438 1 } # (WFAS +)
 	}
 
 	resources={

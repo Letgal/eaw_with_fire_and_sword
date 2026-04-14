@@ -155,7 +155,7 @@ units = {
 		start_equipment_factor = 0.1 
 	}
 
-	# (!) Added for WFAS (PCW module)
+	# (WFAS PCWM +)
 	division = {
 		division_name = {
 			is_name_ordered = yes
