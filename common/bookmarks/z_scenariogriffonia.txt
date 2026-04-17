@@ -12,13 +12,13 @@ bookmarks = {
 			history = "GRY_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				GRY_independent_tribes
+				wfas_GRY_disunited_tribes
 				GRY_landed_gentry
 				GRY_communist_rebels
 			}
 			focuses = {
 				GRY_great_anniversary
-				GRY_chorna_rada_wfas
+				GRY_convene_the_chorna_rada
 				#GRU_the_knights_resurgent
 			}
 		}

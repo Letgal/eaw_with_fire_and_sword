@@ -38,11 +38,29 @@ ideas = {
 		}
 		wfas_GRY_socialist_movement = {
 			picture = jap_the_unthinkable_option
+			allowed_civil_war = { NOT = { has_government = communism } }
+			modifier = { # (*) TODO: change
+				conscription_factor = -0.05
+				communism_drift = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
 		}
 		wfas_GRY_socialist_movement_temp = {
 			# (*) swap on temp idea
 			name = wfas_GRY_socialist_movement
 			picture = jap_the_unthinkable_option
+			allowed_civil_war = { NOT = { has_government = communism } }
+			modifier = {
+				conscription_factor = -0.05
+				communism_drift = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
 		}
 		wfas_GRY_pleased_burghers = {
 			#picture = generic_disjointed_gov

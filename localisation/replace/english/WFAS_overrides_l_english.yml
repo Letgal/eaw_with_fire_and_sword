@@ -1,4 +1,12 @@
 ﻿l_english:
+### COUNTRY NAMES ###
+ GRY_democratic: "$GRY_neutrality$" # (*) don't be hasty with renaming
+ GRY_democratic_DEF: "$GRY_neutrality_DEF$"
+ GRY_democratic_ADJ: "$GRY_neutrality_ADJ$"
+ GRY_fascism: "$GRY_neutrality$"
+ GRY_fascism_DEF: "$GRY_neutrality_DEF$"
+ GRY_fascism_ADJ: "$GRY_neutrality_ADJ$"
+
 ### PLACE NAMES ###
  ## LUSHI
   STATE_591: "Talvona" # Talvona

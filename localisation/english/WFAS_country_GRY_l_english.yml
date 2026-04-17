@@ -6,8 +6,8 @@
  GRY_gather_the_siches_desc: "Gather the siches for a raid."
  GRY_the_raid: "The Raid"
  GRY_the_raid_desc: "Conduct a raid on either [BRF.GetNameDef] or [GRW.GetNameDef]."
- GRY_chorna_rada_wfas: "Chorna Rada"
- GRY_chorna_rada_wfas_desc: "Assemble and convene the Chorna Rada."
+ GRY_convene_the_chorna_rada: "Convene the Chorna Rada"
+ GRY_convene_the_chorna_rada_desc: "Assemble and convene the Chorna Rada."
 
  ## 
   GRY_hryfnytsky_wins: "Hryfnytsky Wins"
@@ -58,20 +58,20 @@
  WFAS_gryphia.4.d: "Naturally, the raid was a complete success cuz we're cool B)"
  WFAS_gryphia.4.a: "Still sad about the old hetman tho..."
 
- WFAS_gryphia.5.t: "$GRY_chorna_rada_wfas$ Intro"
- WFAS_gryphia.5.d: "$GRY_chorna_rada_wfas$ intro."
+ WFAS_gryphia.5.t: "$GRY_chorna_rada$ Intro"
+ WFAS_gryphia.5.d: "$GRY_chorna_rada$ intro."
  WFAS_gryphia.5.a: "Proceed."
 
- WFAS_gryphia.6.t: "$GRY_chorna_rada_wfas$ – Harmonist Agitation"
+ WFAS_gryphia.6.t: "$GRY_chorna_rada$ – Harmonist Agitation"
  WFAS_gryphia.6.d: "Harmonist agitation."
  WFAS_gryphia.6.a: "Proceed."
 
- WFAS_gryphia.7.t: "$GRY_chorna_rada_wfas$ – Supremacist Agitation"
+ WFAS_gryphia.7.t: "$GRY_chorna_rada$ – Supremacist Agitation"
  WFAS_gryphia.7.d: "Supremacist agitation."
  WFAS_gryphia.7.a: "Proceed."
 
- WFAS_gryphia.8.t: "$GRY_chorna_rada_wfas$ – Socialist Movement"
- WFAS_gryphia.8.d: "Socialist movement is organized."
+ WFAS_gryphia.8.t: "$GRY_chorna_rada$ – Socialist Movement"
+ WFAS_gryphia.8.d: "It's Ruina and all, so the socialists have organized into a full on movement."
  WFAS_gryphia.8.a: "Proceed."
 
  WFAS_gryphia.9.t: "Attempt on Vereskopadsky"
@@ -79,23 +79,23 @@
  WFAS_gryphia.9.a: "Give support to Hryfnytsky."
  WFAS_gryphia.9.b: "Give support to Kravelets."
 
- WFAS_gryphia.10.t: "$GRY_chorna_rada_wfas$ – Choice 1"
- WFAS_gryphia.10.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.10.t: "$GRY_chorna_rada$ – Choice 1"
+ WFAS_gryphia.10.d: "$GRY_chorna_rada$."
  WFAS_gryphia.10.a: "$wfas_GRY_pleased_burghers$."
  WFAS_gryphia.10.b: "$wfas_GRY_pleased_cossacks$."
 
- WFAS_gryphia.11.t: "$GRY_chorna_rada_wfas$ – Agitation in Capital"
- WFAS_gryphia.11.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.11.t: "$GRY_chorna_rada$ – Agitation in the Capital"
+ WFAS_gryphia.11.d: "It's agitation and it's in the capital."
  WFAS_gryphia.11.a: "+ Supremacy."
  WFAS_gryphia.11.b: "– Harmony."
 
- WFAS_gryphia.12.t: "$GRY_chorna_rada_wfas$ – Trade on Evi"
- WFAS_gryphia.12.d: "$GRY_chorna_rada_wfas$."
+ WFAS_gryphia.12.t: "$GRY_chorna_rada$ – Trade on Evi"
+ WFAS_gryphia.12.d: "Smth about trade on river Evi."
  WFAS_gryphia.12.a: "+ Harmony."
  WFAS_gryphia.12.b: "– Supremacy."
 
- WFAS_gryphia.13.t: "$GRY_chorna_rada_wfas$ End"
- WFAS_gryphia.13.d: "$GRY_chorna_rada_wfas$ end."
+ WFAS_gryphia.13.t: "$GRY_chorna_rada$ End"
+ WFAS_gryphia.13.d: "$GRY_chorna_rada$ results."
  WFAS_gryphia.13.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
  WFAS_gryphia.13.b: "[GRY_borad_grifnitsky.GetName] wins."
  WFAS_gryphia.13.c: "[GRY_yeven_krawvelets.GetName] wins."

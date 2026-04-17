@@ -42,7 +42,7 @@ focus_tree = {
 		completion_reward = { country_event = WFAS_gryphia.4 } # no delay. ~ L.H.
 	}
 	focus = {
-		id = GRY_chorna_rada_wfas
+		id = GRY_convene_the_chorna_rada
 		icon = GFX_focus_GRY_chorna_rada
 		prerequisite = { focus = GRY_the_raid }
 		relative_position_id = GRY_the_raid
@@ -61,9 +61,9 @@ focus_tree = {
 		id = GRY_hryfnytsky_wins
 		icon = GFX_goal_unknown
 		allow_branch = { NOT = { has_completed_focus = GRY_vereskopadsky_wins has_completed_focus = GRY_kravelets_wins } }
-		prerequisite = { focus = GRY_chorna_rada_wfas }
+		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_vereskopadsky_wins focus = GRY_kravelets_wins }
-		relative_position_id = GRY_chorna_rada_wfas
+		relative_position_id = GRY_convene_the_chorna_rada
 		x = -2
 		y = 1
 		offset = {
@@ -81,7 +81,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_placate_the_nationalists
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ideology_national_populist
 		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
@@ -104,7 +104,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_fight_the_red_menace
-		icon = GFX_goal_unknown
+		icon = GFX_goal_broken_red_star
 		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
@@ -123,7 +123,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_placate_the_nobility
-		icon = GFX_goal_unknown
+		icon = GFX_goal_collaborate_local_elites
 		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
@@ -146,7 +146,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_hetmans_coronation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_hun_elect_a_king
 		prerequisite = { focus = GRY_placate_the_nationalists }
 		prerequisite = { focus = GRY_fight_the_red_menace }
 		prerequisite = { focus = GRY_placate_the_nobility }
@@ -164,7 +164,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_preparation_for_the_election
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_elections
 		prerequisite = { focus = GRY_placate_the_nationalists }
 		prerequisite = { focus = GRY_fight_the_red_menace }
 		prerequisite = { focus = GRY_placate_the_nobility }
@@ -185,9 +185,9 @@ focus_tree = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_vereskopadsky_wins
 		allow_branch = { NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_kravelets_wins } }
-		prerequisite = { focus = GRY_chorna_rada_wfas }
+		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_kravelets_wins }
-		relative_position_id = GRY_chorna_rada_wfas
+		relative_position_id = GRY_convene_the_chorna_rada
 		x = 0
 		y = 1
 		cost = 5
@@ -214,9 +214,9 @@ focus_tree = {
 		id = GRY_kravelets_wins
 		icon = GFX_goal_unknown
 		allow_branch = { NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_vereskopadsky_wins } }
-		prerequisite = { focus = GRY_chorna_rada_wfas }
+		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_vereskopadsky_wins }
-		relative_position_id = GRY_chorna_rada_wfas
+		relative_position_id = GRY_convene_the_chorna_rada
 		x = 2
 		y = 1
 		offset = {
