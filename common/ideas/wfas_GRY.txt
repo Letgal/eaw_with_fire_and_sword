@@ -76,5 +76,17 @@ ideas = {
 				conscription_factor = 0.1
 			}
 		}
+
+		### HRYFNYTSKY'S PATH ###
+		wfas_GRY_independent_siches_cut = {
+			# (*) effects cut in half
+			name = wfas_GRY_independent_siches
+			picture = generic_disjointed_gov
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.05
+			}
+		}
 	}
 }

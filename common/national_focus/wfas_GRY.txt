@@ -9,7 +9,7 @@ focus_tree = {
 			NOT = { has_country_flag = GRY_neutral_rebellion }
 		}
 	}
-	continuous_focus_position = { x = 0 y = 0 }
+	continuous_focus_position = { x = 0 y = 2000 }
 
 	focus = {
 		id = GRY_great_anniversary
@@ -39,11 +39,15 @@ focus_tree = {
 		cost = 3
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		select_effect = { country_event = { id = WFAS_gryphia.3 days = 12 random_days = 4 } }
-		completion_reward = { country_event = WFAS_gryphia.4 } # no delay. ~ L.H.
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			country_event = WFAS_gryphia.4 # no delay. ~ L.H.
+		}
 	}
 	focus = {
 		id = GRY_convene_the_chorna_rada
 		icon = GFX_focus_GRY_Blek_rada
+		allow_branch = { has_completed_focus = GRY_the_raid }
 		prerequisite = { focus = GRY_the_raid }
 		relative_position_id = GRY_the_raid
 		x = 0
@@ -60,7 +64,10 @@ focus_tree = {
 	focus = {
 		id = GRY_hryfnytsky_wins
 		icon = GFX_focus_GRY_Borad_peremoha
-		allow_branch = { NOT = { has_completed_focus = GRY_vereskopadsky_wins has_completed_focus = GRY_kravelets_wins } }
+		allow_branch = {
+			has_completed_focus = GRY_the_raid
+			NOT = { has_completed_focus = GRY_vereskopadsky_wins has_completed_focus = GRY_kravelets_wins }
+		}
 		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_vereskopadsky_wins focus = GRY_kravelets_wins }
 		relative_position_id = GRY_convene_the_chorna_rada
@@ -82,7 +89,6 @@ focus_tree = {
 	focus = {
 		id = GRY_placate_the_nationalists
 		icon = GFX_focus_GRY_Fashista
-		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = -2
@@ -105,7 +111,6 @@ focus_tree = {
 	focus = {
 		id = GRY_fight_the_red_menace
 		icon = GFX_focus_GRY_KOMUNIAKU_NA_GILLIAKU
-		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = 0
@@ -124,7 +129,6 @@ focus_tree = {
 	focus = {
 		id = GRY_placate_the_nobility
 		icon = GFX_goal_collaborate_local_elites
-		allow_branch = { has_completed_focus = GRY_hryfnytsky_wins }
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = 2
@@ -174,13 +178,195 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = GRY_travel_the_country
+		icon = GFX_focus_GRY_Royal_tour
+		prerequisite = { focus = GRY_hetmans_coronation }
+		relative_position_id = GRY_hetmans_coronation
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.05
+			#country_event = 0
+		}
+	}
+	focus = {
+		id = GRY_expand_the_siches_autonomy
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = GRY_travel_the_country }
+		relative_position_id = GRY_travel_the_country
+		x = -7
+		y = 1
+		cost = 10
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { swap_ideas = { remove_idea = wfas_GRY_independent_siches add_idea = wfas_GRY_independent_siches_cut } }
+	}
+	focus = {
+		id = GRY_sich_liberties
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_expand_the_siches_autonomy }
+		relative_position_id = GRY_expand_the_siches_autonomy
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_fealty_to_the_king
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_sich_liberties }
+		relative_position_id = GRY_sich_liberties
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_keep_those_promises
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_travel_the_country }
+		relative_position_id = GRY_travel_the_country
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_gathering_the_lands
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_keep_those_promises }
+		relative_position_id = GRY_keep_those_promises
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_economic_union
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_gathering_the_lands }
+		relative_position_id = GRY_gathering_the_lands
+		x = -3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_destroy_commies
+		icon = GFX_goal_broken_red_star
+		prerequisite = { focus = GRY_gathering_the_lands }
+		relative_position_id = GRY_gathering_the_lands
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_riverland_friendship
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_gathering_the_lands }
+		mutually_exclusive = { focus = GRY_reclaim_polshavina }
+		relative_position_id = GRY_gathering_the_lands
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_reclaim_polshavina
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_gathering_the_lands }
+		mutually_exclusive = { focus = GRY_riverland_friendship }
+		relative_position_id = GRY_gathering_the_lands
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_matter_of_marriage
+		icon = GFX_focus_GRY_Borad_Seeking
+		prerequisite = { focus = GRY_keep_those_promises }
+		relative_position_id = GRY_reclaim_polshavina
+		x = 2
+		y = -1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_cossack_baroque
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_keep_those_promises }
+		relative_position_id = GRY_matter_of_marriage
+		x = 2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_develop_culture
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_cossack_baroque }
+		relative_position_id = GRY_cossack_baroque
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_tax_the_rich
+		icon = GFX_focus_GRY_taxes
+		prerequisite = { focus = GRY_travel_the_country }
+		relative_position_id = GRY_travel_the_country
+		x = 7
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_industrialization_program
+		icon = GFX_focus_GRY_Naturalu_po_ebalu
+		prerequisite = { focus = GRY_tax_the_rich }
+		relative_position_id = GRY_tax_the_rich
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_ban_serfdom
+		icon = GFX_focus_GRY_ludskoe
+		prerequisite = { focus = GRY_industrialization_program }
+		relative_position_id = GRY_industrialization_program
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
 		id = GRY_preparation_for_the_election
 		icon = GFX_goal_generic_elections
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_hetmans_coronation }
-		relative_position_id = GRY_fight_the_red_menace
-		x = 1
-		y = 1
+		relative_position_id = GRY_tax_the_rich
+		x = 2
+		y = -2
 		cost = 10
 		search_filters = { FOCUS_FILTER_STABILITY }
 		available = { always = no }
@@ -193,12 +379,15 @@ focus_tree = {
 	focus = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_Veresk_trap
-		allow_branch = { NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_kravelets_wins } }
+		allow_branch = {
+			has_completed_focus = GRY_the_raid
+			NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_kravelets_wins }
+		}
 		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_kravelets_wins }
-		relative_position_id = GRY_convene_the_chorna_rada
-		x = 0
-		y = 1
+		relative_position_id = GRY_preparation_for_the_election
+		x = 2
+		y = -3
 		cost = 5
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
@@ -222,12 +411,15 @@ focus_tree = {
 	focus = {
 		id = GRY_kravelets_wins
 		icon = GFX_goal_ideology_national_populist
-		allow_branch = { NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_vereskopadsky_wins } }
+		allow_branch = {
+			has_completed_focus = GRY_the_raid
+			NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_vereskopadsky_wins }
+		}
 		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_vereskopadsky_wins }
-		relative_position_id = GRY_convene_the_chorna_rada
+		relative_position_id = GRY_vereskopadsky_wins
 		x = 2
-		y = 1
+		y = 0
 		offset = {
 			x = -2
 			trigger = { has_completed_focus = GRY_kravelets_wins }
