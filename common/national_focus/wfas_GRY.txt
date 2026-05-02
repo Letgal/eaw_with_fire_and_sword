@@ -7,9 +7,14 @@ focus_tree = {
 			add = 15
 			original_tag = GRY
 			NOT = { has_country_flag = GRY_neutral_rebellion }
+			# (*) add a NOT debug flag or smþ. ~ L.H.
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2000 }
+
+	# GOTO:
+	# HRYF_MONARCHY
+	# HRYF_REPUBLIC
 
 	focus = {
 		id = GRY_great_anniversary
@@ -128,7 +133,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_placate_the_nobility
-		icon = GFX_goal_collaborate_local_elites
+		icon = GFX_focus_GRY_cheer_up_big_guy
 		prerequisite = { focus = GRY_hryfnytsky_wins }
 		relative_position_id = GRY_hryfnytsky_wins
 		x = 2
@@ -161,6 +166,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { country_event = EVENT_TO_UNLOCK_PATH & EVENT_TO_CHOOSE_CORONATION_COST if mon }
 	}
+
+	# HRYF_MONARCHY
 	focus = {
 		id = GRY_hetmans_coronation
 		icon = GFX_focus_GRY_Boradian_Coronation
@@ -193,46 +200,100 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GRY_expand_the_siches_autonomy
-		icon = GFX_goal_generic_forceful_treaty
+		id = GRY_matter_of_marriage
+		icon = GFX_focus_GRY_Borad_Seeking
+		prerequisite = { focus = GRY_travel_the_country }
+		relative_position_id = GRY_expand_the_siches_autonomy
+		x = -2
+		y = -1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { country_event = UNLOCKS DECISIONS, MISSION with TIMER }
+	}
+	focus = {
+		#dynamic = yes
+		id = GRY_spouse_focus
+		# (*) or somehow do as event target? ~ L.H.
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = taillow } }
+		#	value = GFX_focus_GRY_MILF
+		#}
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = katrina } }
+		#	value = GFX_focus_GRY_Aviansha
+		#}
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = diellza } }
+		#	value = GFX_focus_GRY_best_waifu
+		#}
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = vivienne } }
+		#	value = GFX_focus_GRY_Vivienne
+		#}
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = regina } }
+		#	value = GFX_focus_GRY_Regina
+		#}
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = margaret } }
+		#	value = GFX_focus_GRY_Margo
+		#}
+		#icon = {
+		#	trigger = { check_variable = { borad_spouse = skoldsvard } }
+		#	value = GFX_focus_GRY_Shieldwoman
+		#}
+		icon = { value = GFX_goal_unknown }
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		available = { is_debug = yes }
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_keep_those_promises
+		icon = GFX_focus_GRY_Pinky_promise
 		prerequisite = { focus = GRY_travel_the_country }
 		relative_position_id = GRY_travel_the_country
-		x = -7
+		x = 0
 		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_expand_the_siches_autonomy
+		icon = GFX_focus_GRY_Sich_1
+		prerequisite = { focus = GRY_keep_those_promises }
+		relative_position_id = GRY_economic_union
+		x = -2
+		y = -1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = { swap_ideas = { remove_idea = wfas_GRY_independent_siches add_idea = wfas_GRY_independent_siches_cut } }
 	}
 	focus = {
 		id = GRY_sich_liberties
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_pivko
 		prerequisite = { focus = GRY_expand_the_siches_autonomy }
 		relative_position_id = GRY_expand_the_siches_autonomy
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { remove_ideas = wfas_GRY_independent_siches_cut }
 	}
 	focus = {
 		id = GRY_fealty_to_the_king
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_Krown_is_cool
 		prerequisite = { focus = GRY_sich_liberties }
 		relative_position_id = GRY_sich_liberties
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-	}
-	focus = {
-		id = GRY_keep_those_promises
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GRY_travel_the_country }
-		relative_position_id = GRY_travel_the_country
-		x = 0
-		y = 1
-		cost = 10
+		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
 	}
@@ -241,7 +302,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GRY_keep_those_promises }
 		relative_position_id = GRY_keep_those_promises
-		x = -2
+		x = 0
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -294,45 +355,12 @@ focus_tree = {
 		#completion_reward = { }
 	}
 	focus = {
-		id = GRY_matter_of_marriage
-		icon = GFX_focus_GRY_Borad_Seeking
+		id = GRY_tax_the_rich
+		icon = GFX_focus_GRY_taxes
 		prerequisite = { focus = GRY_keep_those_promises }
 		relative_position_id = GRY_reclaim_polshavina
 		x = 2
 		y = -1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-	}
-	focus = {
-		id = GRY_cossack_baroque
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GRY_keep_those_promises }
-		relative_position_id = GRY_matter_of_marriage
-		x = 2
-		y = 0
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-	}
-	focus = {
-		id = GRY_develop_culture
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GRY_cossack_baroque }
-		relative_position_id = GRY_cossack_baroque
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-	}
-	focus = {
-		id = GRY_tax_the_rich
-		icon = GFX_focus_GRY_taxes
-		prerequisite = { focus = GRY_travel_the_country }
-		relative_position_id = GRY_travel_the_country
-		x = 7
-		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
@@ -360,12 +388,58 @@ focus_tree = {
 		#completion_reward = { }
 	}
 	focus = {
+		id = GRY_cossack_baroque
+		icon = GFX_focus_GRY_Barokkock
+		prerequisite = { focus = GRY_travel_the_country }
+		relative_position_id = GRY_tax_the_rich
+		x = 3
+		y = -1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_theaters
+		icon = GFX_focus_GRY_teatr
+		prerequisite = { focus = GRY_cossack_baroque }
+		relative_position_id = GRY_cossack_baroque
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_cultural_programs
+		icon = GFX_focus_GRY_Holy_peak
+		prerequisite = { focus = GRY_cossack_baroque }
+		relative_position_id = GRY_cossack_baroque
+		x = 0
+		y = 2
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = GRY_art_academies
+		icon = GFX_focus_GRY_art
+		prerequisite = { focus = GRY_cossack_baroque }
+		relative_position_id = GRY_cossack_baroque
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+
+	# HRYF_REPUBLIC
+	focus = {
 		id = GRY_preparation_for_the_election
 		icon = GFX_goal_generic_elections
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_hetmans_coronation }
-		relative_position_id = GRY_tax_the_rich
-		x = 2
+		relative_position_id = GRY_cossack_baroque
+		x = 3
 		y = -2
 		cost = 10
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -376,6 +450,7 @@ focus_tree = {
 			#country_event = 0
 		}
 	}
+
 	focus = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_Veresk_trap

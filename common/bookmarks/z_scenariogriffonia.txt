@@ -18,7 +18,7 @@ bookmarks = {
 			}
 			focuses = {
 				GRY_great_anniversary
-				GRY_convene_the_chorna_rada
+				GRY_hetmans_coronation
 				#GRU_the_knights_resurgent
 			}
 		}
