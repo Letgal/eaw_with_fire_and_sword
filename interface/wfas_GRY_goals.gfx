@@ -1,7 +1,15 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_focus_GRY_art"
+		texturefile = "gfx/interface/goals/GRY/GRY_art.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_Aviansha"
 		texturefile = "gfx/interface/goals/GRY/GRY_Aviansha.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Barokkock"
+		texturefile = "gfx/interface/goals/GRY/GRY_Barokkock.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_best_waifu"
@@ -36,12 +44,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/GRY_Fashista.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_Holy_peak"
+		texturefile = "gfx/interface/goals/GRY/GRY_Holy_peak.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_cheer_up_big_guy"
+		texturefile = "gfx/interface/goals/GRY/GRY_cheer_up_big_guy.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_Industrialisation"
 		texturefile = "gfx/interface/goals/GRY/GRY_Industrialisation.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_KOMUNIAKU_NA_GILLIAKU"
 		texturefile = "gfx/interface/goals/GRY/GRY_KOMUNIAKU_NA_GILLIAKU.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Krown_is_cool"
+		texturefile = "gfx/interface/goals/GRY/GRY_Krown_is_cool.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_ludskoe"
@@ -68,6 +88,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/GRY_NeIndustrialisation.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_Pinky_promise"
+		texturefile = "gfx/interface/goals/GRY/GRY_Pinky_promise.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_pivko"
+		texturefile = "gfx/interface/goals/GRY/GRY_pivko.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_Regina"
 		texturefile = "gfx/interface/goals/GRY/GRY_Regina.dds"
 	}
@@ -80,8 +108,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/GRY_Shieldwoman.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_Sich_1"
+		texturefile = "gfx/interface/goals/GRY/GRY_Sich_1.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_taxes"
 		texturefile = "gfx/interface/goals/GRY/GRY_taxes.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_teatr"
+		texturefile = "gfx/interface/goals/GRY/GRY_teatr.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Veresk_trap"
