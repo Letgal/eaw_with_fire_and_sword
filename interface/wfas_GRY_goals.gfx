@@ -1,0 +1,94 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_GRY_Aviansha"
+		texturefile = "gfx/interface/goals/GRY/GRY_Aviansha.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_best_waifu"
+		texturefile = "gfx/interface/goals/GRY/GRY_best_waifu.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Blek_rada"
+		texturefile = "gfx/interface/goals/GRY/GRY_Blek_rada.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Boradian_Coronation"
+		texturefile = "gfx/interface/goals/GRY/GRY_Boradian_Coronation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Borad_peremoha"
+		texturefile = "gfx/interface/goals/GRY/GRY_Borad_peremoha.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Borad_Seeking"
+		texturefile = "gfx/interface/goals/GRY/GRY_Borad_Seeking.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Bylo_vashe_stalo_nashe_V2"
+		texturefile = "gfx/interface/goals/GRY/GRY_Bylo_vashe_stalo_nashe_V2.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Call_of_Ctulhu"
+		texturefile = "gfx/interface/goals/GRY/GRY_Call_of_Ctulhu.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Fashista"
+		texturefile = "gfx/interface/goals/GRY/GRY_Fashista.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Industrialisation"
+		texturefile = "gfx/interface/goals/GRY/GRY_Industrialisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_KOMUNIAKU_NA_GILLIAKU"
+		texturefile = "gfx/interface/goals/GRY/GRY_KOMUNIAKU_NA_GILLIAKU.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_ludskoe"
+		texturefile = "gfx/interface/goals/GRY/GRY_ludskoe.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Margo"
+		texturefile = "gfx/interface/goals/GRY/GRY_Margo.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_MILF"
+		texturefile = "gfx/interface/goals/GRY/GRY_MILF.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Naturalu_po_ebalu"
+		texturefile = "gfx/interface/goals/GRY/GRY_Naturalu_po_ebalu.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_NearEnd_of_perfect_hetmanstvo"
+		texturefile = "gfx/interface/goals/GRY/GRY_NearEnd_of_perfect_hetmanstvo.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_NeIndustrialisation"
+		texturefile = "gfx/interface/goals/GRY/GRY_NeIndustrialisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Regina"
+		texturefile = "gfx/interface/goals/GRY/GRY_Regina.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Royal_tour"
+		texturefile = "gfx/interface/goals/GRY/GRY_Royal_tour.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Shieldwoman"
+		texturefile = "gfx/interface/goals/GRY/GRY_Shieldwoman.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_taxes"
+		texturefile = "gfx/interface/goals/GRY/GRY_taxes.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Veresk_trap"
+		texturefile = "gfx/interface/goals/GRY/GRY_Veresk_trap.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Vivienne"
+		texturefile = "gfx/interface/goals/GRY/GRY_Vivienne.dds"
+	}
+}
