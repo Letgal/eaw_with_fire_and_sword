@@ -19,6 +19,7 @@ focus_tree = {
 	focus = {
 		id = GRY_great_anniversary
 		icon = GFX_focus_GRY_NearEnd_of_perfect_hetmanstvo
+		x = 8
 		cost = 2
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = { country_event = { id = WFAS_gryphia.1 hours = 12 random_hours = 12 } }
@@ -155,7 +156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_whats_next
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_GRY_were_fucked_lmao_prequel
 		prerequisite = { focus = GRY_placate_the_nationalists }
 		prerequisite = { focus = GRY_fight_the_red_menace }
 		prerequisite = { focus = GRY_placate_the_nobility }
@@ -248,7 +249,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		available = { is_debug = yes }
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
 	}

@@ -23,17 +23,17 @@ ideas = {
 		}
 		wfas_GRY_ruina_1 = {
 			name = wfas_GRY_ruina
-			picture = ENG_the_war_to_end_all_wars
+			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = { stability_weekly = -0.005 }
 		}
 		wfas_GRY_ruina_2 = {
 			name = wfas_GRY_ruina
-			picture = ENG_the_war_to_end_all_wars
+			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = { stability_weekly = -0.0035 }
 		}
 		wfas_GRY_ruina_3 = {
 			name = wfas_GRY_ruina
-			picture = ENG_the_war_to_end_all_wars
+			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = { stability_weekly = -0.002 }
 		}
 		wfas_GRY_socialist_movement = {

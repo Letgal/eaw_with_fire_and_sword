@@ -127,4 +127,12 @@ spriteTypes = {
 		name = "GFX_focus_GRY_Vivienne"
 		texturefile = "gfx/interface/goals/GRY/GRY_Vivienne.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_GRY_were_fucked_lmao"
+		texturefile = "gfx/interface/goals/GRY/GRY_we're_fucked_lmao.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_were_fucked_lmao_prequel"
+		texturefile = "gfx/interface/goals/GRY/GRY_we're_fucked_lmao_prequel.dds"
+	}
 }
