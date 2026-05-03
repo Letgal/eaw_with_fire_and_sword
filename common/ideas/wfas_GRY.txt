@@ -78,6 +78,10 @@ ideas = {
 		}
 
 		### HRYFNYTSKY'S PATH ###
+		wfas_GRY_love_of_the_people = {
+			#picture = generic_disjointed_gov
+			modifier = { political_power_gain = 0.25 }
+		}
 		wfas_GRY_independent_siches_cut = {
 			# (*) effects cut in half
 			name = wfas_GRY_independent_siches

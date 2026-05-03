@@ -260,8 +260,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { add_ideas = wfas_GRY_love_of_the_people }
 	}
 	focus = {
 		id = GRY_expand_the_siches_autonomy
@@ -284,6 +284,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = { remove_ideas = wfas_GRY_independent_siches_cut }
+		# (*) -10% recruit factor, +5% resrch speed, +5% fac output
 	}
 	focus = {
 		id = GRY_fealty_to_the_king
@@ -296,32 +297,33 @@ focus_tree = {
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
+		# (*) +10% recruit factor, +5% att, +5% def -5% resrch speed, -5% fac output
 	}
 	focus = {
 		id = GRY_gathering_the_lands
-		icon = GFX_goal_unknown
+		icon = GFX_goal_unknown # (:) no icon
 		prerequisite = { focus = GRY_keep_those_promises }
 		relative_position_id = GRY_keep_those_promises
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = { add_war_support = 0.1 }
 	}
 	focus = {
 		id = GRY_economic_union
-		icon = GFX_goal_unknown
+		icon = GFX_goal_unknown # (:) no icon
 		prerequisite = { focus = GRY_gathering_the_lands }
 		relative_position_id = GRY_gathering_the_lands
 		x = -3
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#completion_reward = { create Evian Union faction, decisions: union wiþ unaligned and harmonists }
 	}
 	focus = {
 		id = GRY_destroy_commies
-		icon = GFX_goal_broken_red_star
+		icon = GFX_goal_broken_red_star # (:) no icon
 		prerequisite = { focus = GRY_gathering_the_lands }
 		relative_position_id = GRY_gathering_the_lands
 		x = -1
@@ -332,7 +334,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_riverland_friendship
-		icon = GFX_goal_unknown
+		icon = GFX_goal_unknown # (:) no icon
 		prerequisite = { focus = GRY_gathering_the_lands }
 		mutually_exclusive = { focus = GRY_reclaim_polshavina }
 		relative_position_id = GRY_gathering_the_lands
@@ -344,7 +346,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_reclaim_polshavina
-		icon = GFX_goal_unknown
+		icon = GFX_goal_unknown # (:) no icon
 		prerequisite = { focus = GRY_gathering_the_lands }
 		mutually_exclusive = { focus = GRY_riverland_friendship }
 		relative_position_id = GRY_gathering_the_lands

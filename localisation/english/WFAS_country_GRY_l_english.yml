@@ -60,6 +60,8 @@
  wfas_GRY_socialist_movement: "Socialist Movement"
  wfas_GRY_pleased_burghers: "Pleased Burghers"
  wfas_GRY_pleased_cossacks: "Pleased Cossacks"
+ wfas_GRY_love_of_the_people: "Love of the People"
+ wfas_GRY_love_of_the_people_desc: "People love you, milord!"
 
 ### EVENTS ###
  WFAS_gryphia.1.t: "$GRY_great_anniversary$"
