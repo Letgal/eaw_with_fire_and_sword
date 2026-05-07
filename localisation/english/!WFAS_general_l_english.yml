@@ -1,4 +1,12 @@
 ﻿l_english:
+### COUNTRY SELECTION ###
+ wfas_GRY_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRY_GATHERING_STORM_DESC$"
+ wfas_LUS_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$LUS_GATHERING_STORM_DESC$"
+ wfas_GRU_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRU_GATHERING_STORM_DESC$"
+ wfas_GRW_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRW_GATHERING_STORM_DESC$"
+ wfas_BRF_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$BRF_GATHERING_STORM_DESC$"
+ wfas_other_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$OTHER_GATHERING_STORM_DESC$"
+
 ### FOCUS FILTERS ###
  FOCUS_FILTER_NO_EFFECTS: "No Effects" # (*) stolen from my RCW mod :)
 

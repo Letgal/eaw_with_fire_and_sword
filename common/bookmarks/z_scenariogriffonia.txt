@@ -9,7 +9,7 @@ bookmarks = {
 
 		# (WFAS ~) to present current and future scope countries
 		"GRY"={
-			history = "GRY_GATHERING_STORM_DESC"
+			history = "wfas_GRY_bookmark_desc"
 			ideology = neutrality
 			ideas = {
 				wfas_GRY_disunited_tribes
@@ -23,7 +23,7 @@ bookmarks = {
 			}
 		}
 		"LUS"={
-			history = "LUS_GATHERING_STORM_DESC"
+			history = "wfas_LUS_bookmark_desc"
 			ideology = neutrality
 			ideas = {
 				feudalism
@@ -36,7 +36,7 @@ bookmarks = {
 			}
 		}
 		"GRU"={
-			history = "GRU_GATHERING_STORM_DESC"
+			history = "wfas_GRU_bookmark_desc"
 			ideology = neutrality
 			ideas = {
 				GRU_knightly_orders
@@ -49,10 +49,10 @@ bookmarks = {
 			}
 		}
 		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
+			history = "wfas_other_bookmark_desc"
 		}
 		"GRW"={
-			history = "GRW_GATHERING_STORM_DESC"
+			history = "wfas_GRW_bookmark_desc"
 			ideology = communism
 			ideas = {
 				prywhen_civil_war
@@ -65,7 +65,7 @@ bookmarks = {
 			}
 		}
 		"BRF"={
-			history = "BRF_GATHERING_STORM_DESC"
+			history = "wfas_BRF_bookmark_desc"
 			ideology = neutrality
 			ideas = {
 				prywhen_civil_war_brf
