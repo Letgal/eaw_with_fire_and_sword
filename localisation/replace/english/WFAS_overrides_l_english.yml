@@ -23,3 +23,10 @@
   VICTORY_POINTS_5071: "Talvona" # Talvona
   VICTORY_POINTS_4167: "Greifem" # Gryphem
 
+### CHARACTERS ###
+ ## GRY: COUNTRY LEADERS
+  GRY_hetman_calas_bulba: "Hetman Kalas Bulba"
+  GRY_pavel_vereskopadsky: "Pavlo Vereskopadsky"
+  GRY_yeven_krawvelets: "Yevhen Kravelets"
+  GRY_borad_grifnitsky: "Borad Hryfnytsky"
+  GRY_cornilo_khurshevich: "Kornylo Khrushchevych"
