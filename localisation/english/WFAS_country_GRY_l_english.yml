@@ -131,6 +131,19 @@
  WFAS_gryphia.13.b: "[GRY_borad_grifnitsky.GetName] wins."
  WFAS_gryphia.13.c: "[GRY_yeven_krawvelets.GetName] wins."
 
+ WFAS_gryphia.14.t: "Monarchy or Republic?"
+ WFAS_gryphia.14.d: "Hryfnytsky needs to make a decision."
+ WFAS_gryphia.14.a: "Monarchy."
+ WFAS_gryphia.14.b: "Republic."
+
+ WFAS_gryphia.15.t: "Coronation Costs"
+ WFAS_gryphia.15.d: "Decide how much to spend on a coronation."
+ WFAS_gryphia.15.a: "Yes."
+
+### FLAGS ###
+ hryf_chose_monarchy: "Monarchy chosen"
+ hryf_chose_republic: "Republic chosen"
+
 ### TOOLTIPS ###
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P

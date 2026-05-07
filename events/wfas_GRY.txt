@@ -318,3 +318,40 @@ country_event = {
 		complete_national_focus = GRY_kravelets_wins
 	}
 }
+
+# HRYFNYTSKY
+country_event = {
+	id = WFAS_gryphia.14 # Monarchy or Republic?
+	title = WFAS_gryphia.14.t
+	desc = WFAS_gryphia.14.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.14.a
+		set_country_flag = hryf_chose_monarchy
+		country_event = WFAS_gryphia.15
+	}
+	option = {
+		trigger = { always = no } # (*) delete later upon adding þe republican paþ(s). ~ L.H.
+		name = WFAS_gryphia.14.b
+		set_country_flag = hryf_chose_republic
+	}
+}
+country_event = {
+	id = WFAS_gryphia.15 # Coronation Costs
+	title = WFAS_gryphia.15.t
+	desc = WFAS_gryphia.15.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.15.a
+	}
+}
+
+# (*) add narrative & flavor events for monarchy & republic. ~ L.H.

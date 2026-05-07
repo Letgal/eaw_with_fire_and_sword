@@ -164,8 +164,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 1
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { country_event = EVENT_TO_UNLOCK_PATH & EVENT_TO_CHOOSE_CORONATION_COST if mon }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { country_event = WFAS_gryphia.14 }
 	}
 
 	# HRYF_MONARCHY
@@ -178,6 +178,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			has_country_flag = hryf_chose_monarchy
+		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_political_power = 70
@@ -535,8 +539,11 @@ focus_tree = {
 		x = 3
 		y = -2
 		cost = 10
+		available = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			has_country_flag = hryf_chose_republic
+		}
 		search_filters = { FOCUS_FILTER_STABILITY }
-		available = { always = no }
 		completion_reward = {
 			add_political_power = 70
 			add_stability = 0.05
