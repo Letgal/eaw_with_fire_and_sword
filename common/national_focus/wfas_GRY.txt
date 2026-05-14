@@ -492,8 +492,19 @@ focus_tree = {
 		x = 3
 		y = -1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			effect_tooltip = { add_ideas = wfas_GRY_cultural_revival_dummy }
+			hidden_effect = { add_dynamic_modifier = { modifier = wfas_GRY_cultural_revival } }
+			# ADD 2 FLAVOR EVENTS
+		}
 	}
 	focus = {
 		id = GRY_theaters
@@ -503,8 +514,18 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { prestige_gain = 0.05 tooltip = prestige_gain_tt }
+			add_to_variable = { cultural_revival_ppf = 0.05 tooltip = political_power_factor_tt }
+		}
 	}
 	focus = {
 		id = GRY_cultural_programs
@@ -514,8 +535,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { add_ideas = wfas_GRY_cultural_programs_idea }
 	}
 	focus = {
 		id = GRY_art_academies
@@ -525,8 +546,19 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { prestige_gain = 0.05 tooltip = prestige_gain_tt }
+			add_to_variable = { cultural_revival_ppf = 0.05 tooltip = political_power_factor_tt }
+			add_to_variable = { cultural_revival_cgf = -0.05 tooltip = consumer_goods_factor_tt }
+		}
 	}
 
 	# HRYF_REPUBLIC

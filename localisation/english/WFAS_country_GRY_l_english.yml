@@ -70,6 +70,8 @@
  wfas_GRY_pleased_cossacks: "Pleased Cossacks"
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
+ wfas_GRY_cultural_revival: "Cultural Revival"
+ wfas_GRY_cultural_programs_idea: "Cultural Programs Idea"
 
 ### EVENTS ###
  WFAS_gryphia.1.t: "$GRY_great_anniversary$"
@@ -148,3 +150,7 @@
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
+
+ prestige_gain: "Prestige Gain"
+ prestige_gain_var: "$prestige_gain$: [?prestige_gain|2%+=]"
+ prestige_gain_tt: " $prestige_gain$: $RIGHT|2%+=$"

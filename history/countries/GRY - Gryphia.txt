@@ -113,3 +113,8 @@ set_rule = {
 	can_generate_female_unit_leaders  = yes
 	can_generate_female_country_leaders = yes
 }
+
+# (WFAS +)
+set_variable = { prestige_gain = 0.15 }
+set_variable = { cultural_revival_ppf = 0.05 }
+set_variable = { cultural_revival_cgf = 0 }
