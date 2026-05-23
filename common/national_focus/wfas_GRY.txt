@@ -6,7 +6,10 @@ focus_tree = {
 		modifier = {
 			add = 15
 			original_tag = GRY
-			NOT = { has_country_flag = GRY_neutral_rebellion }
+			NOT = {
+				has_country_flag = GRY_neutral_rebellion
+				has_country_flag = debug_screw_you
+			}
 			# (*) add a NOT debug flag or smþ. ~ L.H.
 		}
 	}

@@ -1,0 +1,18 @@
+debug_decisions = {
+	wfas_GRY_load_focus_WFAS = {
+		allowed = { original_tag = GRY }
+		available = { is_ai = no }
+		complete_effect = {
+			set_country_flag = debug_screw_you
+			load_focus_tree = GRY_focus
+		}
+	}
+	wfas_GRY_load_focus_EAW = {
+		allowed = { original_tag = GRY }
+		available = { is_ai = no }
+		complete_effect = {
+			clr_country_flag = debug_screw_you
+			load_focus_tree = wfas_GRY_focus
+		}
+	}
+}
