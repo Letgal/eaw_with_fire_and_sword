@@ -49,7 +49,7 @@ bookmarks = {
 			}
 		}
 		"---"={
-			history = "wfas_other_bookmark_desc"
+			history = "wfas_XXX_bookmark_desc"
 		}
 		"GRW"={
 			history = "wfas_GRW_bookmark_desc"
