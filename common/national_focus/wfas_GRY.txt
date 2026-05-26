@@ -1,5 +1,5 @@
 focus_tree = {
-	id = wfas_GRY_focus
+	id = wfas_GRY_focus # (*) in EAW: GRY_focus
 
 	country = {
 		factor = 0
@@ -10,7 +10,6 @@ focus_tree = {
 				has_country_flag = GRY_neutral_rebellion
 				has_country_flag = debug_screw_you
 			}
-			# (*) add a NOT debug flag or smþ. ~ L.H.
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2000 }

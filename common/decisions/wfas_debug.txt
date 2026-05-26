@@ -1,18 +1,34 @@
 debug_decisions = {
-	wfas_GRY_load_focus_WFAS = {
-		allowed = { original_tag = GRY }
-		available = { is_ai = no }
-		complete_effect = {
-			set_country_flag = debug_screw_you
-			load_focus_tree = GRY_focus
+	wfas_load_focus_WFAS = {
+		allowed = {
+			OR = {
+				original_tag = GRY
+			}
 		}
-	}
-	wfas_GRY_load_focus_EAW = {
-		allowed = { original_tag = GRY }
+		visible = { has_country_flag = debug_screw_you }
 		available = { is_ai = no }
 		complete_effect = {
 			clr_country_flag = debug_screw_you
-			load_focus_tree = wfas_GRY_focus
+			if = {
+				limit = { original_tag = GRY }
+				load_focus_tree = wfas_GRY_focus
+			}
+		}
+	}
+	wfas_load_focus_EAW = {
+		allowed = {
+			OR = {
+				original_tag = GRY
+			}
+		}
+		visible = { NOT = { has_country_flag = debug_screw_you } }
+		available = { is_ai = no }
+		complete_effect = {
+			set_country_flag = debug_screw_you
+			if = {
+				limit = { original_tag = GRY }
+				load_focus_tree = GRY_focus
+			}
 		}
 	}
 }
