@@ -1,0 +1,218 @@
+focus_tree = {
+	id = wfas_LUS_focus # EAW: Lushi_focus
+
+	country = {
+		factor = 0
+		#modifier = {
+		#	add = 15
+		#	original_tag = LUS
+		#	NOT = { has_country_flag = debug_screw_you }
+		#}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = LUS_pressing_matters
+		icon = GFX_goal_unknown
+		x = 6
+		# (*) position to make it all appear kinda centered.
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) Elias narrat event: what do we do?
+	}
+	focus = {
+		id = LUS_relief_for_peasants
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_pressing_matters }
+		relative_position_id = LUS_pressing_matters
+		x = -3 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) rush it or þey STARVE.
+	}
+	focus = {
+		id = LUS_assess_the_situation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_relief_for_peasants }
+		relative_position_id = LUS_relief_for_peasants
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) Elias narrat event: what is goiŋ on?
+	}
+	focus = {
+		id = LUS_early_reforms
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_assess_the_situation }
+		relative_position_id = LUS_assess_the_situation
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) reforms wiþin Elias's power, mild as to not anger þ nobles.
+	}
+	focus = {
+		id = LUS_those_darn_nobles
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_pressing_matters }
+		relative_position_id = LUS_pressing_matters
+		x = 3 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) Elias narrat event
+	}
+	focus = {
+		id = LUS_find_an_approach
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_those_darn_nobles }
+		relative_position_id = LUS_those_darn_nobles
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) Elias narrat event
+	}
+	focus = {
+		id = LUS_deal_with_talvona_lord # Kelvin Rosenfeather
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_find_an_approach }
+		relative_position_id = LUS_find_an_approach
+		x = -2 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_deal_with_dratsch_lord
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_find_an_approach }
+		relative_position_id = LUS_find_an_approach
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_deal_with_cessabit_lord # Gordon Matton
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_find_an_approach }
+		relative_position_id = LUS_find_an_approach
+		x = 2 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_deal_with_talvona_lord_2 # Kelvin Rosenfeather
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_deal_with_talvona_lord }
+		relative_position_id = LUS_deal_with_talvona_lord
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_deal_with_dratsch_lord_2
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_deal_with_dratsch_lord }
+		relative_position_id = LUS_deal_with_dratsch_lord
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_deal_with_cessabit_lord_2 # Gordon Matton
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_deal_with_cessabit_lord }
+		relative_position_id = LUS_deal_with_cessabit_lord
+		x = 0 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_give_assurances
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_early_reforms }
+		prerequisite = { focus = LUS_find_an_approach }
+		relative_position_id = LUS_early_reforms
+		x = 2 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) probably Elias narrat event
+	}
+	focus = {
+		id = LUS_create_the_diet
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_give_assurances }
+		prerequisite = { focus = LUS_deal_with_talvona_lord_2 }
+		prerequisite = { focus = LUS_deal_with_dratsch_lord_2 }
+		prerequisite = { focus = LUS_deal_with_cessabit_lord_2 }
+		relative_position_id = LUS_give_assurances
+		x = 1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) probably Elias narrat event
+	}
+	focus = {
+		id = LUS_dealing_with_the_hunger
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_create_the_diet }
+		relative_position_id = LUS_create_the_diet
+		x = -3 y = 1
+		cost = 12
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_abolish_serfdom
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_dealing_with_the_hunger }
+		mutually_exclusive = { focus = LUS_preserve_serfdom }
+		relative_position_id = LUS_dealing_with_the_hunger
+		x = -1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_preserve_serfdom
+		icon = GFX_goal_unknown
+		prerequisite = { focus = LUS_dealing_with_the_hunger }
+		mutually_exclusive = { focus = LUS_abolish_serfdom }
+		relative_position_id = LUS_dealing_with_the_hunger
+		x = 1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+
+	focus = {
+		id = LUS_negotiate_with_GRW
+		icon = GFX_goal_unknown
+		relative_position_id = LUS_deal_with_cessabit_lord
+		x = 2 y = -3
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) Elias demands some liberalization and to sign a NAP. commies are still hostile, will probably backstab later. not for Gerhard.
+	}
+	focus = {
+		id = LUS_negotiate_with_BRF
+		icon = GFX_goal_unknown
+		relative_position_id = LUS_negotiate_with_GRW
+		x = 2 y = 0
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+		# (*) can strengþen nobles and undermine Elias, which is optimal for Gerhard.
+	}
+}
