@@ -13,7 +13,7 @@ focus_tree = {
 
 	focus = {
 		id = LUS_pressing_matters
-		icon = GFX_goal_unknown
+		icon = GFX_goal_griffon_clock
 		x = 6
 		# (*) position to make it all appear kinda centered.
 		cost = 8
@@ -23,7 +23,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_relief_for_peasants
-		icon = GFX_goal_unknown
+		icon = GFX_goal_communist_potatoes
 		prerequisite = { focus = LUS_pressing_matters }
 		relative_position_id = LUS_pressing_matters
 		x = -3 y = 1
@@ -34,7 +34,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_assess_the_situation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_agriculture
 		prerequisite = { focus = LUS_relief_for_peasants }
 		relative_position_id = LUS_relief_for_peasants
 		x = 0 y = 1
@@ -45,7 +45,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_early_reforms
-		icon = GFX_goal_unknown
+		icon = GFX_focus_indy_agriculture # GFX_goal_agrarian_reform
 		prerequisite = { focus = LUS_assess_the_situation }
 		relative_position_id = LUS_assess_the_situation
 		x = 0 y = 1
@@ -56,7 +56,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_those_darn_nobles
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rich_focus
 		prerequisite = { focus = LUS_pressing_matters }
 		relative_position_id = LUS_pressing_matters
 		x = 3 y = 1
@@ -67,7 +67,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_find_an_approach
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = LUS_those_darn_nobles }
 		relative_position_id = LUS_those_darn_nobles
 		x = 0 y = 1
@@ -88,7 +88,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_deal_with_dratsch_lord
-		icon = GFX_goal_unknown
+		icon = GFX_goal_LUS_lord_drak
 		prerequisite = { focus = LUS_find_an_approach }
 		relative_position_id = LUS_find_an_approach
 		x = 0 y = 1
@@ -138,7 +138,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_give_assurances
-		icon = GFX_goal_unknown
+		icon = GFX_goal_molotov_ribbentrop_pact
 		prerequisite = { focus = LUS_early_reforms }
 		prerequisite = { focus = LUS_find_an_approach }
 		relative_position_id = LUS_early_reforms
@@ -150,7 +150,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_create_the_diet
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_examination_yuan
 		prerequisite = { focus = LUS_give_assurances }
 		prerequisite = { focus = LUS_deal_with_talvona_lord_2 }
 		prerequisite = { focus = LUS_deal_with_dratsch_lord_2 }
@@ -164,7 +164,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_dealing_with_the_hunger
-		icon = GFX_goal_unknown
+		icon = GFX_goal_griffon_rice
 		prerequisite = { focus = LUS_create_the_diet }
 		relative_position_id = LUS_create_the_diet
 		x = -3 y = 1
@@ -174,7 +174,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_abolish_serfdom
-		icon = GFX_goal_unknown
+		icon = GFX_HON_peace_in_our_time
 		prerequisite = { focus = LUS_dealing_with_the_hunger }
 		mutually_exclusive = { focus = LUS_preserve_serfdom }
 		relative_position_id = LUS_dealing_with_the_hunger
@@ -185,7 +185,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_preserve_serfdom
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = LUS_dealing_with_the_hunger }
 		mutually_exclusive = { focus = LUS_abolish_serfdom }
 		relative_position_id = LUS_dealing_with_the_hunger
@@ -197,7 +197,7 @@ focus_tree = {
 
 	focus = {
 		id = LUS_negotiate_with_GRW
-		icon = GFX_goal_unknown
+		icon = GFX_goal_prywhen_civilwar_red
 		relative_position_id = LUS_deal_with_cessabit_lord
 		x = 2 y = -3
 		cost = 8
@@ -207,7 +207,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_negotiate_with_BRF
-		icon = GFX_goal_unknown
+		icon = GFX_goal_prywhen_civilwar_yellow
 		relative_position_id = LUS_negotiate_with_GRW
 		x = 2 y = 0
 		cost = 8
