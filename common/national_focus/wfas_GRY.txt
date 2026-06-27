@@ -527,6 +527,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = modify_idea_cultural_revival
 			add_to_variable = { prestige_gain = 0.05 tooltip = prestige_gain_tt }
 			add_to_variable = { cultural_revival_ppf = 0.05 tooltip = political_power_factor_tt }
 		}
@@ -559,6 +560,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = modify_idea_cultural_revival
 			add_to_variable = { prestige_gain = 0.05 tooltip = prestige_gain_tt }
 			add_to_variable = { cultural_revival_ppf = 0.05 tooltip = political_power_factor_tt }
 			add_to_variable = { cultural_revival_cgf = -0.05 tooltip = consumer_goods_factor_tt }

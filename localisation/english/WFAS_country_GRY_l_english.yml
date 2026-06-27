@@ -151,6 +151,7 @@
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
 
+ modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"
  prestige_gain: "Prestige Gain"
  prestige_gain_var: "$prestige_gain$: [?prestige_gain|2%+=]"
  prestige_gain_tt: " $prestige_gain$: $RIGHT|2%+=$"
