@@ -332,6 +332,9 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.14.a
 		set_country_flag = hryf_chose_monarchy
+		set_cosmetic_tag = GRY_principality
+		set_country_leader_ideology = conservatism
+		add_country_leader_trait = uncrowned_monarch
 		country_event = WFAS_gryphia.15
 	}
 	option = {

@@ -1,4 +1,12 @@
 ﻿l_english:
+### COSMETIC TAGS ###
+ GRY_principality: "Principality of Zaphzia"
+ GRY_principality_DEF: "the Principality of Zaphzia"
+ GRY_principality_ADJ: "Zaphzian"
+ GRY_principality_communism: "$GRY_communism$"
+ GRY_principality_communism_DEF: "$GRY_communism_DEF$"
+ GRY_principality_communism_ADJ: "$GRY_communism_ADJ$"
+
 ### FOCUSES ###
  GRY_great_anniversary: "50 Years of Hetman's Rule"
  GRY_great_anniversary_desc: "Celebrate the happy 50 years of $GRY_hetman_calas_bulba$'s rule."
@@ -141,6 +149,9 @@
  WFAS_gryphia.15.t: "Coronation Costs"
  WFAS_gryphia.15.d: "Decide how much to spend on a coronation."
  WFAS_gryphia.15.a: "Yes."
+
+### TRAITS ###
+ uncrowned_monarch: "Uncrowned Monarch"
 
 ### FLAGS ###
  hryf_chose_monarchy: "Monarchy chosen"
