@@ -18,7 +18,7 @@ ideas = {
 			}
 		}
 		wfas_GRY_spoils_of_war_BRF_temp = {
-			picture = capital_outflow
+			picture = GRY_spoils_of_war
 			modifier = { consumer_goods_factor = -0.2 }
 		}
 		wfas_GRY_ruina_1 = {
@@ -36,8 +36,21 @@ ideas = {
 			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = { stability_weekly = -0.002 }
 		}
-		wfas_GRY_socialist_movement = {
-			picture = jap_the_unthinkable_option
+		wfas_GRY_communist_rebels = {
+			# (*) copy from EAW
+			picture = GRY_Red_Menace_asleep
+			allowed_civil_war = { NOT = { has_government = communism } }
+			modifier = {
+				conscription_factor = -0.05
+				communism_drift = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		wfas_GRY_communist_movement = {
+			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
 			modifier = { # (*) TODO: change
 				conscription_factor = -0.05
@@ -51,7 +64,7 @@ ideas = {
 		wfas_GRY_socialist_movement_temp = {
 			# (*) swap on temp idea
 			name = wfas_GRY_socialist_movement
-			picture = jap_the_unthinkable_option
+			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
 			modifier = {
 				conscription_factor = -0.05
@@ -79,7 +92,7 @@ ideas = {
 
 		### HRYFNYTSKY'S PATH ###
 		wfas_GRY_love_of_the_people = {
-			#picture = generic_disjointed_gov
+			picture = GRY_Everyones_favorite
 			modifier = { political_power_gain = 0.25 }
 		}
 		wfas_GRY_independent_siches_cut = {
@@ -93,6 +106,7 @@ ideas = {
 			}
 		}
 		wfas_GRY_cultural_programs_idea = {
+			picture = GRY_cultural_ideas_niecotam
 			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -108,6 +122,7 @@ ideas = {
 	hidden_ideas = {
 		wfas_GRY_cultural_revival_dummy = {
 			name = wfas_GRY_cultural_revival
+			picture = GRY_cultural_revival
 			modifier = {
 				custom_modifier_tooltip = prestige_gain_var
 				political_power_factor = 0.05

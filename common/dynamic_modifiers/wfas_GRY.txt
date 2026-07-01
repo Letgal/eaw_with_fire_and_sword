@@ -1,5 +1,5 @@
 wfas_GRY_cultural_revival = {
-	icon = GFX_idea_unknown
+	icon = GFX_idea_GRY_cultural_revival
 	remove_trigger = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
 	political_power_factor = cultural_revival_ppf
 	custom_modifier_tooltip = prestige_gain_var

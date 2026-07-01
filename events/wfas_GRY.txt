@@ -167,7 +167,7 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.8.a
 		add_stability = -0.025
-		swap_ideas = { remove_idea = GRY_communist_rebels add_idea = wfas_GRY_socialist_movement }
+		swap_ideas = { remove_idea = wfas_GRY_communist_rebels add_idea = wfas_GRY_communist_movement }
 		hidden_effect = { country_event = { id = WFAS_gryphia.9 days = 12 } }
 	}
 }

@@ -42,13 +42,13 @@ add_ideas = {
 	# (WFAS +)
 	wfas_GRY_disunited_tribes
 	wfas_GRY_independent_siches
+	wfas_GRY_communist_rebels
 
 	agrarian_society
 	lack_of_scientists
 	#GRY_independent_tribes
 	GRY_landed_gentry
 	GRY_cossacks
-	GRY_communist_rebels
 }
 
 set_stability = 0.70

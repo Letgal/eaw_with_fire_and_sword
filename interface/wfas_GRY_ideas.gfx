@@ -1,6 +1,30 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_GRY_Red_Menace_asleep"
+		texturefile = "gfx/interface/ideas/GRY/Red_Menace_asleep.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_Red_Menace"
+		texturefile = "gfx/interface/ideas/GRY/Red_Menace.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_spoils_of_war"
+		texturefile = "gfx/interface/ideas/GRY/spoils_of_war.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_GRY_Disaster_struggle_for_royal_power"
-		texturefile = "gfx/interface/ideas/Disaster_struggle_for_royal_power.tga"
+		texturefile = "gfx/interface/ideas/GRY/Disaster_struggle_for_royal_power.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_Everyones_favorite"
+		texturefile = "gfx/interface/ideas/GRY/Everyones_favorite.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_cultural_revival"
+		texturefile = "gfx/interface/ideas/GRY/cultural_revival.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_cultural_ideas_niecotam"
+		texturefile = "gfx/interface/ideas/GRY/cultural_ideas_niecotam.tga"
 	}
 }

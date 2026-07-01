@@ -253,7 +253,7 @@ bookmarks = {
 			ideas = {
 				wfas_GRY_disunited_tribes
 				GRY_landed_gentry
-				GRY_communist_rebels
+				wfas_GRY_communist_rebels
 			}
 			focuses = {
 				GRY_great_anniversary
