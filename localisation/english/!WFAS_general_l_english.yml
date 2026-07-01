@@ -5,7 +5,6 @@
  wfas_GRU_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRU_GATHERING_STORM_DESC$"
  wfas_GRW_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRW_GATHERING_STORM_DESC$"
  wfas_BRF_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$BRF_GATHERING_STORM_DESC$"
- wfas_XXX_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$OTHER_GATHERING_STORM_DESC$"
 
 ### FOCUS FILTERS ###
  FOCUS_FILTER_NO_EFFECTS: "No Effects" # (*) stolen from my RCW mod :)

@@ -8,4 +8,4 @@ dependencies={
 	"Equestria at War"
 }
 name="EAW: With Fire and Sword"
-supported_version="1.17.*"
+supported_version="1.19.*"
