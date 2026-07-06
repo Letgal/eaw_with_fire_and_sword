@@ -60,13 +60,18 @@ focus_tree = {
 		relative_position_id = GRY_the_raid
 		x = 0
 		y = 1
-		cost = 20
+		cost = 30
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
+		select_effect = {
+			set_country_flag = chorna_rada_in_progress
+			country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 }
+		}
 		completion_reward = {
+			clr_country_flag = chorna_rada_in_progress
 			custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
 			effect_tooltip = { country_event = WFAS_gryphia.5 }
-			hidden_effect = { country_event = { id = WFAS_gryphia.13 } }
+			hidden_effect = { country_event = { id = WFAS_gryphia.24 } }
+			custom_effect_tooltip = chorna_rada_explanation_tt
 		}
 	}
 	focus = {

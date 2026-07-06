@@ -11,3 +11,6 @@
 
 ### TOOLTIPS ###
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
+
+### MISC ###
+ wfas_GRY_chorna_rada_status: "wfas_GRY_chorna_rada_status [?chr_support_hryf|P0] - [?chr_support_krav|C0]"

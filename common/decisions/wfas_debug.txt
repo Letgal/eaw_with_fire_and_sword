@@ -41,4 +41,9 @@ debug_decisions = {
 			}
 		}
 	}
+
+	wfas_GRY_chorna_rada_status = {
+		allowed = { original_tag = GRY }
+		visible = { has_country_flag = chorna_rada_in_progress }
+	}
 }

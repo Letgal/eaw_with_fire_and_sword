@@ -102,56 +102,97 @@
  WFAS_gryphia.4.d: "Naturally, the raid was a complete success cuz we're cool B)"
  WFAS_gryphia.4.a: "Still sad about the old hetman tho..."
 
- WFAS_gryphia.5.t: "$GRY_chorna_rada$ Intro"
- WFAS_gryphia.5.d: "$GRY_chorna_rada$ intro."
- WFAS_gryphia.5.a: "Proceed."
+ WFAS_gryphia.5.t: "Chorna Rada Intro"
+ WFAS_gryphia.5.d: "But nobody came.\n(Cuz nobody cares.)"
+ WFAS_gryphia.5.a: "Aight man."
 
- WFAS_gryphia.6.t: "$GRY_chorna_rada$ – Harmonist Agitation"
- WFAS_gryphia.6.d: "Harmonist agitation."
- WFAS_gryphia.6.a: "Proceed."
+ WFAS_gryphia.6.t: "Burnt Down Village"
+ WFAS_gryphia.6.d: "Someone has burnt down a village. We don't know who did it."
+ WFAS_gryphia.6.a: "That's disturbing fr fr."
 
- WFAS_gryphia.7.t: "$GRY_chorna_rada$ – Supremacist Agitation"
- WFAS_gryphia.7.d: "Supremacist agitation."
- WFAS_gryphia.7.a: "Proceed."
+ WFAS_gryphia.7.t: "Attempt on Otaman Ivan Klovsky"
+ WFAS_gryphia.7.d: "He survived."
+ WFAS_gryphia.7.a: "What next?"
 
- WFAS_gryphia.8.t: "$GRY_chorna_rada$ – Socialist Movement"
- WFAS_gryphia.8.d: "It's Ruina and all, so the socialists have organized into a full on movement."
- WFAS_gryphia.8.a: "Proceed."
+ WFAS_gryphia.8.t: "Ivan Klovsky Acts"
+ WFAS_gryphia.8.d: "He lives and he's mad that he was nearly killed."
+ WFAS_gryphia.8.a: "He's got quite the zeal."
 
- WFAS_gryphia.9.t: "Attempt on Vereskopadsky"
- WFAS_gryphia.9.d: "Attempt on Vereskopadsky."
- WFAS_gryphia.9.a: "Give support to Hryfnytsky."
- WFAS_gryphia.9.b: "Give support to Kravelets."
+ WFAS_gryphia.9.t: "Marichka and Pylyp"
+ WFAS_gryphia.9.d: "They discuss."
+ WFAS_gryphia.9.a: "Nice."
 
- WFAS_gryphia.10.t: "$GRY_chorna_rada$ – Choice 1"
- WFAS_gryphia.10.d: "$GRY_chorna_rada$."
- WFAS_gryphia.10.a: "$wfas_GRY_pleased_burghers$."
- WFAS_gryphia.10.b: "$wfas_GRY_pleased_cossacks$."
+ WFAS_gryphia.10.t: "Attempt on Vereskopadsky"
+ WFAS_gryphia.10.d: "He survived, but fell into a coma and cannot run for elections."
+ WFAS_gryphia.10.a: "Sad."
 
- WFAS_gryphia.11.t: "$GRY_chorna_rada$ – Agitation in the Capital"
- WFAS_gryphia.11.d: "It's agitation and it's in the capital."
- WFAS_gryphia.11.a: "+ Supremacy."
- WFAS_gryphia.11.b: "– Harmony."
+ WFAS_gryphia.11.t: "Household or Musket Crisis"
+ WFAS_gryphia.11.d: ""
+ WFAS_gryphia.11.a: "Households."
+ WFAS_gryphia.11.b: "Muskets."
 
- WFAS_gryphia.12.t: "$GRY_chorna_rada$ – Trade on Evi"
- WFAS_gryphia.12.d: "Smth about trade on river Evi."
- WFAS_gryphia.12.a: "+ Harmony."
- WFAS_gryphia.12.b: "– Supremacy."
+ WFAS_gryphia.12.t: "Fire in the Store"
+ WFAS_gryphia.12.d: "You know the drill."
+ WFAS_gryphia.12.a: "Blame the harmonists!"
+ WFAS_gryphia.12.b: "Blame the supremacists!"
 
- WFAS_gryphia.13.t: "$GRY_chorna_rada$ End"
- WFAS_gryphia.13.d: "$GRY_chorna_rada$ results."
- WFAS_gryphia.13.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
- WFAS_gryphia.13.b: "[GRY_borad_grifnitsky.GetName] wins."
- WFAS_gryphia.13.c: "[GRY_yeven_krawvelets.GetName] wins."
+ WFAS_gryphia.13.t: "Land Dispute"
+ WFAS_gryphia.13.d: ""
+ WFAS_gryphia.13.a: "Yay harmonists."
+ WFAS_gryphia.13.b: "Yay supremacists."
 
- WFAS_gryphia.14.t: "Monarchy or Republic?"
- WFAS_gryphia.14.d: "Hryfnytsky needs to make a decision."
- WFAS_gryphia.14.a: "Monarchy."
- WFAS_gryphia.14.b: "Republic."
+ WFAS_gryphia.14.t: "A Pamphlet"
+ WFAS_gryphia.14.d: ""
+ WFAS_gryphia.14.a: "This is bad."
 
- WFAS_gryphia.15.t: "Coronation Costs"
- WFAS_gryphia.15.d: "Decide how much to spend on a coronation."
- WFAS_gryphia.15.a: "Yes."
+ WFAS_gryphia.15.t: "A Riverpony Trader"
+ WFAS_gryphia.15.d: ""
+ WFAS_gryphia.15.a: "Welcome him."
+ WFAS_gryphia.15.b: "Drive him away."
+
+ WFAS_gryphia.16.t: "A Letter of Support"
+ WFAS_gryphia.16.d: ""
+ WFAS_gryphia.16.a: "He supports harmonists!"
+ WFAS_gryphia.16.b: "He supports supremacists!"
+
+ WFAS_gryphia.17.t: "A Stalemate"
+ WFAS_gryphia.17.d: ""
+ WFAS_gryphia.17.a: "Worrying."
+
+ WFAS_gryphia.18.t: "Night Before Election"
+ WFAS_gryphia.18.d: ""
+ WFAS_gryphia.18.a: "Support harmonists."
+ WFAS_gryphia.18.b: "Support supremacists."
+
+ WFAS_gryphia.19.t: "Agitation in the Capital"
+ WFAS_gryphia.19.d: ""
+ WFAS_gryphia.19.a: "Support harmonists."
+ WFAS_gryphia.19.b: "Support supremacists."
+
+ WFAS_gryphia.20.t: "Meeting in a Church"
+ WFAS_gryphia.20.d: ""
+ WFAS_gryphia.20.a: "Arrest them. (+ Harmonist)"
+ WFAS_gryphia.20.b: "Clear them out. (+ Supremacist)"
+
+ WFAS_gryphia.21.t: "Meeting in a Church 2"
+ WFAS_gryphia.21.d: ""
+ WFAS_gryphia.21.a: "Mhm."
+
+ WFAS_gryphia.24.t: "Chorna Rada End"
+ WFAS_gryphia.24.d: "Chorna Rada results."
+ WFAS_gryphia.24.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
+ WFAS_gryphia.24.b: "[GRY_borad_grifnitsky.GetName] wins."
+ WFAS_gryphia.24.c: "[GRY_yeven_krawvelets.GetName] wins."
+ WFAS_gryphia.24.e: "Civil war!"
+
+ WFAS_gryphia.25.t: "Monarchy or Republic?"
+ WFAS_gryphia.25.d: "Hryfnytsky needs to make a decision."
+ WFAS_gryphia.25.a: "Monarchy."
+ WFAS_gryphia.25.b: "Republic."
+
+ WFAS_gryphia.26.t: "Coronation Costs"
+ WFAS_gryphia.26.d: "Decide how much to spend on a coronation."
+ WFAS_gryphia.26.a: "Yes."
 
 ### TRAITS ###
  uncrowned_monarch: "Uncrowned Monarch"
@@ -161,6 +202,9 @@
  hryf_chose_republic: "Republic chosen"
 
 ### TOOLTIPS ###
+ chorna_rada_explanation_tt: "§YDifferent situations will happen for a duration of this focus. Your response to them will shape the outcome of the Chorna Rada.§!"
+ chorna_rada_support_hryf_tt: "This will please §Pharmonists§!, but §Csupremacists§! will be displeased."
+ chorna_rada_support_krav_tt: "This will please §Csupremacists§!, but §Pharmonists§! will be displeased."
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
