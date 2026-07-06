@@ -38,6 +38,9 @@ set_politics = {
 }
 set_country_flag = has_custom_advisors
 
+set_country_flag = economic_laws_blocked
+set_country_flag = manpower_laws_blocked
+
 add_ideas = {
 	# (WFAS +)
 	wfas_GRY_disunited_tribes
