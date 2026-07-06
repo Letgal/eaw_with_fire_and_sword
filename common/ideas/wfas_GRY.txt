@@ -29,9 +29,26 @@ ideas = {
 		wfas_GRY_ruina_2 = {
 			name = wfas_GRY_ruina
 			picture = GRY_Disaster_struggle_for_royal_power
-			modifier = { stability_weekly = -0.0035 }
+			modifier = {
+				stability_weekly = -0.005
+				political_power_cost = 0.15
+			}
 		}
 		wfas_GRY_ruina_3 = {
+			name = wfas_GRY_ruina
+			picture = GRY_Disaster_struggle_for_royal_power
+			modifier = {
+				stability_weekly = -0.0075
+				political_power_cost = 0.3
+				drift_defence_factor = -0.5
+			}
+		}
+		wfas_GRY_ruina_4 = {
+			name = wfas_GRY_ruina
+			picture = GRY_Disaster_struggle_for_royal_power
+			modifier = { stability_weekly = -0.0035 }
+		}
+		wfas_GRY_ruina_5 = {
 			name = wfas_GRY_ruina
 			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = { stability_weekly = -0.002 }
@@ -61,9 +78,9 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
-		wfas_GRY_socialist_movement_temp = {
+		wfas_GRY_communist_movement_temp = {
 			# (*) swap on temp idea
-			name = wfas_GRY_socialist_movement
+			name = wfas_GRY_communist_movement
 			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
 			modifier = {

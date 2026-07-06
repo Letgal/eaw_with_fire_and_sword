@@ -164,6 +164,7 @@
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
+ GRY_communist_movement_temp_tt: "Set a duration of §H365§! days for §Y$wfas_GRY_communist_movement$§!."
 
  modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"
  prestige_gain: "Prestige Gain"
