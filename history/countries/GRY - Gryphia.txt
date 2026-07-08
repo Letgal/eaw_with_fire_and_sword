@@ -23,12 +23,12 @@ set_technology = {
 }
 
 set_convoys = 70
-set_popularities = {
-	democratic = 16
-	fascism = 16
-	communism = 3
-	neutrality = 65
-}
+#set_popularities = {
+#	democratic = 30
+#	fascism = 17
+#	communism = 23
+#	neutrality = 30
+#}
 set_politics = {
 
 	ruling_party = neutrality
@@ -38,20 +38,13 @@ set_politics = {
 }
 set_country_flag = has_custom_advisors
 
-set_country_flag = economic_laws_blocked
-set_country_flag = manpower_laws_blocked
-
 add_ideas = {
-	# (WFAS +)
-	wfas_GRY_disunited_tribes
-	wfas_GRY_independent_siches
-	wfas_GRY_communist_rebels
-
 	agrarian_society
 	lack_of_scientists
 	#GRY_independent_tribes
 	GRY_landed_gentry
 	GRY_cossacks
+	#GRY_communist_rebels
 }
 
 set_stability = 0.70
@@ -118,6 +111,22 @@ set_rule = {
 }
 
 # (WFAS +)
+set_popularities = {
+	democratic = 16
+	fascism = 16
+	communism = 3
+	neutrality = 65
+}
+
+set_country_flag = economic_laws_blocked
+set_country_flag = manpower_laws_blocked
+
 set_variable = { prestige_gain = 0.15 }
 set_variable = { cultural_revival_ppf = 0.05 }
 set_variable = { cultural_revival_cgf = 0 }
+
+add_ideas = {
+	wfas_GRY_independent_siches
+	wfas_GRY_disunited_tribes
+	wfas_GRY_communist_rebels
+}
