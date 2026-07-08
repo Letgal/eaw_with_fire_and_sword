@@ -17,7 +17,7 @@
  GRY_convene_the_chorna_rada: "Convene the Chorna Rada"
  GRY_convene_the_chorna_rada_desc: "Assemble and convene the Chorna Rada."
 
- ## 
+ ## HRYFNYTSKY
   GRY_hryfnytsky_wins: "Hryfnytsky Wins"
   GRY_hryfnytsky_wins_desc: "Placeholder"
   GRY_placate_the_nationalists: "Placate the Nationalists"
@@ -60,11 +60,11 @@
   GRY_preparation_for_the_election: "Preparation for the Election"
   GRY_preparation_for_the_election_desc: ""
 
- ##
+ ## VERESKOPADSKY
   GRY_vereskopadsky_wins: "Vereskopadsky Wins"
   GRY_vereskopadsky_wins_desc: "Placeholder"
 
- ##
+ ## KRAVELETS
   GRY_kravelets_wins: "Kravelets Wins"
   GRY_kravelets_wins_desc: "Placeholder"
 
@@ -73,12 +73,10 @@
  wfas_GRY_independent_siches: "Independent Siches"
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
  wfas_GRY_ruina: "Ruina"
- wfas_GRY_communist_rebels: "Communist Rebels"
- wfas_GRY_communist_rebels_desc: "$GRY_communist_rebels_desc$"
- wfas_GRY_communist_movement: "Communist Movement"
- wfas_GRY_communist_movement_desc: "$GRY_communist_rebels_desc$"
- wfas_GRY_pleased_burghers: "Pleased Burghers"
- wfas_GRY_pleased_cossacks: "Pleased Cossacks"
+ wfas_GRY_communist_rebels: "Peasant Rebels"
+ wfas_GRY_communist_rebels_desc: "There exists a small but growing group of peasants disloyal to our cause. They demand better life conditions and a solution for their problems."
+ wfas_GRY_communist_movement: "Communist Rebels"
+ wfas_GRY_communist_movement_desc: "Seizing the opportunity and exploiting the destabilization in our country, a communist movement has organized itself in our country. They conduct terrorist acts aimed at undermining our authority and their threat grows fast."
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
  wfas_GRY_cultural_revival: "Cultural Revival"

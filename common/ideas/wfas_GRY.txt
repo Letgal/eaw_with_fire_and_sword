@@ -24,14 +24,17 @@ ideas = {
 		wfas_GRY_ruina_1 = {
 			name = wfas_GRY_ruina
 			picture = GRY_Disaster_struggle_for_royal_power
-			modifier = { stability_weekly = -0.005 }
+			modifier = {
+				stability_weekly = -0.005
+				political_power_cost = 0.1
+			}
 		}
 		wfas_GRY_ruina_2 = {
 			name = wfas_GRY_ruina
 			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = {
 				stability_weekly = -0.005
-				political_power_cost = 0.15
+				political_power_cost = 0.25
 			}
 		}
 		wfas_GRY_ruina_3 = {
@@ -39,7 +42,8 @@ ideas = {
 			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = {
 				stability_weekly = -0.0075
-				political_power_cost = 0.3
+				political_power_cost = 0.5
+				#political_power_factor = -0.25
 				drift_defence_factor = -0.5
 			}
 		}
@@ -57,6 +61,7 @@ ideas = {
 			# (*) copy from EAW
 			picture = GRY_Red_Menace_asleep
 			allowed_civil_war = { NOT = { has_government = communism } }
+			cancel = { has_government = communism }
 			modifier = {
 				conscription_factor = -0.05
 				communism_drift = 0.05
@@ -69,6 +74,7 @@ ideas = {
 		wfas_GRY_communist_movement = {
 			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
+			cancel = { has_government = communism }
 			modifier = { # (*) TODO: change
 				conscription_factor = -0.05
 				communism_drift = 0.05
@@ -83,6 +89,7 @@ ideas = {
 			name = wfas_GRY_communist_movement
 			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
+			cancel = { has_government = communism }
 			modifier = {
 				conscription_factor = -0.05
 				communism_drift = 0.05
@@ -92,24 +99,11 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
-		wfas_GRY_pleased_burghers = {
-			#picture = generic_disjointed_gov
-			modifier = {
-				democratic_drift = 0.03
-				monthly_population = 0.1
-			}
-		}
-		wfas_GRY_pleased_cossacks = {
-			#picture = generic_disjointed_gov
-			modifier = {
-				fascism_drift = 0.03
-				conscription_factor = 0.1
-			}
-		}
 
 		### HRYFNYTSKY'S PATH ###
 		wfas_GRY_love_of_the_people = {
 			picture = GRY_Everyones_favorite
+			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
 			modifier = { political_power_gain = 0.25 }
 		}
 		wfas_GRY_independent_siches_cut = {
@@ -139,7 +133,6 @@ ideas = {
 	hidden_ideas = {
 		wfas_GRY_cultural_revival_dummy = {
 			name = wfas_GRY_cultural_revival
-			picture = GRY_cultural_revival
 			modifier = {
 				custom_modifier_tooltip = prestige_gain_var
 				political_power_factor = 0.05

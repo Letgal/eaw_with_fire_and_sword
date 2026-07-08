@@ -34,7 +34,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.3 # Calas Bulba Dies in Raid!
+	id = WFAS_gryphia.3 # Kalas Bulba Dies in Raid!
 	title = WFAS_gryphia.3.t
 	desc = WFAS_gryphia.3.d
 	picture = GFX_event_griffon_mountain
@@ -44,6 +44,7 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.3.a
+		add_political_power = -100
 		add_stability = -0.2
 		hidden_effect = {
 			add_country_leader_role = {
@@ -500,7 +501,10 @@ country_event = {
 		start_civil_war = {
 			ruling_party = ROOT
 			ideology = communism
-			size = 0.66
+			size = 0.6
+			capital = 598
+			states = { 596 598 610 611 613 }
+			hidden_effect = { load_focus_tree = generic_griffon_focus }
 		}
 	}
 }
