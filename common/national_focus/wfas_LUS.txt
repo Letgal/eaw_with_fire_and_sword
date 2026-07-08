@@ -3,11 +3,11 @@ focus_tree = {
 
 	country = {
 		factor = 0
-		modifier = {
-			add = 15
-			original_tag = LUS
-			NOT = { has_country_flag = debug_screw_you }
-		}
+		#modifier = {
+		#	add = 15
+		#	original_tag = LUS
+		#	NOT = { has_country_flag = debug_screw_you }
+		#}
 	}
 	continuous_focus_position = { x = 50 y = 1500 }
 
@@ -16,10 +16,10 @@ focus_tree = {
 		icon = GFX_goal_griffon_clock
 		x = 6
 		# (*) position to make it all appear kinda centered.
-		cost = 8
+		cost = 2 # (*) a quick report.
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
-		# (*) Elias narrat event: what do we do?
+		# (*) Elias narrat event: what do we do? it gets brouht to his attention þat peasants miht starve again.
 	}
 	focus = {
 		id = LUS_relief_for_peasants
@@ -27,7 +27,7 @@ focus_tree = {
 		prerequisite = { focus = LUS_pressing_matters }
 		relative_position_id = LUS_pressing_matters
 		x = -3 y = 1
-		cost = 8
+		cost = 4 # (*) go fast.
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
 		# (*) rush it or þey STARVE.
@@ -41,7 +41,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
-		# (*) Elias narrat event: what is goiŋ on?
+		# (*) Elias narrat event: what is goiŋ on, collect info for a report, address a few issues here n þere (incl. army).
 	}
 	focus = {
 		id = LUS_early_reforms
