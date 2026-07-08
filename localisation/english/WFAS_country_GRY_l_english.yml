@@ -100,28 +100,28 @@
  WFAS_gryphia.4.d: "Naturally, the raid was a complete success cuz we're cool B)"
  WFAS_gryphia.4.a: "Still sad about the old hetman tho..."
 
- WFAS_gryphia.5.t: "Chorna Rada Intro"
+ WFAS_gryphia.5.t: "First Convention of the Chorna Rada"
  WFAS_gryphia.5.d: "But nobody came.\n(Cuz nobody cares.)"
- WFAS_gryphia.5.a: "Aight man."
+ WFAS_gryphia.5.a: "There's much work ahead of us."
 
  WFAS_gryphia.6.t: "Burnt Down Village"
- WFAS_gryphia.6.d: "Someone has burnt down a village. We don't know who did it."
+ WFAS_gryphia.6.d: "Someone has burnt down a village. We don't know who did it. Peasants, probably."
  WFAS_gryphia.6.a: "That's disturbing fr fr."
 
- WFAS_gryphia.7.t: "Attempt on Otaman Ivan Klovsky"
- WFAS_gryphia.7.d: "He survived."
- WFAS_gryphia.7.a: "What next?"
+ WFAS_gryphia.7.t: "Attempt on Ivan Klovsky's Life"
+ WFAS_gryphia.7.d: "There was an attempt to assassinate Ivan Klovsky, the Hetman of Vorobeyko Kurin.\nHe survived and he's pissed."
+ WFAS_gryphia.7.a: "What's next?"
 
  WFAS_gryphia.8.t: "Ivan Klovsky Acts"
- WFAS_gryphia.8.d: "He lives and he's mad that he was nearly killed."
+ WFAS_gryphia.8.d: "Ivan Klovsky lives and he's mad that he was nearly killed.\nThanks to his actions, griffons now slowly gather for Chorna Rada."
  WFAS_gryphia.8.a: "He's got quite the zeal."
 
  WFAS_gryphia.9.t: "Marichka and Pylyp"
  WFAS_gryphia.9.d: "They discuss."
  WFAS_gryphia.9.a: "Nice."
 
- WFAS_gryphia.10.t: "Attempt on Vereskopadsky"
- WFAS_gryphia.10.d: "He survived, but fell into a coma and cannot run for elections."
+ WFAS_gryphia.10.t: "Attempt on Pavlo Vereskopadsky's Life"
+ WFAS_gryphia.10.d: "There was an attempt to assassinate Pavlo Vereskopadsky, who is a leading candidate in the ongoing elections.\nHe survived, but fell into a coma and cannot run for elections."
  WFAS_gryphia.10.a: "Sad."
 
  WFAS_gryphia.11.t: "Household or Musket Crisis"
@@ -131,8 +131,8 @@
 
  WFAS_gryphia.12.t: "Fire in the Store"
  WFAS_gryphia.12.d: "You know the drill."
- WFAS_gryphia.12.a: "Blame the harmonists!"
- WFAS_gryphia.12.b: "Blame the supremacists!"
+ WFAS_gryphia.12.a: "Blame the supremacists!"
+ WFAS_gryphia.12.b: "Blame the harmonists!"
 
  WFAS_gryphia.13.t: "Land Dispute"
  WFAS_gryphia.13.d: ""
@@ -200,7 +200,7 @@
  hryf_chose_republic: "Republic chosen"
 
 ### TOOLTIPS ###
- chorna_rada_explanation_tt: "§YDifferent situations will happen for a duration of this focus. Your response to them will shape the outcome of the Chorna Rada.§!"
+ chorna_rada_explanation_tt: "§YDifferent situations will happen for a duration of this focus. Your response to them will shape the course of the nation.§!"
  chorna_rada_support_hryf_tt: "This will please §Pharmonists§!, but §Csupremacists§! will be displeased."
  chorna_rada_support_krav_tt: "This will please §Csupremacists§!, but §Pharmonists§! will be displeased."
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
