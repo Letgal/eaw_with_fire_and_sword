@@ -23,5 +23,7 @@
  LUS_dealing_with_the_hunger: "Dealing with the Hunger"
  LUS_abolish_serfdom: "Abolish Serfdom"
  LUS_preserve_serfdom: "Preserve Serfdom"
+ LUS_airforce_foundations: "Foundations of an Airforce"
+ LUS_navy_foundations: "Foundations of a Navy"
  LUS_negotiate_with_GRW: "Negotiate with [GRW.GetNameDef]"
  LUS_negotiate_with_BRF: "Negotiate with [BRF.GetNameDef]"

@@ -11,6 +11,10 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1500 }
 
+	# GOTO:
+	# SERFDOM_QUESTION
+	# ARMY_REFORM
+
 	focus = {
 		id = LUS_pressing_matters
 		icon = GFX_goal_griffon_clock
@@ -45,7 +49,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LUS_early_reforms
-		icon = GFX_focus_indy_agriculture # GFX_goal_agrarian_reform
+		icon = GFX_focus_indy_agriculture
 		prerequisite = { focus = LUS_assess_the_situation }
 		relative_position_id = LUS_assess_the_situation
 		x = 0 y = 1
@@ -162,12 +166,14 @@ focus_tree = {
 		#completion_reward = { }
 		# (*) probably Elias narrat event
 	}
+
+	# SERFDOM_QUESTION
 	focus = {
 		id = LUS_dealing_with_the_hunger
 		icon = GFX_goal_griffon_rice
 		prerequisite = { focus = LUS_create_the_diet }
 		relative_position_id = LUS_create_the_diet
-		x = -3 y = 1
+		x = -5 y = 1
 		cost = 12
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		#completion_reward = { }
@@ -192,6 +198,163 @@ focus_tree = {
 		x = 1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+
+	#
+	focus = {
+		id = LUS_land_reform_placeholder
+		icon = GFX_goal_agrarian_reform
+		prerequisite = { focus = LUS_create_the_diet }
+		relative_position_id = LUS_create_the_diet
+		x = -1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_industrialization_placeholder
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = LUS_create_the_diet }
+		relative_position_id = LUS_create_the_diet
+		x = 1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+
+	# ARMY_REFORM
+	focus = {
+		id = LUS_initial_army_reform
+		icon = GFX_focus_CZE_build_infantry
+		prerequisite = { focus = LUS_create_the_diet }
+		relative_position_id = LUS_create_the_diet
+		x = 7 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_defense_of_lushi
+		icon = GFX_goal_LUS_expand_military_branch
+		prerequisite = { focus = LUS_revise_the_levy_system focus = LUS_look_up_to_our_betters }
+		relative_position_id = LUS_initial_army_reform
+		x = 0 y = 2
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_lushian_wit
+		icon = GFX_goal_double_research
+		prerequisite = { focus = LUS_defense_of_lushi }
+		relative_position_id = LUS_defense_of_lushi
+		x = 0 y = 2
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_revise_the_levy_system
+		icon = GFX_goal_griffon_levy
+		prerequisite = { focus = LUS_initial_army_reform }
+		mutually_exclusive = { focus = LUS_look_up_to_our_betters }
+		relative_position_id = LUS_initial_army_reform
+		x = -1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_elias_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_asymmetrical_warfare
+		icon = GFX_focus_GRE_a_land_of_mountains
+		prerequisite = { focus = LUS_revise_the_levy_system }
+		relative_position_id = LUS_revise_the_levy_system
+		x = -1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_elias_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_home_guard
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = LUS_asymmetrical_warfare }
+		prerequisite = { focus = LUS_defense_of_lushi }
+		relative_position_id = LUS_revise_the_levy_system
+		x = 0 y = 2
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_elias_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_look_up_to_our_betters
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = LUS_initial_army_reform }
+		mutually_exclusive = { focus = LUS_revise_the_levy_system }
+		relative_position_id = LUS_initial_army_reform
+		x = 1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_find_place_for_the_nobles
+		icon = GFX_goal_griffon_knights
+		prerequisite = { focus = LUS_look_up_to_our_betters }
+		relative_position_id = LUS_look_up_to_our_betters
+		x = 1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_modern_army_hq
+		icon = GFX_goal_officers
+		prerequisite = { focus = LUS_defense_of_lushi }
+		prerequisite = { focus = LUS_find_place_for_the_nobles }
+		relative_position_id = LUS_defense_of_lushi
+		x = 1 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_doctrinal_developments
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LUS_modern_army_hq }
+		relative_position_id = LUS_modern_army_hq
+		x = 0 y = 2
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_airforce_foundations
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = LUS_initial_army_reform }
+		relative_position_id = LUS_initial_army_reform
+		x = -4 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
+		#completion_reward = { }
+	}
+	focus = {
+		id = LUS_navy_foundations
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = LUS_initial_army_reform }
+		relative_position_id = LUS_initial_army_reform
+		x = 4 y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
 		#completion_reward = { }
 	}
 
