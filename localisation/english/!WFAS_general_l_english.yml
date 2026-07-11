@@ -10,6 +10,7 @@
  FOCUS_FILTER_NO_EFFECTS: "No Effects" # (*) stolen from my RCW mod :)
 
 ### TOOLTIPS ###
+ EFFECT_UNLOCK_DECISION_FREE: "Unlocks £decision_icon_free free decision: $NAME|H$."
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
 
 ### MISC ###

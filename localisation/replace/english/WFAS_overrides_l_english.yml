@@ -31,3 +31,8 @@
   GRY_yeven_krawvelets: "Yevhen Kravelets"
   GRY_borad_grifnitsky: "Borad Hryfnytsky"
   GRY_cornilo_khurshevich: "Kornylo Khrushchevych"
+
+### LOCALIZATION ###
+ EFFECT_UNLOCK_DECISION: "Unlocks £decision_icon_small decision: $NAME|H$.$EFFECT$"
+ EFFECT_UNLOCK_DECISION_BOP: "Unlocks £decision_icon_small Balance of Power decision: $NAME|H$.$EFFECT$"
+ EFFECT_UNLOCK_DECISION_CATEGORY: "Unlocks $NAME|H$ £decision_icon_small decisions."
