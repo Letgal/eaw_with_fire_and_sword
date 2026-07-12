@@ -19,6 +19,7 @@ focus_tree = {
 	# HRYF_INTRO
 	# HRYF_MONARCHY
 	# HRYF_REPUBLIC
+	# HRYF_ECONOMIC
 
 	focus = {
 		id = GRY_great_anniversary
@@ -577,15 +578,388 @@ focus_tree = {
 		}
 	}
 
+	# HRYF_ECONOMIC
+	focus = {
+		id = GRY_where_we_are
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_whats_next }
+		relative_position_id = GRY_cossack_baroque
+		x = 9
+		y = -1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = { has_country_leader = { character = GRY_borad_grifnitsky } }
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GRY_physiocracy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_where_we_are }
+		mutually_exclusive = { focus = GRY_industrialization }
+		relative_position_id = GRY_where_we_are
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_land_fund
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_physiocracy }
+		relative_position_id = GRY_physiocracy
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_community_creation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_land_fund }
+		relative_position_id = GRY_land_fund
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_rural_schools
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_community_creation }
+		relative_position_id = GRY_community_creation
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_food_industry
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_physiocracy }
+		relative_position_id = GRY_physiocracy
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_search_for_coal_basins
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_food_industry }
+		relative_position_id = GRY_food_industry
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GRY_industrialization
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_where_we_are }
+		mutually_exclusive = { focus = GRY_physiocracy }
+		relative_position_id = GRY_where_we_are
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_manufactory_modernization
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_industrialization }
+		relative_position_id = GRY_industrialization
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_advanced_weapons_production
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_manufactory_modernization }
+		relative_position_id = GRY_manufactory_modernization
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_infrastructure_development
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_industrialization }
+		relative_position_id = GRY_industrialization
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_workers_training
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_infrastructure_development }
+		relative_position_id = GRY_infrastructure_development
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_kaiv_polytechnical
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_workers_training }
+		relative_position_id = GRY_workers_training
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+
+	focus = {
+		id = GRY_first_successes
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_community_creation focus = GRY_search_for_coal_basins focus = GRY_advanced_weapons_production focus = GRY_workers_training }
+		relative_position_id = GRY_where_we_are
+		x = 0
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_subsidies_for_the_farmers
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_first_successes }
+		mutually_exclusive = { focus = GRY_centralized_planning }
+		relative_position_id = GRY_first_successes
+		x = -3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_metal_extraction
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_subsidies_for_the_farmers }
+		relative_position_id = GRY_subsidies_for_the_farmers
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_steam_engines
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_metal_extraction }
+		relative_position_id = GRY_metal_extraction
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_crystal_extraction
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_steam_engines }
+		relative_position_id = GRY_steam_engines
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_oil_fields
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_steam_engines }
+		relative_position_id = GRY_steam_engines
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_flat_land_tax
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_subsidies_for_the_farmers }
+		relative_position_id = GRY_subsidies_for_the_farmers
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_home_grown_fertilizers
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_flat_land_tax }
+		relative_position_id = GRY_flat_land_tax
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_agronomic_universities
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_subsidies_for_the_farmers }
+		relative_position_id = GRY_subsidies_for_the_farmers
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_centralized_planning
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_first_successes }
+		mutually_exclusive = { focus = GRY_subsidies_for_the_farmers }
+		relative_position_id = GRY_first_successes
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_local_technical_colleges
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_centralized_planning }
+		relative_position_id = GRY_centralized_planning
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_mandatory_elementary_education
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_agronomic_universities focus = GRY_local_technical_colleges }
+		relative_position_id = GRY_local_technical_colleges
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_progressive_taxation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_centralized_planning }
+		relative_position_id = GRY_centralized_planning
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_antitrust_laws
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_progressive_taxation }
+		relative_position_id = GRY_progressive_taxation
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_steady_development
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_home_grown_fertilizers focus = GRY_antitrust_laws }
+		relative_position_id = GRY_antitrust_laws
+		x = -3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_cossack_mace
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_steady_development }
+		relative_position_id = GRY_steady_development
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_accelerated_electrification
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_centralized_planning }
+		relative_position_id = GRY_centralized_planning
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_advanced_electric_rail
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_accelerated_electrification }
+		relative_position_id = GRY_accelerated_electrification
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_civilian_transportation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_advanced_electric_rail }
+		relative_position_id = GRY_advanced_electric_rail
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+	focus = {
+		id = GRY_small_dams
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_advanced_electric_rail }
+		relative_position_id = GRY_advanced_electric_rail
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { }
+	}
+
 	# HRYF_REPUBLIC
 	focus = {
 		id = GRY_preparation_for_the_election
 		icon = GFX_goal_generic_elections
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_hetmans_coronation }
-		relative_position_id = GRY_cossack_baroque
-		x = 3
-		y = -2
+		relative_position_id = GRY_where_we_are
+		x = 8
+		y = -1
 		cost = 10
 		available = {
 			has_country_leader = { character = GRY_borad_grifnitsky }
