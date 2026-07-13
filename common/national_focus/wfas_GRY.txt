@@ -601,8 +601,13 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_owned_state = {
+				limit = { NOT = { state = 598 state = 609 } }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 	}
 	focus = {
 		id = GRY_land_fund
@@ -612,8 +617,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = { add_stability = 0.1 }
 	}
 	focus = {
 		id = GRY_community_creation
@@ -624,7 +629,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { } # gives a SPIRIT and unlocks a DECISION.
 	}
 	focus = {
 		id = GRY_rural_schools
@@ -635,7 +640,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { } # unlocks a DECISION.
 	}
 	focus = {
 		id = GRY_food_industry
@@ -645,8 +650,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_state = {
+				limit = { NOT = { state = 598 state = 609 } }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			# and an EVENT þat gives a SPIRIT.
+		}
 	}
 	focus = {
 		id = GRY_search_for_coal_basins
@@ -656,8 +667,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			add_resource = { type = coal amount = 9 state = 612 }
+			add_resource = { type = coal amount = 5 state = 613 }
+		}
 	}
 
 	focus = {
@@ -669,8 +683,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_owned_state = {
+				limit = { OR = { state = 598 state = 609 } }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 	}
 	focus = {
 		id = GRY_manufactory_modernization
@@ -680,8 +699,14 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_state = {
+				limit = { OR = { state = 598 state = 609 } }
+				prioritize = { 609 }
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
 	}
 	focus = {
 		id = GRY_advanced_weapons_production
@@ -691,8 +716,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_state = {
+				limit = { OR = { state = 598 state = 609 } }
+				prioritize = { 598 }
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
 	}
 	focus = {
 		id = GRY_infrastructure_development
@@ -702,8 +733,13 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_owned_state = {
+				limit = { OR = { state = 598 state = 609 } }
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
 	}
 	focus = {
 		id = GRY_workers_training
@@ -714,7 +750,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { } # gives a SPIRIT.
 	}
 	focus = {
 		id = GRY_kaiv_polytechnical
@@ -725,7 +761,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { } # unlocks a DECISION.
 	}
 
 	focus = {
@@ -736,8 +772,11 @@ focus_tree = {
 		x = 0
 		y = 4
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			clr_country_flag = economic_laws_blocked
+			custom_effect_tooltip = will_allow_economic_laws_tt
+		}
 	}
 	focus = {
 		id = GRY_subsidies_for_the_farmers
