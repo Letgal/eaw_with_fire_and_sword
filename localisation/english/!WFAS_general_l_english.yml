@@ -14,5 +14,5 @@
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
 
 ### MISC ###
- wfas_GRY_chorna_rada_status: "wfas_GRY_chorna_rada_status [?chr_support_hryf|P0] - [?chr_support_krav|C0]"
+ wfas_GRY_chorna_rada_status: "wfas_GRY_chorna_rada_status: [?chr_support_hryf|P0] / [?chr_support_krav|C0]"
  wfas_GRW_simple_ruina: "$TRIGGER_HAS_NOT_IDEA_COUNTRY$§H$wfas_GRY_ruina$§!"

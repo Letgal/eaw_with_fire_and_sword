@@ -15,7 +15,7 @@
  GRY_the_raid: "The Raid"
  GRY_the_raid_desc: "Conduct a raid on either [BRF.GetNameDef] or [GRW.GetNameDef]."
  GRY_convene_the_chorna_rada: "Convene the Chorna Rada"
- GRY_convene_the_chorna_rada_desc: "Assemble and convene the Chorna Rada."
+ GRY_convene_the_chorna_rada_desc: "Assemble and convene the Chorna Rada, or the Black Council."
 
  ## HRYFNYTSKY
   GRY_hryfnytsky_wins: "Hryfnytsky Wins"
@@ -115,7 +115,7 @@
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
  wfas_GRY_cultural_revival: "Cultural Revival"
- wfas_GRY_cultural_programs_idea: "Cultural Programs Idea"
+ wfas_GRY_cultural_programs_idea: "Cultural Programs"
 
 ### EVENTS ###
  WFAS_gryphia.1.t: "$GRY_great_anniversary$"

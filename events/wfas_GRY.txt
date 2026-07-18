@@ -26,10 +26,22 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.2.a
+		trigger = {
+			any_home_area_neighbor_country = {
+				original_tag = BRF
+				exists = yes
+			}
+		}
 		set_variable = { GRY_raid_target = BRF }
 	}
 	option = {
 		name = WFAS_gryphia.2.b
+		trigger = {
+			any_home_area_neighbor_country = {
+				original_tag = GRW
+				exists = yes
+			}
+		}
 		set_variable = { GRY_raid_target = GRW }
 	}
 }
