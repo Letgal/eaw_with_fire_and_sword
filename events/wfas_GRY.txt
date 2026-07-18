@@ -107,7 +107,7 @@ country_event = {
 }
 
 country_event = {
-	id = WFAS_gryphia.5 # Chorna Rada 1. Intro. Nobody really cares
+	id = WFAS_gryphia.5 # 1:CRI. Intro
 	title = WFAS_gryphia.5.t
 	desc = WFAS_gryphia.5.d
 	picture = GFX_event_griffon_mountain
@@ -122,10 +122,11 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.5.a
 		hidden_effect = { country_event = { id = WFAS_gryphia.6 days = 18 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.7 days = 42 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.6 # Chorna Rada 2. Commie 1. Fire in a village
+	id = WFAS_gryphia.6 # 2:CRC1. Fire in a village
 	title = WFAS_gryphia.6.t
 	desc = WFAS_gryphia.6.d
 	picture = GFX_event_griffon_mountain
@@ -141,11 +142,11 @@ country_event = {
 		name = WFAS_gryphia.6.a
 		add_stability = -0.025
 		add_popularity = { ideology = communism popularity = 0.05 }
-		hidden_effect = { country_event = { id = WFAS_gryphia.7 days = 24 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.12 days = 75 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.7 # Chorna Rada 3. Attempt on Klovsky's life
+	id = WFAS_gryphia.7 # 3:CRA1. Attempt on Klovsky's life
 	title = WFAS_gryphia.7.t
 	desc = WFAS_gryphia.7.d
 	picture = GFX_event_griffon_mountain
@@ -165,7 +166,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.8 # Chorna Rada 4. Klovsky acts. Electors trickle into Kaiv
+	id = WFAS_gryphia.8 # 4:CRA2. Klovsky acts. Electors trickle into Kaiv
 	title = WFAS_gryphia.8.t
 	desc = WFAS_gryphia.8.d
 	picture = GFX_event_griffon_mountain
@@ -184,7 +185,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.9 # Chorna Rada 5. Marichka and Pylyp discuss þ candidates
+	id = WFAS_gryphia.9 # 5:CRA2+. Marichka and Pylyp discuss þ candidates
 	title = WFAS_gryphia.9.t
 	desc = WFAS_gryphia.9.d
 	picture = GFX_event_griffon_mountain
@@ -199,11 +200,11 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.9.a
 		add_political_power = 5
-		hidden_effect = { country_event = { id = WFAS_gryphia.10 days = 24 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.10 days = 27 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.10 # Chorna Rada 6. Attempt on Vereskopadsky's life
+	id = WFAS_gryphia.10 # 6:CRA3. Attempt on Vereskopadsky's life
 	title = WFAS_gryphia.10.t
 	desc = WFAS_gryphia.10.d
 	picture = GFX_event_griffon_mountain
@@ -229,7 +230,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.11 # Chorna Rada 7. Household or Musket Crisis
+	id = WFAS_gryphia.11 # 7:CRS1. Household or Musket Crisis
 	title = WFAS_gryphia.11.t
 	desc = WFAS_gryphia.11.d
 	picture = GFX_event_griffon_mountain
@@ -244,16 +245,16 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.11.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.12 days = 18 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.13 days = 18 } }
 	}
 	option = {
 		name = WFAS_gryphia.11.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.12 days = 18 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.13 days = 18 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.12 # Chorna Rada 8. Commie 2. Fire in a store
+	id = WFAS_gryphia.12 # 8:CRC2. Fire in a store
 	title = WFAS_gryphia.12.t
 	desc = WFAS_gryphia.12.d
 	picture = GFX_event_griffon_mountain
@@ -271,7 +272,7 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.13 days = 6 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.14 days = 30 } }
 	}
 	option = {
 		name = WFAS_gryphia.12.b
@@ -279,11 +280,11 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.13 days = 6 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.14 days = 30 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.13 # Chorna Rada 9. Land dispute
+	id = WFAS_gryphia.13 # 9:CRS2. Land dispute
 	title = WFAS_gryphia.13.t
 	desc = WFAS_gryphia.13.d
 	picture = GFX_event_griffon_mountain
@@ -298,16 +299,16 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.13.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.14 days = 18 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.15 days = 24 } }
 	}
 	option = {
 		name = WFAS_gryphia.13.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.14 days = 18 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.15 days = 24 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.14 # Chorna Rada 10. Commie 3. Pamphlet
+	id = WFAS_gryphia.14 # 10:CRC3. Pamphlet
 	title = WFAS_gryphia.14.t
 	desc = WFAS_gryphia.14.d
 	picture = GFX_event_griffon_mountain
@@ -324,12 +325,12 @@ country_event = {
 		custom_effect_tooltip = has_happened_tt
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
-		hidden_effect = { country_event = { id = WFAS_gryphia.15 days = 6 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.20 days = 60 } }
 	}
 	# INVESTIGATE.
 }
 country_event = {
-	id = WFAS_gryphia.15 # Chorna Rada 11. Riverpony trader
+	id = WFAS_gryphia.15 # 11:CRS3. Riverpony trader
 	title = WFAS_gryphia.15.t
 	desc = WFAS_gryphia.15.d
 	picture = GFX_event_griffon_mountain
@@ -353,7 +354,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.16 # Chorna Rada 12. Letter of support
+	id = WFAS_gryphia.16 # 12:CRS4. Letter of support
 	title = WFAS_gryphia.16.t
 	desc = WFAS_gryphia.16.d
 	picture = GFX_event_griffon_mountain
@@ -369,16 +370,18 @@ country_event = {
 		name = WFAS_gryphia.16.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 		hidden_effect = { country_event = { id = WFAS_gryphia.17 days = 12 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.18 days = 18 } }
 	}
 	option = {
 		name = WFAS_gryphia.16.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
 		hidden_effect = { country_event = { id = WFAS_gryphia.17 days = 12 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.18 days = 18 } }
 	}
 	# INVESTIGATE.
 }
 country_event = {
-	id = WFAS_gryphia.17 # Chorna Rada 13. Stalemate
+	id = WFAS_gryphia.17 # 13:CRX1. Stalemate
 	title = WFAS_gryphia.17.t
 	desc = WFAS_gryphia.17.d
 	picture = GFX_event_griffon_mountain
@@ -388,17 +391,14 @@ country_event = {
 	trigger = {
 		has_civil_war = no
 		NOT = { has_government = communism }
-		#check_variable = { chr_support_hryf = chr_support_krav }
+		check_variable = { chr_support_hryf = chr_support_krav }
 	}
 
-	option = {
-		name = WFAS_gryphia.17.a
-		hidden_effect = { country_event = { id = WFAS_gryphia.18 days = 6 } }
-	}
+	option = { name = WFAS_gryphia.17.a }
 	# INVESTIGATE.
 }
 country_event = {
-	id = WFAS_gryphia.18 # Chorna Rada 14. Niht before election
+	id = WFAS_gryphia.18 # 14:CRS5. Niht before election
 	title = WFAS_gryphia.18.t
 	desc = WFAS_gryphia.18.d
 	picture = GFX_event_griffon_mountain
@@ -412,17 +412,19 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.18.a
+		add_stability = 0.03
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 		hidden_effect = { country_event = { id = WFAS_gryphia.19 days = 12 } }
 	}
 	option = {
 		name = WFAS_gryphia.18.b
+		add_war_support = 0.03
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
 		hidden_effect = { country_event = { id = WFAS_gryphia.19 days = 12 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.19 # Chorna Rada 15. Agitation in þ capital
+	id = WFAS_gryphia.19 # 15:CRS6. Agitation in þ capital
 	title = WFAS_gryphia.19.t
 	desc = WFAS_gryphia.19.d
 	picture = GFX_event_griffon_mountain
@@ -440,7 +442,6 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.20 days = 12 } }
 	}
 	option = {
 		name = WFAS_gryphia.19.b
@@ -448,11 +449,10 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_gryphia.20 days = 12 } }
 	}
 }
 country_event = {
-	id = WFAS_gryphia.20 # Chorna Rada 16. Meetin in a church
+	id = WFAS_gryphia.20 # 16:CRC4. Meetin in a church
 	title = WFAS_gryphia.20.t
 	desc = WFAS_gryphia.20.d
 	picture = GFX_event_griffon_mountain
@@ -467,17 +467,18 @@ country_event = {
 	option = {
 		name = WFAS_gryphia.20.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		#hidden_effect = { country_event = { id = WFAS_gryphia.24 days = 12 } }
 	}
 	option = {
 		name = WFAS_gryphia.20.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		#hidden_effect = { country_event = { id = WFAS_gryphia.24 days = 12 } }
 	}
-	# CONTINUE LISTENING.
+	option = {
+		name = WFAS_gryphia.20.c
+		hidden_effect = { country_event = { id = WFAS_gryphia.21 days = 3 } }
+	}
 }
 country_event = {
-	id = WFAS_gryphia.21 # Chorna Rada 17. Meetin in a church 2 (skipped for now)
+	id = WFAS_gryphia.21 # 17:CRC4+. Meetin in a church 2 (skipped for now)
 	title = WFAS_gryphia.21.t
 	desc = WFAS_gryphia.21.d
 	picture = GFX_event_griffon_mountain
@@ -495,7 +496,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.24 # Chorna Rada 8. End
+	id = WFAS_gryphia.24 # 18-20:CRE. End
 	title = WFAS_gryphia.24.t
 	desc = WFAS_gryphia.24.d
 	picture = GFX_event_griffon_mountain
