@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_GRY_zapzh_bordersam_pizda"
+		texturefile = "gfx/interface/ideas/GRY/zapzh_bordersam_pizda.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_GRY_Red_Menace_asleep"
 		texturefile = "gfx/interface/ideas/GRY/Red_Menace_asleep.tga"
 	}

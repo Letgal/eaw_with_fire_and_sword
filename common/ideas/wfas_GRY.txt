@@ -1,5 +1,13 @@
 ideas = {
 	country = {
+		wfas_GRY_independent_siches = {
+			picture = GRY_zapzh_bordersam_pizda
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.1
+			}
+		}
 		wfas_GRY_disunited_tribes = {
 			picture = generic_disjointed_gov
 			modifier = {
@@ -7,14 +15,6 @@ ideas = {
 				#mobilization_speed = 0
 				conscription_factor = -0.2
 				production_speed_buildings_factor = -0.1
-			}
-		}
-		wfas_GRY_independent_siches = {
-			picture = generic_disjointed_gov
-			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.1
-				conscription_factor = -0.1
 			}
 		}
 		wfas_GRY_spoils_of_war_BRF_temp = {
