@@ -78,8 +78,20 @@ focus_tree = {
 			custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
 			effect_tooltip = { country_event = WFAS_chorna_rada.1 }
 			custom_effect_tooltip = chorna_rada_explanation_tt
-			hidden_effect = { country_event = { id = WFAS_chorna_rada.18 } }
-			# ADD commie victory trigger.
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { chr_support_hryf = chr_support_krav }
+							check_variable = { var = chr_support_hryf value = 4 compare = not_equals }
+							check_variable = { var = chr_support_krav value = 4 compare = not_equals }
+						}
+						has_country_flag = GRY_investigation_launched
+					}
+					country_event = WFAS_chorna_rada.18
+					else = { country_event = WFAS_chorna_rada.21 }
+				}
+			}
 		}
 	}
 

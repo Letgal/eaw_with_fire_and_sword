@@ -212,21 +212,34 @@
  WFAS_chorna_rada.15.t: "A Pamphlet"
  WFAS_chorna_rada.15.d: ""
  WFAS_chorna_rada.15.a: "This is bad."
+ WFAS_chorna_rada.15.b: "Investigate it."
 
  WFAS_chorna_rada.16.t: "Meeting in a Church"
  WFAS_chorna_rada.16.d: ""
- WFAS_chorna_rada.16.a: "Arrest them. (+ Harmonist)"
- WFAS_chorna_rada.16.b: "Clear them out. (+ Supremacist)"
+ WFAS_chorna_rada.16.a: "Continue to listen."
 
  WFAS_chorna_rada.17.t: "Meeting in a Church 2"
  WFAS_chorna_rada.17.d: ""
- WFAS_chorna_rada.17.a: "Mhm."
+ WFAS_chorna_rada.17.a: "Arrest them. (+ Harmonist)"
+ WFAS_chorna_rada.17.b: "Clear them out. (+ Supremacist)"
 
  WFAS_chorna_rada.18.t: "Chorna Rada End"
  WFAS_chorna_rada.18.d: "Chorna Rada results."
  WFAS_chorna_rada.18.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
  WFAS_chorna_rada.18.b: "[GRY_borad_grifnitsky.GetName] wins."
  WFAS_chorna_rada.18.c: "[GRY_yeven_krawvelets.GetName] wins."
+
+ WFAS_chorna_rada.19.t: "Capital Encircled"
+ WFAS_chorna_rada.19.d: ""
+ WFAS_chorna_rada.19.a: ""
+
+ WFAS_chorna_rada.20.t: "Parliament Besieged"
+ WFAS_chorna_rada.20.d: ""
+ WFAS_chorna_rada.20.a: ""
+
+ WFAS_chorna_rada.21.t: "Communist Takeover"
+ WFAS_chorna_rada.21.d: ""
+ WFAS_chorna_rada.21.a: "Glory to the Revolution!"
 
 ### TRAITS ###
  uncrowned_monarch: "Uncrowned Monarch"
