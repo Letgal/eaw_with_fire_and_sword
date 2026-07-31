@@ -16,8 +16,8 @@ country_event = {
 
 	option = {
 		name = WFAS_chorna_rada.1.a
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.2 days = 42 } } # CRA1
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.13 days = 18 } } # CRC1
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.2 days = 30 } } # CRA1
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.13 days = 6 } } # CRC1
 	}
 }
 country_event = {

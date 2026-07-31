@@ -1,6 +1,9 @@
 ﻿l_english:
 ### COUNTRY NAMES ###
  # (*) don't be hasty with renaming
+ GRY_neutrality: "Gryphian Sich"
+ GRY_neutrality_DEF: "the Gryphian Sich"
+ #GRY_neutrality_ADJ: "Gryphian"
  GRY_democratic: "$GRY_neutrality$" # was: Republic of Zaphzia
  GRY_democratic_DEF: "$GRY_neutrality_DEF$" # was: the Republic of Zaphzia
  GRY_democratic_ADJ: "$GRY_neutrality_ADJ$" # was: Zaphzian

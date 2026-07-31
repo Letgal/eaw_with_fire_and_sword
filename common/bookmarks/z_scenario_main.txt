@@ -251,7 +251,7 @@ bookmarks = {
 			ideology = neutrality
 			label = { CSS_GriffoniaFilter }
 			ideas = {
-				wfas_GRY_disunited_tribes
+				wfas_GRY_independent_siches
 				GRY_landed_gentry
 				wfas_GRY_communist_rebels
 			}
