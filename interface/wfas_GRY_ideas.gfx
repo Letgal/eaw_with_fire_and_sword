@@ -1,7 +1,11 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GRY_zapzh_bordersam_pizda"
-		texturefile = "gfx/interface/ideas/GRY/zapzh_bordersam_pizda.tga"
+		texturefile = "gfx/interface/ideas/GRY/zapzh_bordersam_pizda_V3.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_dis_tribes"
+		texturefile = "gfx/interface/ideas/GRY/dis_tribes.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_GRY_Red_Menace_asleep"

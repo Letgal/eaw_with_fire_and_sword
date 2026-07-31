@@ -9,7 +9,7 @@ ideas = {
 			}
 		}
 		wfas_GRY_disunited_tribes = {
-			picture = generic_disjointed_gov
+			picture = GRY_dis_tribes
 			modifier = {
 				stability_factor = -0.1
 				#mobilization_speed = 0
