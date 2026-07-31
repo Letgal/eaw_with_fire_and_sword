@@ -33,6 +33,7 @@ country_event = {
 			}
 		}
 		set_variable = { GRY_raid_target = BRF }
+		set_country_flag = GRY_raid_succeeded # (*) predestined to win B) ~ L.H.
 	}
 	option = {
 		name = WFAS_gryphia.2.b
@@ -43,6 +44,7 @@ country_event = {
 			}
 		}
 		set_variable = { GRY_raid_target = GRW }
+		set_country_flag = GRY_raid_succeeded # (*) predestined to win B) ~ L.H.
 	}
 }
 country_event = {
