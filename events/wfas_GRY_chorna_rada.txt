@@ -96,8 +96,8 @@ country_event = {
 		add_stability = -0.1
 		add_political_power = -100
 		GRY_pavel_vereskopadsky = { set_character_flag = in_coma }
-		swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
 		add_popularity = { ideology = neutrality popularity = -0.3 }
+		swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
 		hidden_effect = {
 			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_1 add_idea = wfas_GRY_communist_rebels_2 }
 			set_party_name = {
@@ -190,6 +190,8 @@ country_event = {
 
 	option = {
 		name = WFAS_chorna_rada.9.a
+		add_stability = -0.025
+		add_war_support = 0.01
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } # CRS4
 	}
@@ -216,13 +218,13 @@ country_event = {
 		name = WFAS_chorna_rada.10.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRT5
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRS5
 	}
 	option = {
 		name = WFAS_chorna_rada.10.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRT5
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRS5
 	}
 }
 country_event = {
@@ -270,7 +272,7 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE3
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE2
 	}
 	option = {
 		name = WFAS_chorna_rada.12.b
@@ -278,7 +280,7 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE3
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE2
 	}
 }
 
@@ -454,7 +456,7 @@ country_event = {
 	#}
 }
 country_event = {
-	id = WFAS_chorna_rada.19 # 18:CRE3. Capital encircled
+	id = WFAS_chorna_rada.19 # 18:CRE2. Capital encircled
 	title = WFAS_chorna_rada.19.t
 	desc = WFAS_chorna_rada.19.d
 	picture = GFX_event_griffon_mountain
@@ -474,7 +476,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_chorna_rada.20 # 19:CRE4. Siege of parliament
+	id = WFAS_chorna_rada.20 # 19:CRE3. Siege of parliament
 	title = WFAS_chorna_rada.20.t
 	desc = WFAS_chorna_rada.20.d
 	picture = GFX_event_griffon_mountain
@@ -491,7 +493,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_chorna_rada.21 # 20:CRE5. Communists in power
+	id = WFAS_chorna_rada.21 # 20:CRE4. Communists in power
 	title = WFAS_chorna_rada.21.t
 	desc = WFAS_chorna_rada.21.d
 	picture = GFX_event_griffon_mountain

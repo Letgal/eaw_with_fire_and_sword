@@ -163,9 +163,9 @@
  WFAS_chorna_rada.3.d: "Ivan Klovsky lives and he's mad that he was nearly killed.\nThanks to his actions, griffons now slowly gather for Chorna Rada."
  WFAS_chorna_rada.3.a: "He's got quite the zeal."
 
- WFAS_chorna_rada.4.t: "Marichka and Pylyp"
- WFAS_chorna_rada.4.d: "They discuss."
- WFAS_chorna_rada.4.a: "Nice."
+ WFAS_chorna_rada.4.t: "Informational Event" # Marichka and Pylyp
+ WFAS_chorna_rada.4.d: "Add info on all the factions, who they are, what they want and what do they do." # They discuss.
+ WFAS_chorna_rada.4.a: "Got it." # Nice.
 
  WFAS_chorna_rada.5.t: "Attempt on Pavlo Vereskopadsky's Life"
  WFAS_chorna_rada.5.d: "There was an attempt to assassinate Pavlo Vereskopadsky, who is a leading candidate in the ongoing elections.\nHe survived, but fell into a coma and cannot run for elections."
