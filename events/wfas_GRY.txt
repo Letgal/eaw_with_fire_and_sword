@@ -130,6 +130,7 @@ country_event = {
 		trigger = { always = no } # (*) delete later upon adding þe republican paþ(s). ~ L.H.
 		name = WFAS_gryphia.5.b
 		set_country_flag = hryf_chose_republic
+		remove_ideas = wfas_GRY_ruina_6 # (*) move elsewhere when we get to the coronation. ~ L.H.
 	}
 }
 country_event = {

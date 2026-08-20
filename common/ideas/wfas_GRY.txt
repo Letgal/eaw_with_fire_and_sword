@@ -50,12 +50,27 @@ ideas = {
 		wfas_GRY_ruina_4 = {
 			name = wfas_GRY_ruina
 			picture = GRY_Disaster_struggle_for_royal_power
-			modifier = { stability_weekly = -0.0035 }
+			modifier = {
+				stability_weekly = -0.005
+				political_power_cost = 0.5
+				drift_defence_factor = -0.25
+			}
 		}
 		wfas_GRY_ruina_5 = {
 			name = wfas_GRY_ruina
 			picture = GRY_Disaster_struggle_for_royal_power
-			modifier = { stability_weekly = -0.002 }
+			modifier = {
+				stability_weekly = -0.0035
+				political_power_cost = 0.25
+			}
+		}
+		wfas_GRY_ruina_6 = {
+			name = wfas_GRY_ruina
+			picture = GRY_Disaster_struggle_for_royal_power
+			modifier = {
+				stability_weekly = -0.002
+				political_power_cost = 0.1
+			}
 		}
 		wfas_GRY_communist_rebels_1 = {
 			# (*) copy from EAW

@@ -424,6 +424,8 @@ country_event = {
 		name = WFAS_chorna_rada.18.a
 		custom_effect_tooltip = GRY_vereskopadsky_wins_tt
 		complete_national_focus = GRY_vereskopadsky_wins
+		custom_effect_tooltip = SEPARATION_LINE
+		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
 		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
 	}
 	option = {
@@ -432,6 +434,8 @@ country_event = {
 		custom_effect_tooltip = GRY_hryfnytsky_wins_tt
 		set_politics = { ruling_party = democratic }
 		complete_national_focus = GRY_hryfnytsky_wins
+		custom_effect_tooltip = SEPARATION_LINE
+		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
 		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
 	}
 	option = {
@@ -440,6 +444,8 @@ country_event = {
 		custom_effect_tooltip = GRY_kravelets_wins_tt
 		set_politics = { ruling_party = fascism }
 		complete_national_focus = GRY_kravelets_wins
+		custom_effect_tooltip = SEPARATION_LINE
+		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
 		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
 	}
 	#option = {

@@ -2207,6 +2207,7 @@ country_event = { ### ask countries for military aid
 						has_idea = wfas_GRY_ruina_3
 						has_idea = wfas_GRY_ruina_4
 						has_idea = wfas_GRY_ruina_5
+						has_idea = wfas_GRY_ruina_6
 					}
 				}
 			}
@@ -2573,6 +2574,7 @@ country_event = { ### ask countries for industrial aid
 						has_idea = wfas_GRY_ruina_3
 						has_idea = wfas_GRY_ruina_4
 						has_idea = wfas_GRY_ruina_5
+						has_idea = wfas_GRY_ruina_6
 					}
 				}
 			}

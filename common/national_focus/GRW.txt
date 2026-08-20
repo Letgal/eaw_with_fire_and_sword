@@ -458,6 +458,7 @@ focus_tree = {
 						has_idea = wfas_GRY_ruina_3
 						has_idea = wfas_GRY_ruina_4
 						has_idea = wfas_GRY_ruina_5
+						has_idea = wfas_GRY_ruina_6
 					}
 				}
 			}

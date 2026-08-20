@@ -130,12 +130,12 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			if = {
-				limit = { has_idea = wfas_GRY_ruina_1 }
-				swap_ideas = { remove_idea = wfas_GRY_ruina_1 add_idea = wfas_GRY_ruina_2 }
+				limit = { has_idea = wfas_GRY_ruina_4 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_4 add_idea = wfas_GRY_ruina_5 }
 			}
 			else_if = {
-				limit = { has_idea = wfas_GRY_ruina_2 }
-				swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
+				limit = { has_idea = wfas_GRY_ruina_5 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_5 add_idea = wfas_GRY_ruina_6 }
 			}
 			#country_event = 0
 		}
@@ -166,12 +166,12 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			if = {
-				limit = { has_idea = wfas_GRY_ruina_1 }
-				swap_ideas = { remove_idea = wfas_GRY_ruina_1 add_idea = wfas_GRY_ruina_2 }
+				limit = { has_idea = wfas_GRY_ruina_4 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_4 add_idea = wfas_GRY_ruina_5 }
 			}
 			else_if = {
-				limit = { has_idea = wfas_GRY_ruina_2 }
-				swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
+				limit = { has_idea = wfas_GRY_ruina_5 }
+				swap_ideas = { remove_idea = wfas_GRY_ruina_5 add_idea = wfas_GRY_ruina_6 }
 			}
 			#country_event = 0
 		}
