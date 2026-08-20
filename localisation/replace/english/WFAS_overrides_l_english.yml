@@ -51,6 +51,13 @@
   VICTORY_POINTS_5071: "Talvona" # Talvona
   VICTORY_POINTS_4167: "Greifem" # Gryphem
 
+### PARTY NAMES ###
+ #GRY_neutrality_party: "The Hetmanate"
+ GRY_communism_party: "Rebellious Peasants"
+ GRY_communism_party_long: "Rebellious Peasants"
+ #GRY_democratic_party: "Viysko Griffonske"
+ #GRY_fascism_party: "The Black Council"
+
 ### CHARACTERS ###
  ## GRY: COUNTRY LEADERS
   GRY_hetman_calas_bulba: "Kalas Bulba"

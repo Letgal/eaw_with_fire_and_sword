@@ -7,6 +7,10 @@
  GRY_principality_communism_DEF: "$GRY_communism_DEF$"
  GRY_principality_communism_ADJ: "$GRY_communism_ADJ$"
 
+### PARTY NAMES ###
+ GRY_communism_party_organized: "GSDRP"
+ GRY_communism_party_organized_long: "Grifіjs'ka Socіal-Demokraticna Robіtnica Partіja"
+
 ### FOCUSES ###
  GRY_great_anniversary: "50 Years of Hetman's Rule"
  GRY_great_anniversary_desc: "Celebrate the happy 50 years of $GRY_hetman_calas_bulba$'s rule."
