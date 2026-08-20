@@ -81,15 +81,12 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = {
-							check_variable = { chr_support_hryf = chr_support_krav }
-							check_variable = { var = chr_support_hryf value = 4 compare = not_equals }
-							check_variable = { var = chr_support_krav value = 4 compare = not_equals }
-						}
-						has_country_flag = GRY_investigation_launched
+						check_variable = { chr_support_hryf = chr_support_krav }
+						check_variable = { chr_support_hryf < 5 }
+						check_variable = { chr_support_krav < 5 }
 					}
-					country_event = WFAS_chorna_rada.18
-					else = { country_event = WFAS_chorna_rada.21 }
+					country_event = WFAS_chorna_rada.21
+					else = { country_event = WFAS_chorna_rada.18 }
 				}
 			}
 		}

@@ -458,13 +458,9 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_civil_war = no
-		NOT = {
-			has_government = communism
-			check_variable = { chr_support_hryf = chr_support_krav }
-			check_variable = { var = chr_support_hryf value = 4 compare = not_equals }
-			check_variable = { var = chr_support_krav value = 4 compare = not_equals }
-			has_country_flag = GRY_investigation_launched
-		}
+		check_variable = { chr_support_hryf = chr_support_krav }
+		check_variable = { chr_support_hryf < 5 }
+		check_variable = { chr_support_krav < 5 }
 	}
 
 	option = {
