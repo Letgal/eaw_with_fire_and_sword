@@ -253,7 +253,7 @@ bookmarks = {
 			ideas = {
 				wfas_GRY_independent_siches
 				GRY_landed_gentry
-				wfas_GRY_communist_rebels
+				wfas_GRY_communist_rebels_1
 			}
 			focuses = {
 				GRY_great_anniversary

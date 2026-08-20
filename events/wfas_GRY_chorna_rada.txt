@@ -99,7 +99,7 @@ country_event = {
 		swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
 		add_popularity = { ideology = neutrality popularity = -0.3 }
 		hidden_effect = {
-			swap_ideas = { remove_idea = wfas_GRY_communist_rebels add_idea = wfas_GRY_communist_movement }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_1 add_idea = wfas_GRY_communist_rebels_2 }
 			country_event = { id = WFAS_chorna_rada.7 days = 18 } # CRS1
 		}
 	}
@@ -417,6 +417,7 @@ country_event = {
 		name = WFAS_chorna_rada.18.a
 		custom_effect_tooltip = GRY_vereskopadsky_wins_tt
 		complete_national_focus = GRY_vereskopadsky_wins
+		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
 	}
 	option = {
 		trigger = { check_variable = { chr_support_hryf > chr_support_krav } }
@@ -424,6 +425,7 @@ country_event = {
 		custom_effect_tooltip = GRY_hryfnytsky_wins_tt
 		set_politics = { ruling_party = democratic }
 		complete_national_focus = GRY_hryfnytsky_wins
+		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
 	}
 	option = {
 		trigger = { check_variable = { chr_support_hryf < chr_support_krav } }
@@ -431,6 +433,7 @@ country_event = {
 		custom_effect_tooltip = GRY_kravelets_wins_tt
 		set_politics = { ruling_party = fascism }
 		complete_national_focus = GRY_kravelets_wins
+		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
 	}
 	#option = {
 	#	trigger = { check_variable = { chr_support_hryf = chr_support_krav } }

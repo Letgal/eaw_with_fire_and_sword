@@ -154,11 +154,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.05
-			hidden_effect = {
-				remove_ideas = wfas_GRY_communist_movement
-				add_timed_idea = { idea = wfas_GRY_communist_movement_temp years = 1 }
-			}
-			custom_effect_tooltip = GRY_communist_movement_temp_tt
 			# ADD TT: UNLOCK DECISIONS TO FIHT Þ MOVEMENT, shortenin þ duration.
 		}
 	}

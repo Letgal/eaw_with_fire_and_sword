@@ -128,5 +128,5 @@ set_variable = { cultural_revival_cgf = 0 }
 add_ideas = {
 	wfas_GRY_independent_siches
 	wfas_GRY_disunited_tribes
-	wfas_GRY_communist_rebels
+	wfas_GRY_communist_rebels_1
 }

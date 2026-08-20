@@ -108,10 +108,11 @@
  wfas_GRY_disunited_tribes: "Disunited Tribes"
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
  wfas_GRY_ruina: "Ruina"
- wfas_GRY_communist_rebels: "Peasant Rebels"
- wfas_GRY_communist_rebels_desc: "There exists a small but growing group of peasants disloyal to our cause. They demand better life conditions and a solution for their problems."
- wfas_GRY_communist_movement: "Communist Rebels"
- wfas_GRY_communist_movement_desc: "Seizing the opportunity and exploiting the destabilization in our country, a communist movement has organized itself in our country. They conduct terrorist acts aimed at undermining our authority and their threat grows fast."
+ wfas_GRY_communist_rebels_1: "Peasant Rebels"
+ wfas_GRY_communist_rebels_1_desc: "There exists a small but growing group of peasants disloyal to our cause. They demand better life conditions and a solution for their problems."
+ wfas_GRY_communist_rebels_2: "Communist Rebels"
+ wfas_GRY_communist_rebels_2_desc: "Seizing the opportunity and exploiting the destabilization in our country, a communist movement has organized itself in our country. They conduct terrorist acts aimed at undermining our authority and their threat grows fast."
+ wfas_GRY_communist_rebels_temp: "Faltering Communist Movement"
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
  wfas_GRY_cultural_revival: "Cultural Revival"
@@ -255,7 +256,6 @@
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
- GRY_communist_movement_temp_tt: "Set a duration of §H365§! days for §Y$wfas_GRY_communist_movement$§!."
 
  modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"
  prestige_gain: "Prestige Gain"

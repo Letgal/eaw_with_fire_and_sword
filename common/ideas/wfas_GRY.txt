@@ -57,7 +57,7 @@ ideas = {
 			picture = GRY_Disaster_struggle_for_royal_power
 			modifier = { stability_weekly = -0.002 }
 		}
-		wfas_GRY_communist_rebels = {
+		wfas_GRY_communist_rebels_1 = {
 			# (*) copy from EAW
 			picture = GRY_Red_Menace_asleep
 			allowed_civil_war = { NOT = { has_government = communism } }
@@ -71,7 +71,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
-		wfas_GRY_communist_movement = {
+		wfas_GRY_communist_rebels_2 = {
 			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
 			cancel = { has_government = communism }
@@ -84,9 +84,8 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
-		wfas_GRY_communist_movement_temp = {
+		wfas_GRY_communist_rebels_temp = {
 			# (*) swap on temp idea
-			name = wfas_GRY_communist_movement
 			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
 			cancel = { has_government = communism }
