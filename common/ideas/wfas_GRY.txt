@@ -100,7 +100,6 @@ ideas = {
 			}
 		}
 		wfas_GRY_communist_rebels_temp = {
-			# (*) swap on temp idea
 			picture = GRY_Red_Menace
 			allowed_civil_war = { NOT = { has_government = communism } }
 			cancel = { has_government = communism }

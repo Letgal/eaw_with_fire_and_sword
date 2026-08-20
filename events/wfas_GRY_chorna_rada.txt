@@ -398,10 +398,12 @@ country_event = {
 	option = {
 		name = WFAS_chorna_rada.17.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
+		custom_effect_tooltip = chorna_rada_investigation_tt
 	}
 	option = {
 		name = WFAS_chorna_rada.17.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
+		custom_effect_tooltip = chorna_rada_investigation_tt
 	}
 }
 
@@ -426,7 +428,11 @@ country_event = {
 		complete_national_focus = GRY_vereskopadsky_wins
 		custom_effect_tooltip = SEPARATION_LINE
 		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
-		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
+		if = {
+			limit = { has_country_flag = GRY_investigation_launched }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 273 } # (*) 92 days shorter. ~ L.H.
+			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 } }
+		}
 	}
 	option = {
 		trigger = { check_variable = { chr_support_hryf > chr_support_krav } }
@@ -436,7 +442,11 @@ country_event = {
 		complete_national_focus = GRY_hryfnytsky_wins
 		custom_effect_tooltip = SEPARATION_LINE
 		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
-		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
+		if = {
+			limit = { has_country_flag = GRY_investigation_launched }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 273 }
+			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 } }
+		}
 	}
 	option = {
 		trigger = { check_variable = { chr_support_hryf < chr_support_krav } }
@@ -446,7 +456,11 @@ country_event = {
 		complete_national_focus = GRY_kravelets_wins
 		custom_effect_tooltip = SEPARATION_LINE
 		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
-		swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 }
+		if = {
+			limit = { has_country_flag = GRY_investigation_launched }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 273 }
+			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 } }
+		}
 	}
 	#option = {
 	#	trigger = { check_variable = { chr_support_hryf = chr_support_krav } }

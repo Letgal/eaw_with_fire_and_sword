@@ -257,6 +257,7 @@
  chorna_rada_explanation_tt: "§YDifferent situations will happen for a duration of this focus. Your response to them will shape the course of the nation.§!"
  chorna_rada_support_hryf_tt: "This will please §Pharmonists§!, but §Csupremacists§! will be displeased."
  chorna_rada_support_krav_tt: "This will please §Csupremacists§!, but §Pharmonists§! will be displeased."
+ chorna_rada_investigation_tt: "This will cut the duration of the §H$wfas_GRY_communist_rebels_temp$§! spirit by §Y3 months§! upon the end of §HChorna Rada§!."
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
