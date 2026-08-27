@@ -18,6 +18,10 @@ spriteTypes = {
 
 	# FOCUS FILTERS
 	spriteType = {
+		name = "GFX_FOCUS_FILTER_RESOURCES"
+		texturefile = "gfx/interface/focusview/filter/resources.dds"
+	}
+	spriteType = {
 		name = "GFX_FOCUS_FILTER_LAND_DOCTRINE"
 		texturefile = "gfx/interface/focusview/filter/land_doctrine.dds"
 	}

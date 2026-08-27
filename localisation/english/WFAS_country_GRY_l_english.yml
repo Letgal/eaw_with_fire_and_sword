@@ -85,7 +85,7 @@
   GRY_crystal_extraction: "Crystal Extraction"
   GRY_oil_fields: "Oil Fields"
   GRY_flat_land_tax: "Flat Land Tax"
-  GRY_home_grown_fertilizers: "Home Grown Fertilizers"
+  GRY_home_made_fertilizers: "Home Made Fertilizers"
   GRY_agronomic_universities: "Agronomic Universities"
   GRY_centralized_planning: "Centralized Planning"
   GRY_local_technical_colleges: "Local Technical Colleges"
@@ -117,10 +117,22 @@
  wfas_GRY_communist_rebels_2: "Communist Rebels"
  wfas_GRY_communist_rebels_2_desc: "Seizing the opportunity and exploiting the destabilization in our country, a communist movement has organized itself in our country. They conduct terrorist acts aimed at undermining our authority and their threat grows fast."
  wfas_GRY_communist_rebels_temp: "Faltering Communist Movement"
+
+ ## HRYFNYTSKY
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
  wfas_GRY_cultural_revival: "Cultural Revival"
  wfas_GRY_cultural_programs_idea: "Cultural Programs"
+
+  # Economic
+  GRY_srodna_pratsya: "Srodna Pratsya" # Skovoroda's 'Congenial Work'
+  GRY_ready_for_the_modernity: "Ready for the Demands of Modernity"
+  GRY_loyal_peasantry: "Loyal Peasants"
+  GRY_efficient_extraction: "Efficient Extraction"
+  GRY_power_of_steam: "Power of Steam"
+  GRY_weird_crystals: "Weird Crystals"
+  GRY_home_made_fertilizers_idea: "$GRY_home_made_fertilizers$"
+  GRY_agronomic_universities_idea: "$GRY_agronomic_universities$"
 
 ### EVENTS ###
  WFAS_gryphia.1.t: "$GRY_great_anniversary$"
@@ -250,8 +262,8 @@
  uncrowned_monarch: "Uncrowned Monarch"
 
 ### FLAGS ###
- hryf_chose_monarchy: "Monarchy chosen"
- hryf_chose_republic: "Republic chosen"
+ hryf_chose_monarchy: "Monarchy was chosen"
+ hryf_chose_republic: "Republic was chosen"
 
 ### TOOLTIPS ###
  chorna_rada_explanation_tt: "§YDifferent situations will happen for a duration of this focus. Your response to them will shape the course of the nation.§!"
@@ -266,3 +278,5 @@
  prestige_gain: "Prestige Gain"
  prestige_gain_var: "$prestige_gain$: [?prestige_gain|2%+=]"
  prestige_gain_tt: " $prestige_gain$: $RIGHT|2%+=$"
+
+ improve_srodna_pratsya: "The effect will be applied once you receive the spirit from the §H$GRY_community_creation$§! focus."

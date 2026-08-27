@@ -7,7 +7,11 @@
  wfas_BRF_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$BRF_GATHERING_STORM_DESC$"
 
 ### FOCUS FILTERS ###
- FOCUS_FILTER_NO_EFFECTS: "No Effects" # (*) stolen from my RCW mod :)
+ FOCUS_FILTER_RESOURCES: "Resources"
+ FOCUS_FILTER_LAND_DOCTRINE: "Land Doctrine" # (*) stolen from my RCW mod :)
+ FOCUS_FILTER_NAVAL_DOCTRINE: "Naval Doctrine" # (*) RCW
+ FOCUS_FILTER_AIR_DOCTRINE: "Air Doctrine" # (*) RCW
+ FOCUS_FILTER_NO_EFFECTS: "No Effects" # (*) RCW
 
 ### TOOLTIPS ###
  EFFECT_UNLOCK_DECISION_FREE: "Unlocks £decision_icon_free free decision: $NAME|H$."

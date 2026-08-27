@@ -1,5 +1,9 @@
 ideas = {
 	country = {
+		# GOTO:
+		# HRYF_MONARCHY
+		# HRYF_ECONOMIC
+
 		wfas_GRY_independent_siches = {
 			picture = GRY_zapzh_bordersam_pizda
 			modifier = {
@@ -113,7 +117,7 @@ ideas = {
 			}
 		}
 
-		### HRYFNYTSKY'S PATH ###
+		# HRYF_MONARCHY
 		wfas_GRY_love_of_the_people = {
 			picture = GRY_Everyones_favorite
 			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
@@ -140,6 +144,79 @@ ideas = {
 				tag = LCT
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
+			}
+		}
+
+		# HRYF_ECONOMIC
+		GRY_srodna_pratsya_1 = {
+			# focus: GRY_community_creation
+			name = GRY_srodna_pratsya
+			modifier = {
+				monthly_population = 0.2
+				political_power_factor = 0.05
+			}
+		}
+		GRY_srodna_pratsya_2 = {
+			# focus: GRY_food_industry
+			name = GRY_srodna_pratsya
+			modifier = {
+				monthly_population = 0.2
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		GRY_ready_for_the_modernity = {
+			# focus: GRY_workers_training
+			modifier = { production_factory_efficiency_gain_factor = 0.15 }
+		}
+		GRY_loyal_peasantry_1 = {
+			# focus: GRY_subsidies_for_the_farmers
+			name = GRY_loyal_peasantry
+			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
+			modifier = {
+				conscription_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GRY_loyal_peasantry_2 = {
+			# focus: GRY_flat_land_tax
+			name = GRY_loyal_peasantry
+			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
+			modifier = {
+				political_power_factor = 0.05
+				conscription_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+		GRY_efficient_extraction = {
+			# focus: GRY_metal_extraction
+			modifier = { local_resources_factor = 0.1 }
+		}
+		GRY_power_of_steam = {
+			# focus: GRY_steam_engines
+			modifier = {
+				factory_energy_consumption = -0.1
+				supply_node_range = 0.05
+			}
+		}
+		GRY_weird_crystals = {
+			# focus: GRY_crystal_extraction
+			research_bonus = { magical_tech = 0.1 }
+			equipment_bonus = { magical_tech = { instant = yes build_cost_ic = -0.05 } }
+		}
+		GRY_home_made_fertilizers_idea = {
+			# focus: GRY_home_made_fertilizers
+			modifier = {
+				monthly_population = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		GRY_agronomic_universities_idea = {
+			# focus: GRY_agronomic_universities
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.1
 			}
 		}
 	}

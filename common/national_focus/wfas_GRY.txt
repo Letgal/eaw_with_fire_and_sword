@@ -637,8 +637,15 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { } # gives a SPIRIT and unlocks a DECISION.
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			if = {
+				limit = { has_completed_focus = GRY_food_industry }
+				add_ideas = GRY_srodna_pratsya_2
+				else = { add_ideas = GRY_srodna_pratsya_1 }
+			}
+			# unlocks a DECISION.
+		}
 	}
 	focus = {
 		id = GRY_rural_schools
@@ -665,7 +672,16 @@ focus_tree = {
 				limit = { NOT = { state = 598 state = 609 } }
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			}
-			# and an EVENT þat gives a SPIRIT.
+			custom_effect_tooltip = SEPARATION_LINE
+			if = {
+				limit = { has_idea = GRY_srodna_pratsya_1 }
+				swap_ideas = { remove_idea = GRY_srodna_pratsya_1 add_idea = GRY_srodna_pratsya_2 }
+				else = {
+					effect_tooltip = { swap_ideas = { remove_idea = GRY_srodna_pratsya_1 add_idea = GRY_srodna_pratsya_2 } }
+					custom_effect_tooltip = improve_srodna_pratsya
+				}
+			}
+			# and an EVENT and move swap_ideas there.
 		}
 	}
 	focus = {
@@ -676,7 +692,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		search_filters = { FOCUS_FILTER_RESOURCES }
 		completion_reward = {
 			add_resource = { type = coal amount = 9 state = 612 }
 			add_resource = { type = coal amount = 5 state = 613 }
@@ -758,8 +774,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { } # gives a SPIRIT.
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = { add_ideas = GRY_ready_for_the_modernity }
 	}
 	focus = {
 		id = GRY_kaiv_polytechnical
@@ -769,8 +785,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { } # unlocks a DECISION.
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+			# unlocks a DECISION.
+		}
 	}
 
 	focus = {
@@ -796,8 +815,8 @@ focus_tree = {
 		x = -3
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { add_ideas = GRY_loyal_peasantry_1 }
 	}
 	focus = {
 		id = GRY_metal_extraction
@@ -807,8 +826,11 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_RESOURCES }
+		completion_reward = {
+			add_resource = { type = steel amount = 24 state = 598 }
+			add_ideas = GRY_efficient_extraction
+		}
 	}
 	focus = {
 		id = GRY_steam_engines
@@ -818,8 +840,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { add_ideas = GRY_power_of_steam }
 	}
 	focus = {
 		id = GRY_crystal_extraction
@@ -829,8 +851,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		search_filters = { FOCUS_FILTER_RESOURCES }
+		completion_reward = {
+			# move to country_event:
+			add_resource = { type = crystals amount = 14 state = 612 }
+			add_ideas = GRY_weird_crystals
+		}
 	}
 	focus = {
 		id = GRY_oil_fields
@@ -851,19 +877,19 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { swap_ideas = { remove_idea = GRY_loyal_peasantry_1 add_idea = GRY_loyal_peasantry_2 } }
 	}
 	focus = {
-		id = GRY_home_grown_fertilizers
+		id = GRY_home_made_fertilizers
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GRY_flat_land_tax }
 		relative_position_id = GRY_flat_land_tax
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { add_ideas = GRY_home_made_fertilizers_idea }
 	}
 	focus = {
 		id = GRY_agronomic_universities
@@ -873,8 +899,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { add_ideas = GRY_agronomic_universities_idea }
 	}
 	focus = {
 		id = GRY_centralized_planning
@@ -935,7 +961,7 @@ focus_tree = {
 	focus = {
 		id = GRY_steady_development
 		icon = GFX_goal_unknown
-		prerequisite = { focus = GRY_home_grown_fertilizers focus = GRY_antitrust_laws }
+		prerequisite = { focus = GRY_home_made_fertilizers focus = GRY_antitrust_laws }
 		relative_position_id = GRY_antitrust_laws
 		x = -3
 		y = 1
