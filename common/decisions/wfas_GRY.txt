@@ -1,0 +1,63 @@
+economy_decisions = {
+	GRY_expand_peasant_education = {
+		icon = generic_research
+		allowed = { original_tag = GRY }
+		visible = { has_completed_focus = GRY_rural_schools }
+		cost = 50
+		fire_only_once = yes
+		days_remove = 140
+		modifier = { consumer_goods_factor = 0.15 }
+		remove_effect = { add_research_slot = 1 }
+	}
+	GRY_put_the_knowledge_into_practice = {
+		icon = generic_research
+		allowed = { original_tag = GRY }
+		visible = { has_completed_focus = GRY_kaiv_polytechnical }
+		cost = 50
+		fire_only_once = yes
+		days_remove = 140
+		modifier = { consumer_goods_factor = 0.15 }
+		remove_effect = { decrease_illiteracy = yes }
+	}
+	#GRY_use_the_oil_fields = {
+	#	# (*) bad. ~ L.H.
+	#	icon = oil
+	#	allowed = { original_tag = GRY }
+	#	visible = { has_completed_focus = GRY_oil_fields }
+	#	available = {
+	#		has_tech = synth_oil_experiments
+	#		num_of_available_civilian_factories > 1
+	#	}
+	#	cost = 50
+	#	fire_only_once = yes
+	#	days_remove = 210
+	#	modifier = { civilian_factory_use = 2 }
+	#	remove_effect = {
+	#		609 = {
+	#			add_building_construction = {
+	#				type = synthetic_refinery
+	#				level = 1
+	#				instant_build = yes
+	#			}
+	#		}
+	#	}
+	#}
+}
+prospect_for_resources = {
+	increase_coal_extraction_in_buzzovyna = {
+		icon = coal
+		allowed = { original_tag = GRY }
+		visible = { has_completed_focus = GRY_search_for_coal_basins }
+		available = {
+			has_tech = excavation1
+			num_of_available_civilian_factories > 0
+		}
+		state_target = yes
+		targets = { 611 }
+		cost = 25
+		fire_only_once = yes
+		days_remove = 60
+		modifier = { civilian_factory_use = 1 }
+		remove_effect = { add_resource = { type = coal amount = 4 state = FROM } }
+	}
+}

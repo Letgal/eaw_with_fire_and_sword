@@ -596,9 +596,12 @@ focus_tree = {
 		x = 9
 		y = -1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = GRY_borad_grifnitsky } }
-		completion_reward = { }
+		completion_reward = {
+			add_political_power = 50
+			# event.
+		}
 	}
 
 	focus = {
@@ -655,8 +658,11 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { } # unlocks a DECISION.
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			decrease_illiteracy = yes
+			unlock_decision_tooltip = GRY_expand_peasant_education
+		}
 	}
 	focus = {
 		id = GRY_food_industry
@@ -696,6 +702,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = { type = coal amount = 9 state = 612 }
 			add_resource = { type = coal amount = 5 state = 613 }
+			unlock_decision_tooltip = increase_coal_extraction_in_buzzovyna
 		}
 	}
 
@@ -788,7 +795,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
-			# unlocks a DECISION.
+			unlock_decision_tooltip = GRY_put_the_knowledge_into_practice
 		}
 	}
 
@@ -804,6 +811,8 @@ focus_tree = {
 		completion_reward = {
 			clr_country_flag = economic_laws_blocked
 			custom_effect_tooltip = will_allow_economic_laws_tt
+			custom_effect_tooltip = SEPARATION_LINE
+			increase_society_development_gradual = yes
 		}
 	}
 	focus = {
@@ -851,6 +860,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
+		#available = { has_tech = excavation4 }
 		search_filters = { FOCUS_FILTER_RESOURCES }
 		completion_reward = {
 			# move to country_event:
@@ -866,8 +876,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#available = { has_tech = excavation5 }
+		search_filters = { FOCUS_FILTER_RESOURCES }
+		completion_reward = {
+			add_resource = { type = oil amount = 22 state = 597 }
+			#unlock_decision_tooltip = GRY_use_the_oil_fields
+		}
 	}
 	focus = {
 		id = GRY_flat_land_tax
@@ -911,8 +925,8 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { capital_scope = { add_extra_state_shared_building_slots = 3 } }
 	}
 	focus = {
 		id = GRY_local_technical_colleges
@@ -933,8 +947,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { increase_science_base = yes }
 	}
 	focus = {
 		id = GRY_progressive_taxation

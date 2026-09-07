@@ -107,6 +107,13 @@
   GRY_kravelets_wins: "Kravelets Wins"
   GRY_kravelets_wins_desc: "Placeholder"
 
+### DECISIONS ###
+ GRY_expand_peasant_education: "Expand Peasant Education"
+ GRY_put_the_knowledge_into_practice: "Put Our Knowledge into Practice"
+
+ ## EXCAVATION
+  increase_coal_extraction_in_buzzovyna: "Increase Coal Extraction in [611.GetName]"
+
 ### IDEAS ###
  wfas_GRY_independent_siches: "Independent Siches"
  wfas_GRY_disunited_tribes: "Disunited Tribes"
