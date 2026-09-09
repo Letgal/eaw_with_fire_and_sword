@@ -36,21 +36,6 @@
   VICTORY_POINTS_10764: "Kaiv"
   VICTORY_POINTS_12719: "Chykchyryn"
 
- ## LUSHI
-  STATE_591: "Talvona" # Talvona
-  STATE_593: "Greifem" # Gryphem
-  STATE_607: "Cessabit" # Cessabit
-  STATE_608: "Lüscheland" # Lushland
-  STATE_632: "Dratsch" # Draksland
-
-  VICTORY_POINTS_8003: "Lümien" # Lumium
-  VICTORY_POINTS_12040: "Schmallengen" # Saiburg
-  VICTORY_POINTS_8026: "Hertau" # Origako
-  VICTORY_POINTS_11912: "Selnau" # Mitoriv
-  VICTORY_POINTS_7204: "Dratschenburg" # Drakburg
-  VICTORY_POINTS_5071: "Talvona" # Talvona
-  VICTORY_POINTS_4167: "Greifem" # Gryphem
-
 ### PARTY NAMES ###
  #GRY_neutrality_party: "The Hetmanate"
  GRY_communism_party: "Rebellious Peasants"

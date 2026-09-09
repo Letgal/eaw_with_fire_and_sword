@@ -1,9 +1,24 @@
 ﻿l_english:
-### VICTORY POINTS ###
+### STATES & VICTORY POINTS ###
+ # (*) moved from replace to be compatible with the Ukrainian localization :) ~ L.H.
+ wfas_STATE_591: "Talvona" # Talvona
+ wfas_STATE_593: "Greifem" # Gryphem
+ wfas_STATE_607: "Cessabit" # Cessabit
+ wfas_STATE_608: "Lüscheland" # Lushland
+ wfas_STATE_632: "Dratsch" # Draksland
+
+ wfas_VP_8003: "Lümien" # Lumium
+ wfas_VP_12040: "Schmallengen" # Saiburg
+ wfas_VP_8026: "Hertau" # Origako
+ wfas_VP_11912: "Selnau" # Mitoriv
+ wfas_VP_7204: "Dratschenburg" # Drakburg
+ wfas_VP_5071: "Talvona" # Talvona
+ wfas_VP_4167: "Greifem" # Gryphem
+
  ## NEW IN WFAS
- VICTORY_POINTS_438: "Laschendorf" # or Buschendorf
- VICTORY_POINTS_10765: "Tschornau"
- VICTORY_POINTS_12642: "Bierhagen"
+ wfas_VP_438: "Laschendorf" # or Buschendorf
+ wfas_VP_10765: "Tschornau"
+ wfas_VP_12642: "Bierhagen"
 
 ### FOCUSES ###
  LUS_pressing_matters: "Pressing Matters"
