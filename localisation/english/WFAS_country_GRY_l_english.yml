@@ -1,4 +1,9 @@
 ﻿l_english:
+### STATES & VICTORY POINTS ###
+ # (*) moved from replace to be compatible with Ukr loc :) ~ L.H.
+ wfas_STATE_613: "Upper Kosarshchyna" # Upper Cropperclaws
+ wfas_STATE_631: "Lower Kosarshchyna" # Lower Cropperclaws
+
 ### COSMETIC TAGS ###
  GRY_principality: "Principality of Zaphzia"
  GRY_principality_DEF: "the Principality of Zaphzia"
@@ -22,6 +27,7 @@
  GRY_convene_the_chorna_rada_desc: "Assemble and convene the Chorna Rada, or the Black Council."
 
  ## HRYFNYTSKY
+  # HRYF_MONARCHY
   GRY_hryfnytsky_wins: "Hryfnytsky Wins"
   GRY_hryfnytsky_wins_desc: "Placeholder"
   GRY_placate_the_nationalists: "Placate the Nationalists"

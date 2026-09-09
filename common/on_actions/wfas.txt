@@ -1,6 +1,11 @@
 on_actions = {
 on_startup = {
 effect = {
+	# GRY
+	613 = { set_state_name = wfas_STATE_613 }
+	631 = { set_state_name = wfas_STATE_631 }
+
+	# LUS
 	591 = { set_state_name = wfas_STATE_591 }
 	593 = { set_state_name = wfas_STATE_593 }
 	607 = { set_state_name = wfas_STATE_607 }

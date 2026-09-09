@@ -203,6 +203,7 @@ focus_tree = {
 		available = {
 			has_country_leader = { character = GRY_borad_grifnitsky }
 			has_country_flag = hryf_chose_monarchy
+			has_country_flag = coronation_costs_decided
 		}
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = { country_event = WFAS_gryphia.10 }

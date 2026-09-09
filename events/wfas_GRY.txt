@@ -237,6 +237,7 @@ country_event = {
 		}
 		clr_country_flag = coronation_costs
 		clr_country_flag = coronation_costs_decided
+		clr_country_flag = archons_refused_coronation
 	}
 }
 
