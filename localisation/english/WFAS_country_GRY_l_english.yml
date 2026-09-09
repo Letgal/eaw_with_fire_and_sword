@@ -126,6 +126,7 @@
  wfas_GRY_communist_rebels_temp: "Faltering Communist Movement"
 
  ## HRYFNYTSKY
+ GRY_coronation_costs: "Coronation Costs"
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
  wfas_GRY_cultural_revival: "Cultural Revival"
@@ -166,7 +167,18 @@
 
  WFAS_gryphia.6.t: "Coronation Costs"
  WFAS_gryphia.6.d: "Decide how much to spend on a coronation."
- WFAS_gryphia.6.a: "Yes."
+ WFAS_gryphia.6.d1: "Brother, you're at war, so your coronation can't be lavish."
+ WFAS_gryphia.6.a: "It will be a private ceremony."
+ WFAS_gryphia.6.b: "It will be a lavish ceremony!"
+ WFAS_gryphia.6.c: "Only an archon is worthy of coronating me!"
+ WFAS_gryphia.6.e: "Oh."
+
+ WFAS_gryphia.10.t: "The Coronation"
+ WFAS_gryphia.10.d1: "A humble coronation."
+ WFAS_gryphia.10.d2: "A decent coronation."
+ WFAS_gryphia.10.d3: "An extravagant coronation."
+ WFAS_gryphia.10.d4: "A coronation during war."
+ WFAS_gryphia.10.a: "Three cheers for the Prince!"
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.
@@ -267,6 +279,15 @@
 
 ### TRAITS ###
  uncrowned_monarch: "Uncrowned Monarch"
+ uncrowned_monarch_desc: "  §L$uncrowned_monarch$ Description§!\n"
+ monarch_of_all_zaphzia_1: "Monarch of All Zaphzia"
+ monarch_of_all_zaphzia_1_desc: "$prestige_gain_var_monarch$\n  §L$monarch_of_all_zaphzia_1$ Description§!\n"
+ monarch_of_all_zaphzia_2: "$monarch_of_all_zaphzia_1$"
+ monarch_of_all_zaphzia_2_desc: "$prestige_gain_var_monarch$\n  §L$monarch_of_all_zaphzia_1$ Description§!\n"
+ monarch_of_all_zaphzia_3: "$monarch_of_all_zaphzia_1$"
+ monarch_of_all_zaphzia_3_desc: "$prestige_gain_var_monarch$\n  §L$monarch_of_all_zaphzia_1$ Description§!\n"
+ cossack_prince: "Cossack Prince"
+ cossack_prince_desc: "  §L$cossack_prince$ Description§!\n"
 
 ### FLAGS ###
  hryf_chose_monarchy: "Monarchy was chosen"
@@ -284,6 +305,7 @@
  modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"
  prestige_gain: "Prestige Gain"
  prestige_gain_var: "$prestige_gain$: [?prestige_gain|2%+=]"
+ prestige_gain_var_monarch: "  - $prestige_gain$: [?prestige_gain_monarch|2%+=]"
  prestige_gain_tt: " $prestige_gain$: $RIGHT|2%+=$"
 
  improve_srodna_pratsya: "The effect will be applied once you receive the spirit from the §H$GRY_community_creation$§! focus."

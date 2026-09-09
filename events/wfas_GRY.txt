@@ -136,14 +136,107 @@ country_event = {
 country_event = {
 	id = WFAS_gryphia.6 # Coronation Costs
 	title = WFAS_gryphia.6.t
-	desc = WFAS_gryphia.6.d
+	desc = {
+		trigger = { has_war = yes }
+		text = WFAS_gryphia.6.d1
+	}
+	desc = { text = WFAS_gryphia.6.d }
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.6.a
+		trigger = { has_war = no }
+		add_political_power = -50
+		set_variable = { prestige_gain_monarch = -0.1 }
+		add_timed_idea = { idea = GRY_coronation_costs_1_temp months = 3 }
+		set_country_flag = { flag = coronation_costs value = 1 }
+		set_country_flag = coronation_costs_decided
+	}
+	option = {
+		name = WFAS_gryphia.6.b
+		trigger = { has_war = no }
+		add_political_power = -150
+		set_variable = { prestige_gain_monarch = 0.1 }
+		add_timed_idea = { idea = GRY_coronation_costs_2_temp months = 6 }
+		set_country_flag = { flag = coronation_costs value = 2 }
+		set_country_flag = coronation_costs_decided
+	}
+	option = {
+		name = WFAS_gryphia.6.c
+		trigger = {
+			has_war = no
+			NOT = { has_country_flag = archons_refused_coronation }
+		}
+		#custom_effect_tooltip = if_they_accept
+		add_political_power = -250
+		set_variable = { prestige_gain_monarch = 0.5 }
+		add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 9 }
+		set_country_flag = { flag = coronation_costs value = 3 }
+		set_country_flag = coronation_costs_decided # (*) temp, delete later! ~ L.H.
+	}
+	option = {
+		name = WFAS_gryphia.6.e
+		trigger = { has_war = yes }
+		add_political_power = -75
+		add_timed_idea = { idea = GRY_coronation_costs_4_temp months = 3 }
+		set_country_flag = { flag = coronation_costs value = 4 }
+		set_country_flag = coronation_costs_decided
+	}
+}
+#country_event = Request to the archons
+#country_event = They accepted, but with a condition
+	# set_country_flag = coronation_costs_decided
+#country_event = Refusal (and go back)
+	# immediate = { set_country_flag = archons_refused_coronation }
+
+country_event = {
+	id = WFAS_gryphia.10
+	title = WFAS_gryphia.10.t
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 1 } }
+		text = WFAS_gryphia.10.d1
+	}
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 2 } }
+		text = WFAS_gryphia.10.d2
+	}
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 3 } }
+		text = WFAS_gryphia.10.d3
+	}
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 4 } }
+		text = WFAS_gryphia.10.d4
+	}
 	picture = GFX_report_event_generic_read_write
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = WFAS_gryphia.6.a
+		name = WFAS_gryphia.10.a
+		add_stability = 0.1
+		if = {
+			limit = { has_country_flag = { flag = coronation_costs value = 1 } }
+			swap_ruler_traits = { remove = uncrowned_monarch add = monarch_of_all_zaphzia_1 }
+		}
+		else_if = {
+			limit = { has_country_flag = { flag = coronation_costs value = 2 } }
+			swap_ruler_traits = { remove = uncrowned_monarch add = monarch_of_all_zaphzia_2 }
+		}
+		else_if = {
+			limit = { has_country_flag = { flag = coronation_costs value = 3 } }
+			swap_ruler_traits = { remove = uncrowned_monarch add = monarch_of_all_zaphzia_3 }
+		}
+		else_if = {
+			limit = { has_country_flag = { flag = coronation_costs value = 4 } }
+			swap_ruler_traits = { remove = uncrowned_monarch add = cossack_prince }
+		}
+		clr_country_flag = coronation_costs
+		clr_country_flag = coronation_costs_decided
 	}
 }
 

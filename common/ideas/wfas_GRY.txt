@@ -118,6 +118,22 @@ ideas = {
 		}
 
 		# HRYF_MONARCHY
+		GRY_coronation_costs_1_temp = {
+			name = GRY_coronation_costs
+			modifier = { consumer_goods_factor = 0.05 }
+		}
+		GRY_coronation_costs_2_temp = {
+			name = GRY_coronation_costs
+			modifier = { consumer_goods_factor = 0.15 }
+		}
+		GRY_coronation_costs_3_temp = {
+			name = GRY_coronation_costs
+			modifier = { consumer_goods_factor = 0.25 }
+		}
+		GRY_coronation_costs_4_temp = {
+			name = GRY_coronation_costs
+			modifier = { consumer_goods_factor = 0.1 }
+		}
 		wfas_GRY_love_of_the_people = {
 			picture = GRY_Everyones_favorite
 			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }

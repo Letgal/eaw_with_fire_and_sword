@@ -46,4 +46,26 @@ debug_decisions = {
 		allowed = { original_tag = GRY }
 		visible = { has_country_flag = chorna_rada_in_progress }
 	}
+	wfas_GRY_add_all_monarch_traits = {
+		allowed = { original_tag = GRY }
+		visible = { has_country_leader = { character = GRY_borad_grifnitsky } }
+		complete_effect = {
+			set_variable = { prestige_gain_monarch = 0.1 }
+			add_country_leader_trait = uncrowned_monarch
+			add_country_leader_trait = monarch_of_all_zaphzia_1
+			add_country_leader_trait = monarch_of_all_zaphzia_2
+			add_country_leader_trait = monarch_of_all_zaphzia_3
+			add_country_leader_trait = cossack_prince
+		}
+	}
+	wfas_GRY_add_all_coronation_costs = {
+		allowed = { original_tag = GRY }
+		visible = { has_country_leader = { character = GRY_borad_grifnitsky } }
+		complete_effect = {
+			add_timed_idea = { idea = GRY_coronation_costs_1_temp months = 9 }
+			add_timed_idea = { idea = GRY_coronation_costs_2_temp months = 6 }
+			add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 3 }
+			add_timed_idea = { idea = GRY_coronation_costs_4_temp months = 3 }
+		}
+	}
 }

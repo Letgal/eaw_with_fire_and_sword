@@ -204,12 +204,8 @@ focus_tree = {
 			has_country_leader = { character = GRY_borad_grifnitsky }
 			has_country_flag = hryf_chose_monarchy
 		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_political_power = 70
-			add_stability = 0.05
-			#country_event = ADD CORONATION & FLAVOR
-		}
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { country_event = WFAS_gryphia.10 }
 	}
 	focus = {
 		id = GRY_travel_the_country
