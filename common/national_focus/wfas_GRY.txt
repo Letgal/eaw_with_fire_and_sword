@@ -1,5 +1,5 @@
 focus_tree = {
-	id = wfas_GRY_focus # (*) in EAW: GRY_focus
+	id = wfas_GRY_focus # EAW: GRY_focus
 
 	country = {
 		factor = 0
@@ -27,7 +27,7 @@ focus_tree = {
 		x = 8
 		cost = 1
 		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = { country_event = { id = WFAS_gryphia.1 hours = 12 random_hours = 12 } }
+		completion_reward = { country_event = WFAS_gryphia.1 }
 	}
 	focus = {
 		id = GRY_gather_the_siches
@@ -38,7 +38,7 @@ focus_tree = {
 		y = 1
 		cost = 2
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = { country_event = { id = WFAS_gryphia.2 hours = 12 random_hours = 12 } }
+		completion_reward = { country_event = WFAS_gryphia.2 }
 	}
 	focus = {
 		id = GRY_the_raid
@@ -205,7 +205,7 @@ focus_tree = {
 			has_country_flag = hryf_chose_monarchy
 			has_country_flag = coronation_costs_decided
 		}
-		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = { country_event = WFAS_gryphia.10 }
 	}
 	focus = {
@@ -228,7 +228,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Borad_Seeking
 		prerequisite = { focus = GRY_travel_the_country }
 		relative_position_id = GRY_expand_the_siches_autonomy
-		x = -2
+		x = -3
 		y = -1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }

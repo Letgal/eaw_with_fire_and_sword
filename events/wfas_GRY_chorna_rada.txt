@@ -102,8 +102,8 @@ country_event = {
 			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_1 add_idea = wfas_GRY_communist_rebels_2 }
 			set_party_name = {
 				ideology = communism
-				name = GRY_communism_party_organized
-				long_name = GRY_communism_party_organized_long
+				name = GRY_communism_party
+				long_name = GRY_communism_party_long
 			}
 			country_event = { id = WFAS_chorna_rada.7 days = 18 } # CRS1
 		}
@@ -430,9 +430,10 @@ country_event = {
 		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
 		if = {
 			limit = { has_country_flag = GRY_investigation_launched }
-			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 273 } # (*) 92 days shorter. ~ L.H.
-			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 } }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 820 } # (*) 90 days shorter. ~ L.H.
+			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 910 } } # (*) almost 2.5 years. ~ L.H.
 		}
+		#add_dynamic_modifier = { modifier = wfas_GRY_communist_rebels_dyn days = 0 }
 	}
 	option = {
 		trigger = { check_variable = { chr_support_hryf > chr_support_krav } }
@@ -444,9 +445,10 @@ country_event = {
 		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
 		if = {
 			limit = { has_country_flag = GRY_investigation_launched }
-			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 273 }
-			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 } }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 820 }
+			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 910 } }
 		}
+		#add_dynamic_modifier = { modifier = wfas_GRY_communist_rebels_dyn days = 0 }
 	}
 	option = {
 		trigger = { check_variable = { chr_support_hryf < chr_support_krav } }
@@ -458,9 +460,10 @@ country_event = {
 		swap_ideas = { remove_idea = wfas_GRY_ruina_3 add_idea = wfas_GRY_ruina_4 }
 		if = {
 			limit = { has_country_flag = GRY_investigation_launched }
-			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 273 }
-			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 365 } }
+			swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 820 }
+			else = { swap_ideas = { remove_idea = wfas_GRY_communist_rebels_2 add_idea = wfas_GRY_communist_rebels_temp days = 910 } }
 		}
+		#add_dynamic_modifier = { modifier = wfas_GRY_communist_rebels_dyn days = 0 }
 	}
 	#option = {
 	#	trigger = { check_variable = { chr_support_hryf = chr_support_krav } }

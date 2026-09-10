@@ -117,6 +117,11 @@ set_popularities = {
 	communism = 3
 	neutrality = 65
 }
+set_party_name = {
+	ideology = communism
+	name = GRY_communism_party_unorganized
+	long_name = GRY_communism_party_unorganized
+}
 
 set_country_flag = economic_laws_blocked
 set_country_flag = manpower_laws_blocked

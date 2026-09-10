@@ -1,6 +1,6 @@
 ﻿l_english:
 ### STATES & VICTORY POINTS ###
- # (*) moved from replace to be compatible with Ukr loc :) ~ L.H.
+ # (*) moved from replace to be compatible with the Ukrainian localization :) ~ L.H.
  wfas_STATE_613: "Upper Kosarshchyna" # Upper Cropperclaws
  wfas_STATE_631: "Lower Kosarshchyna" # Lower Cropperclaws
 
@@ -13,8 +13,7 @@
  GRY_principality_communism_ADJ: "$GRY_communism_ADJ$"
 
 ### PARTY NAMES ###
- GRY_communism_party_organized: "GSDRP"
- GRY_communism_party_organized_long: "Grifіjs'ka Socіal-Demokraticna Robіtnica Partіja"
+ GRY_communism_party_unorganized: "Rebellious Peasants"
 
 ### FOCUSES ###
  GRY_great_anniversary: "50 Years of Hetman's Rule"
@@ -42,7 +41,7 @@
   GRY_hetmans_coronation_desc: ""
   GRY_travel_the_country: "Travel the Country"
   GRY_expand_the_siches_autonomy: "Expand the Siches' Autonomy"
-  GRY_sich_liberties: "Libertātēs of the Siches" # or commonly Liberties
+  GRY_sich_liberties: "Liberties of the Siches" # alt.ly Libertātēs
   GRY_fealty_to_the_king: "Fealty to the King"
   GRY_keep_those_promises: "Keep Those Promises"
   GRY_gathering_the_lands: "Gathering the Lands"
