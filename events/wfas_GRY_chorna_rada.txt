@@ -228,7 +228,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_chorna_rada.11 # 14:CRS5. Niht before election
+	id = WFAS_chorna_rada.11 # 14:CRS5. Agitation in the capital
 	title = WFAS_chorna_rada.11.t
 	desc = WFAS_chorna_rada.11.d
 	picture = GFX_event_griffon_mountain
@@ -242,19 +242,23 @@ country_event = {
 
 	option = {
 		name = WFAS_chorna_rada.11.a
-		add_stability = 0.03
+		custom_effect_tooltip = has_happened_tt
+		add_stability = -0.025
+		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 18 } } # CRS6
 	}
 	option = {
 		name = WFAS_chorna_rada.11.b
-		add_war_support = 0.03
+		custom_effect_tooltip = has_happened_tt
+		add_stability = -0.025
+		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 18 } } # CRS6
 	}
 }
 country_event = {
-	id = WFAS_chorna_rada.12 # 15:CRS6. Agitation in þ capital
+	id = WFAS_chorna_rada.12 # 15:CRS6. Night before election
 	title = WFAS_chorna_rada.12.t
 	desc = WFAS_chorna_rada.12.d
 	picture = GFX_event_griffon_mountain
@@ -268,17 +272,13 @@ country_event = {
 
 	option = {
 		name = WFAS_chorna_rada.12.a
-		custom_effect_tooltip = has_happened_tt
-		add_stability = -0.025
-		custom_effect_tooltip = SEPARATION_LINE
+		add_stability = 0.03
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE2
 	}
 	option = {
 		name = WFAS_chorna_rada.12.b
-		custom_effect_tooltip = has_happened_tt
-		add_stability = -0.025
-		custom_effect_tooltip = SEPARATION_LINE
+		add_war_support = 0.03
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE2
 	}
