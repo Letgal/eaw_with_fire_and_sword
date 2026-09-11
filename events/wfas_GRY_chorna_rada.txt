@@ -217,14 +217,24 @@ country_event = {
 	option = {
 		name = WFAS_chorna_rada.10.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRS5
+		hidden_effect = {
+			country_event = { id = WFAS_chorna_rada.11 days = 24 } # CRS5
+			if = {
+				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
+				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
+			}
+		}
 	}
 	option = {
 		name = WFAS_chorna_rada.10.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRS5
+		hidden_effect = {
+			country_event = { id = WFAS_chorna_rada.11 days = 24 } # CRS5
+			if = {
+				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
+				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
+			}
+		}
 	}
 }
 country_event = {
@@ -246,7 +256,13 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 18 } } # CRS6
+		hidden_effect = {
+			country_event = { id = WFAS_chorna_rada.12 days = 24 } # CRS6
+			if = {
+				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
+				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
+			}
+		}
 	}
 	option = {
 		name = WFAS_chorna_rada.11.b
@@ -254,7 +270,13 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 18 } } # CRS6
+		hidden_effect = {
+			country_event = { id = WFAS_chorna_rada.12 days = 24 } # CRS6
+			if = {
+				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
+				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
+			}
+		}
 	}
 }
 country_event = {
@@ -353,9 +375,19 @@ country_event = {
 		custom_effect_tooltip = has_happened_tt
 		add_stability = -0.025
 		#hidden_effect = { country_event = { id = WFAS_chorna_rada.18 days = 99 } } # CRC5 (deprecated)
+		custom_effect_tooltip = SEPARATION_LINE
+		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
 	}
 	option = {
 		name = WFAS_chorna_rada.15.b
+		custom_effect_tooltip = has_happened_tt
+		add_stability = -0.025
+		#hidden_effect = { country_event = { id = WFAS_chorna_rada.18 days = 99 } } # CRC5 (deprecated)
+		custom_effect_tooltip = SEPARATION_LINE
+		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
+	}
+	option = {
+		name = WFAS_chorna_rada.15.c
 		custom_effect_tooltip = has_happened_tt
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
