@@ -85,8 +85,8 @@ focus_tree = {
 						check_variable = { chr_support_hryf < 5 }
 						check_variable = { chr_support_krav < 5 }
 					}
-					country_event = WFAS_chorna_rada.21
-					else = { country_event = WFAS_chorna_rada.18 }
+					country_event = WFAS_chorna_rada.22
+					else = { country_event = WFAS_chorna_rada.19 }
 				}
 			}
 		}

@@ -37,7 +37,7 @@ country_event = {
 		name = WFAS_chorna_rada.2.a
 		add_stability = -0.025
 		swap_ideas = { remove_idea = wfas_GRY_ruina_1 add_idea = wfas_GRY_ruina_2 }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.3 days = 6 } } # CRA2
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.3 days = 3 } } # CRA2
 	}
 }
 country_event = {
@@ -75,7 +75,7 @@ country_event = {
 	option = {
 		name = WFAS_chorna_rada.4.a
 		add_political_power = 5
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.5 days = 27 } } # CRA3
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.5 days = 21 } } # CRA3
 	}
 }
 country_event = {
@@ -296,13 +296,13 @@ country_event = {
 		name = WFAS_chorna_rada.12.a
 		add_stability = 0.03
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE2
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 30 } } # CRE2
 	}
 	option = {
 		name = WFAS_chorna_rada.12.b
 		add_war_support = 0.03
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.19 days = 42 } } # CRE2
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 30 } } # CRE2
 	}
 }
 
@@ -407,7 +407,6 @@ country_event = {
 	trigger = {
 		has_civil_war = no
 		NOT = { has_government = communism }
-		has_country_flag = GRY_investigation_launched
 	}
 
 	option = {
@@ -539,18 +538,6 @@ country_event = {
 		}
 		#add_dynamic_modifier = { modifier = wfas_GRY_communist_rebels_dyn days = 0 }
 	}
-	#option = {
-	#	trigger = { check_variable = { chr_support_hryf = chr_support_krav } }
-	#	name = WFAS_chorna_rada.4.e
-	#	start_civil_war = {
-	#		ruling_party = ROOT
-	#		ideology = communism
-	#		size = 0.6
-	#		capital = 598
-	#		states = { 596 598 610 611 613 }
-	#		hidden_effect = { load_focus_tree = generic_griffon_focus }
-	#	}
-	#}
 }
 country_event = {
 	id = WFAS_chorna_rada.20 # 18:CRE2. Capital encircled
@@ -562,9 +549,8 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_civil_war = no
+		NOT = { has_government = communism }
 		check_variable = { chr_support_hryf = chr_support_krav }
-		check_variable = { chr_support_hryf < 5 }
-		check_variable = { chr_support_krav < 5 }
 	}
 
 	option = {
@@ -587,6 +573,7 @@ country_event = {
 
 	option = {
 		name = WFAS_chorna_rada.21.a
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.22 days = 3 } } # CRC4
 	}
 }
 country_event = {
@@ -604,7 +591,9 @@ country_event = {
 
 	option = {
 		name = WFAS_chorna_rada.22.a
+		clr_country_flag = chorna_rada_in_progress
 		set_politics = { ruling_party = communism }
+		complete_national_focus = GRY_convene_the_chorna_rada
 		load_focus_tree = generic_griffon_focus
 	}
 }
