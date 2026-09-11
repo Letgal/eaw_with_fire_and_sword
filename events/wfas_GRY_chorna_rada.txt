@@ -197,6 +197,7 @@ country_event = {
 	}
 	option = {
 		name = WFAS_chorna_rada.9.b
+		add_stability = 0.025
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } # CRS4
 	}

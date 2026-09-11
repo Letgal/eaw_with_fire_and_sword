@@ -125,7 +125,7 @@
  wfas_GRY_spoils_of_war_BRF_temp: "Spoils of War"
  wfas_GRY_ruina: "Ruina"
  wfas_GRY_communist_rebels_1: "Peasant Rebels"
- wfas_GRY_communist_rebels_1_desc: "There exists a small but growing group of peasants disloyal to our cause. They demand better life conditions and a solution for their problems."
+ wfas_GRY_communist_rebels_1_desc: "There exists a small but growing group of peasants disloyal to our cause. They demand better life conditions and an immediate solution for their problems."
  wfas_GRY_communist_rebels_2: "Communist Rebels"
  wfas_GRY_communist_rebels_2_desc: "Seizing the opportunity and exploiting the destabilization in our country, a communist movement has organized itself in our country. They conduct terrorist acts aimed at undermining our authority and their threat grows fast."
  wfas_GRY_communist_rebels_temp: "Faltering Communist Movement"
@@ -200,7 +200,7 @@
  WFAS_chorna_rada.3.a: "He's got quite the zeal."
 
  WFAS_chorna_rada.4.t: "Informational Event" # Marichka and Pylyp
- WFAS_chorna_rada.4.d: "Add info on all the factions, who they are, what they want and what do they do." # They discuss.
+ WFAS_chorna_rada.4.d: "Here you get info on all the factions, who they are, what they want and what do they do.\n\nThe harmonists are the chill peace-loving UwU kinda griffs.\n\nThe radicals are the fascisty types who want to 1048 all over the country.\n\nThe moderates are the moderates, obviously. They are led by Vereskopadsky who is loved by all. Most likely to win I'm sure." # They discuss.
  WFAS_chorna_rada.4.a: "Got it." # Nice.
 
  WFAS_chorna_rada.5.t: "Attempt on Pavlo Vereskopadsky's Life"
@@ -252,8 +252,9 @@
 
  WFAS_chorna_rada.15.t: "A Pamphlet"
  WFAS_chorna_rada.15.d: ""
- WFAS_chorna_rada.15.a: "This is bad."
- WFAS_chorna_rada.15.b: "Investigate it."
+ WFAS_chorna_rada.15.a: "This is all radicals' scheming!"
+ WFAS_chorna_rada.15.b: "Damn harmonists."
+ WFAS_chorna_rada.15.c: "Investigate it closer."
 
  WFAS_chorna_rada.16.t: "Meeting in a Church"
  WFAS_chorna_rada.16.d: ""
@@ -264,23 +265,31 @@
  WFAS_chorna_rada.17.a: "Arrest them. (+ Harmonist)"
  WFAS_chorna_rada.17.b: "Clear them out. (+ Supremacist)"
 
- WFAS_chorna_rada.18.t: "Chorna Rada End"
- WFAS_chorna_rada.18.d: "Chorna Rada results."
- WFAS_chorna_rada.18.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
- WFAS_chorna_rada.18.b: "[GRY_borad_grifnitsky.GetName] wins."
- WFAS_chorna_rada.18.c: "[GRY_yeven_krawvelets.GetName] wins."
+ #WFAS_chorna_rada.18.t: "A Skirmish With Rebels"
+ #WFAS_chorna_rada.18.d1: "A military unit was on the march closer to dusk, until it unexpectedly got beset and ultimately CRUSHED by the rebel force.\n\n(They look awful lot like harmonists or smþ.)"
+ #WFAS_chorna_rada.18.d2: "A military unit was on the march closer to dusk, until it unexpectedly got beset and ultimately CRUSHED by the rebel force.\n\n(They look awful lot like supremacists or smþ.)"
+ #WFAS_chorna_rada.18.a: "Who could be the culprit here? (+ Harmonist)"
+ #WFAS_chorna_rada.18.b: "They are the harmonist saboteurs! (+ Supremacist)"
+ #WFAS_chorna_rada.18.c: "Kravelets's thugs! (+ Harmonist)"
+ #WFAS_chorna_rada.18.d: "As the rebels deserve. (+ Supremacist)"
 
- WFAS_chorna_rada.19.t: "Capital Encircled"
- WFAS_chorna_rada.19.d: ""
- WFAS_chorna_rada.19.a: ""
+ WFAS_chorna_rada.19.t: "Chorna Rada End"
+ WFAS_chorna_rada.19.d: "Chorna Rada results."
+ WFAS_chorna_rada.19.a: "[GRY_pavel_vereskopadsky.GetName] wins." # Unused
+ WFAS_chorna_rada.19.b: "[GRY_borad_grifnitsky.GetName] wins."
+ WFAS_chorna_rada.19.c: "[GRY_yeven_krawvelets.GetName] wins."
 
- WFAS_chorna_rada.20.t: "Parliament Besieged"
- WFAS_chorna_rada.20.d: ""
- WFAS_chorna_rada.20.a: ""
+ WFAS_chorna_rada.20.t: "Capital Encircled"
+ WFAS_chorna_rada.20.d: "Commies encircle Kaiv, Hryfnytsky surrenders."
+ WFAS_chorna_rada.20.a: "A disaster!"
 
- WFAS_chorna_rada.21.t: "Communist Takeover"
- WFAS_chorna_rada.21.d: ""
- WFAS_chorna_rada.21.a: "Glory to the Revolution!"
+ WFAS_chorna_rada.21.t: "Parliament Building Besieged"
+ WFAS_chorna_rada.21.d: "Kravelets barricades himself in the parliament building."
+ WFAS_chorna_rada.21.a: "But alas, he fails to hold it."
+
+ WFAS_chorna_rada.22.t: "Communist Takeover"
+ WFAS_chorna_rada.22.d: "Big W for the communist insurgency."
+ WFAS_chorna_rada.22.a: "Get ready for the 1048."
 
 ### TRAITS ###
  uncrowned_monarch: "Uncrowned Monarch"
