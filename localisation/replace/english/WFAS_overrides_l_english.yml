@@ -13,26 +13,33 @@
 
 ### PLACE NAMES ###
  ## GRYPHIA
-  STATE_592: "Vorobeyko"
+  #STATE_592: "Vorobeyko"
   STATE_596: "Pohryfynnia" # Pohryfynnja
-  STATE_597: "Soloboda"
-  STATE_598: "Kaiv"
-  STATE_609: "Chykchyryn"
+  #STATE_597: "Soloboda"
+  #STATE_598: "Kaiv"
+  #STATE_609: "Chykchyryn"
   STATE_610: "Holdkrestiv" # Holdkrestov
   STATE_611: "Buzzovyna" # Buzzovina
 
   VICTORY_POINTS_2154: "Kalynske" # Kalintsk
-  VICTORY_POINTS_3877: "Shklosha"
+  #VICTORY_POINTS_3877: "Shklosha"
   VICTORY_POINTS_8054: "Voronashka" # Voronaska
   VICTORY_POINTS_7201: "Orelske" # Orelsk
   VICTORY_POINTS_11879: "Sovatske" # Sovatsk
-  VICTORY_POINTS_6989: "Skopardovske" # Skopardovsky
-  VICTORY_POINTS_10376: "Husaka"
+  #VICTORY_POINTS_6989: "Skopardovsky"
+  #VICTORY_POINTS_10376: "Husaka"
   VICTORY_POINTS_1571: "Holubashka" # Holubaska
   VICTORY_POINTS_2083: "Holdkrestiv" # Holdkrestov
-  VICTORY_POINTS_10746: "Vorobeyko"
-  VICTORY_POINTS_10764: "Kaiv"
-  VICTORY_POINTS_12719: "Chykchyryn"
+  #VICTORY_POINTS_10746: "Vorobeyko"
+  #VICTORY_POINTS_10764: "Kaiv"
+  #VICTORY_POINTS_12719: "Chykchyryn"
+
+### PARTY NAMES ###
+ ## LUSHI
+  #LUS_neutrality_party: "Whitecrest Dynasty"
+  #LUS_communism_party: "Green Rods' Council"
+  LUS_democratic_party: "Progressivists" # Prosperists
+  LUS_fascism_party: "Supremacists" # Searchers of Harmony
 
 ### CHARACTERS ###
  ## GRY: COUNTRY LEADERS

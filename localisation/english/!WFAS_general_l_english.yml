@@ -15,7 +15,12 @@
 
 ### TOOLTIPS ###
  EFFECT_UNLOCK_DECISION_FREE: "Unlocks £decision_icon_free free decision: $NAME|H$."
+ EFFECT_UNLOCK_DECISION_SUBCATEGORY: "Unlocks $NAME|H$ £decision_icon_small decisions in the $CATEGORY|H$ category."
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
+
+ decision_cost_mp_3000_inf_300: "£manpower_icon §Y3000§! £infantry_equipment_text_icon §Y300§!"
+ decision_cost_mp_3000_inf_300_blocked: "£manpower_icon §R3000§! £infantry_equipment_text_icon §R300§!"
+ decision_cost_mp_3000_inf_300_tooltip: "It costs £manpower_icon §Y3000§! £infantry_equipment_text_icon §Y300§! to take the decision"
 
 ### MISC ###
  wfas_GRY_chorna_rada_status: "wfas_GRY_chorna_rada_status: [?chr_support_hryf|P0] / [?chr_support_krav|C0]"

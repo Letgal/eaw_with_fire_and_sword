@@ -95,7 +95,10 @@ country_event = {
 		name = WFAS_chorna_rada.5.a
 		add_stability = -0.1
 		add_political_power = -100
-		GRY_pavel_vereskopadsky = { set_character_flag = in_coma }
+		GRY_pavel_vereskopadsky = {
+			set_character_flag = in_coma
+			custom_effect_tooltip = veresk_falls_in_coma
+		}
 		add_popularity = { ideology = neutrality popularity = -0.3 }
 		swap_ideas = { remove_idea = wfas_GRY_ruina_2 add_idea = wfas_GRY_ruina_3 }
 		hidden_effect = {

@@ -2015,6 +2015,14 @@ political_actions = {
 					has_country_flag = ABY_peace_with_patriots
 				}
 			}
+			# (WFAS +): hidden while the communists are active. ~ L.H.
+			else_if = {
+				limit = { original_tag = GRY }
+				NOT = {
+					has_idea = wfas_GRY_communist_rebels_2
+					has_idea = wfas_GRY_communist_rebels_temp
+				}
+			}
 		}
 		available = {
 			communism > 0.1
@@ -2756,6 +2764,14 @@ political_actions = {
 				}
 				NOT = {
 					has_country_flag = ABY_peace_with_patriots
+				}
+			}
+			# (WFAS +): hidden while the communists are active. ~ L.H.
+			else_if = {
+				limit = { original_tag = GRY }
+				NOT = {
+					has_idea = wfas_GRY_communist_rebels_2
+					has_idea = wfas_GRY_communist_rebels_temp
 				}
 			}
 		}
