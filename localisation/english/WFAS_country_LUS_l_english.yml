@@ -1,9 +1,9 @@
 ﻿l_english:
 ### STATES & VICTORY POINTS ###
  # (*) moved from replace to be compatible with the Ukrainian localization :) ~ L.H.
- wfas_STATE_591: "Talvona" # Talvona
+ wfas_STATE_591: "Willagen" # Talvona
  wfas_STATE_593: "Greifem" # Gryphem
- wfas_STATE_607: "Cessabit" # Cessabit
+ wfas_STATE_607: "Weißenbach" # Cessabit
  wfas_STATE_608: "Lüscheland" # Lushland
  wfas_STATE_632: "Dratsch" # Draksland
 
@@ -12,7 +12,7 @@
  wfas_VP_8026: "Hertau" # Origako
  wfas_VP_11912: "Selnau" # Mitoriv
  wfas_VP_7204: "Dratschenburg" # Drakburg
- wfas_VP_5071: "Talvona" # Talvona
+ wfas_VP_5071: "Willagen" # Talvona
  wfas_VP_4167: "Greifem" # Gryphem
 
  ## NEW IN WFAS
@@ -27,12 +27,12 @@
  LUS_early_reforms: "Early Reforms"
  LUS_those_darn_nobles: "Those Darn Nobles"
  LUS_find_an_approach: "Find an Approach"
- LUS_deal_with_talvona_lord: "Deal with Lord Kelvin"
+ LUS_deal_with_willagen_lord: "Deal with Lord Kelvin"
  LUS_deal_with_dratsch_lord: "Deal with Lord Marven"
- LUS_deal_with_cessabit_lord: "Deal with Lord Gordon"
- LUS_deal_with_talvona_lord_2: "Deal with Lord Kelvin 2"
+ LUS_deal_with_weissenbach_lord: "Deal with Lord Gordon"
+ LUS_deal_with_willagen_lord_2: "Deal with Lord Kelvin 2"
  LUS_deal_with_dratsch_lord_2: "Deal with Lord Marven 2"
- LUS_deal_with_cessabit_lord_2: "Deal with Lord Gordon 2"
+ LUS_deal_with_weissenbach_lord_2: "Deal with Lord Gordon 2"
  LUS_give_assurances: "Give Assurances"
  LUS_create_the_diet: "Create the Diet"
  LUS_dealing_with_the_hunger: "Dealing with the Hunger"

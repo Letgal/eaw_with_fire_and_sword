@@ -81,7 +81,7 @@ focus_tree = {
 		# (*) Elias narrat event
 	}
 	focus = {
-		id = LUS_deal_with_talvona_lord # Kelvin Rosenfeather
+		id = LUS_deal_with_willagen_lord # Kelvin Rosenfeder
 		icon = GFX_goal_unknown
 		prerequisite = { focus = LUS_find_an_approach }
 		relative_position_id = LUS_find_an_approach
@@ -101,7 +101,7 @@ focus_tree = {
 		#completion_reward = { }
 	}
 	focus = {
-		id = LUS_deal_with_cessabit_lord # Gordon Matton
+		id = LUS_deal_with_weissenbach_lord # Gordon Matton
 		icon = GFX_goal_unknown
 		prerequisite = { focus = LUS_find_an_approach }
 		relative_position_id = LUS_find_an_approach
@@ -111,10 +111,10 @@ focus_tree = {
 		#completion_reward = { }
 	}
 	focus = {
-		id = LUS_deal_with_talvona_lord_2 # Kelvin Rosenfeather
+		id = LUS_deal_with_willagen_lord_2 # Kelvin Rosenfeder
 		icon = GFX_goal_unknown
-		prerequisite = { focus = LUS_deal_with_talvona_lord }
-		relative_position_id = LUS_deal_with_talvona_lord
+		prerequisite = { focus = LUS_deal_with_willagen_lord }
+		relative_position_id = LUS_deal_with_willagen_lord
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -131,10 +131,10 @@ focus_tree = {
 		#completion_reward = { }
 	}
 	focus = {
-		id = LUS_deal_with_cessabit_lord_2 # Gordon Matton
+		id = LUS_deal_with_weissenbach_lord_2 # Gordon Matton
 		icon = GFX_goal_unknown
-		prerequisite = { focus = LUS_deal_with_cessabit_lord }
-		relative_position_id = LUS_deal_with_cessabit_lord
+		prerequisite = { focus = LUS_deal_with_weissenbach_lord }
+		relative_position_id = LUS_deal_with_weissenbach_lord
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -156,9 +156,9 @@ focus_tree = {
 		id = LUS_create_the_diet
 		icon = GFX_focus_chi_examination_yuan
 		prerequisite = { focus = LUS_give_assurances }
-		prerequisite = { focus = LUS_deal_with_talvona_lord_2 }
+		prerequisite = { focus = LUS_deal_with_willagen_lord_2 }
 		prerequisite = { focus = LUS_deal_with_dratsch_lord_2 }
-		prerequisite = { focus = LUS_deal_with_cessabit_lord_2 }
+		prerequisite = { focus = LUS_deal_with_weissenbach_lord_2 }
 		relative_position_id = LUS_give_assurances
 		x = 1 y = 1
 		cost = 8
@@ -361,7 +361,7 @@ focus_tree = {
 	focus = {
 		id = LUS_negotiate_with_GRW
 		icon = GFX_goal_prywhen_civilwar_red
-		relative_position_id = LUS_deal_with_cessabit_lord
+		relative_position_id = LUS_deal_with_weissenbach_lord
 		x = 2 y = -3
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
