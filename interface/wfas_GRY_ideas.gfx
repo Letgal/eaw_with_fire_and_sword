@@ -35,4 +35,8 @@ spriteTypes = {
 		name = "GFX_idea_GRY_cultural_ideas_niecotam"
 		texturefile = "gfx/interface/ideas/GRY/cultural_ideas_niecotam.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_GRY_Katya_portrait"
+		texturefile = "gfx/interface/ideas/GRY/Katya_portrait.tga"
+	}
 }

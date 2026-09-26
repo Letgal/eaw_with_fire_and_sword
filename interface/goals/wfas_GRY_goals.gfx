@@ -92,8 +92,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/Pinky_promise.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_pir"
+		texturefile = "gfx/interface/goals/GRY/pir.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_pivko"
 		texturefile = "gfx/interface/goals/GRY/pivko.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Pratecktianism_Cathrine"
+		texturefile = "gfx/interface/goals/GRY/Pratecktianism_Cathrine.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Regina"
@@ -118,6 +126,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_GRY_teatr"
 		texturefile = "gfx/interface/goals/GRY/teatr.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_uni_katka"
+		texturefile = "gfx/interface/goals/GRY/uni_katka.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Veresk_trap"
