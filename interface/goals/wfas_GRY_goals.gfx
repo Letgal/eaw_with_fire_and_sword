@@ -1,138 +1,138 @@
 spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_GRY_art"
-		texturefile = "gfx/interface/goals/GRY/GRY_art.dds"
+		texturefile = "gfx/interface/goals/GRY/art.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Aviansha"
-		texturefile = "gfx/interface/goals/GRY/GRY_Aviansha.dds"
+		texturefile = "gfx/interface/goals/GRY/Aviansha.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Barokkock"
-		texturefile = "gfx/interface/goals/GRY/GRY_Barokkock.dds"
+		texturefile = "gfx/interface/goals/GRY/Barokkock.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_best_waifu"
-		texturefile = "gfx/interface/goals/GRY/GRY_best_waifu.dds"
+		texturefile = "gfx/interface/goals/GRY/best_waifu.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Blek_rada"
-		texturefile = "gfx/interface/goals/GRY/GRY_Blek_rada.dds"
+		texturefile = "gfx/interface/goals/GRY/Blek_rada.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Boradian_Coronation"
-		texturefile = "gfx/interface/goals/GRY/GRY_Boradian_Coronation.dds"
+		texturefile = "gfx/interface/goals/GRY/Boradian_Coronation.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Borad_peremoha"
-		texturefile = "gfx/interface/goals/GRY/GRY_Borad_peremoha.dds"
+		texturefile = "gfx/interface/goals/GRY/Borad_peremoha.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Borad_Seeking"
-		texturefile = "gfx/interface/goals/GRY/GRY_Borad_Seeking.dds"
+		texturefile = "gfx/interface/goals/GRY/Borad_Seeking.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Bylo_vashe_stalo_nashe_V2"
-		texturefile = "gfx/interface/goals/GRY/GRY_Bylo_vashe_stalo_nashe_V2.dds"
+		texturefile = "gfx/interface/goals/GRY/Bylo_vashe_stalo_nashe_V2.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Call_of_Ctulhu"
-		texturefile = "gfx/interface/goals/GRY/GRY_Call_of_Ctulhu.dds"
+		texturefile = "gfx/interface/goals/GRY/Call_of_Ctulhu.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Fashista"
-		texturefile = "gfx/interface/goals/GRY/GRY_Fashista.dds"
+		texturefile = "gfx/interface/goals/GRY/Fashista.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Holy_peak"
-		texturefile = "gfx/interface/goals/GRY/GRY_Holy_peak.dds"
+		texturefile = "gfx/interface/goals/GRY/Holy_peak.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_cheer_up_big_guy"
-		texturefile = "gfx/interface/goals/GRY/GRY_cheer_up_big_guy.dds"
+		texturefile = "gfx/interface/goals/GRY/cheer_up_big_guy.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Industrialisation"
-		texturefile = "gfx/interface/goals/GRY/GRY_Industrialisation.dds"
+		texturefile = "gfx/interface/goals/GRY/Industrialisation.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_KOMUNIAKU_NA_GILLIAKU"
-		texturefile = "gfx/interface/goals/GRY/GRY_KOMUNIAKU_NA_GILLIAKU.dds"
+		texturefile = "gfx/interface/goals/GRY/KOMUNIAKU_NA_GILLIAKU.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Krown_is_cool"
-		texturefile = "gfx/interface/goals/GRY/GRY_Krown_is_cool.dds"
+		texturefile = "gfx/interface/goals/GRY/Krown_is_cool.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_ludskoe"
-		texturefile = "gfx/interface/goals/GRY/GRY_ludskoe.dds"
+		texturefile = "gfx/interface/goals/GRY/ludskoe.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Margo"
-		texturefile = "gfx/interface/goals/GRY/GRY_Margo.dds"
+		texturefile = "gfx/interface/goals/GRY/Margo.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_MILF"
-		texturefile = "gfx/interface/goals/GRY/GRY_MILF.dds"
+		texturefile = "gfx/interface/goals/GRY/MILF.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Naturalu_po_ebalu"
-		texturefile = "gfx/interface/goals/GRY/GRY_Naturalu_po_ebalu.dds"
+		texturefile = "gfx/interface/goals/GRY/Naturalu_po_ebalu.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_NearEnd_of_perfect_hetmanstvo"
-		texturefile = "gfx/interface/goals/GRY/GRY_NearEnd_of_perfect_hetmanstvo.dds"
+		texturefile = "gfx/interface/goals/GRY/NearEnd_of_perfect_hetmanstvo.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_NeIndustrialisation"
-		texturefile = "gfx/interface/goals/GRY/GRY_NeIndustrialisation.dds"
+		texturefile = "gfx/interface/goals/GRY/NeIndustrialisation.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Pinky_promise"
-		texturefile = "gfx/interface/goals/GRY/GRY_Pinky_promise.dds"
+		texturefile = "gfx/interface/goals/GRY/Pinky_promise.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_pivko"
-		texturefile = "gfx/interface/goals/GRY/GRY_pivko.dds"
+		texturefile = "gfx/interface/goals/GRY/pivko.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Regina"
-		texturefile = "gfx/interface/goals/GRY/GRY_Regina.dds"
+		texturefile = "gfx/interface/goals/GRY/Regina.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Royal_tour"
-		texturefile = "gfx/interface/goals/GRY/GRY_Royal_tour.dds"
+		texturefile = "gfx/interface/goals/GRY/Royal_tour.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Shieldwoman"
-		texturefile = "gfx/interface/goals/GRY/GRY_Shieldwoman.dds"
+		texturefile = "gfx/interface/goals/GRY/Shieldwoman.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Sich_1"
-		texturefile = "gfx/interface/goals/GRY/GRY_Sich_1.dds"
+		texturefile = "gfx/interface/goals/GRY/Sich_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_taxes"
-		texturefile = "gfx/interface/goals/GRY/GRY_taxes.dds"
+		texturefile = "gfx/interface/goals/GRY/taxes.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_teatr"
-		texturefile = "gfx/interface/goals/GRY/GRY_teatr.dds"
+		texturefile = "gfx/interface/goals/GRY/teatr.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Veresk_trap"
-		texturefile = "gfx/interface/goals/GRY/GRY_Veresk_trap.dds"
+		texturefile = "gfx/interface/goals/GRY/Veresk_trap.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Vivienne"
-		texturefile = "gfx/interface/goals/GRY/GRY_Vivienne.dds"
+		texturefile = "gfx/interface/goals/GRY/Vivienne.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_were_fucked_lmao"
-		texturefile = "gfx/interface/goals/GRY/GRY_we're_fucked_lmao.dds"
+		texturefile = "gfx/interface/goals/GRY/we're_fucked_lmao.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_were_fucked_lmao_prequel"
-		texturefile = "gfx/interface/goals/GRY/GRY_we're_fucked_lmao_prequel.dds"
+		texturefile = "gfx/interface/goals/GRY/we're_fucked_lmao_prequel.dds"
 	}
 }
