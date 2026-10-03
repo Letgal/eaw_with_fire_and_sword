@@ -14,11 +14,12 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	option = {
-		name = WFAS_chorna_rada.1.a
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.2 days = 30 } } # CRA1
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.13 days = 6 } } # CRC1
-	}
+	immediate = { hidden_effect = {
+		country_event = { id = WFAS_chorna_rada.2 days = 30 } # CRA1
+		country_event = { id = WFAS_chorna_rada.13 days = 6 } # CRC1
+	} }
+
+	option = { name = WFAS_chorna_rada.1.a }
 }
 country_event = {
 	id = WFAS_chorna_rada.2 # 3:CRA1. Attempt on Klovsky's life
@@ -33,11 +34,12 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.3 days = 3 } } } # CRA2
+
 	option = {
 		name = WFAS_chorna_rada.2.a
 		add_stability = -0.025
 		swap_ideas = { remove_idea = wfas_GRY_ruina_1 add_idea = wfas_GRY_ruina_2 }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.3 days = 3 } } # CRA2
 	}
 }
 country_event = {
@@ -53,10 +55,11 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.4 days = 3 } } } # CRG2
+
 	option = {
 		name = WFAS_chorna_rada.3.a
 		add_political_power = 30
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.4 days = 3 } } # CRG2
 	}
 }
 country_event = {
@@ -72,10 +75,11 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.5 days = 21 } } } # CRA3
+
 	option = {
 		name = WFAS_chorna_rada.4.a
 		add_political_power = 5
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.5 days = 21 } } # CRA3
 	}
 }
 country_event = {
@@ -91,12 +95,14 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.7 days = 18 } } } # CRS1
+
 	option = {
 		name = WFAS_chorna_rada.5.a
 		add_stability = -0.1
 		add_political_power = -100
 		GRY_pavel_vereskopadsky = {
-			set_character_flag = in_coma
+			hidden_effect = { set_character_flag = in_coma }
 			custom_effect_tooltip = veresk_falls_in_coma
 		}
 		add_popularity = { ideology = neutrality popularity = -0.3 }
@@ -108,7 +114,6 @@ country_event = {
 				name = GRY_communism_party
 				long_name = GRY_communism_party_long
 			}
-			country_event = { id = WFAS_chorna_rada.7 days = 18 } # CRS1
 		}
 	}
 }
@@ -143,15 +148,15 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.8 days = 18 } } } # CRS2
+
 	option = {
 		name = WFAS_chorna_rada.7.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.8 days = 18 } } # CRS2
 	}
 	option = {
 		name = WFAS_chorna_rada.7.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.8 days = 18 } } # CRS2
 	}
 }
 country_event = {
@@ -167,15 +172,15 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.9 days = 30 } } } # CRS3
+
 	option = {
 		name = WFAS_chorna_rada.8.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.9 days = 30 } } # CRS3
 	}
 	option = {
 		name = WFAS_chorna_rada.8.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.9 days = 30 } } # CRS3
 	}
 }
 country_event = {
@@ -191,18 +196,18 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } } # CRS4
+
 	option = {
 		name = WFAS_chorna_rada.9.a
 		add_stability = -0.025
 		add_war_support = 0.01
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } # CRS4
 	}
 	option = {
 		name = WFAS_chorna_rada.9.b
 		add_stability = 0.025
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } # CRS4
 	}
 }
 country_event = {
@@ -218,27 +223,17 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } } # CRS5
+
 	option = {
 		name = WFAS_chorna_rada.10.a
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = {
-			country_event = { id = WFAS_chorna_rada.11 days = 24 } # CRS5
-			if = {
-				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
-				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
-			}
-		}
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
 	}
 	option = {
 		name = WFAS_chorna_rada.10.b
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = {
-			country_event = { id = WFAS_chorna_rada.11 days = 24 } # CRS5
-			if = {
-				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
-				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
-			}
-		}
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
 	}
 }
 country_event = {
@@ -254,19 +249,15 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 24 } } } # CRS6
+
 	option = {
 		name = WFAS_chorna_rada.11.a
 		custom_effect_tooltip = has_happened_tt
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = {
-			country_event = { id = WFAS_chorna_rada.12 days = 24 } # CRS6
-			if = {
-				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
-				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
-			}
-		}
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
 	}
 	option = {
 		name = WFAS_chorna_rada.11.b
@@ -274,13 +265,7 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = {
-			country_event = { id = WFAS_chorna_rada.12 days = 24 } # CRS6
-			if = {
-				limit = { NOT = { check_variable = { chr_support_hryf = chr_support_krav } } }
-				country_event = { id = WFAS_chorna_rada.6 days = 12 } # CRG3
-			}
-		}
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.6 days = 12 } } # CRG3
 	}
 }
 country_event = {
@@ -296,17 +281,17 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 36 } } } # CRE2
+
 	option = {
 		name = WFAS_chorna_rada.12.a
 		add_stability = 0.03
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 30 } } # CRE2
 	}
 	option = {
 		name = WFAS_chorna_rada.12.b
 		add_war_support = 0.03
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 30 } } # CRE2
 	}
 }
 
@@ -324,11 +309,12 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.14 days = 75 } } } # CRC2
+
 	option = {
 		name = WFAS_chorna_rada.13.a
 		add_stability = -0.025
 		add_popularity = { ideology = communism popularity = 0.05 }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.14 days = 75 } } # CRC2
 	}
 }
 country_event = {
@@ -344,13 +330,14 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.15 days = 30 } } } # CRC3
+
 	option = {
 		name = WFAS_chorna_rada.14.a
 		custom_effect_tooltip = has_happened_tt
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_hryf = 1 tooltip = chorna_rada_support_hryf_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.15 days = 30 } } # CRC3
 	}
 	option = {
 		name = WFAS_chorna_rada.14.b
@@ -358,7 +345,6 @@ country_event = {
 		add_stability = -0.025
 		custom_effect_tooltip = SEPARATION_LINE
 		add_to_variable = { chr_support_krav = 1 tooltip = chorna_rada_support_krav_tt }
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.15 days = 30 } } # CRC3
 	}
 }
 country_event = {
@@ -397,7 +383,7 @@ country_event = {
 		custom_effect_tooltip = SEPARATION_LINE
 		add_political_power = -50
 		set_country_flag = GRY_investigation_launched
-		hidden_effect = { country_event = { id = WFAS_chorna_rada.16 days = 96 } } # CRC4
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.16 days = 99 } } # CRC4
 	}
 }
 country_event = {

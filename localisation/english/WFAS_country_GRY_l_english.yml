@@ -254,7 +254,7 @@
  WFAS_chorna_rada.15.d: ""
  WFAS_chorna_rada.15.a: "This is all radicals' scheming!"
  WFAS_chorna_rada.15.b: "Damn harmonists."
- WFAS_chorna_rada.15.c: "Investigate it closer."
+ WFAS_chorna_rada.15.c: "Suspicious... Investigate it closer."
 
  WFAS_chorna_rada.16.t: "Meeting in a Church"
  WFAS_chorna_rada.16.d: ""
@@ -308,6 +308,7 @@
  hryf_chose_republic: "Republic was chosen"
 
 ### TOOLTIPS ###
+ veresk_coma_tt: "falls into a coma."
  chorna_rada_explanation_tt: "§YDifferent situations will happen for a duration of this focus. Your response to them will shape the course of the nation.§!"
  chorna_rada_support_hryf_tt: "This will please §Pharmonists§!, but §Csupremacists§! will be displeased."
  chorna_rada_support_krav_tt: "This will please §Csupremacists§!, but §Pharmonists§! will be displeased."
