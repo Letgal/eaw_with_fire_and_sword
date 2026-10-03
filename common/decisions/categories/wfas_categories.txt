@@ -1,0 +1,7 @@
+GRY_marital_matters = {
+	allowed = { original_tag = GRY }
+	visible = {
+		has_country_leader = { character = GRY_borad_grifnitsky }
+		has_country_flag = hryf_marriage_unlocked # ~is~ will be added by event. ~ L.H.
+	}
+}

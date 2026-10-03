@@ -115,8 +115,15 @@
   GRY_kravelets_wins_desc: "Placeholder"
 
 ### DECISIONS ###
+ GRY_anti_communist_effort_weak: "Fight the Communist Propaganda"
+ GRY_anti_communist_effort_medium: "Raid the Communist Bases"
+ GRY_anti_communist_effort_strong: "Grant Amnesty to Communist POWs"
+ GRY_anti_communist_effort_special: "Infiltrate the Socalist Ranks" # ???
+
  GRY_expand_peasant_education: "Expand Peasant Education"
  GRY_put_the_knowledge_into_practice: "Put Our Knowledge into Practice"
+
+ GRY_marital_matters: "Marital Matters"
 
  ## EXCAVATION
   increase_coal_extraction_in_buzzovyna: "Increase Coal Extraction in [611.GetName]"

@@ -1,3 +1,42 @@
+political_actions = {
+	GRY_anti_communist_effort_weak = {
+		priority = 1
+		icon = generic_PLACEHOLDER
+		allowed = { original_tag = GRY }
+		visible = {
+			has_completed_focus = GRY_fight_the_red_menace
+			has_idea = wfas_GRY_communist_rebels_temp
+		}
+	}
+	GRY_anti_communist_effort_medium = {
+		priority = 1
+		icon = generic_PLACEHOLDER
+		allowed = { original_tag = GRY }
+		visible = {
+			has_completed_focus = GRY_fight_the_red_menace
+			has_idea = wfas_GRY_communist_rebels_temp
+		}
+	}
+	GRY_anti_communist_effort_strong = {
+		priority = 1
+		icon = generic_PLACEHOLDER
+		allowed = { original_tag = GRY }
+		visible = {
+			has_completed_focus = GRY_fight_the_red_menace
+			has_idea = wfas_GRY_communist_rebels_temp
+		}
+	}
+	GRY_anti_communist_effort_special = {
+		priority = 1
+		icon = generic_PLACEHOLDER
+		allowed = { original_tag = GRY }
+		visible = {
+			has_completed_focus = GRY_fight_the_red_menace
+			has_idea = wfas_GRY_communist_rebels_temp
+			NOT = { has_country_flag = GRY_investigation_launched }
+		}
+	}
+}
 economy_decisions = {
 	GRY_expand_peasant_education = {
 		icon = generic_research

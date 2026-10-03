@@ -235,8 +235,11 @@ focus_tree = {
 		x = -3
 		y = -1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { country_event = UNLOCKS DECISIONS, MISSION with TIMER }
+		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			unlock_decision_category_tooltip = GRY_marital_matters # replace with: country_event = 0 (unlocks decisions, mission with timer)
+		}
 	}
 	focus = {
 		#dynamic = yes
