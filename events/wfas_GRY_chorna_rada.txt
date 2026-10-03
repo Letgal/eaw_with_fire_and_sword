@@ -439,7 +439,7 @@ country_event = {
 		trigger = { check_variable = { chr_support_hryf < chr_support_krav } }
 		text = WFAS_chorna_rada.18.d2
 	}
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_event_griffon_mountain
 
 	fire_only_once = yes
 	is_triggered_only = yes

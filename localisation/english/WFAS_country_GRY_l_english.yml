@@ -13,6 +13,8 @@
  GRY_principality_communism_ADJ: "$GRY_communism_ADJ$"
 
 ### PARTY NAMES ###
+ GRY_neutrality_party_faction: "Hetmanists"
+ GRY_neutrality_party_faction_long: "Hetmanate Supporters"
  GRY_communism_party_unorganized: "Rebellious Peasants"
 
 ### FOCUSES ###
@@ -173,9 +175,9 @@
  WFAS_gryphia.6.t: "Coronation Costs"
  WFAS_gryphia.6.d: "Decide how much to spend on a coronation."
  WFAS_gryphia.6.d1: "Brother, you're at war, so your coronation can't be lavish."
- WFAS_gryphia.6.a: "It will be a private ceremony."
+ WFAS_gryphia.6.a: "It will be a small and private ceremony."
  WFAS_gryphia.6.b: "It will be a lavish ceremony!"
- WFAS_gryphia.6.c: "Only an archon is worthy of coronating me!"
+ WFAS_gryphia.6.c: "Only an Archon is fit to crown me!"
  WFAS_gryphia.6.e: "Oh."
 
  WFAS_gryphia.10.t: "The Coronation"
@@ -306,6 +308,7 @@
 ### FLAGS ###
  hryf_chose_monarchy: "Monarchy was chosen"
  hryf_chose_republic: "Republic was chosen"
+ coronation_costs_decided: "Coronation costs were agreed upon"
 
 ### TOOLTIPS ###
  veresk_coma_tt: "falls into a coma."

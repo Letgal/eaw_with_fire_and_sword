@@ -113,7 +113,7 @@ country_event = {
 	id = WFAS_gryphia.5 # Monarchy or Republic?
 	title = WFAS_gryphia.5.t
 	desc = WFAS_gryphia.5.d
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_event_griffon_mountain
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -141,7 +141,7 @@ country_event = {
 		text = WFAS_gryphia.6.d1
 	}
 	desc = { text = WFAS_gryphia.6.d }
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_event_griffon_mountain
 
 	fire_only_once = no
 	is_triggered_only = yes
@@ -211,7 +211,7 @@ country_event = {
 		trigger = { has_country_flag = { flag = coronation_costs value = 4 } }
 		text = WFAS_gryphia.10.d4
 	}
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_event_griffon_mountain
 
 	fire_only_once = yes
 	is_triggered_only = yes
