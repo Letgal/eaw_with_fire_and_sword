@@ -1,0 +1,4 @@
+opinion_modifiers = {
+	opinion_prywhenians = { value = -25 }
+	opinion_pry_commies = { value = -15 }
+}
