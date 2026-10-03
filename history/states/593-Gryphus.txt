@@ -22,5 +22,10 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 		}
+
+		# (WFAS +)
+		set_state_name = wfas_STATE_593
+		set_province_name = { id = 4167 name = wfas_VP_4167 }
+		set_province_name = { id = 8026 name = wfas_VP_8026 }
 	}
 }

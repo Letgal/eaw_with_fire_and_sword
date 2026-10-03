@@ -21,5 +21,10 @@ state={
 			infrastructure = 1
 			industrial_complex = 1
 		}
+
+		# (WFAS +)
+		set_state_name = wfas_STATE_591
+		set_province_name = { id = 5071 name = wfas_VP_5071 }
+		set_province_name = { id = 12040 name = wfas_VP_12040 }
 	}
 }

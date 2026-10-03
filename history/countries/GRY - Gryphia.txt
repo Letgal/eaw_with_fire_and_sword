@@ -111,6 +111,10 @@ set_rule = {
 }
 
 # (WFAS +)
+# Custom state renames (move to appropriate state files if they're copied for override)
+613 = { set_state_name = wfas_STATE_613 }
+631 = { set_state_name = wfas_STATE_631 }
+
 set_popularities = {
 	democratic = 16
 	fascism = 16

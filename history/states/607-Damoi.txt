@@ -20,5 +20,10 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
+
+		# (WFAS +)
+		set_state_name = wfas_STATE_607
+		set_province_name = { id = 11912 name = wfas_VP_11912 }
+		set_province_name = { id = 12642 name = wfas_VP_12642 }
 	}
 }

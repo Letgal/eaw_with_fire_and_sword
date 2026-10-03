@@ -15,6 +15,11 @@ state={
 		add_core_of = LUS
 		victory_points = { 7204 3 }
 		victory_points = { 438 1 } # (WFAS +)
+
+		# (WFAS +)
+		set_state_name = wfas_STATE_632
+		set_province_name = { id = 7204 name = wfas_VP_7204 }
+		set_province_name = { id = 438 name = wfas_VP_438 }
 	}
 
 	resources={
