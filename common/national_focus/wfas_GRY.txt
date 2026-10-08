@@ -103,10 +103,10 @@ focus_tree = {
 		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_vereskopadsky_wins focus = GRY_kravelets_wins }
 		relative_position_id = GRY_convene_the_chorna_rada
-		x = -2
+		x = -4
 		y = 1
 		offset = {
-			x = 2
+			x = 4
 			trigger = { has_completed_focus = GRY_hryfnytsky_wins }
 		}
 		cost = 5
@@ -201,7 +201,7 @@ focus_tree = {
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_preparation_for_the_election }
 		relative_position_id = GRY_whats_next
-		x = 0
+		x = -12
 		y = 1
 		cost = 10
 		available = {
@@ -591,14 +591,36 @@ focus_tree = {
 		}
 	}
 
+	# HRYF_REPUBLIC
+	focus = {
+		id = GRY_preparation_for_the_election
+		icon = GFX_goal_generic_elections
+		prerequisite = { focus = GRY_whats_next }
+		mutually_exclusive = { focus = GRY_hetmans_coronation }
+		relative_position_id = GRY_cossack_baroque
+		x = 3
+		y = -2
+		cost = 10
+		available = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			has_country_flag = hryf_chose_republic
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 70
+			add_stability = 0.05
+			#country_event = 0
+		}
+	}
+
 	# HRYF_ECONOMIC
 	focus = {
 		id = GRY_where_we_are
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GRY_whats_next }
-		relative_position_id = GRY_cossack_baroque
-		x = 9
-		y = -1
+		relative_position_id = GRY_preparation_for_the_election
+		x = 5
+		y = 0
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = GRY_borad_grifnitsky } }
@@ -1043,28 +1065,6 @@ focus_tree = {
 		completion_reward = { }
 	}
 
-	# HRYF_REPUBLIC
-	focus = {
-		id = GRY_preparation_for_the_election
-		icon = GFX_goal_generic_elections
-		prerequisite = { focus = GRY_whats_next }
-		mutually_exclusive = { focus = GRY_hetmans_coronation }
-		relative_position_id = GRY_where_we_are
-		x = 8
-		y = -1
-		cost = 10
-		available = {
-			has_country_leader = { character = GRY_borad_grifnitsky }
-			has_country_flag = hryf_chose_republic
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_political_power = 70
-			add_stability = 0.05
-			#country_event = 0
-		}
-	}
-
 	focus = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_Veresk_trap
@@ -1074,8 +1074,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = GRY_convene_the_chorna_rada }
 		mutually_exclusive = { focus = GRY_hryfnytsky_wins focus = GRY_kravelets_wins }
-		relative_position_id = GRY_preparation_for_the_election
-		x = 2
+		relative_position_id = GRY_where_we_are
+		x = 3
 		y = -3
 		cost = 5
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
