@@ -22,6 +22,10 @@
  EFFECT_UNLOCK_DECISION_SUBCATEGORY: "Unlocks $NAME|H$ £decision_icon_small decisions in the $CATEGORY|H$ category."
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
 
+ decision_cost_cp_30_mp_1500_inf_100: "£command_power §Y30§! £manpower_icon §Y1500§! £infantry_equipment_text_icon §Y100§!"
+ decision_cost_cp_30_mp_1500_inf_100_blocked: "£command_power §R30§! £manpower_icon §R1500§! £infantry_equipment_text_icon §R100§!"
+ decision_cost_cp_30_mp_1500_inf_100_tooltip: "It costs £command_power §Y30§! £manpower_icon §Y1500§! £infantry_equipment_text_icon §Y100§! to take the decision"
+
  decision_cost_mp_3000_inf_300: "£manpower_icon §Y3000§! £infantry_equipment_text_icon §Y300§!"
  decision_cost_mp_3000_inf_300_blocked: "£manpower_icon §R3000§! £infantry_equipment_text_icon §R300§!"
  decision_cost_mp_3000_inf_300_tooltip: "It costs £manpower_icon §Y3000§! £infantry_equipment_text_icon §Y300§! to take the decision"
