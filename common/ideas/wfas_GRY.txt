@@ -120,18 +120,22 @@ ideas = {
 		# HRYF_MONARCHY
 		GRY_coronation_costs_1_temp = {
 			name = GRY_coronation_costs
+			picture = PLACEHOLDER_idea_icon
 			modifier = { consumer_goods_factor = 0.05 }
 		}
 		GRY_coronation_costs_2_temp = {
 			name = GRY_coronation_costs
+			picture = PLACEHOLDER_idea_icon
 			modifier = { consumer_goods_factor = 0.15 }
 		}
 		GRY_coronation_costs_3_temp = {
 			name = GRY_coronation_costs
+			picture = PLACEHOLDER_idea_icon
 			modifier = { consumer_goods_factor = 0.25 }
 		}
 		GRY_coronation_costs_4_temp = {
 			name = GRY_coronation_costs
+			picture = PLACEHOLDER_idea_icon
 			modifier = { consumer_goods_factor = 0.1 }
 		}
 		wfas_GRY_love_of_the_people = {
@@ -142,7 +146,7 @@ ideas = {
 		wfas_GRY_independent_siches_cut = {
 			# (*) effects cut in half
 			name = wfas_GRY_independent_siches
-			picture = generic_disjointed_gov
+			picture = GRY_zapzh_bordersam_pizda
 			modifier = {
 				stability_factor = -0.05
 				war_support_factor = -0.05
@@ -167,6 +171,7 @@ ideas = {
 		GRY_srodna_pratsya_1 = {
 			# focus: GRY_community_creation
 			name = GRY_srodna_pratsya
+			picture = PLACEHOLDER_idea_icon
 			modifier = {
 				monthly_population = 0.2
 				political_power_factor = 0.05
@@ -175,6 +180,7 @@ ideas = {
 		GRY_srodna_pratsya_2 = {
 			# focus: GRY_food_industry
 			name = GRY_srodna_pratsya
+			picture = PLACEHOLDER_idea_icon
 			modifier = {
 				monthly_population = 0.2
 				political_power_factor = 0.05
@@ -183,11 +189,13 @@ ideas = {
 		}
 		GRY_ready_for_the_modernity = {
 			# focus: GRY_workers_training
+			picture = PLACEHOLDER_idea_icon
 			modifier = { production_factory_efficiency_gain_factor = 0.15 }
 		}
 		GRY_loyal_peasantry_1 = {
 			# focus: GRY_subsidies_for_the_farmers
 			name = GRY_loyal_peasantry
+			picture = PLACEHOLDER_idea_icon
 			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
 			modifier = {
 				conscription_factor = 0.1
@@ -197,6 +205,7 @@ ideas = {
 		GRY_loyal_peasantry_2 = {
 			# focus: GRY_flat_land_tax
 			name = GRY_loyal_peasantry
+			picture = PLACEHOLDER_idea_icon
 			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
 			modifier = {
 				political_power_factor = 0.05
@@ -207,10 +216,12 @@ ideas = {
 		}
 		GRY_efficient_extraction = {
 			# focus: GRY_metal_extraction
+			picture = PLACEHOLDER_idea_icon
 			modifier = { local_resources_factor = 0.1 }
 		}
 		GRY_power_of_steam = {
 			# focus: GRY_steam_engines
+			picture = PLACEHOLDER_idea_icon
 			modifier = {
 				factory_energy_consumption = -0.1
 				supply_node_range = 0.05
@@ -218,11 +229,13 @@ ideas = {
 		}
 		GRY_weird_crystals = {
 			# focus: GRY_crystal_extraction
+			picture = PLACEHOLDER_idea_icon
 			research_bonus = { magical_tech = 0.1 }
 			equipment_bonus = { magical_tech = { instant = yes build_cost_ic = -0.05 } }
 		}
 		GRY_home_made_fertilizers_idea = {
 			# focus: GRY_home_made_fertilizers
+			picture = PLACEHOLDER_idea_icon
 			modifier = {
 				monthly_population = 0.1
 				production_factory_max_efficiency_factor = 0.1
@@ -230,6 +243,7 @@ ideas = {
 		}
 		GRY_agronomic_universities_idea = {
 			# focus: GRY_agronomic_universities
+			picture = PLACEHOLDER_idea_icon
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				industrial_capacity_factory = 0.1

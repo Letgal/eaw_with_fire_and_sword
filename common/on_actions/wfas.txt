@@ -2,8 +2,11 @@ on_actions = {
 on_startup = {
 effect = {
 	every_possible_country = {
-		limit = { is_griffon_race = yes }
-		# all griffons despise Prywhenians. ~ L.H.
+		limit = {
+			is_griffon_race = yes
+			NOT = { original_tag = GRW original_tag = BRF }
+		}
+		# (*) all griffons despise Prywhenians. ~ L.H.
 		add_opinion_modifier = { target = GRW modifier = opinion_prywhenians }
 		add_opinion_modifier = { target = BRF modifier = opinion_prywhenians }
 	}
@@ -32,7 +35,7 @@ effect = {
 				original_tag = BAN
 			}
 		}
-		# Evi valley non-communist nations despise PLA. ~ L.H.
+		# (*) Evi valley non-communist nations also despise PLA. ~ L.H.
 		if = {
 			limit = { has_government = communism }
 			remove_opinion_modifier = { target = GRW modifier = opinion_pry_commies }

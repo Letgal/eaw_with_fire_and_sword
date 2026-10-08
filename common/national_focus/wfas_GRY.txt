@@ -198,6 +198,10 @@ focus_tree = {
 	focus = {
 		id = GRY_hetmans_coronation
 		icon = GFX_focus_GRY_Boradian_Coronation
+		allow_branch = {
+			has_completed_focus = GRY_the_raid
+			NOT = { has_completed_focus = GRY_preparation_for_the_election }
+		}
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_preparation_for_the_election }
 		relative_position_id = GRY_whats_next
@@ -210,7 +214,10 @@ focus_tree = {
 			has_country_flag = coronation_costs_decided
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = { country_event = WFAS_gryphia.10 }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			country_event = WFAS_gryphia.10
+		}
 	}
 	focus = {
 		id = GRY_travel_the_country
@@ -244,7 +251,7 @@ focus_tree = {
 	focus = {
 		#dynamic = yes
 		id = GRY_spouse_focus
-		# (*) or somehow do as event target? ~ L.H.
+		# (*) or do as event target. ~ L.H.
 		#icon = {
 		#	trigger = { check_variable = { borad_spouse = taillow } }
 		#	value = GFX_focus_GRY_MILF
@@ -270,10 +277,11 @@ focus_tree = {
 		#	value = GFX_focus_GRY_Margo
 		#}
 		#icon = {
-		#	trigger = { check_variable = { borad_spouse = skoldsvard } }
+		#	trigger = { check_variable = { borad_spouse = cyrille } }
 		#	value = GFX_focus_GRY_Shieldwoman
 		#}
 		icon = { value = GFX_goal_unknown }
+		allow_branch = { has_completed_focus = GRY_matter_of_marriage } # (*) othrws tie it to has_variable or has_event_target. ~ L.H.
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
 		x = 0
@@ -595,6 +603,10 @@ focus_tree = {
 	focus = {
 		id = GRY_preparation_for_the_election
 		icon = GFX_goal_generic_elections
+		allow_branch = {
+			has_completed_focus = GRY_the_raid
+			NOT = { has_completed_focus = GRY_hetmans_coronation }
+		}
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_hetmans_coronation }
 		relative_position_id = GRY_cossack_baroque
@@ -607,6 +619,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			add_political_power = 70
 			add_stability = 0.05
 			#country_event = 0
