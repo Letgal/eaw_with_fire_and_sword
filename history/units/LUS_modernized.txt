@@ -1,0 +1,31 @@
+﻿### TEMPLATES ###
+division_template = {
+	name = "Garrison Division"
+	priority = 0
+	is_locked = yes
+	division_names_group = LUS_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	regimental_support = { field_guns = { x = 0 y = 0 } }
+}
+division_template = {
+	name = "Infantry Division"
+	division_names_group = LUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	regimental_support = {
+		field_guns = { x = 0 y = 0 }
+		field_guns = { x = 1 y = 0 }
+	}
+}
