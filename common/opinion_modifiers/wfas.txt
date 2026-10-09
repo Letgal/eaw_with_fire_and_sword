@@ -1,4 +1,8 @@
 opinion_modifiers = {
 	opinion_prywhenians = { value = -25 }
 	opinion_pry_commies = { value = -15 }
+
+	grateful = { value = 15 decay = 0.5 } # (*) stolen from my RCW mod :)
+	disappointed = { value = -10 decay = 0.5 } # (*) RCW
+	insulted = { value = -25 decay = 0.5 }
 }

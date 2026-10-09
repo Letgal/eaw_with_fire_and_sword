@@ -170,12 +170,26 @@ country_event = {
 			has_war = no
 			NOT = { has_country_flag = archons_refused_coronation }
 		}
-		#custom_effect_tooltip = if_they_accept
-		add_political_power = -250
-		set_variable = { prestige_gain_monarch = 0.5 }
-		add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 9 }
-		set_country_flag = { flag = coronation_costs value = 3 }
-		set_country_flag = coronation_costs_decided # (*) temp, delete later! ~ L.H.
+		hidden_effect = {
+			save_event_target_as = petitioner
+			if = {
+				limit = { GRI = { has_country_leader = archon_eros } }
+				GRI = { country_event = { id = WFAS_gryphia.7 days = 3 } }
+				else = {
+					random_list = {
+						1 = { GRI = { country_event = { id = WFAS_gryphia.7 days = 3 } } }
+						1 = { ROU = { country_event = { id = WFAS_gryphia.7 days = 3 } } }
+						1 = { YAL = { country_event = { id = WFAS_gryphia.7 days = 3 } } }
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = petition_to_archons
+		custom_effect_tooltip = if_they_accept
+		effect_tooltip = {
+			add_political_power = -250
+			add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 9 }
+		}
 	}
 	option = {
 		name = WFAS_gryphia.6.e
@@ -186,31 +200,110 @@ country_event = {
 		set_country_flag = coronation_costs_decided
 	}
 }
-#country_event = Request to the archons
-#country_event = They accepted, but with a condition
-	# set_country_flag = coronation_costs_decided
-#country_event = Refusal (and go back)
-	# immediate = { set_country_flag = archons_refused_coronation }
-
 country_event = {
-	id = WFAS_gryphia.10
+	id = WFAS_gryphia.7 # A Petition to Archons
+	title = WFAS_gryphia.7.t
+	desc = {
+		trigger = { has_country_leader = archon_eros }
+		text = WFAS_gryphia.7.d1
+	}
+	desc = { text = WFAS_gryphia.7.d3 }
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.7.a
+		ai_chance = { base = 3 }
+		add_political_power = 120
+		event_target:petitioner = { country_event = { id = WFAS_gryphia.9 days = 1 } }
+	}
+	option = {
+		name = WFAS_gryphia.7.b
+		trigger = { has_country_leader = archon_eros }
+		ai_chance = { base = 2 }
+		ROU = { country_event = { id = WFAS_gryphia.8 days = 1 } }
+	}
+	option = {
+		name = WFAS_gryphia.7.c
+		trigger = { has_country_leader = archon_eros }
+		ai_chance = { base = 2 }
+		YAL = { country_event = { id = WFAS_gryphia.8 days = 1 } }
+	}
+	option = {
+		name = WFAS_gryphia.7.e
+		ai_chance = { base = 1 }
+		event_target:petitioner = {
+			country_event = { id = WFAS_gryphia.10 days = 1 }
+			effect_tooltip = { add_opinion_modifier = { target = PREV modifier = insulted } }
+		}
+	}
+}
+country_event = {
+	id = WFAS_gryphia.8 # A Petition is Redirected
+	title = WFAS_gryphia.7.t
+	desc = WFAS_gryphia.7.d2
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.7.a
+		ai_chance = { base = 3 }
+		add_political_power = 120
+		event_target:petitioner = { country_event = { id = WFAS_gryphia.9 days = 2 } }
+	}
+	option = {
+		name = WFAS_gryphia.7.e
+		ai_chance = { base = 1 }
+		event_target:petitioner = {
+			country_event = { id = WFAS_gryphia.10 days = 2 }
+			effect_tooltip = { add_opinion_modifier = { target = PREV modifier = insulted } }
+		}
+	}
+}
+country_event = {
+	id = WFAS_gryphia.9 # Archon Accepts, in Exchange for a Favor
+	title = WFAS_gryphia.9.t
+	desc = {
+		trigger = { FROM = { tag = ROU } }
+		text = WFAS_gryphia.9.d2
+	}
+	desc = {
+		trigger = { FROM = { tag = YAL } }
+		text = WFAS_gryphia.9.d3
+	}
+	desc = { text = WFAS_gryphia.9.d1 }
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.9.a
+		add_political_power = -250
+		set_variable = { prestige_gain_monarch = 0.5 }
+		add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 9 }
+		set_country_flag = { flag = coronation_costs value = 3 }
+		set_country_flag = coronation_costs_decided
+		add_opinion_modifier = { target = FROM modifier = grateful }
+	}
+	option = {
+		name = WFAS_gryphia.9.b
+		set_country_flag = archons_refused_coronation
+		FROM = {
+			country_event = { id = WFAS_gryphia.10 days = 2 }
+			effect_tooltip = { add_opinion_modifier = { target = PREV modifier = disappointed } }
+		}
+		country_event = WFAS_gryphia.6
+	}
+}
+country_event = {
+	id = WFAS_gryphia.10 # Petitioner Reneges on Their Petition
 	title = WFAS_gryphia.10.t
-	desc = {
-		trigger = { has_country_flag = { flag = coronation_costs value = 1 } }
-		text = WFAS_gryphia.10.d1
-	}
-	desc = {
-		trigger = { has_country_flag = { flag = coronation_costs value = 2 } }
-		text = WFAS_gryphia.10.d2
-	}
-	desc = {
-		trigger = { has_country_flag = { flag = coronation_costs value = 3 } }
-		text = WFAS_gryphia.10.d3
-	}
-	desc = {
-		trigger = { has_country_flag = { flag = coronation_costs value = 4 } }
-		text = WFAS_gryphia.10.d4
-	}
+	desc = WFAS_gryphia.10.d
 	picture = GFX_event_griffon_mountain
 
 	fire_only_once = yes
@@ -218,6 +311,53 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.10.a
+		add_opinion_modifier = { target = FROM modifier = disappointed }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.11 # Archon Has Refused
+	title = WFAS_gryphia.11.t
+	desc = WFAS_gryphia.11.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { set_country_flag = archons_refused_coronation }
+
+	option = {
+		name = WFAS_gryphia.11.a
+		country_event = WFAS_gryphia.6
+		add_opinion_modifier = { target = FROM modifier = insulted }
+	}
+}
+
+country_event = {
+	id = WFAS_gryphia.12
+	title = WFAS_gryphia.12.t
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 1 } }
+		text = WFAS_gryphia.12.d1
+	}
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 2 } }
+		text = WFAS_gryphia.12.d2
+	}
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 3 } }
+		text = WFAS_gryphia.12.d3
+	}
+	desc = {
+		trigger = { has_country_flag = { flag = coronation_costs value = 4 } }
+		text = WFAS_gryphia.12.d4
+	}
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WFAS_gryphia.12.a
 		add_stability = 0.1
 		if = {
 			limit = { has_country_flag = { flag = coronation_costs value = 1 } }

@@ -187,12 +187,36 @@
  WFAS_gryphia.6.c: "Only an Archon is fit to crown me!"
  WFAS_gryphia.6.e: "Oh."
 
- WFAS_gryphia.10.t: "The Coronation"
- WFAS_gryphia.10.d1: "A humble coronation."
- WFAS_gryphia.10.d2: "A decent coronation."
- WFAS_gryphia.10.d3: "An extravagant coronation."
- WFAS_gryphia.10.d4: "A coronation during war."
- WFAS_gryphia.10.a: "Three cheers for the Prince!"
+ WFAS_gryphia.7.t: "A Curious Petition"
+ WFAS_gryphia.7.d1: "Desc if Eros is in charge of GRI."
+ WFAS_gryphia.7.d2: "Desc if Eros has redirected this."
+ WFAS_gryphia.7.d3: "Desc if Eros is not in charge of GRI."
+ WFAS_gryphia.7.a: "This might prove beneficial..."
+ WFAS_gryphia.7.b: "Forward it to Archon Erion."
+ WFAS_gryphia.7.c: "Forward it to Archon Proteus."
+ WFAS_gryphia.7.e: "Such absurdity!"
+
+ WFAS_gryphia.9.t: "[FROM.GetName] Agrees"
+ WFAS_gryphia.9.d1: "Their Archon has agreed to conduct the coronation ceremony, in exchange for a favor:\nMake a donation to the Church, so that they might use those funds to aid the poor."
+ WFAS_gryphia.9.d2: "Their Archon has agreed to conduct the coronation ceremony, in exchange for a favor:\nGive more authority to the Church in [ROOT.GetNameDef]."
+ WFAS_gryphia.9.d3: "Their Archon has agreed to conduct the coronation ceremony, in exchange for a favor:\nSend a particular commander into a military order."
+ WFAS_gryphia.9.a: "We will oblige."
+ WFAS_gryphia.9.b: "This is too much!"
+
+ WFAS_gryphia.10.t: "[FROM.GetName] Reneges on Their Petition"
+ WFAS_gryphia.10.d: "They say it's too much to ask."
+ WFAS_gryphia.10.a: "Disappointing."
+
+ WFAS_gryphia.11.t: "[FROM.GetName] Refuses"
+ WFAS_gryphia.11.d: "Their Archon has refused to conduct the coronation ceremony."
+ WFAS_gryphia.11.a: "Maar smite that pompous hypocrite..."
+
+ WFAS_gryphia.12.t: "The Coronation"
+ WFAS_gryphia.12.d1: "A humble coronation."
+ WFAS_gryphia.12.d2: "A decent coronation."
+ WFAS_gryphia.12.d3: "An extravagant coronation."
+ WFAS_gryphia.12.d4: "A coronation during war."
+ WFAS_gryphia.12.a: "Three cheers for the Prince!"
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.
@@ -326,6 +350,8 @@
  GRY_vereskopadsky_wins_tt: "§G[GRY_pavel_vereskopadsky.GetName] wins the election!§!" # §g
  GRY_hryfnytsky_wins_tt: "§G[GRY_borad_grifnitsky.GetName] wins the election!§!" # §P
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
+
+ petition_to_archons: "Sends a petition to the Archons requesting to conduct the coronation ceremony."
 
  modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"
  prestige_gain: "Prestige Gain"
