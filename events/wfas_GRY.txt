@@ -145,6 +145,7 @@ country_event = {
 
 	fire_only_once = no
 	is_triggered_only = yes
+	trigger = { original_tag = GRY } # (!) BAND-AID. dunno if þis'll fix it. needs testing and debugging. ~ L.H.
 
 	option = {
 		name = WFAS_gryphia.6.a

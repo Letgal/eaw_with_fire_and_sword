@@ -279,3 +279,12 @@ GRY_ARM_01 = {
 		10 = { "%d. Bryhada (Verkhnya Kosarshchyna)" }
 	}
 }
+
+# (WFAS +)
+LUS_GAR_01 = {
+	name = "Okhoronny Polk"
+	for_countries = { GRY }
+	division_types = { infantry magical_infantry }
+
+	fallback_name = "%d. Okhoronny Polk"
+}

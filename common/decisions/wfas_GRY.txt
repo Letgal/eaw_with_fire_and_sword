@@ -1,7 +1,7 @@
 political_actions = {
 	GRY_anti_communist_effort_weak = {
 		priority = 1
-		icon = generic_PLACEHOLDER
+		icon = oppression
 		allowed = { original_tag = GRY }
 		visible = {
 			has_completed_focus = GRY_fight_the_red_menace
@@ -17,7 +17,7 @@ political_actions = {
 	}
 	GRY_anti_communist_effort_medium = {
 		priority = 1
-		icon = generic_PLACEHOLDER
+		icon = generic_fortification
 		allowed = { original_tag = GRY }
 		visible = {
 			has_completed_focus = GRY_fight_the_red_menace
@@ -48,7 +48,7 @@ political_actions = {
 	}
 	GRY_anti_communist_effort_strong = {
 		priority = 1
-		icon = generic_PLACEHOLDER
+		icon = eng_blackshirt_march
 		allowed = { original_tag = GRY }
 		visible = {
 			has_completed_focus = GRY_fight_the_red_menace
@@ -64,7 +64,7 @@ political_actions = {
 	}
 	GRY_anti_communist_effort_special = {
 		priority = 1
-		icon = generic_PLACEHOLDER
+		icon = generic_intelligence_operation
 		allowed = { original_tag = GRY }
 		visible = {
 			has_completed_focus = GRY_fight_the_red_menace
