@@ -141,6 +141,9 @@
 
  ## HRYFNYTSKY
  GRY_coronation_costs: "Coronation Costs"
+ GRY_donations_to_the_church: "Donations to the Church"
+ GRY_church_investiture: "Expanded Church Investiture"
+ GRY_church_of_zaphzia: "Church of Zaphzia"
  wfas_GRY_love_of_the_people: "Love of the People"
  wfas_GRY_love_of_the_people_desc: "People love you, milord!"
  wfas_GRY_cultural_revival: "Cultural Revival"
@@ -358,5 +361,9 @@
  prestige_gain_var: "$prestige_gain$: [?prestige_gain|2%+=]"
  prestige_gain_var_monarch: "  - $prestige_gain$: [?prestige_gain_monarch|2%+=]"
  prestige_gain_tt: " $prestige_gain$: $RIGHT|2%+=$"
+
+ piety_gain: "Piety Gain"
+ piety_gain_var: "$piety_gain$: [?piety_gain|2%+=]"
+ piety_gain_tt: " $piety_gain$: $RIGHT|2%+=$"
 
  improve_srodna_pratsya: "The effect will be applied once you receive the spirit from the §H$GRY_community_creation$§! focus."

@@ -138,6 +138,27 @@ ideas = {
 			picture = PLACEHOLDER_idea_icon
 			modifier = { consumer_goods_factor = 0.1 }
 		}
+		GRY_donations_to_the_church = {
+			picture = PLACEHOLDER_idea_icon
+			modifier = { consumer_goods_factor = 0.15 }
+		}
+		GRY_church_investiture = {
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				custom_modifier_tooltip = piety_gain_var
+			}
+		}
+		GRY_church_of_zaphzia = {
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				custom_modifier_tooltip = piety_gain_var
+			}
+			# (*) upon replace, use custom_effect_tooltip = { localization_key = EFFECT_SWAP_IDEAS_REPLACE REMOVE = GRY_church_investiture ADD = GRY_church_of_zaphzia } ~ L.H.
+		}
 		wfas_GRY_love_of_the_people = {
 			picture = GRY_Everyones_favorite
 			cancel = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }

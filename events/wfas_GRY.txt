@@ -308,6 +308,19 @@ country_event = {
 		set_country_flag = { flag = coronation_costs value = 3 }
 		set_country_flag = coronation_costs_decided
 		add_opinion_modifier = { target = FROM modifier = grateful }
+		custom_effect_tooltip = SEPARATION_LINE
+		if = {
+			limit = { FROM = { tag = GRI } }
+			add_ideas = GRY_donations_to_the_church
+		}
+		else_if = {
+			limit = { FROM = { tag = ROU } }
+			#
+		}
+		else_if = {
+			limit = { FROM = { tag = YAL } }
+			add_ideas = GRY_church_investiture
+		}
 	}
 	option = {
 		name = WFAS_gryphia.9.b
