@@ -5,6 +5,7 @@ division_template = {
 	priority = 0
 	is_locked = yes
 	division_names_group = LUS_IRR_01
+	template_counter = 18
 	regiments = {
 		irregular_infantry = { x = 0 y = 0 }
 		irregular_infantry = { x = 0 y = 1 }

@@ -138,7 +138,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'placate_the_nobility' (WFAS)"
+			log = "([GetDate]) [ROOT.GetTag]: focus 'placate_the_nationalists' (WFAS)"
 			add_stability = 0.05
 			if = {
 				limit = { has_idea = wfas_GRY_ruina_4 }
@@ -180,7 +180,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'placate_the_nationalists' (WFAS)"
+			log = "([GetDate]) [ROOT.GetTag]: focus 'placate_the_nobility' (WFAS)"
 			add_stability = 0.05
 			if = {
 				limit = { has_idea = wfas_GRY_ruina_4 }
@@ -233,7 +233,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'hetmans_coronation' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
-			country_event = WFAS_gryphia.10
+			country_event = WFAS_gryphia.12
 		}
 	}
 	focus = {
@@ -599,7 +599,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'art_academies' (WFAS)"
+			log = "([GetDate]) [ROOT.GetTag]: focus 'theaters' (WFAS)"
 			random_owned_state = {
 				add_building_construction = {
 					type = infrastructure
@@ -636,7 +636,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'theaters' (WFAS)"
+			log = "([GetDate]) [ROOT.GetTag]: focus 'art_academies' (WFAS)"
 			random_owned_state = {
 				add_building_construction = {
 					type = infrastructure

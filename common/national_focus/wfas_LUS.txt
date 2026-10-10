@@ -34,9 +34,10 @@ focus_tree = {
 		relative_position_id = LUS_pressing_matters
 		x = -3 y = 1
 		cost = 4 # (*) go fast.
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'relief_for_peasants' (WFAS)"
+			add_stability = 0.05
 			# (*) rush it or þey STARVE.
 		}
 	}
