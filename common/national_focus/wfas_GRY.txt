@@ -27,7 +27,10 @@ focus_tree = {
 		x = 8
 		cost = 1
 		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = { country_event = WFAS_gryphia.1 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'great_anniversary' (WFAS)"
+			country_event = WFAS_gryphia.1
+		}
 	}
 	focus = {
 		id = GRY_gather_the_siches
@@ -38,7 +41,10 @@ focus_tree = {
 		y = 1
 		cost = 2
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = { country_event = WFAS_gryphia.2 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'gather_the_siches' (WFAS)"
+			country_event = WFAS_gryphia.2
+		}
 	}
 	focus = {
 		id = GRY_the_raid
@@ -55,6 +61,7 @@ focus_tree = {
 			country_event = { id = WFAS_gryphia.3 days = 12 random_days = 4 }
 		}
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'the_raid' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			country_event = WFAS_gryphia.4 # no delay. ~ L.H.
 		}
@@ -70,10 +77,12 @@ focus_tree = {
 		cost = 35
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		select_effect = {
+			log = "([GetDate]) [ROOT.GetTag]: 'convene_the_chorna_rada' focus SELECTED (WFAS)"
 			set_country_flag = chorna_rada_in_progress
 			country_event = { id = WFAS_chorna_rada.1 hours = 12 random_hours = 12 }
 		}
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'convene_the_chorna_rada' (WFAS)"
 			clr_country_flag = chorna_rada_in_progress
 			custom_effect_tooltip = POLITICS_GOAL_INSTANT_EFFECT
 			effect_tooltip = { country_event = WFAS_chorna_rada.1 }
@@ -113,6 +122,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { always = no }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'hryfnytsky_wins' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = GRY_hryfnytsky_wins_tt
 			effect_tooltip = { set_politics = { ruling_party = democratic } }
@@ -128,6 +138,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'placate_the_nobility' (WFAS)"
 			add_stability = 0.05
 			if = {
 				limit = { has_idea = wfas_GRY_ruina_4 }
@@ -150,6 +161,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'fight_the_red_menace' (WFAS)"
 			add_stability = 0.05
 			custom_effect_tooltip = {
 				localization_key = EFFECT_UNLOCK_DECISION_SUBCATEGORY
@@ -168,6 +180,7 @@ focus_tree = {
 		cost = 5
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'placate_the_nationalists' (WFAS)"
 			add_stability = 0.05
 			if = {
 				limit = { has_idea = wfas_GRY_ruina_4 }
@@ -191,7 +204,10 @@ focus_tree = {
 		y = 1
 		cost = 1
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { country_event = WFAS_gryphia.5 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'whats_next' (WFAS)"
+			country_event = WFAS_gryphia.5
+		}
 	}
 
 	# HRYF_MONARCHY
@@ -215,6 +231,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'hetmans_coronation' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			country_event = WFAS_gryphia.10
 		}
@@ -229,6 +246,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'travel_the_country' (WFAS)"
 			add_political_power = 70
 			add_stability = 0.05
 			#country_event = 0
@@ -244,6 +262,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'matter_of_marriage' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			unlock_decision_category_tooltip = GRY_marital_matters # replace with: country_event = 0 (unlocks decisions, mission with timer)
 		}
@@ -288,7 +307,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'spouse_focus' (WFAS)" }
 	}
 	focus = {
 		id = GRY_keep_those_promises
@@ -301,7 +320,10 @@ focus_tree = {
 		available = { has_political_power > 99.999 }
 		continue_if_invalid = yes
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { add_ideas = wfas_GRY_love_of_the_people }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'keep_those_promises' (WFAS)"
+			add_ideas = wfas_GRY_love_of_the_people
+		}
 	}
 	focus = {
 		id = GRY_expand_the_siches_autonomy
@@ -312,7 +334,10 @@ focus_tree = {
 		y = -1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { swap_ideas = { remove_idea = wfas_GRY_independent_siches add_idea = wfas_GRY_independent_siches_cut } }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'expand_the_siches_autonomy' (WFAS)"
+			swap_ideas = { remove_idea = wfas_GRY_independent_siches add_idea = wfas_GRY_independent_siches_cut }
+		}
 	}
 	focus = {
 		id = GRY_sich_liberties
@@ -323,7 +348,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { remove_ideas = wfas_GRY_independent_siches_cut }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'sich_liberties' (WFAS)"
+			remove_ideas = wfas_GRY_independent_siches_cut
+		}
 		# (*) -10% recruit factor, +5% resrch speed, +5% fac output
 	}
 	focus = {
@@ -336,7 +364,7 @@ focus_tree = {
 		cost = 10
 		available = { has_war = yes }
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'fealty_to_the_king' (WFAS)" }
 		# (*) +10% recruit factor, +5% att, +5% def -5% resrch speed, -5% fac output
 	}
 	focus = {
@@ -348,7 +376,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = { add_war_support = 0.1 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'gathering_the_lands' (WFAS)"
+			add_war_support = 0.1
+		}
 	}
 	focus = {
 		id = GRY_destroy_commies
@@ -359,7 +390,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'destroy_commies' (WFAS)" }
 	}
 	focus = {
 		id = GRY_organizing_subject_govs
@@ -370,7 +401,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'organizing_subject_govs' (WFAS)" }
 	}
 	focus = {
 		id = GRY_economic_union
@@ -381,7 +412,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { create Evian Union faction, decisions: union wiþ unaligned and harmonists }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'economic_union' (WFAS)"
+			# create Evian Union faction, decisions: union wiþ unaligned and harmonists
+		}
 	}
 	focus = {
 		id = GRY_integrate_politics
@@ -392,7 +426,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { decisions to "integrate the member states' politics", turn þem into dominions, add spirit "Political Integration" - PP gain +10%, auton gain -0.5 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'economic_union' (WFAS)"
+			# decisions to "integrate the member states' politics", turn þem into dominions, add spirit "Political Integration" - PP gain +10%, auton gain -0.5
+		}
 	}
 	focus = {
 		id = GRY_secure_the_union
@@ -403,7 +440,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { create Evian Union faction, decisions: union wiþ unaligned and harmonists }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'secure_the_union' (WFAS)"
+			# create Evian Union faction, decisions: union wiþ unaligned and harmonists
+		}
 	}
 	focus = {
 		id = GRY_economical_integration
@@ -416,7 +456,10 @@ focus_tree = {
 		cost = 10
 		#available = { has_completed_focus = GRY_first_successes }
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { decision category, see appropriate file }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'economical_integration' (WFAS)"
+			# decision category, see appropriate file
+		}
 	}
 	focus = {
 		id = GRY_uniting_the_borders
@@ -428,7 +471,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { create Evian Union faction, decisions: union wiþ unaligned and harmonists }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'uniting_the_borders' (WFAS)"
+			# create Evian Union faction, decisions: union wiþ unaligned and harmonists
+		}
 	}
 	focus = {
 		id = GRY_riverland_friendship
@@ -440,7 +486,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'riverland_friendship' (WFAS)" }
 	}
 	focus = {
 		id = GRY_bulwark_against_radicalism
@@ -451,7 +497,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'bulwark_against_radicalism' (WFAS)" }
 	}
 	focus = {
 		id = GRY_reclaim_polshavina
@@ -463,7 +509,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'reclaim_polshavina' (WFAS)" }
 	}
 	focus = {
 		id = GRY_wittenland_kurin
@@ -474,7 +520,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'wittenland_kurin' (WFAS)" }
 	}
 	focus = {
 		id = GRY_integrating_the_tribes
@@ -485,7 +531,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'integrating_the_tribes' (WFAS)" }
 	}
 	focus = {
 		id = GRY_tax_the_rich
@@ -496,7 +542,7 @@ focus_tree = {
 		y = -1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'tax_the_rich' (WFAS)" }
 	}
 	focus = {
 		id = GRY_industrialization_program
@@ -507,7 +553,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'industrialization_program' (WFAS)" }
 	}
 	focus = {
 		id = GRY_ban_serfdom
@@ -518,7 +564,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ban_serfdom' (WFAS)" }
 	}
 	focus = {
 		id = GRY_cossack_baroque
@@ -530,6 +576,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'cossack_baroque' (WFAS)"
 			capital_scope = {
 				add_building_construction = {
 					type = infrastructure
@@ -552,6 +599,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'art_academies' (WFAS)"
 			random_owned_state = {
 				add_building_construction = {
 					type = infrastructure
@@ -573,7 +621,10 @@ focus_tree = {
 		y = 2
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { add_ideas = wfas_GRY_cultural_programs_idea }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'cultural_programs' (WFAS)"
+			add_ideas = wfas_GRY_cultural_programs_idea
+		}
 	}
 	focus = {
 		id = GRY_art_academies
@@ -585,6 +636,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'theaters' (WFAS)"
 			random_owned_state = {
 				add_building_construction = {
 					type = infrastructure
@@ -619,6 +671,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'preparation_for_the_election' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			add_political_power = 70
 			add_stability = 0.05
@@ -638,6 +691,7 @@ focus_tree = {
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = GRY_borad_grifnitsky } }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'where_we_are' (WFAS)"
 			add_political_power = 50
 			# event.
 		}
@@ -654,6 +708,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'physiocracy' (WFAS)"
 			every_owned_state = {
 				limit = { NOT = { state = 598 state = 609 } }
 				add_extra_state_shared_building_slots = 1
@@ -669,7 +724,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_STABILITY }
-		completion_reward = { add_stability = 0.1 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'land_fund' (WFAS)"
+			add_stability = 0.1
+		}
 	}
 	focus = {
 		id = GRY_community_creation
@@ -681,6 +739,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'community_creation' (WFAS)"
 			if = {
 				limit = { has_completed_focus = GRY_food_industry }
 				add_ideas = GRY_srodna_pratsya_2
@@ -699,6 +758,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'rural_schools' (WFAS)"
 			decrease_illiteracy = yes
 			unlock_decision_tooltip = GRY_expand_peasant_education
 		}
@@ -713,6 +773,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'food_industry' (WFAS)"
 			random_owned_state = {
 				limit = { NOT = { state = 598 state = 609 } }
 				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -739,6 +800,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESOURCES }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'search_for_coal_basins' (WFAS)"
 			add_resource = { type = coal amount = 9 state = 612 }
 			add_resource = { type = coal amount = 5 state = 613 }
 			unlock_decision_tooltip = increase_coal_extraction_in_buzzovyna
@@ -756,6 +818,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'industrialization' (WFAS)"
 			every_owned_state = {
 				limit = { OR = { state = 598 state = 609 } }
 				add_extra_state_shared_building_slots = 1
@@ -772,6 +835,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'manufactory_modernization' (WFAS)"
 			random_owned_state = {
 				limit = { OR = { state = 598 state = 609 } }
 				prioritize = { 609 }
@@ -789,6 +853,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'advanced_weapons_production' (WFAS)"
 			random_owned_state = {
 				limit = { OR = { state = 598 state = 609 } }
 				prioritize = { 598 }
@@ -806,6 +871,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'infrastructure_development' (WFAS)"
 			every_owned_state = {
 				limit = { OR = { state = 598 state = 609 } }
 				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
@@ -821,7 +887,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = { add_ideas = GRY_ready_for_the_modernity }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'workers_training' (WFAS)"
+			add_ideas = GRY_ready_for_the_modernity
+		}
 	}
 	focus = {
 		id = GRY_kaiv_polytechnical
@@ -833,6 +902,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'kaiv_polytechnical' (WFAS)"
 			add_research_slot = 1
 			unlock_decision_tooltip = GRY_put_the_knowledge_into_practice
 		}
@@ -848,6 +918,7 @@ focus_tree = {
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'first_successes' (WFAS)"
 			clr_country_flag = economic_laws_blocked
 			custom_effect_tooltip = will_allow_economic_laws_tt
 			custom_effect_tooltip = SEPARATION_LINE
@@ -864,7 +935,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { add_ideas = GRY_loyal_peasantry_1 }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'subsidies_for_the_farmers' (WFAS)"
+			add_ideas = GRY_loyal_peasantry_1
+		}
 	}
 	focus = {
 		id = GRY_metal_extraction
@@ -876,6 +950,7 @@ focus_tree = {
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESOURCES }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'metal_extraction' (WFAS)"
 			add_resource = { type = steel amount = 24 state = 598 }
 			add_ideas = GRY_efficient_extraction
 		}
@@ -889,7 +964,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { add_ideas = GRY_power_of_steam }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'steam_engines' (WFAS)"
+			add_ideas = GRY_power_of_steam
+		}
 	}
 	focus = {
 		id = GRY_crystal_extraction
@@ -902,6 +980,7 @@ focus_tree = {
 		#available = { has_tech = excavation4 }
 		search_filters = { FOCUS_FILTER_RESOURCES }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'crystal_extraction' (WFAS)"
 			# move to country_event:
 			add_resource = { type = crystals amount = 14 state = 612 }
 			add_ideas = GRY_weird_crystals
@@ -918,6 +997,7 @@ focus_tree = {
 		#available = { has_tech = excavation5 }
 		search_filters = { FOCUS_FILTER_RESOURCES }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'oil_fields' (WFAS)"
 			add_resource = { type = oil amount = 22 state = 597 }
 			#unlock_decision_tooltip = GRY_use_the_oil_fields
 		}
@@ -931,7 +1011,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { swap_ideas = { remove_idea = GRY_loyal_peasantry_1 add_idea = GRY_loyal_peasantry_2 } }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'flat_land_tax' (WFAS)"
+			swap_ideas = { remove_idea = GRY_loyal_peasantry_1 add_idea = GRY_loyal_peasantry_2 }
+		}
 	}
 	focus = {
 		id = GRY_home_made_fertilizers
@@ -942,7 +1025,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { add_ideas = GRY_home_made_fertilizers_idea }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'home_made_fertilizers' (WFAS)"
+			add_ideas = GRY_home_made_fertilizers_idea
+		}
 	}
 	focus = {
 		id = GRY_agronomic_universities
@@ -953,7 +1039,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { add_ideas = GRY_agronomic_universities_idea }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'agronomic_universities' (WFAS)"
+			add_ideas = GRY_agronomic_universities_idea
+		}
 	}
 	focus = {
 		id = GRY_centralized_planning
@@ -965,7 +1054,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { capital_scope = { add_extra_state_shared_building_slots = 3 } }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'centralized_planning' (WFAS)"
+			capital_scope = { add_extra_state_shared_building_slots = 3 }
+		}
 	}
 	focus = {
 		id = GRY_local_technical_colleges
@@ -976,7 +1068,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'local_technical_colleges' (WFAS)" }
 	}
 	focus = {
 		id = GRY_mandatory_elementary_education
@@ -987,7 +1079,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { increase_science_base = yes }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'mandatory_elementary_education' (WFAS)"
+			increase_science_base = yes
+		}
 	}
 	focus = {
 		id = GRY_progressive_taxation
@@ -998,7 +1093,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'progressive_taxation' (WFAS)" }
 	}
 	focus = {
 		id = GRY_antitrust_laws
@@ -1009,7 +1104,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'antitrust_laws' (WFAS)" }
 	}
 	focus = {
 		id = GRY_steady_development
@@ -1020,7 +1115,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'steady_development' (WFAS)" }
 	}
 	focus = {
 		id = GRY_cossack_mace
@@ -1031,7 +1126,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'cossack_mace' (WFAS)" }
 	}
 	focus = {
 		id = GRY_accelerated_electrification
@@ -1042,7 +1137,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'accelerated_electrification' (WFAS)" }
 	}
 	focus = {
 		id = GRY_advanced_electric_rail
@@ -1053,7 +1148,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'advanced_electric_rail' (WFAS)" }
 	}
 	focus = {
 		id = GRY_civilian_transportation
@@ -1064,7 +1159,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'civilian_transportation' (WFAS)" }
 	}
 	focus = {
 		id = GRY_small_dams
@@ -1075,7 +1170,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'small_dams' (WFAS)" }
 	}
 
 	focus = {
@@ -1101,6 +1196,7 @@ focus_tree = {
 		}
 		#select_effect = { country_event = { id = WFAS_gryphia.5 hours = 12 random_hours = 12 } }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'vereskopadsky_wins' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = GRY_vereskopadsky_wins_tt
 		}
@@ -1130,6 +1226,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { always = no }
 		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'kravelets_wins' (WFAS)"
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = GRY_kravelets_wins_tt
 			effect_tooltip = { set_politics = { ruling_party = fascism } }

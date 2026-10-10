@@ -14,10 +14,13 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = {
-		country_event = { id = WFAS_chorna_rada.2 days = 30 } # CRA1
-		country_event = { id = WFAS_chorna_rada.13 days = 6 } # CRC1
-	} }
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.1' (WFAS)"
+		hidden_effect = {
+			country_event = { id = WFAS_chorna_rada.2 days = 30 } # CRA1
+			country_event = { id = WFAS_chorna_rada.13 days = 6 } # CRC1
+		}
+	}
 
 	option = { name = WFAS_chorna_rada.1.a }
 }
@@ -34,7 +37,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.3 days = 3 } } } # CRA2
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.2' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.3 days = 3 } } # CRA2
+	}
 
 	option = {
 		name = WFAS_chorna_rada.2.a
@@ -55,7 +61,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.4 days = 3 } } } # CRG2
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.3' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.4 days = 3 } } # CRG2
+	}
 
 	option = {
 		name = WFAS_chorna_rada.3.a
@@ -75,7 +84,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.5 days = 21 } } } # CRA3
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.4' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.5 days = 21 } } # CRA3
+	}
 
 	option = {
 		name = WFAS_chorna_rada.4.a
@@ -95,7 +107,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.7 days = 18 } } } # CRS1
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.5' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.7 days = 18 } } # CRS1
+	}
 
 	option = {
 		name = WFAS_chorna_rada.5.a
@@ -131,6 +146,8 @@ country_event = {
 		check_variable = { chr_support_hryf = chr_support_krav }
 	}
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.6' (WFAS)" }
+
 	option = { name = WFAS_chorna_rada.6.a }
 }
 
@@ -148,7 +165,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.8 days = 18 } } } # CRS2
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.7' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.8 days = 18 } } # CRS2
+	}
 
 	option = {
 		name = WFAS_chorna_rada.7.a
@@ -172,7 +192,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.9 days = 30 } } } # CRS3
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.8' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.9 days = 30 } } # CRS3
+	}
 
 	option = {
 		name = WFAS_chorna_rada.8.a
@@ -196,7 +219,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } } # CRS4
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.9' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.10 days = 24 } } # CRS4
+	}
 
 	option = {
 		name = WFAS_chorna_rada.9.a
@@ -223,7 +249,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } } # CRS5
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.10' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.11 days = 24 } } # CRS5
+	}
 
 	option = {
 		name = WFAS_chorna_rada.10.a
@@ -249,7 +278,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 24 } } } # CRS6
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.11' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.12 days = 24 } } # CRS6
+	}
 
 	option = {
 		name = WFAS_chorna_rada.11.a
@@ -281,7 +313,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 36 } } } # CRE2
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.12' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.20 days = 36 } } # CRE2
+	}
 
 	option = {
 		name = WFAS_chorna_rada.12.a
@@ -309,7 +344,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.14 days = 75 } } } # CRC2
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.13' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.14 days = 75 } } # CRC2
+	}
 
 	option = {
 		name = WFAS_chorna_rada.13.a
@@ -330,7 +368,10 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
-	immediate = { hidden_effect = { country_event = { id = WFAS_chorna_rada.15 days = 30 } } } # CRC3
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.14' (WFAS)"
+		hidden_effect = { country_event = { id = WFAS_chorna_rada.15 days = 30 } } # CRC3
+	}
 
 	option = {
 		name = WFAS_chorna_rada.14.a
@@ -359,6 +400,8 @@ country_event = {
 		has_civil_war = no
 		NOT = { has_government = communism }
 	}
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.15' (WFAS)" }
 
 	option = {
 		name = WFAS_chorna_rada.15.a
@@ -399,6 +442,8 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.16' (WFAS)" }
+
 	option = {
 		name = WFAS_chorna_rada.16.a
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.17 days = 3 } } # CRC4+
@@ -416,6 +461,8 @@ country_event = {
 		has_civil_war = no
 		NOT = { has_government = communism }
 	}
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.17' (WFAS)" }
 
 	option = {
 		name = WFAS_chorna_rada.17.a
@@ -447,6 +494,8 @@ country_event = {
 		has_civil_war = no
 		NOT = { has_government = communism }
 	}
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.18' (WFAS)" }
 
 	option = {
 		name = WFAS_chorna_rada.18.a
@@ -483,6 +532,8 @@ country_event = {
 		has_civil_war = no
 		NOT = { has_government = communism }
 	}
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.19' (WFAS)" }
 
 	option = {
 		trigger = { NOT = { GRY_pavel_vereskopadsky = { has_character_flag = in_coma } } }
@@ -543,6 +594,8 @@ country_event = {
 		check_variable = { chr_support_hryf = chr_support_krav }
 	}
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.20' (WFAS)" }
+
 	option = {
 		name = WFAS_chorna_rada.20.a
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.21 days = 6 } } # CRC3
@@ -561,6 +614,8 @@ country_event = {
 		NOT = { has_government = communism }
 	}
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.21' (WFAS)" }
+
 	option = {
 		name = WFAS_chorna_rada.21.a
 		hidden_effect = { country_event = { id = WFAS_chorna_rada.22 days = 3 } } # CRC4
@@ -578,6 +633,8 @@ country_event = {
 		has_civil_war = no
 		NOT = { has_government = communism }
 	}
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_chorna_rada.22' (WFAS)" }
 
 	option = {
 		name = WFAS_chorna_rada.22.a

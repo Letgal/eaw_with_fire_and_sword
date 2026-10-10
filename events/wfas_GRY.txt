@@ -9,6 +9,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.1' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.1.a
 		add_political_power = 25
@@ -23,6 +25,8 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.2' (WFAS)" }
 
 	option = {
 		name = WFAS_gryphia.2.a
@@ -56,6 +60,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.3' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.3.a
 		add_political_power = -100
@@ -82,6 +88,8 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.4' (WFAS)" }
 
 	option = {
 		name = WFAS_gryphia.4.a
@@ -118,6 +126,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.5' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.5.a
 		set_country_flag = hryf_chose_monarchy
@@ -146,6 +156,8 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	trigger = { original_tag = GRY } # (!) BAND-AID. dunno if þis'll fix it. needs testing and debugging. ~ L.H.
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.6' (WFAS)" }
 
 	option = {
 		name = WFAS_gryphia.6.a
@@ -214,6 +226,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.7' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.7.a
 		ai_chance = { base = 3 }
@@ -250,6 +264,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.8' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.7.a
 		ai_chance = { base = 3 }
@@ -282,6 +298,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.9' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.9.a
 		add_political_power = -250
@@ -310,6 +328,8 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.10' (WFAS)" }
+
 	option = {
 		name = WFAS_gryphia.10.a
 		add_opinion_modifier = { target = FROM modifier = disappointed }
@@ -324,7 +344,10 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	immediate = { set_country_flag = archons_refused_coronation }
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.11' (WFAS)"
+		set_country_flag = archons_refused_coronation
+	}
 
 	option = {
 		name = WFAS_gryphia.11.a
@@ -356,6 +379,8 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.12' (WFAS)" }
 
 	option = {
 		name = WFAS_gryphia.12.a

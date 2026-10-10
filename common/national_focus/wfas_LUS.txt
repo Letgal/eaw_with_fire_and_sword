@@ -22,8 +22,10 @@ focus_tree = {
 		# (*) position to make it all appear kinda centered.
 		cost = 2 # (*) a quick report.
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) Elias narrat event: what do we do? it gets brouht to his attention þat peasants miht starve again.
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'pressing_matters' (WFAS)"
+			# (*) Elias narrat event: what do we do? it gets brouht to his attention þat peasants miht starve again.
+		}
 	}
 	focus = {
 		id = LUS_relief_for_peasants
@@ -33,8 +35,10 @@ focus_tree = {
 		x = -3 y = 1
 		cost = 4 # (*) go fast.
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) rush it or þey STARVE.
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'relief_for_peasants' (WFAS)"
+			# (*) rush it or þey STARVE.
+		}
 	}
 	focus = {
 		id = LUS_assess_the_situation
@@ -44,8 +48,10 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) Elias narrat event: what is goiŋ on, collect info for a report, address a few issues here n þere (incl. army).
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'assess_the_situation' (WFAS)"
+			# (*) Elias narrat event: what is goiŋ on, collect info for a report, address a few issues here n þere (incl. army).
+		}
 	}
 	focus = {
 		id = LUS_early_reforms
@@ -55,8 +61,10 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) reforms wiþin Elias's power, mild as to not anger þ nobles.
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'early_reforms' (WFAS)"
+			# (*) reforms wiþin Elias's power, mild as to not anger þ nobles.
+		}
 	}
 	focus = {
 		id = LUS_those_pesky_nobles
@@ -66,8 +74,10 @@ focus_tree = {
 		x = 3 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) Elias narrat event
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'those_pesky_nobles' (WFAS)"
+			# (*) Elias narrat event
+		}
 	}
 	focus = {
 		id = LUS_find_an_approach
@@ -77,8 +87,10 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) Elias narrat event
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'find_an_approach' (WFAS)"
+			# (*) Elias narrat event
+		}
 	}
 	focus = {
 		id = LUS_deal_with_willagen_lord # Kelvin Rosenfeder
@@ -88,7 +100,7 @@ focus_tree = {
 		x = -2 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'deal_with_willagen_lord' (WFAS)" }
 	}
 	focus = {
 		id = LUS_deal_with_dratsch_lord
@@ -98,7 +110,7 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'deal_with_dratsch_lord' (WFAS)" }
 	}
 	focus = {
 		id = LUS_deal_with_weissenbach_lord # Gordon Matton
@@ -108,7 +120,7 @@ focus_tree = {
 		x = 2 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'deal_with_weissenbach_lord' (WFAS)" }
 	}
 	focus = {
 		id = LUS_deal_with_willagen_lord_2 # Kelvin Rosenfeder
@@ -118,7 +130,7 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'deal_with_willagen_lord_2' (WFAS)" }
 	}
 	focus = {
 		id = LUS_deal_with_dratsch_lord_2
@@ -128,7 +140,7 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'deal_with_dratsch_lord_2' (WFAS)" }
 	}
 	focus = {
 		id = LUS_deal_with_weissenbach_lord_2 # Gordon Matton
@@ -138,7 +150,7 @@ focus_tree = {
 		x = 0 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'deal_with_weissenbach_lord_2' (WFAS)" }
 	}
 	focus = {
 		id = LUS_give_assurances
@@ -149,8 +161,10 @@ focus_tree = {
 		x = 2 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) probably Elias narrat event where he pinky promises he's not a þreat.
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'give_assurances' (WFAS)"
+			# (*) probably Elias narrat event where he pinky promises he's not a þreat.
+		}
 	}
 	focus = {
 		id = LUS_create_the_diet
@@ -163,8 +177,10 @@ focus_tree = {
 		x = 1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) probably Elias narrat event
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'create_the_diet' (WFAS)"
+			# (*) probably Elias narrat event
+		}
 	}
 
 	# SERFDOM_QUESTION
@@ -176,7 +192,7 @@ focus_tree = {
 		x = -5 y = 1
 		cost = 12
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'dealing_with_the_hunger' (WFAS)" }
 	}
 	focus = {
 		id = LUS_abolish_serfdom
@@ -187,7 +203,7 @@ focus_tree = {
 		x = -1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'abolish_serfdom' (WFAS)" }
 	}
 	focus = {
 		id = LUS_preserve_serfdom
@@ -198,7 +214,7 @@ focus_tree = {
 		x = 1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'preserve_serfdom' (WFAS)" }
 	}
 
 	#
@@ -210,7 +226,7 @@ focus_tree = {
 		x = -1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'land_reform_placeholder' (WFAS)" }
 	}
 	focus = {
 		id = LUS_industrialization_placeholder
@@ -220,7 +236,7 @@ focus_tree = {
 		x = 1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'industrialization_placeholder' (WFAS)" }
 	}
 
 	# ARMY_REFORM
@@ -232,7 +248,7 @@ focus_tree = {
 		x = 7 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'initial_army_reform' (WFAS)" }
 	}
 	focus = {
 		id = LUS_defense_of_lushi
@@ -242,7 +258,7 @@ focus_tree = {
 		x = 0 y = 2
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'defense_of_lushi' (WFAS)" }
 	}
 	focus = {
 		id = LUS_lushian_wit
@@ -252,7 +268,7 @@ focus_tree = {
 		x = 0 y = 2
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'lushian_wit' (WFAS)" }
 	}
 	focus = {
 		id = LUS_revise_the_levy_system
@@ -264,7 +280,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_elias_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'revise_the_levy_system' (WFAS)" }
 	}
 	focus = {
 		id = LUS_asymmetrical_warfare
@@ -275,7 +291,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_elias_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'asymmetrical_warfare' (WFAS)" }
 	}
 	focus = {
 		id = LUS_home_guard
@@ -287,7 +303,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_elias_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'home_guard' (WFAS)" }
 	}
 	focus = {
 		id = LUS_look_up_to_our_betters
@@ -299,7 +315,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'look_up_to_our_betters' (WFAS)" }
 	}
 	focus = {
 		id = LUS_find_place_for_the_nobles
@@ -310,7 +326,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'find_place_for_the_nobles' (WFAS)" }
 	}
 	focus = {
 		id = LUS_modern_army_hq
@@ -322,7 +338,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'modern_army_hq' (WFAS)" }
 	}
 	focus = {
 		id = LUS_doctrinal_developments
@@ -333,7 +349,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'doctrinal_developments' (WFAS)" }
 	}
 	focus = {
 		id = LUS_airforce_foundations
@@ -344,7 +360,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'airforce_foundations' (WFAS)" }
 	}
 	focus = {
 		id = LUS_navy_foundations
@@ -355,7 +371,7 @@ focus_tree = {
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
-		#completion_reward = { }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'navy_foundations' (WFAS)" }
 	}
 
 	focus = {
@@ -365,8 +381,10 @@ focus_tree = {
 		x = 2 y = -3
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) Elias demands some liberalization and to sign a NAP. commies are still hostile, will probably backstab later. not for Gerhard.
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'negotiate_with_GRW' (WFAS)"
+			# (*) Elias demands some liberalization and to sign a NAP. commies are still hostile, will probably backstab later. not for Gerhard.
+		}
 	}
 	focus = {
 		id = LUS_negotiate_with_BRF
@@ -375,7 +393,9 @@ focus_tree = {
 		x = 2 y = 0
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		#completion_reward = { }
-		# (*) can strengþen nobles and undermine Elias, which is optimal for Gerhard.
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'negotiate_with_BRF' (WFAS)"
+			# (*) can strengþen nobles and undermine Elias, which is optimal for Gerhard.
+		}
 	}
 }
