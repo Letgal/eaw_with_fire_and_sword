@@ -72,6 +72,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/Margo.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_Margo_buchic"
+		texturefile = "gfx/interface/goals/GRY/Margo_buchic.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Margo_is_watching"
+		texturefile = "gfx/interface/goals/GRY/Margo_is_watching.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_MILF"
 		texturefile = "gfx/interface/goals/GRY/MILF.dds"
 	}
@@ -86,6 +94,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_GRY_NeIndustrialisation"
 		texturefile = "gfx/interface/goals/GRY/NeIndustrialisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_noble_puppets_katka"
+		texturefile = "gfx/interface/goals/GRY/noble_puppets_katka.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_oh_would_you_look_at_the_time_margo"
+		texturefile = "gfx/interface/goals/GRY/oh_would_you_look_at_the_time_margo.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Pinky_promise"
@@ -130,6 +146,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_GRY_uni_katka"
 		texturefile = "gfx/interface/goals/GRY/uni_katka.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_unlimited_money_glitch_download"
+		texturefile = "gfx/interface/goals/GRY/unlimited_money_glitch_download.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Veresk_trap"
