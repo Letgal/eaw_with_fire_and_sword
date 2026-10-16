@@ -1053,7 +1053,7 @@ focus_tree = {
 	# HRYF_ECONOMIC
 	focus = {
 		id = GRY_where_we_are
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_were_fucked_lmao
 		prerequisite = { focus = GRY_whats_next }
 		relative_position_id = GRY_preparation_for_the_election
 		x = 5
@@ -1070,7 +1070,7 @@ focus_tree = {
 
 	focus = {
 		id = GRY_physiocracy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_NeIndustrialisation
 		prerequisite = { focus = GRY_where_we_are }
 		mutually_exclusive = { focus = GRY_industrialization }
 		relative_position_id = GRY_where_we_are
@@ -1180,7 +1180,7 @@ focus_tree = {
 
 	focus = {
 		id = GRY_industrialization
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_Industrialisation
 		prerequisite = { focus = GRY_where_we_are }
 		mutually_exclusive = { focus = GRY_physiocracy }
 		relative_position_id = GRY_where_we_are
