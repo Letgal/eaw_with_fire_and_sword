@@ -268,46 +268,417 @@ focus_tree = {
 		}
 	}
 	focus = {
-		#dynamic = yes
-		id = GRY_spouse_focus
-		# (*) or do as event target. ~ L.H.
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = taillow } }
-		#	value = GFX_focus_GRY_MILF
-		#}
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = katrina } }
-		#	value = GFX_focus_GRY_Aviansha
-		#}
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = diellza } }
-		#	value = GFX_focus_GRY_best_waifu
-		#}
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = vivienne } }
-		#	value = GFX_focus_GRY_Vivienne
-		#}
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = regina } }
-		#	value = GFX_focus_GRY_Regina
-		#}
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = margaret } }
-		#	value = GFX_focus_GRY_Margo
-		#}
-		#icon = {
-		#	trigger = { check_variable = { borad_spouse = cyrille } }
-		#	value = GFX_focus_GRY_Shieldwoman
-		#}
-		icon = { value = GFX_goal_unknown }
-		allow_branch = { has_completed_focus = GRY_matter_of_marriage } # (*) othrws tie it to has_variable or has_event_target. ~ L.H.
+		id = GRY_AVI_spouse
+		icon = GFX_focus_GRY_Aviansha
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian }
+		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
 		x = 0
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'spouse_focus' (WFAS)" }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'spouse_AVI' (WFAS)" }
+	}
+	focus = {
+		id = GRY_AVI_focus_1
+		icon = GFX_focus_GRY_Pratecktianism_Cathrine
+		prerequisite = { focus = GRY_AVI_spouse }
+		relative_position_id = GRY_AVI_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_protectionism' (WFAS)" }
+	}
+	focus = {
+		id = GRY_AVI_focus_2
+		icon = GFX_focus_GRY_pir
+		prerequisite = { focus = GRY_AVI_focus_1 }
+		relative_position_id = GRY_AVI_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_conducting_the_balls' (WFAS)" }
+	}
+	focus = {
+		id = GRY_AVI_focus_3
+		icon = GFX_focus_GRY_uni_katka
+		prerequisite = { focus = GRY_AVI_spouse }
+		relative_position_id = GRY_AVI_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_princes_philosophical_academy' (WFAS)" }
+	}
+	focus = {
+		id = GRY_AVI_focus_4
+		icon = GFX_focus_GRY_noble_puppets_katka
+		prerequisite = { focus = GRY_AVI_focus_3 }
+		relative_position_id = GRY_AVI_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_influence_the_nobility' (WFAS)" }
+	}
+	focus = {
+		id = GRY_ARA_spouse
+		icon = GFX_focus_GRY_Margo
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = ARA_margareth_featherin }
+		}
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_spouse' (WFAS)" }
+	}
+	focus = {
+		id = GRY_ARA_focus_1
+		icon = GFX_focus_GRY_Margo_buchic
+		prerequisite = { focus = GRY_ARA_spouse }
+		relative_position_id = GRY_ARA_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_1' (WFAS)" }
+	}
+	focus = {
+		id = GRY_ARA_focus_2
+		icon = GFX_focus_GRY_Margo_is_watching
+		prerequisite = { focus = GRY_ARA_focus_1 }
+		relative_position_id = GRY_ARA_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_2' (WFAS)" }
+	}
+	focus = {
+		id = GRY_ARA_focus_3
+		icon = GFX_focus_GRY_oh_would_you_look_at_the_time_margo
+		prerequisite = { focus = GRY_ARA_spouse }
+		relative_position_id = GRY_ARA_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_3' (WFAS)" }
+	}
+	focus = {
+		id = GRY_ARA_focus_4
+		icon = GFX_focus_GRY_unlimited_money_glitch_download
+		prerequisite = { focus = GRY_ARA_focus_3 }
+		relative_position_id = GRY_ARA_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_4' (WFAS)" }
+	}
+	focus = {
+		id = GRY_CYA_spouse
+		icon = GFX_focus_GRY_MILF
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel }
+		}
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_spouse' (WFAS)" }
+	}
+	focus = {
+		id = GRY_CYA_focus_1
+		icon = GFX_focus_GRY_gift_taillow
+		prerequisite = { focus = GRY_CYA_spouse }
+		relative_position_id = GRY_CYA_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_1' (WFAS)" }
+	}
+	focus = {
+		id = GRY_CYA_focus_2
+		icon = GFX_focus_GRY_oiloiloiloiloiloiloiloiloiloiloiloil_taillow
+		prerequisite = { focus = GRY_CYA_focus_1 }
+		relative_position_id = GRY_CYA_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_2' (WFAS)" }
+	}
+	focus = {
+		id = GRY_CYA_focus_3
+		icon = GFX_focus_GRY_door_is_opened_taillow
+		prerequisite = { focus = GRY_CYA_spouse }
+		relative_position_id = GRY_CYA_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_3' (WFAS)" }
+	}
+	focus = {
+		id = GRY_CYA_focus_4
+		icon = GFX_focus_GRY_Taillow_is_listening
+		prerequisite = { focus = GRY_CYA_focus_3 }
+		relative_position_id = GRY_CYA_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_4' (WFAS)" }
+	}
+	focus = {
+		id = GRY_BAN_spouse
+		icon = GFX_focus_GRY_Shieldwoman
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest }
+		}
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_spouse' (WFAS)" }
+	}
+	focus = {
+		id = GRY_BAN_focus_1
+		icon = GFX_focus_GRY_Ciri_knights_with_BIG_guns
+		prerequisite = { focus = GRY_BAN_spouse }
+		relative_position_id = GRY_BAN_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_1' (WFAS)" }
+	}
+	focus = {
+		id = GRY_BAN_focus_2
+		icon = GFX_focus_GRY_Ciri_shoot_mountain_sad_sight
+		prerequisite = { focus = GRY_BAN_focus_1 }
+		relative_position_id = GRY_BAN_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_2' (WFAS)" }
+	}
+	focus = {
+		id = GRY_BAN_focus_3
+		icon = GFX_focus_GRY_Ciri_stoopid_ahh_nobles
+		prerequisite = { focus = GRY_BAN_spouse }
+		relative_position_id = GRY_BAN_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_3' (WFAS)" }
+	}
+	focus = {
+		id = GRY_BAN_focus_4
+		icon = GFX_focus_GRY_Ciri_thats_la_peace
+		prerequisite = { focus = GRY_BAN_focus_3 }
+		relative_position_id = GRY_BAN_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_4' (WFAS)" }
+	}
+	focus = {
+		id = GRY_STW_spouse
+		icon = GFX_focus_GRY_Regina
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = STW_regina_eagleclaw }
+		}
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_spouse' (WFAS)" }
+	}
+	focus = {
+		id = GRY_STW_focus_1
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_STW_spouse }
+		relative_position_id = GRY_STW_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_1' (WFAS)" }
+	}
+	focus = {
+		id = GRY_STW_focus_2
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_STW_focus_1 }
+		relative_position_id = GRY_STW_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_2' (WFAS)" }
+	}
+	focus = {
+		id = GRY_STW_focus_3
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_STW_spouse }
+		relative_position_id = GRY_STW_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_3' (WFAS)" }
+	}
+	focus = {
+		id = GRY_STW_focus_4
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_STW_focus_3 }
+		relative_position_id = GRY_STW_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_4' (WFAS)" }
+	}
+	focus = {
+		id = GRY_KAT_spouse
+		icon = GFX_focus_GRY_best_waifu
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg }
+		}
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_spouse' (WFAS)" }
+	}
+	focus = {
+		id = GRY_KAT_focus_1
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_KAT_spouse }
+		relative_position_id = GRY_KAT_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_1' (WFAS)" }
+	}
+	focus = {
+		id = GRY_KAT_focus_2
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_KAT_focus_1 }
+		relative_position_id = GRY_KAT_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_2' (WFAS)" }
+	}
+	focus = {
+		id = GRY_KAT_focus_3
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_KAT_spouse }
+		relative_position_id = GRY_KAT_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_3' (WFAS)" }
+	}
+	focus = {
+		id = GRY_KAT_focus_4
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_KAT_focus_3 }
+		relative_position_id = GRY_KAT_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_4' (WFAS)" }
+	}
+	focus = {
+		id = GRY_JER_spouse
+		icon = GFX_focus_GRY_Vivienne
+		allow_branch = {
+			has_completed_focus = GRY_matter_of_marriage
+			#event_target:hryf_spouse = { is_character = JER_char_vivienne }
+		}
+		prerequisite = { focus = GRY_matter_of_marriage }
+		relative_position_id = GRY_matter_of_marriage
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_spouse' (WFAS)" }
+	}
+	focus = {
+		id = GRY_JER_focus_1
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_JER_spouse }
+		relative_position_id = GRY_JER_spouse
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_1' (WFAS)" }
+	}
+	focus = {
+		id = GRY_JER_focus_2
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_JER_focus_1 }
+		relative_position_id = GRY_JER_focus_1
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_2' (WFAS)" }
+	}
+	focus = {
+		id = GRY_JER_focus_3
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_JER_spouse }
+		relative_position_id = GRY_JER_spouse
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_3' (WFAS)" }
+	}
+	focus = {
+		id = GRY_JER_focus_4
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GRY_JER_focus_3 }
+		relative_position_id = GRY_JER_focus_3
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_4' (WFAS)" }
 	}
 	focus = {
 		id = GRY_keep_those_promises
