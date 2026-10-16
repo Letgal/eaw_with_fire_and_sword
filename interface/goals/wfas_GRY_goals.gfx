@@ -40,8 +40,32 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/Call_of_Ctulhu.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_Ciri_knights_with_BIG_guns"
+		texturefile = "gfx/interface/goals/GRY/Ciri_knights_with_BIG_guns.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Ciri_shoot_mountain_sad_sight"
+		texturefile = "gfx/interface/goals/GRY/Ciri_shoot_mountain_sad_sight.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Ciri_stoopid_ahh_nobles"
+		texturefile = "gfx/interface/goals/GRY/Ciri_stoopid_ahh_nobles.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Ciri_thats_la_peace"
+		texturefile = "gfx/interface/goals/GRY/Ciri_thats_la_peace.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_door_is_opened_taillow"
+		texturefile = "gfx/interface/goals/GRY/door_is_opened_taillow.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_Fashista"
 		texturefile = "gfx/interface/goals/GRY/Fashista.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_gift_taillow"
+		texturefile = "gfx/interface/goals/GRY/gift_taillow.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_Holy_peak"
@@ -104,6 +128,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/oh_would_you_look_at_the_time_margo.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_oiloiloiloiloiloiloiloiloiloiloiloil_taillow"
+		texturefile = "gfx/interface/goals/GRY/oiloiloiloiloiloiloiloiloiloiloiloil_taillow.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_Pinky_promise"
 		texturefile = "gfx/interface/goals/GRY/Pinky_promise.dds"
 	}
@@ -134,6 +162,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_GRY_Sich_1"
 		texturefile = "gfx/interface/goals/GRY/Sich_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Taillow_is_listening"
+		texturefile = "gfx/interface/goals/GRY/Taillow_is_listening.dds"
 	}
 	SpriteType = {
 		name = "GFX_focus_GRY_taxes"
