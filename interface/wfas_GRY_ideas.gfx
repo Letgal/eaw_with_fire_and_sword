@@ -36,7 +36,27 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GRY/cultural_ideas_niecotam.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_GRY_Cyri_portrait"
+		texturefile = "gfx/interface/ideas/GRY/Cyri_portrait.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_GRY_Katya_portrait"
 		texturefile = "gfx/interface/ideas/GRY/Katya_portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_Margo_Portrait"
+		texturefile = "gfx/interface/ideas/GRY/Margo_Portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_Regina_portrait"
+		texturefile = "gfx/interface/ideas/GRY/Regina_portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_Sonechko_portrait"
+		texturefile = "gfx/interface/ideas/GRY/Sonechko_portrait.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_GRY_Taillow_portrait"
+		texturefile = "gfx/interface/ideas/GRY/Taillow_portrait.tga"
 	}
 }
