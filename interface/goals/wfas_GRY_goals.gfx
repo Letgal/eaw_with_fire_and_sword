@@ -152,6 +152,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GRY/Regina.dds"
 	}
 	SpriteType = {
+		name = "GFX_focus_GRY_Regina_everybodys_friend"
+		texturefile = "gfx/interface/goals/GRY/Regina_everybodys_friend.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Regina_more_money_to_peasants"
+		texturefile = "gfx/interface/goals/GRY/Regina_more_money_to_peasants.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Regina_Sunny_Radio"
+		texturefile = "gfx/interface/goals/GRY/Regina_Sunny_Radio.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_GRY_Regina_table"
+		texturefile = "gfx/interface/goals/GRY/Regina_table.dds"
+	}
+	SpriteType = {
 		name = "GFX_focus_GRY_Royal_tour"
 		texturefile = "gfx/interface/goals/GRY/Royal_tour.dds"
 	}

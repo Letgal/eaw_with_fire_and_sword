@@ -520,7 +520,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_STW_focus_1
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_Regina_more_money_to_peasants
 		prerequisite = { focus = GRY_STW_spouse }
 		relative_position_id = GRY_STW_spouse
 		x = -1
@@ -531,7 +531,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_STW_focus_2
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_Regina_table
 		prerequisite = { focus = GRY_STW_focus_1 }
 		relative_position_id = GRY_STW_focus_1
 		x = 0
@@ -542,7 +542,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_STW_focus_3
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_Regina_everybodys_friend
 		prerequisite = { focus = GRY_STW_spouse }
 		relative_position_id = GRY_STW_spouse
 		x = 1
@@ -553,7 +553,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRY_STW_focus_4
-		icon = GFX_goal_unknown
+		icon = GFX_focus_GRY_Regina_Sunny_Radio
 		prerequisite = { focus = GRY_STW_focus_3 }
 		relative_position_id = GRY_STW_focus_3
 		x = 0
