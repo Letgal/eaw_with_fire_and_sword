@@ -68,4 +68,25 @@ debug_decisions = {
 			add_timed_idea = { idea = GRY_coronation_costs_4_temp months = 3 }
 		}
 	}
+	wfas_GRY_set_proposal_costs = {
+		allowed = { original_tag = GRY }
+		visible = { has_country_leader = { character = GRY_borad_grifnitsky } }
+		complete_effect = {
+			set_variable = { marry_cost_ARA = 40 }
+			set_variable = { marry_cost_AVI = 65 }
+			set_variable = { marry_cost_BAN = 50 }
+			set_variable = { marry_cost_CYA = 65 }
+			set_variable = { marry_cost_EQS = 100 }
+			set_variable = { marry_cost_FAL = 75 }
+			set_variable = { marry_cost_FLO = 100 }
+			set_variable = { marry_cost_HIP = 100 }
+			set_variable = { marry_cost_JER = 250 }
+			set_variable = { marry_cost_KAT = 100 }
+			set_variable = { marry_cost_NCH = 100 }
+			set_variable = { marry_cost_OLV = 100 }
+			set_variable = { marry_cost_STW = 50 }
+			set_variable = { marry_cost_TAL = 85 }
+			set_variable = { marry_cost_WIT = 100 }
+		}
+	}
 }

@@ -135,6 +135,22 @@ country_event = {
 		set_country_leader_ideology = conservatism
 		add_country_leader_trait = uncrowned_monarch
 		country_event = WFAS_gryphia.6
+		# (*) for marriages. ~ L.H.
+		set_variable = { marry_cost_ARA = 40 }
+		set_variable = { marry_cost_AVI = 65 }
+		set_variable = { marry_cost_BAN = 50 }
+		set_variable = { marry_cost_CYA = 65 }
+		set_variable = { marry_cost_EQS = 100 }
+		set_variable = { marry_cost_FAL = 75 }
+		set_variable = { marry_cost_FLO = 100 }
+		set_variable = { marry_cost_HIP = 100 }
+		set_variable = { marry_cost_JER = 250 }
+		set_variable = { marry_cost_KAT = 100 }
+		set_variable = { marry_cost_NCH = 100 }
+		set_variable = { marry_cost_OLV = 100 }
+		set_variable = { marry_cost_STW = 50 }
+		set_variable = { marry_cost_TAL = 85 }
+		set_variable = { marry_cost_WIT = 100 }
 	}
 	option = {
 		trigger = { always = no } # (*) delete later upon adding þe republican paþ(s). ~ L.H.
@@ -417,6 +433,25 @@ country_event = {
 		clr_country_flag = coronation_costs
 		clr_country_flag = coronation_costs_decided
 		clr_country_flag = archons_refused_coronation
+	}
+}
+
+country_event = {
+	id = WFAS_gryphia.13
+	title = WFAS_gryphia.13.t
+	desc = WFAS_gryphia.13.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.13' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.13.a
+		set_country_flag = hryf_marriage_unlocked
+		unlock_decision_category_tooltip = GRY_marital_matters
+		#activate_mission = GRY_marriage_mission
 	}
 }
 

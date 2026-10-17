@@ -151,6 +151,8 @@
  GRY_put_the_knowledge_into_practice: "Put Our Knowledge into Practice"
 
  GRY_marital_matters: "Marital Matters"
+ GRY_marriage_proposal: "Send Proposal to [FROM.GetNameDef]"
+ GRY_marriage_proposal_desc: "(ADD SCRIPTED LOC)"
 
  ## EXCAVATION
   increase_coal_extraction_in_buzzovyna: "Increase Coal Extraction in [611.GetName]"
@@ -247,6 +249,10 @@
  WFAS_gryphia.12.d3: "An extravagant coronation."
  WFAS_gryphia.12.d4: "A coronation during war."
  WFAS_gryphia.12.a: "Three cheers for the Prince!"
+
+ WFAS_gryphia.13.t: "Matter of Marriage"
+ WFAS_gryphia.13.d: "Hryfnytsky thinks of getting a spouse."
+ WFAS_gryphia.13.a: "Okay."
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.
@@ -370,6 +376,7 @@
  hryf_chose_monarchy: "Monarchy was chosen"
  hryf_chose_republic: "Republic was chosen"
  coronation_costs_decided: "Coronation costs were agreed upon"
+ marriage_rejected: "Our marriage proposal has been rejected"
 
 ### TOOLTIPS ###
  veresk_coma_tt: "falls into a coma."

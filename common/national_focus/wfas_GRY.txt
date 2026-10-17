@@ -263,8 +263,7 @@ focus_tree = {
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'matter_of_marriage' (WFAS)"
-			mark_focus_tree_layout_dirty = yes
-			unlock_decision_category_tooltip = GRY_marital_matters # replace with: country_event = 0 (unlocks decisions, mission with timer)
+			country_event = WFAS_gryphia.13
 		}
 	}
 	focus = {
@@ -626,7 +625,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Vivienne
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = JER_char_vivienne }
+			#event_target:hryf_spouse = { is_character = JER_vivienne_discret }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage

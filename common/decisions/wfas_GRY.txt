@@ -155,3 +155,163 @@ prospect_for_resources = {
 		remove_effect = { add_resource = { type = coal amount = 4 state = FROM } }
 	}
 }
+
+# HRYF_MARRIAGE
+GRY_marital_matters = {
+	#GRY_marriage_mission = {
+	#	priority = 0
+	#	icon = generic_PLACEHOLDER
+	#	activation = { always = no }
+	#	available NOT = { has_country_flag = marriage_rejected_@FROM } = { always = no }
+	#	days_mission_timeout
+	#	timeout_effect
+	#	UNFINISHED!!!
+	#}
+	GRY_marriage_proposal = {
+		icon = GRY_mariage_dec
+		visible = {
+			FROM = {
+				exists = yes
+				if = {
+					limit = { tag = ARA }
+					has_character = ARA_margareth_featherin
+				}
+				else_if = {
+					limit = { tag = AVI }
+					has_character = AVI_lady_katrina_avian
+				}
+				else_if = {
+					limit = { tag = BAN }
+					has_character = BAN_cyrille_bluecrest
+				}
+				else_if = {
+					limit = { tag = CYA }
+					has_character = CYA_countess_taillow_sumpfkiel
+				}
+				else_if = {
+					limit = { tag = EQS }
+					has_character = EQS_princess_luna
+				}
+				else_if = {
+					limit = { tag = FAL }
+					has_character = FAL_princess_maximilliana
+				}
+				else_if = {
+					limit = { tag = FLO }
+					has_character = FLO_anna_de_indigo
+				}
+				else_if = {
+					limit = { tag = HIP }
+					has_character = HIP_queen_novo
+				}
+				else_if = {
+					limit = { tag = JER }
+					has_character = JER_vivienne_discret
+				}
+				else_if = {
+					limit = { tag = KAT }
+					has_character = KAT_princess_diellza_von_katerinburg
+				}
+				else_if = {
+					limit = { tag = NCH }
+					has_character = NCH_queen_gytha
+				}
+				else_if = {
+					limit = { tag = OLV }
+					has_character = OLV_jarl_ygritte_bylgjasdottir
+				}
+				else_if = {
+					limit = { tag = STW }
+					has_character = STW_regina_eagleclaw
+				}
+				else_if = {
+					limit = { tag = TAL }
+					OR = {
+						has_idea = TAL_duchess_ginerva
+						has_idea = TAL_duchess_ginerva_pl
+					}
+				}
+				else_if = {
+					limit = { tag = WIT }
+					has_character = WIT_white_star
+				}
+				NOT = { has_country_flag = marriage_rejected }
+			}
+		}
+		available = {
+			FROM = {
+				exists = yes
+				if = {
+					limit = { tag = ARA }
+					has_character = ARA_margareth_featherin
+				}
+				else_if = {
+					limit = { tag = AVI }
+					has_character = AVI_lady_katrina_avian
+				}
+				else_if = {
+					limit = { tag = BAN }
+					has_character = BAN_cyrille_bluecrest
+				}
+				else_if = {
+					limit = { tag = CYA }
+					has_character = CYA_countess_taillow_sumpfkiel
+				}
+				else_if = {
+					limit = { tag = EQS }
+					has_character = EQS_princess_luna
+				}
+				else_if = {
+					limit = { tag = FAL }
+					has_character = FAL_princess_maximilliana
+				}
+				else_if = {
+					limit = { tag = FLO }
+					has_character = FLO_anna_de_indigo
+				}
+				else_if = {
+					limit = { tag = HIP }
+					has_character = HIP_queen_novo
+				}
+				else_if = {
+					limit = { tag = JER }
+					has_character = JER_vivienne_discret
+				}
+				else_if = {
+					limit = { tag = KAT }
+					has_character = KAT_princess_diellza_von_katerinburg
+				}
+				else_if = {
+					limit = { tag = NCH }
+					has_character = NCH_queen_gytha
+				}
+				else_if = {
+					limit = { tag = OLV }
+					has_character = OLV_jarl_ygritte_bylgjasdottir
+				}
+				else_if = {
+					limit = { tag = STW }
+					has_character = STW_regina_eagleclaw
+				}
+				else_if = {
+					limit = { tag = TAL }
+					OR = {
+						has_idea = TAL_duchess_ginerva
+						has_idea = TAL_duchess_ginerva_pl
+					}
+				}
+				else_if = {
+					limit = { tag = WIT }
+					has_character = WIT_white_star
+				}
+				NOT = { has_country_flag = marriage_rejected }
+			}
+		}
+		targets = { ARA AVI BAN CYA EQS FAL FLO HIP JER KAT NCH OLV STW TAL WIT }
+		cost = marry_cost_@FROM # (*) set after choosing monarchy, see event WFAS_gryphia.5. ~ L.H.
+		fire_only_once = yes # (*) check if works as intended. ~ L.H.
+		complete_effect = {
+			#
+		}
+	}
+}
