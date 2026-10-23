@@ -1,0 +1,179 @@
+defined_text = {
+	name = GetSpouse
+	text = {
+		trigger = {
+			tag = ARA
+			has_country_leader = { character = ARA_margareth_featherin }
+		}
+		localization_key = GRY_margareth_ruling
+	}
+	text = {
+		trigger = {
+			tag = ARA
+			has_character = ARA_margareth_featherin
+		}
+		localization_key = GRY_margareth
+	}
+	text = {
+		trigger = {
+			tag = AVI
+			has_country_leader = { character = AVI_lady_katrina_avian }
+		}
+		localization_key = GRY_katrina_ruling
+	}
+	text = {
+		trigger = {
+			tag = AVI
+			has_character = AVI_lady_katrina_avian
+		}
+		localization_key = GRY_katrina
+	}
+	text = {
+		trigger = {
+			tag = BAN
+			has_country_leader = { character = BAN_cyrille_bluecrest }
+		}
+		localization_key = GRY_cyrille_ruling
+	}
+	text = {
+		trigger = {
+			tag = BAN
+			has_character = BAN_cyrille_bluecrest
+		}
+		localization_key = GRY_cyrille
+	}
+	text = {
+		trigger = {
+			tag = CYA
+			has_country_leader = { character = CYA_countess_taillow_sumpfkiel }
+		}
+		localization_key = GRY_taillow_ruling
+	}
+	text = {
+		trigger = {
+			tag = CYA
+			has_character = CYA_countess_taillow_sumpfkiel
+		}
+		localization_key = GRY_taillow
+	}
+	text = {
+		trigger = { tag = EQS }
+		localization_key = EQS_princess_luna
+	}
+	text = {
+		trigger = {
+			tag = FAL
+			has_country_leader = { character = FAL_princess_maximilliana }
+		}
+		localization_key = GRY_maximilliana_ruling
+	}
+	text = {
+		trigger = {
+			tag = FAL
+			has_character = FAL_princess_maximilliana
+		}
+		localization_key = GRY_maximilliana
+	}
+	text = {
+		trigger = {
+			tag = FLO
+			has_country_leader = { character = FLO_anna_de_indigo }
+		}
+		localization_key = GRY_anna_ruling
+	}
+	text = {
+		trigger = {
+			tag = FLO
+			has_character = FLO_anna_de_indigo
+		}
+		localization_key = GRY_anna
+	}
+	text = {
+		trigger = { tag = HIP }
+		localization_key = HIP_queen_novo
+	}
+	text = {
+		trigger = { tag = NCH }
+		localization_key = NCH_queen_gytha
+	}
+	text = {
+		trigger = {
+			OR = { tag = JER tag = MER }
+			has_country_leader = { character = JER_vivienne_discret }
+		}
+		localization_key = GRY_vivienne_ruling
+	}
+	text = {
+		trigger = {
+			OR = { tag = JER tag = MER }
+			has_character = JER_vivienne_discret
+		}
+		localization_key = GRY_vivienne
+	}
+	text = {
+		trigger = {
+			tag = KAT
+			has_country_leader = { character = KAT_princess_diellza_von_katerinburg }
+		}
+		localization_key = GRY_diellza_ruling
+	}
+	text = {
+		trigger = {
+			tag = KAT
+			has_character = KAT_princess_diellza_von_katerinburg
+		}
+		localization_key = GRY_diellza
+	}
+	text = {
+		trigger = {
+			tag = OLV
+			has_country_leader = { character = OLV_jarl_ygritte_bylgjasdottir }
+		}
+		localization_key = GRY_ygritte_ruling
+	}
+	text = {
+		trigger = {
+			tag = OLV
+			has_character = OLV_jarl_ygritte_bylgjasdottir
+		}
+		localization_key = GRY_ygritte
+	}
+	text = {
+		trigger = {
+			tag = STW
+			has_country_leader = { character = STW_regina_eagleclaw }
+		}
+		localization_key = GRY_regina_ruling
+	}
+	text = {
+		trigger = {
+			tag = STW
+			has_character = STW_regina_eagleclaw
+		}
+		localization_key = GRY_regina
+	}
+	text = {
+		trigger = {
+			tag = TAL
+			OR = {
+				has_idea = TAL_duchess_ginerva
+				has_idea = TAL_duchess_ginerva_pl
+			}
+		}
+		localization_key = GRY_ginevra_ruling
+	}
+	text = {
+		trigger = {
+			tag = TAL
+			NOT = {
+				has_idea = TAL_duchess_ginerva
+				has_idea = TAL_duchess_ginerva_pl
+			}
+		}
+		localization_key = GRY_ginevra
+	}
+	text = {
+		trigger = { tag = WIT }
+		localization_key = GRY_white_star
+	}
+}

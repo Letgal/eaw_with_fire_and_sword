@@ -151,7 +151,7 @@
  GRY_put_the_knowledge_into_practice: "Put Our Knowledge into Practice"
 
  GRY_marital_matters: "Marital Matters"
- GRY_marriage_proposal: "Send Proposal to [FROM.GetNameDef]"
+ GRY_marriage_proposal: "Send Proposal to [FROM.GetSpouse]"
  GRY_marriage_proposal_desc: "(ADD SCRIPTED LOC)"
 
  ## EXCAVATION
@@ -419,3 +419,28 @@
  improve_srodna_pratsya: "The effect will be applied once you receive the spirit from the §H$GRY_community_creation$§! focus."
 
  unlock_spouse_focuses: "Unlocks a small §Yfocus branch§! regarding Borad's §Pspouse§!.\n§gThese focuses will auto-complete with time but you can complete them manually.§! §R(no auto-completion implemented yet)§!"
+
+ ## SCRIPTED LOC
+  GRY_margareth: "Margareth Featherin"
+  GRY_margareth_ruling: "§PBaroness§! $GRY_margareth$"
+  GRY_katrina: "Lady Katrina Avian"
+  GRY_katrina_ruling: "$GRY_katrina$"
+  GRY_cyrille: "Cyrille Bluecrest"
+  GRY_cyrille_ruling: "§PCountess§! $GRY_cyrille$"
+  GRY_taillow: "Taillow Sumpfkiel"
+  GRY_taillow_ruling: "§PCountess§! $GRY_taillow$"
+  GRY_maximilliana: "Maximilliana"
+  GRY_maximilliana_ruling: "§PPrincess§! $GRY_maximilliana$"
+  GRY_anna: "Anna de Indigo"
+  GRY_anna_ruling: "$GRY_anna$"
+  GRY_vivienne: "Vivienne Discret"
+  GRY_vivienne_ruling: "§PQueen§! $GRY_vivienne$"
+  GRY_diellza: "Diellza von Katerinburg"
+  GRY_diellza_ruling: "§PPrincess§! $GRY_diellza$"
+  GRY_ygritte: "Ygritte Bylgjasdóttir"
+  GRY_ygritte_ruling: "§PJarl§!/§PQueen§! $GRY_ygritte$"
+  GRY_regina: "Regina Eagleclaw"
+  GRY_regina_ruling: "$GRY_regina$"
+  GRY_ginevra: "Ginevra di Chiazbini"
+  GRY_ginevra_ruling: "§PDuchess§! Ginevra"
+  GRY_white_star: "Queen $WIT_white_star$"
