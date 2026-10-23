@@ -1,4 +1,4 @@
-﻿capital = 608
+capital = 608
 oob = "LUS_1007"
 set_research_slots = 2
 
@@ -93,13 +93,13 @@ set_country_flag = manpower_laws_blocked
 
 set_party_name = {
 	ideology = democratic
-	name = GRY_democratic_party_wfas
-	long_name = GRY_democratic_party_wfas
+	name = LUS_democratic_party_wfas
+	long_name = LUS_democratic_party_wfas
 }
 set_party_name = {
 	ideology = fascism
-	name = GRY_fascism_party_wfas
-	long_name = GRY_fascism_party_wfas
+	name = LUS_fascism_party_wfas
+	long_name = LUS_fascism_party_wfas
 }
 
 add_ideas = {

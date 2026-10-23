@@ -24,7 +24,7 @@ LUS_MIL_01 = {
 	name = "Militia Brigades"
 	for_countries = { LUS }
 	division_types = { militia infantry magical_infantry }
-	link_numbering_with = { HUN_INF_01 }
+	link_numbering_with = { LUS_INF_01 }
 
 	fallback_name = "%d. Militia Brigade"
 	ordered = {
@@ -98,7 +98,7 @@ LUS_INF_01 = {
 	for_countries = { LUS }
 	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { infantry magical_infantry }
-	link_numbering_with = { HUN_MIL_01 }
+	link_numbering_with = { LUS_MIL_01 }
 
 	fallback_name = "%d. Infantry Division"
 }
