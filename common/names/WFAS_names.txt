@@ -1,0 +1,19 @@
+# (WFAS +) modified vanilla UKR, replaces GRY in EAW
+GRY = {
+	male = {
+		names = {
+			Anatoliy Andriy Anton Artem Borys Denys Dmytro Fedir Havrylo Hennadiy Heorhiy Hryhoriy Illya Ivan Kazymyr Kostyantyn Kuzma Kyrylo Leonid Leontiy Lev Maksym Mykhaylo Mykola Mykyta Oleh Oleksandr Oleksiy Omelyan Pavlo Petro Pylyp Roman Sava Semen Serhiy Stanislav Svyatoslav Trokhym Valeriy Vasyl Viktor Vitaliy Vladyslav Volodymyr Yaroslav Yehor Yevhen Yosyp Yukhym Yuriy
+		}
+	}
+	female = {
+		names = {
+			Anastasiya Halyna Hanna Ivanna Lyudmyla Olha Olena Oleksandra Kseniya Ruslana Tetyana Vladyslava Yevheniya Yuliya
+		}
+	}
+	surnames = {
+		Antonenko Bilyk Blyznyuk Bondarchuk Borysenko Demchuk Dmytruk Dorosh Hayduk Havrylenko Havrylyuk Hlushko Holub Horbenko Hrytsay Ivanov Ishchuk Kolisnyk Kostyuchenko Lyashenko Makarenko Mykytyuk Nahorny Novak Osadchuk Ostapchuk Pavlov Petruk Protsenko Prykhodko Prysyazhnyuk Pylypenko Ruban Semenyuk Sereda Shevchuk Stadnyk Taranenko Tkachuk Tsymbalyuk Vasylyev Velychko Yakovenko Zaporozhets Zayets
+
+	}
+	#callsigns = { Anvil Hammer Fury Arrow Storm Bear "White Lily" Devil Eagle Falcon Fox Snowflake Greasy Guardian Gunman Hawk Hardball Howl Blizzard Husky Ice Killer Steel Iron Skull Striker Thunder Warrior Wardog Horilka }
+	use_geographical_default_operation_names = yes
+}
