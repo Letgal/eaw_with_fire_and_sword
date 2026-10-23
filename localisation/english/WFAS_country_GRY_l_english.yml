@@ -254,6 +254,21 @@
  WFAS_gryphia.13.d: "Hryfnytsky thinks of getting a spouse."
  WFAS_gryphia.13.a: "Okay."
 
+ WFAS_gryphia.14.t: "A Peculiar Marriage Proposal"
+ WFAS_gryphia.14.d: ""
+ WFAS_gryphia.14.a: "Accept."
+ WFAS_gryphia.14.b: "Refuse."
+ WFAS_gryphia.14.c: "Oh, send them a gift."
+
+ WFAS_gryphia.15.t: "[FROM.GetNameDefCap] Accepts"
+ WFAS_gryphia.15.d: ""
+
+ WFAS_gryphia.16.t: "[FROM.GetNameDefCap] Declines"
+ WFAS_gryphia.16.d: ""
+
+ WFAS_gryphia.17.t: "[FROM.GetNameDefCap] Declines"
+ WFAS_gryphia.17.d: ""
+
  ## CHORNA RADA
  # I wanna die. ~ L.H.
  WFAS_chorna_rada.1.t: "First Convention of the Chorna Rada"
@@ -376,7 +391,8 @@
  hryf_chose_monarchy: "Monarchy was chosen"
  hryf_chose_republic: "Republic was chosen"
  coronation_costs_decided: "Coronation costs were agreed upon"
- marriage_rejected: "Our marriage proposal has been rejected"
+ marriage_rejected: "Has rejected our marriage proposal"
+ marriage_sent: "Has not sent out another marriage proposal"
 
 ### TOOLTIPS ###
  veresk_coma_tt: "falls into a coma."
@@ -401,3 +417,5 @@
  piety_gain_tt: " $piety_gain$: $RIGHT|2%+=$"
 
  improve_srodna_pratsya: "The effect will be applied once you receive the spirit from the §H$GRY_community_creation$§! focus."
+
+ unlock_spouse_focuses: "Unlocks a small §Yfocus branch§! regarding Borad's §Pspouse§!.\n§gThese focuses will auto-complete with time but you can complete them manually.§! §R(no auto-completion implemented yet)§!"

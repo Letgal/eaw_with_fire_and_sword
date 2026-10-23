@@ -386,7 +386,7 @@ country_event = {
 }
 
 country_event = {
-	id = WFAS_gryphia.12
+	id = WFAS_gryphia.12 # The Coronation
 	title = WFAS_gryphia.12.t
 	desc = {
 		trigger = { has_country_flag = { flag = coronation_costs value = 1 } }
@@ -437,7 +437,7 @@ country_event = {
 }
 
 country_event = {
-	id = WFAS_gryphia.13
+	id = WFAS_gryphia.13 # Hryfnytsky Wants/Needs a Spouse
 	title = WFAS_gryphia.13.t
 	desc = WFAS_gryphia.13.d
 	picture = GFX_event_griffon_mountain
@@ -452,6 +452,93 @@ country_event = {
 		set_country_flag = hryf_marriage_unlocked
 		unlock_decision_category_tooltip = GRY_marital_matters
 		#activate_mission = GRY_marriage_mission
+	}
+}
+country_event = {
+	id = WFAS_gryphia.14 # Marriage Proposal
+	title = WFAS_gryphia.14.t
+	desc = WFAS_gryphia.14.d
+	picture = GFX_event_griffon_mountains
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.14' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.14.a
+		trigger = {
+			NOT = {
+				tag = EQS
+				tag = FAL
+				tag = FLO
+				tag = HIP
+				tag = NCH
+				tag = OLV
+				tag = TAL
+				tag = WIT
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				tag = KAT
+				has_government = democratic
+			}
+			modifier = {
+				factor = 2
+				is_in_faction = no
+			}
+			modifier = {
+				factor = 1.5
+				tag = FAL
+				WNG = { has_government = fascism }
+			}
+			modifier = {
+				factor = 2
+			}
+		}
+		FROM = { country_event = { id = WFAS_gryphia.15 days = 7 } }
+	}
+	option = {
+		name = WFAS_gryphia.14.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				tag = JER
+			}
+		}
+		set_country_flag = marriage_rejected
+		FROM = { country_event = { id = WFAS_gryphia.16 days = 7 } }
+	}
+}
+country_event = {
+	id = WFAS_gryphia.15 # Proposal Accepted
+	title = WFAS_gryphia.15.t
+	desc = WFAS_gryphia.15.d
+	picture = GFX_event_griffon_mountains
+
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.15' (WFAS)"
+		clr_country_flag = marriage_sent
+		clr_country_flag = hryf_marriage_unlocked
+	}
+
+	option = {
+		custom_effect_tooltip = unlock_spouse_focuses
+	}
+}
+country_event = {
+	id = WFAS_gryphia.16 # Proposal Declined
+	title = WFAS_gryphia.16.t
+	desc = WFAS_gryphia.16.d
+	picture = GFX_event_griffon_mountains
+
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.16' (WFAS)"
+		clr_country_flag = marriage_sent
 	}
 }
 

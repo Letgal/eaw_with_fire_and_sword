@@ -191,6 +191,7 @@ GRY_marital_matters = {
 				else_if = {
 					limit = { tag = EQS }
 					has_character = EQS_princess_luna
+					NOT = { has_global_flag = celestia_and_luna_fused }
 				}
 				else_if = {
 					limit = { tag = FAL }
@@ -202,10 +203,10 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = HIP }
-					has_character = HIP_queen_novo
+					has_country_leader = { character = HIP_queen_novo }
 				}
 				else_if = {
-					limit = { tag = JER }
+					limit = { OR = { tag = JER tag = MER } }
 					has_character = JER_vivienne_discret
 				}
 				else_if = {
@@ -214,7 +215,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = NCH }
-					has_character = NCH_queen_gytha
+					has_country_leader = { character = NCH_queen_gytha }
 				}
 				else_if = {
 					limit = { tag = OLV }
@@ -233,7 +234,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = WIT }
-					has_character = WIT_white_star
+					has_country_leader = { character = WIT_white_star }
 				}
 				NOT = { has_country_flag = marriage_rejected }
 			}
@@ -260,6 +261,7 @@ GRY_marital_matters = {
 				else_if = {
 					limit = { tag = EQS }
 					has_character = EQS_princess_luna
+					NOT = { has_global_flag = celestia_and_luna_fused }
 				}
 				else_if = {
 					limit = { tag = FAL }
@@ -271,10 +273,10 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = HIP }
-					has_character = HIP_queen_novo
+					has_country_leader = { character = HIP_queen_novo }
 				}
 				else_if = {
-					limit = { tag = JER }
+					limit = { OR = { tag = JER tag = MER } }
 					has_character = JER_vivienne_discret
 				}
 				else_if = {
@@ -283,7 +285,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = NCH }
-					has_character = NCH_queen_gytha
+					has_country_leader = { character = NCH_queen_gytha }
 				}
 				else_if = {
 					limit = { tag = OLV }
@@ -302,16 +304,18 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = WIT }
-					has_character = WIT_white_star
+					has_country_leader = { character = WIT_white_star }
 				}
 				NOT = { has_country_flag = marriage_rejected }
 			}
+			NOT = { has_country_flag = marriage_sent }
 		}
-		targets = { ARA AVI BAN CYA EQS FAL FLO HIP JER KAT NCH OLV STW TAL WIT }
+		targets = { ARA AVI BAN CYA EQS FAL FLO HIP JER KAT MER NCH OLV STW TAL WIT }
 		cost = marry_cost_@FROM # (*) set after choosing monarchy, see event WFAS_gryphia.5. ~ L.H.
 		fire_only_once = yes # (*) check if works as intended. ~ L.H.
 		complete_effect = {
-			#
+			FROM = { country_event = { id = WFAS_gryphia.14 days = 7 } }
+			set_country_flag = marriage_sent
 		}
 	}
 }
