@@ -88,7 +88,7 @@ set_rule = {
 
 # (WFAS +)
 #set_country_flag = economic_laws_blocked # (*) unlocked by some focus later. activate once one is added. ~ L.H.
-#set_country_flag = manpower_laws_blocked # (*) same. ~ L.H.
+set_country_flag = manpower_laws_blocked
 #country_lock_all_division_template = yes
 
 set_party_name = {
@@ -100,4 +100,8 @@ set_party_name = {
 	ideology = fascism
 	name = GRY_fascism_party_wfas
 	long_name = GRY_fascism_party_wfas
+}
+
+add_ideas = {
+	LUS_levy_system
 }

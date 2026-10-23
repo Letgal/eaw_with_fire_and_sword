@@ -44,4 +44,27 @@ effect = {
 	}
 }
 }
+
+on_war = {
+effect = {
+	if = {
+		limit = {
+			tag = LUS
+			has_idea = LUS_levy_system
+		}
+		country_event = WFAS_lushi.1
+	}
+}
+}
+on_peace = {
+effect = {
+	if = {
+		limit = {
+			tag = LUS
+			has_idea = LUS_levy_system
+		}
+		country_event = WFAS_lushi.2
+	}
+}
+}
 }

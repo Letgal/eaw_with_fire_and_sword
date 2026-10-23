@@ -49,3 +49,20 @@
  LUS_navy_foundations: "Foundations of a Navy"
  LUS_negotiate_with_GRW: "Negotiate with [GRW.GetNameDef]"
  LUS_negotiate_with_BRF: "Negotiate with [BRF.GetNameDef]"
+
+### IDEAS ###
+ LUS_levy_system: "Feudal Levies"
+ LUS_levy_system_desc: "[LUS.GetNonIdeologyNameDefCap] mostly keeps its centuries-old system of peasant militias levied only during war."
+
+### EVENTS ###
+ WFAS_lushi.1.t: "Mobilization"
+ WFAS_lushi.1.d: "Now that our country has found itself at war, we should gather and raise our peasant levies to defend our shared homeland!\n\nOrders to mobilize have been sent out, but it is up to us to call them up." # (*) improve the last paragraph. ~ L.H.
+ WFAS_lushi.1.a: "For our beloved homeland!"
+
+ WFAS_lushi.2.t: "Demobilization"
+ WFAS_lushi.2.d: "The war has ended. People rejoice and celebrate the return of peace.\n\nAnd now that the danger has passed, the time has come for us to demobilize and disband our peasant levies." # (*) improve the first paragraph. ~ L.H.
+ WFAS_lushi.2.a: "[ROOT.GetNonIdeologyNameDefCap] still stands firm!"
+ WFAS_lushi.2.b: "But I wish to keep the levies a little longer..."
+
+### TOOLTIPS ###
+ disband_all_levies_tt: "Disbands all §HPeasant Levy§! divisons."

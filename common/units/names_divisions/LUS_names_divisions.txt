@@ -1,7 +1,7 @@
 ﻿LUS_IRR_01 = {
 	name = "Peasant Levies"
 	for_countries = { LUS }
-	#can_use = { has_idea = LUS_levy_system }
+	can_use = { has_idea = LUS_levy_system }
 	division_types = { irregular_infantry }
 
 	fallback_name = "Peasant Levy"
@@ -96,7 +96,7 @@ LUS_KNI_01 = {
 LUS_INF_01 = {
 	name = "Infantry Divisions"
 	for_countries = { LUS }
-	#can_use = { NOT = { has_idea = LUS_levy_system } }
+	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { infantry magical_infantry }
 	link_numbering_with = { HUN_MIL_01 }
 
@@ -105,7 +105,7 @@ LUS_INF_01 = {
 LUS_GAR_01 = {
 	name = "Garrison Divisions"
 	for_countries = { LUS }
-	#can_use = { NOT = { has_idea = LUS_levy_system } }
+	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { infantry magical_infantry }
 
 	fallback_name = "%d. Garrison Division"
@@ -113,7 +113,7 @@ LUS_GAR_01 = {
 LUS_MOT_01 = {
 	name = "Motorized Divisions"
 	for_countries = { LUS }
-	#can_use = { NOT = { has_idea = LUS_levy_system } }
+	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { motorized }
 
 	fallback_name = "%d. Motorized Division"
@@ -121,7 +121,7 @@ LUS_MOT_01 = {
 LUS_MEC_01 = {
 	name = "Mechanized Divisions"
 	for_countries = { LUS }
-	#can_use = { NOT = { has_idea = LUS_levy_system } }
+	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { paratrooper }
 
 	fallback_name = "%d. Mechanized Division"
@@ -129,7 +129,7 @@ LUS_MEC_01 = {
 LUS_ARM_01 = {
 	name = "Armored Divisions"
 	for_countries = { LUS }
-	#can_use = { NOT = { has_idea = LUS_levy_system } }
+	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { light_armor medium_armor heavy_armor modern_armor }
 
 	fallback_name = "%d. Armored Division"
@@ -137,7 +137,7 @@ LUS_ARM_01 = {
 LUS_ARM_02 = {
 	name = "Heavy Armored Divisions"
 	for_countries = { LUS }
-	#can_use = { NOT = { has_idea = LUS_levy_system } }
+	can_use = { NOT = { has_idea = LUS_levy_system } }
 	division_types = { light_armor medium_armor heavy_armor modern_armor }
 
 	fallback_name = "%d. Heavy Armored Division"

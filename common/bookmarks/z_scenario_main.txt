@@ -268,6 +268,7 @@ bookmarks = {
 			ideas = {
 				feudalism
 				LUS_prywhen_communist_influence
+				LUS_levy_system
 			}
 			focuses = {
 				LUS_create_lord_council

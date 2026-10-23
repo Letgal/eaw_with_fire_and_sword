@@ -1,0 +1,42 @@
+add_namespace = WFAS_lushi
+
+country_event = {
+	id = WFAS_lushi.1 # Mobilization
+	title = WFAS_lushi.1.t
+	desc = WFAS_lushi.1.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_lushi.1' (WFAS)" }
+
+	option = {
+		name = WFAS_lushi.1.a
+		EAW_raise_conscription_law = yes
+		unlock_decision_tooltip = LUS_raise_levy
+	}
+}
+country_event = {
+	id = WFAS_lushi.2 # Demobilization
+	title = WFAS_lushi.2.t
+	desc = WFAS_lushi.2.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_lushi.2' (WFAS)" }
+
+	option = {
+		name = WFAS_lushi.2.a
+		add_stability = 0.05
+		EAW_lower_conscription_law = yes
+		delete_unit = { division_template = "Peasant Levy" }
+		custom_effect_tooltip = disband_all_levies_tt
+	}
+	option = {
+		name = WFAS_lushi.2.b
+		add_political_power = -100
+	}
+}
