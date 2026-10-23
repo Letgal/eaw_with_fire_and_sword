@@ -34,13 +34,6 @@
   #VICTORY_POINTS_10764: "Kaiv"
   #VICTORY_POINTS_12719: "Chykchyryn"
 
-### PARTY NAMES ###
- ## LUSHI
-  #LUS_neutrality_party: "Whitecrest Dynasty"
-  #LUS_communism_party: "Green Rods' Council"
-  LUS_democratic_party: "Progressivists" # Prosperists
-  LUS_fascism_party: "Supremacists" # Searchers of Harmony
-
 ### CHARACTERS ###
  ## GRY: COUNTRY LEADERS
   GRY_hetman_calas_bulba: "Kalas Bulba"

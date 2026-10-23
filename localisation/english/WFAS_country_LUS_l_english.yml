@@ -20,6 +20,13 @@
  wfas_VP_10765: "Tschornau"
  wfas_VP_12642: "Bierhagen"
 
+### PARTY NAMES ###
+ # (*) moved to be compatible. ~ L.H.
+ #LUS_neutrality_party: "Whitecrest Dynasty"
+ #LUS_communism_party: "Green Rods' Council"
+ LUS_democratic_party_wfas: "Progressivists"
+ LUS_fascism_party_wfas: "Supremacists"
+
 ### FOCUSES ###
  LUS_pressing_matters: "Pressing Matters"
  LUS_relief_for_peasants: "Relief for Peasants"
