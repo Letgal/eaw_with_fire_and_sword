@@ -150,7 +150,7 @@
  GRY_expand_peasant_education: "Expand Peasant Education"
  GRY_put_the_knowledge_into_practice: "Put Our Knowledge into Practice"
 
- GRY_marital_matters: "Marital Matters"
+ GRY_marital_matters: "Borad's Marital Matters"
  GRY_marriage_proposal: "Send Proposal to [FROM.GetSpouse]"
  GRY_marriage_proposal_desc: "(ADD SCRIPTED LOC)"
 

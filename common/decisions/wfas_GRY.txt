@@ -170,6 +170,7 @@ GRY_marital_matters = {
 	GRY_marriage_proposal = {
 		icon = GRY_mariage_dec
 		visible = {
+			has_country_flag = hryf_marriage_unlocked
 			FROM = {
 				exists = yes
 				if = {
