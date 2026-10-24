@@ -274,16 +274,14 @@
  WFAS_gryphia.14.d: ""
  WFAS_gryphia.14.a: "Accept."
  WFAS_gryphia.14.b: "Refuse."
- WFAS_gryphia.14.c: "Oh, send them a gift."
 
- WFAS_gryphia.15.t: "[FROM.GetNameDefCap] Accepts"
+ WFAS_gryphia.15.t: "[FROM.GetSpouse] Accepts"
  WFAS_gryphia.15.d: ""
+ WFAS_gryphia.15.a: "How unfortunate."
 
- WFAS_gryphia.16.t: "[FROM.GetNameDefCap] Declines"
+ WFAS_gryphia.16.t: "[FROM.GetSpouse] Declines"
  WFAS_gryphia.16.d: ""
-
- WFAS_gryphia.17.t: "[FROM.GetNameDefCap] Declines"
- WFAS_gryphia.17.d: ""
+ WFAS_gryphia.16.a: "Splendid!"
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.
@@ -434,6 +432,7 @@
 
  improve_srodna_pratsya: "The effect will be applied once you receive the spirit from the §H$GRY_community_creation$§! focus."
 
+ unlock_spouse_focuses_on_accept: "\nA small §Yfocus branch§! regarding Borad's §Pspouse§! will be unlocked §Oonce we get an approval§!."
  unlock_spouse_focuses: "Unlocks a small §Yfocus branch§! regarding Borad's §Pspouse§!.\n§gThese focuses will auto-complete with time but you can complete them manually.§! §R(no auto-completion implemented yet)§!"
 
  ## SCRIPTED LOC

@@ -452,13 +452,14 @@ country_event = {
 		set_country_flag = hryf_marriage_unlocked
 		unlock_decision_category_tooltip = GRY_marital_matters
 		#activate_mission = GRY_marriage_mission
+		custom_effect_tooltip = unlock_spouse_focuses_on_accept
 	}
 }
 country_event = {
 	id = WFAS_gryphia.14 # Marriage Proposal
 	title = WFAS_gryphia.14.t
 	desc = WFAS_gryphia.14.d
-	picture = GFX_event_griffon_mountains
+	picture = GFX_event_griffon_mountain
 
 	fire_only_once = no
 	is_triggered_only = yes
@@ -530,7 +531,10 @@ country_event = {
 	id = WFAS_gryphia.15 # Proposal Accepted
 	title = WFAS_gryphia.15.t
 	desc = WFAS_gryphia.15.d
-	picture = GFX_event_griffon_mountains
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
 
 	immediate = {
 		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.15' (WFAS)"
@@ -567,10 +571,11 @@ country_event = {
 				STW_regina_eagleclaw = { save_global_event_target_as = hryf_spouse }
 			}
 		}
-		log = "([GetDate]) [ROOT.GetTag]: [hryf_spouse.GetName] at [?global.hryf_spouse_TAG:GetTag] saved as event target 'hryf_spouse'"
+		log = "([GetDate]) [ROOT.GetTag]: [hryf_spouse.GetName] at [?global.hryf_spouse_TAG:GetTag] saved as event target 'hryf_spouse' (WFAS)"
 	}
 
 	option = {
+		name = WFAS_gryphia.15.a
 		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = unlock_spouse_focuses
 	}
@@ -579,11 +584,19 @@ country_event = {
 	id = WFAS_gryphia.16 # Proposal Declined
 	title = WFAS_gryphia.16.t
 	desc = WFAS_gryphia.16.d
-	picture = GFX_event_griffon_mountains
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = no
+	is_triggered_only = yes
 
 	immediate = {
 		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.16' (WFAS)"
 		clr_country_flag = marriage_sent
+	}
+
+	option = {
+		name = WFAS_gryphia.15.a
+		add_political_power = var:marry_cost_@FROM
 	}
 }
 
