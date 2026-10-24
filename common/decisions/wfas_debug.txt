@@ -105,4 +105,28 @@ debug_decisions = {
 		}
 		complete_effect = { clr_country_flag = hryf_instant_proposal }
 	}
+	wfas_GRY_hryf_spouse_event_target_test = {
+		allowed = { original_tag = GRY }
+		visible = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			has_completed_focus = GRY_matter_of_marriage
+		}
+		available = {
+			has_event_target = hryf_spouse
+			var:global.hryf_spouse_TAG = {
+				event_target:hryf_spouse = {
+					OR = {
+						is_character = AVI_lady_katrina_avian
+						is_character = ARA_margareth_featherin
+						is_character = CYA_countess_taillow_sumpfkiel
+						is_character = BAN_cyrille_bluecrest
+						is_character = STW_regina_eagleclaw
+						is_character = KAT_princess_diellza_von_katerinburg
+						is_character = JER_vivienne_discret
+					}
+				}
+			}
+		}
+		complete_effect = { mark_focus_tree_layout_dirty = yes }
+	}
 }

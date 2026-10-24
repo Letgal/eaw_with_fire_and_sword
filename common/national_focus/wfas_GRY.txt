@@ -271,7 +271,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Aviansha
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
@@ -330,7 +330,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Margo
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = ARA_margareth_featherin }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = ARA_margareth_featherin } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
@@ -389,7 +389,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_MILF
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
@@ -448,7 +448,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Shieldwoman
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
@@ -507,7 +507,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Regina
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = STW_regina_eagleclaw }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = STW_regina_eagleclaw } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
@@ -566,7 +566,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_best_waifu
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage
@@ -625,7 +625,7 @@ focus_tree = {
 		icon = GFX_focus_GRY_Vivienne
 		allow_branch = {
 			has_completed_focus = GRY_matter_of_marriage
-			#event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+			var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = JER_vivienne_discret } }
 		}
 		prerequisite = { focus = GRY_matter_of_marriage }
 		relative_position_id = GRY_matter_of_marriage

@@ -536,9 +536,42 @@ country_event = {
 		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.15' (WFAS)"
 		clr_country_flag = marriage_sent
 		clr_country_flag = hryf_marriage_unlocked
+		FROM = {
+			set_variable = { global.hryf_spouse_TAG = THIS }
+			if = {
+				limit = { tag = ARA }
+				ARA_margareth_featherin = { save_global_event_target_as = hryf_spouse }
+			}
+			else_if = {
+				limit = { tag = AVI }
+				AVI_lady_katrina_avian = { save_global_event_target_as = hryf_spouse }
+			}
+			else_if = {
+				limit = { tag = BAN }
+				BAN_cyrille_bluecrest = { save_global_event_target_as = hryf_spouse }
+			}
+			else_if = {
+				limit = { tag = CYA }
+				CYA_countess_taillow_sumpfkiel = { save_global_event_target_as = hryf_spouse }
+			}
+			else_if = {
+				limit = { OR = { tag = JER tag = MER } }
+				JER_vivienne_discret = { save_global_event_target_as = hryf_spouse }
+			}
+			else_if = {
+				limit = { tag = KAT }
+				KAT_princess_diellza_von_katerinburg = { save_global_event_target_as = hryf_spouse }
+			}
+			else_if = {
+				limit = { tag = STW }
+				STW_regina_eagleclaw = { save_global_event_target_as = hryf_spouse }
+			}
+		}
+		log = "([GetDate]) [ROOT.GetTag]: [hryf_spouse.GetName] at [?global.hryf_spouse_TAG:GetTag] saved as event target 'hryf_spouse'"
 	}
 
 	option = {
+		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = unlock_spouse_focuses
 	}
 }
