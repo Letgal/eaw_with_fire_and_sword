@@ -530,6 +530,38 @@ country_event = {
 country_event = {
 	id = WFAS_gryphia.15 # Proposal Accepted
 	title = WFAS_gryphia.15.t
+	desc = {
+		text = WFAS_gryphia.15.d_ARA
+		trigger = { tag = ARA }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_AVI
+		trigger = { tag = AVI }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_BAN
+		trigger = { tag = BAN }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_CYA
+		trigger = { tag = CYA }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_JER
+		trigger = { tag = JER }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_KAT
+		trigger = { tag = KAT }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_MER
+		trigger = { tag = MER }
+	}
+	desc = {
+		text = WFAS_gryphia.15.d_STW
+		trigger = { tag = STW }
+	}
 	desc = WFAS_gryphia.15.d
 	picture = GFX_event_griffon_mountain
 
@@ -583,7 +615,70 @@ country_event = {
 country_event = {
 	id = WFAS_gryphia.16 # Proposal Declined
 	title = WFAS_gryphia.16.t
-	desc = WFAS_gryphia.16.d
+	desc = {
+		text = WFAS_gryphia.16.d_ARA
+		trigger = { tag = ARA }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_AVI
+		trigger = { tag = AVI }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_BAN
+		trigger = { tag = BAN }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_CYA
+		trigger = { tag = CYA }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_EQS
+		trigger = { tag = EQS }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_FAL
+		trigger = { tag = FAL }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_FLO
+		trigger = { tag = FLO }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_HIP
+		trigger = { tag = HIP }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_JER
+		trigger = { tag = JER }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_KAT
+		trigger = { tag = KAT }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_MER
+		trigger = { tag = MER }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_NCH
+		trigger = { tag = NCH }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_OLV
+		trigger = { tag = OLV }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_STW
+		trigger = { tag = STW }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_TAL
+		trigger = { tag = TAL }
+	}
+	desc = {
+		text = WFAS_gryphia.16.d_WIT
+		trigger = { tag = WIT }
+	}
 	picture = GFX_event_griffon_mountain
 
 	fire_only_once = no
