@@ -64,5 +64,22 @@
  WFAS_lushi.2.a: "[ROOT.GetNonIdeologyNameDefCap] still stands firm!"
  WFAS_lushi.2.b: "But I wish to keep the levies a little longer..."
 
+### UNITS & TECHS ###
+ LUS_marine: "River Forders"
+ LUS_marines: "River Forders I"
+ LUS_marines2: "River Forders II"
+ LUS_marines3: "River Forders III"
+ LUS_marines_a: "River Forders IV"
+ LUS_marines_b: "River Forders V"
+ LUS_marines_c: "River Forders VI"
+
+ LUS_ranger_battalion: "Hunters"
+ LUS_rangers_tech: "Hunters I"
+ LUS_rangers_tech2: "Hunters II"
+ LUS_rangers_tech3: "Hunters III"
+ LUS_rangers_tech_a: "Hunters IV"
+ LUS_rangers_tech_b: "Hunters V"
+ LUS_rangers_tech_c: "Hunters VI"
+
 ### TOOLTIPS ###
  disband_all_levies_tt: "Disbands all §HPeasant Levy§! divisons."

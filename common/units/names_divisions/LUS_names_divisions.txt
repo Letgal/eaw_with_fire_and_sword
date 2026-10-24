@@ -48,10 +48,11 @@ LUS_MTN_01 = {
 	name = "Mountain Brigades"
 	for_countries = { LUS }
 	division_types = { mountaineers }
+	link_numbering_with = { LUS_RANBAT_01 }
 
 	fallback_name = "%d. Mountaineer Brigade"
 }
-LUS_MAR_01 = {
+LUS_MRN_01 = {
 	name = "River Forder Brigades"
 	for_countries = { LUS }
 	division_types = { marine }
@@ -64,6 +65,14 @@ LUS_PAR_01 = {
 	division_types = { paratrooper }
 
 	fallback_name = "%d. Paratrooper Brigade"
+}
+LUS_RANBAT_01 = {
+	name = "Hunter Brigades"
+	for_countries = { LUS }
+	division_types = { ranger_battalion }
+	link_numbering_with = { LUS_MTN_01 }
+
+	fallback_name = "%d. Hunter Brigade"
 }
 LUS_KNI_01 = {
 	name = "Hussar Regiments"
