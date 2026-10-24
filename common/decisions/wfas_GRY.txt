@@ -315,7 +315,13 @@ GRY_marital_matters = {
 		cost = marry_cost_@FROM # (*) set after choosing monarchy, see event WFAS_gryphia.5. ~ L.H.
 		fire_only_once = yes # (*) check if works as intended. ~ L.H.
 		complete_effect = {
-			FROM = { country_event = { id = WFAS_gryphia.14 days = 7 } }
+			FROM = {
+				if = {
+					limit = { ROOT = { has_country_flag = hryf_instant_proposal } }
+					country_event = WFAS_gryphia.14
+				}
+				else = { country_event = { id = WFAS_gryphia.14 days = 7 } }
+			}
 			set_country_flag = marriage_sent
 		}
 	}

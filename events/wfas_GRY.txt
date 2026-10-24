@@ -499,7 +499,13 @@ country_event = {
 				factor = 2
 			}
 		}
-		FROM = { country_event = { id = WFAS_gryphia.15 days = 7 } }
+		FROM = {
+			if = {
+				limit = { has_country_flag = hryf_instant_proposal }
+				country_event = WFAS_gryphia.15
+			}
+			else = { country_event = { id = WFAS_gryphia.15 days = 7 } }
+		}
 	}
 	option = {
 		name = WFAS_gryphia.14.b
@@ -511,7 +517,13 @@ country_event = {
 			}
 		}
 		set_country_flag = marriage_rejected
-		FROM = { country_event = { id = WFAS_gryphia.16 days = 7 } }
+		FROM = {
+			if = {
+				limit = { has_country_flag = hryf_instant_proposal }
+				country_event = WFAS_gryphia.16
+			}
+			else = { country_event = { id = WFAS_gryphia.16 days = 7 } }
+		}
 	}
 }
 country_event = {

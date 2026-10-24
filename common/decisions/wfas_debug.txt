@@ -89,4 +89,20 @@ debug_decisions = {
 			set_variable = { marry_cost_WIT = 100 }
 		}
 	}
+	wfas_GRY_hryf_instant_proposal = {
+		allowed = { original_tag = GRY }
+		visible = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			NOT = { has_country_flag = hryf_instant_proposal }
+		}
+		complete_effect = { set_country_flag = hryf_instant_proposal }
+	}
+	wfas_GRY_hryf_instant_proposal_NOT = {
+		allowed = { original_tag = GRY }
+		visible = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			has_country_flag = hryf_instant_proposal
+		}
+		complete_effect = { clr_country_flag = hryf_instant_proposal }
+	}
 }
