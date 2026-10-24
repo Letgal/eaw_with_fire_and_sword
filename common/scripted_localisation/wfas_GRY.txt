@@ -177,3 +177,70 @@ defined_text = {
 		localization_key = GRY_white_star
 	}
 }
+defined_text = {
+	name = GetSpouseDesc
+	text = {
+		trigger = { tag = ARA }
+		localization_key = GRY_marriage_proposal_desc_ARA
+	}
+	text = {
+		trigger = { tag = AVI }
+		localization_key = GRY_marriage_proposal_desc_AVI
+	}
+	text = {
+		trigger = { tag = BAN }
+		localization_key = GRY_marriage_proposal_desc_BAN
+	}
+	text = {
+		trigger = { tag = CYA }
+		localization_key = GRY_marriage_proposal_desc_CYA
+	}
+	text = {
+		trigger = { tag = EQS }
+		localization_key = GRY_marriage_proposal_desc_EQS
+	}
+	text = {
+		trigger = { tag = FAL }
+		localization_key = GRY_marriage_proposal_desc_FAL
+	}
+	text = {
+		trigger = { tag = FLO }
+		localization_key = GRY_marriage_proposal_desc_FLO
+	}
+	text = {
+		trigger = { tag = HIP }
+		localization_key = GRY_marriage_proposal_desc_HIP
+	}
+	text = {
+		trigger = { tag = NCH }
+		localization_key = GRY_marriage_proposal_desc_NCH
+	}
+	text = {
+		trigger = { tag = JER }
+		localization_key = GRY_marriage_proposal_desc_JER
+	}
+	text = {
+		trigger = { tag = MER }
+		localization_key = GRY_marriage_proposal_desc_MER
+	}
+	text = {
+		trigger = { tag = KAT }
+		localization_key = GRY_marriage_proposal_desc_KAT
+	}
+	text = {
+		trigger = { tag = OLV }
+		localization_key = GRY_marriage_proposal_desc_OLV
+	}
+	text = {
+		trigger = { tag = STW }
+		localization_key = GRY_marriage_proposal_desc_STW
+	}
+	text = {
+		trigger = { tag = TAL }
+		localization_key = GRY_marriage_proposal_desc_TAL
+	}
+	text = {
+		trigger = { tag = WIT }
+		localization_key = GRY_marriage_proposal_desc_WIT
+	}
+}
