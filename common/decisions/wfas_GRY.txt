@@ -167,6 +167,54 @@ GRY_marital_matters = {
 	#	timeout_effect
 	#	UNFINISHED!!!
 	#}
+	GRY_marriage_proposal_EQS = {
+		# (*) has special cost. ~ L.H.
+		icon = GRY_mariage_dec
+		visible = {
+			has_country_flag = hryf_marriage_unlocked
+			FROM = {
+				exists = yes
+				has_character = EQS_princess_luna
+				NOT = { has_global_flag = celestia_and_luna_fused }
+			}
+			NOT = { has_country_flag = marriage_sent }
+		}
+		available = {
+			FROM = {
+				exists = yes
+				has_character = EQS_princess_luna
+				NOT = {
+					has_global_flag = celestia_and_luna_fused
+					has_country_flag = marriage_rejected
+				}
+			}
+			NOT = { has_country_flag = marriage_sent }
+		}
+		targets = { EQS }
+		custom_cost_trigger = {
+			has_political_power > marry_cost_EQS
+			has_equipment = { convoy > 0 }
+		}
+		custom_cost_text = decision_cost_pp_var_conv_1
+		fire_only_once = yes
+		days_remove = 14
+		complete_effect = {
+			#hidden_effect = {
+				set_temp_variable = { marry_cost_neg_@FROM = marry_cost_@FROM }
+				multiply_temp_variable = { marry_cost_neg_@FROM = -1 }
+				add_political_power = marry_cost_neg_@FROM # (*) wow, it works flawlessly. ~ L.H.
+				add_equipment_to_stockpile = { type = convoy amount = -1 } # (!) this, however, does not work at all. ~ L.H.
+			#}
+			FROM = {
+				if = {
+					limit = { ROOT = { has_country_flag = hryf_instant_proposal } }
+					country_event = WFAS_gryphia.14
+				}
+				else = { country_event = { id = WFAS_gryphia.14 days = 7 } }
+			}
+			set_country_flag = marriage_sent
+		}
+	}
 	GRY_marriage_proposal = {
 		icon = GRY_mariage_dec
 		visible = {
@@ -188,11 +236,6 @@ GRY_marital_matters = {
 				else_if = {
 					limit = { tag = CYA }
 					has_character = CYA_countess_taillow_sumpfkiel
-				}
-				else_if = {
-					limit = { tag = EQS }
-					has_character = EQS_princess_luna
-					NOT = { has_global_flag = celestia_and_luna_fused }
 				}
 				else_if = {
 					limit = { tag = FAL }
@@ -237,7 +280,6 @@ GRY_marital_matters = {
 					limit = { tag = WIT }
 					has_country_leader = { character = WIT_white_star }
 				}
-				#NOT = { has_country_flag = marriage_rejected } # (*) fallback
 			}
 		}
 		available = {
@@ -258,11 +300,6 @@ GRY_marital_matters = {
 				else_if = {
 					limit = { tag = CYA }
 					has_character = CYA_countess_taillow_sumpfkiel
-				}
-				else_if = {
-					limit = { tag = EQS }
-					has_character = EQS_princess_luna
-					NOT = { has_global_flag = celestia_and_luna_fused }
 				}
 				else_if = {
 					limit = { tag = FAL }
@@ -311,8 +348,8 @@ GRY_marital_matters = {
 			}
 			NOT = { has_country_flag = marriage_sent }
 		}
-		targets = { ARA AVI BAN CYA EQS FAL FLO HIP JER KAT MER NCH OLV STW TAL WIT }
-		cost = marry_cost_@FROM # (*) set after choosing monarchy, see event WFAS_gryphia.5. ~ L.H.
+		targets = { ARA AVI BAN CYA FAL FLO HIP JER KAT MER NCH OLV STW TAL WIT }
+		cost = marry_cost_@FROM
 		days_remove = 14
 		fire_only_once = yes
 		complete_effect = {

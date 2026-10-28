@@ -196,10 +196,6 @@ defined_text = {
 		localization_key = GRY_marriage_proposal_desc_CYA
 	}
 	text = {
-		trigger = { tag = EQS }
-		localization_key = GRY_marriage_proposal_desc_EQS
-	}
-	text = {
 		trigger = { tag = FAL }
 		localization_key = GRY_marriage_proposal_desc_FAL
 	}

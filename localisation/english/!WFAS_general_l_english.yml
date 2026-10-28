@@ -25,6 +25,15 @@
  EFFECT_UNLOCK_DECISION_FREE: "Unlocks £decision_icon_free free decision: $NAME|H$."
  EFFECT_UNLOCK_DECISION_SUBCATEGORY: "Unlocks $NAME|H$ £decision_icon_small decisions in the $CATEGORY|H$ category."
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
+ refund_tt: "§HRefunded:§!\n"
+
+ add_stability_tt: "Gain Stability: §G+1§!."
+
+ explosive_cake: "Explosive Cake" # (*) don't ask... ~ L.H.
+
+ decision_cost_pp_var_conv_1: "£pol_power£ §Y[?marry_cost_EQS]§! £convoy_texticon£ §Y1§!"
+ decision_cost_pp_var_conv_1_blocked: "£pol_power£ §R[?marry_cost_EQS]§! £convoy_texticon£ §R1§!"
+ decision_cost_pp_var_conv_1_tooltip: "It costs £pol_power£ §Y[?marry_cost_EQS]§! £convoy_texticon£ §Y1§! to take the decision"
 
  decision_cost_cp_30_mp_1500_inf_100: "£command_power §Y30§! £manpower_icon §Y1500§! £infantry_equipment_text_icon §Y100§!"
  decision_cost_cp_30_mp_1500_inf_100_blocked: "£command_power §R30§! £manpower_icon §R1500§! £infantry_equipment_text_icon §R100§!"

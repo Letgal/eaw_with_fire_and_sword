@@ -532,35 +532,35 @@ country_event = {
 	title = WFAS_gryphia.15.t
 	desc = {
 		text = WFAS_gryphia.15.d_ARA
-		trigger = { tag = ARA }
+		trigger = { FROM = { tag = ARA } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_AVI
-		trigger = { tag = AVI }
+		trigger = { FROM = { tag = AVI } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_BAN
-		trigger = { tag = BAN }
+		trigger = { FROM = { tag = BAN } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_CYA
-		trigger = { tag = CYA }
+		trigger = { FROM = { tag = CYA } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_JER
-		trigger = { tag = JER }
+		trigger = { FROM = { tag = JER } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_KAT
-		trigger = { tag = KAT }
+		trigger = { FROM = { tag = KAT } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_MER
-		trigger = { tag = MER }
+		trigger = { FROM = { tag = MER } }
 	}
 	desc = {
 		text = WFAS_gryphia.15.d_STW
-		trigger = { tag = STW }
+		trigger = { FROM = { tag = STW } }
 	}
 	desc = WFAS_gryphia.15.d
 	picture = GFX_event_griffon_mountain
@@ -617,67 +617,67 @@ country_event = {
 	title = WFAS_gryphia.16.t
 	desc = {
 		text = WFAS_gryphia.16.d_ARA
-		trigger = { tag = ARA }
+		trigger = { FROM = { tag = ARA } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_AVI
-		trigger = { tag = AVI }
+		trigger = { FROM = { tag = AVI } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_BAN
-		trigger = { tag = BAN }
+		trigger = { FROM = { tag = BAN } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_CYA
-		trigger = { tag = CYA }
+		trigger = { FROM = { tag = CYA } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_EQS
-		trigger = { tag = EQS }
+		trigger = { FROM = { tag = EQS } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_FAL
-		trigger = { tag = FAL }
+		trigger = { FROM = { tag = FAL } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_FLO
-		trigger = { tag = FLO }
+		trigger = { FROM = { tag = FLO } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_HIP
-		trigger = { tag = HIP }
+		trigger = { FROM = { tag = HIP } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_JER
-		trigger = { tag = JER }
+		trigger = { FROM = { tag = JER } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_KAT
-		trigger = { tag = KAT }
+		trigger = { FROM = { tag = KAT } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_MER
-		trigger = { tag = MER }
+		trigger = { FROM = { tag = MER } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_NCH
-		trigger = { tag = NCH }
+		trigger = { FROM = { tag = NCH } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_OLV
-		trigger = { tag = OLV }
+		trigger = { FROM = { tag = OLV } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_STW
-		trigger = { tag = STW }
+		trigger = { FROM = { tag = STW } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_TAL
-		trigger = { tag = TAL }
+		trigger = { FROM = { tag = TAL } }
 	}
 	desc = {
 		text = WFAS_gryphia.16.d_WIT
-		trigger = { tag = WIT }
+		trigger = { FROM = { tag = WIT } }
 	}
 	picture = GFX_event_griffon_mountain
 
@@ -691,7 +691,17 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.15.a
+		custom_effect_tooltip = refund_tt
 		add_political_power = var:marry_cost_@FROM
+		if = {
+			limit = { FROM = { tag = EQS } }
+			add_equipment_to_stockpile = { type = convoy amount = 1 }
+			custom_effect_tooltip = SEPARATION_LINE
+			add_political_power = 30
+			custom_effect_tooltip = add_stability_tt
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 100 producer = EQS }
+			custom_effect_tooltip = { localization_key = EFFECT_ADD_EQUIPMENT_TO_STOCKPILE_FOREIGN_PRODUCER AMOUNT = 1 PRODUCER = [EQS.GetAdjective] EQUIPMENT = explosive_cake }
+		}
 	}
 }
 
