@@ -158,15 +158,23 @@ prospect_for_resources = {
 
 # HRYF_MARRIAGE
 GRY_marital_matters = {
-	#GRY_marriage_mission = {
-	#	priority = 0
-	#	icon = generic_PLACEHOLDER
-	#	activation = { always = no }
-	#	available NOT = { has_country_flag = marriage_rejected_@FROM } = { always = no }
-	#	days_mission_timeout
-	#	timeout_effect
-	#	UNFINISHED!!!
-	#}
+	GRY_find_spouse_mission = {
+		priority = 1
+		icon = generic_PLACEHOLDER
+		activation = { always = no }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = bride_yes
+				has_event_target = hryf_spouse
+			}
+		}
+		cancel_trigger = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
+		is_good = no
+		days_mission_timeout = 365
+		selectable_mission = no
+		complete_effect = { }
+		timeout_effect = { country_event = WFAS_gryphia.17 }
+	}
 	GRY_marriage_proposal_EQS = {
 		# (*) has special cost. ~ L.H.
 		icon = GRY_mariage_dec
@@ -362,5 +370,46 @@ GRY_marital_matters = {
 			}
 			set_country_flag = marriage_sent
 		}
+	}
+	GRY_get_married_mission = {
+		priority = 1
+		icon = generic_PLACEHOLDER
+		activation = { always = no }
+		available = {
+			if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian } } }
+				has_completed_focus = GRY_AVI_spouse
+			}
+			else_if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = ARA_margareth_featherin } } }
+				has_completed_focus = GRY_ARA_spouse
+			}
+			else_if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel } } }
+				has_completed_focus = GRY_CYA_spouse
+			}
+			else_if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest } } }
+				has_completed_focus = GRY_BAN_spouse
+			}
+			else_if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = STW_regina_eagleclaw } } }
+				has_completed_focus = GRY_STW_spouse
+			}
+			else_if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } } }
+				has_completed_focus = GRY_KAT_spouse
+			}
+			else_if = {
+				limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = JER_vivienne_discret } } }
+				has_completed_focus = GRY_JER_spouse
+			}
+		}
+		cancel_trigger = { NOT = { has_country_leader = { character = GRY_borad_grifnitsky } } }
+		is_good = no
+		days_mission_timeout = 105
+		selectable_mission = no
+		complete_effect = { }
+		timeout_effect = { country_event = WFAS_gryphia.19 }
 	}
 }

@@ -42,6 +42,7 @@
   GRY_hetmans_coronation: "Hetman's Coronation"
   GRY_hetmans_coronation_desc: ""
   GRY_travel_the_country: "Travel the Country"
+  GRY_keep_those_promises: "Keep Those Promises"
   GRY_expand_the_siches_autonomy: "Expand the Siches' Autonomy"
   GRY_sich_liberties: "Liberties of the Siches" # alt.ly Libertātēs
   GRY_fealty_to_the_king: "Fealty to the King"
@@ -66,7 +67,7 @@
   GRY_tax_the_rich: "Tax the Rich"
   GRY_industrialization_program: "Industrialization Program"
   GRY_ban_serfdom: "Ban Serfdom"
-  # Marriage
+  # HRYF_MARRIAGE
   GRY_matter_of_marriage: "Matter of Marriage"
   GRY_AVI_spouse: "[AVI.GetSpouse]"
   GRY_AVI_focus_1: "Embrace Protectionism"
@@ -151,6 +152,7 @@
  GRY_put_the_knowledge_into_practice: "Put Our Knowledge into Practice"
 
  GRY_marital_matters: "Borad's Marital Matters"
+ GRY_find_spouse_mission: "Find a Bride"
  GRY_marriage_proposal: "Send Proposal to [FROM.GetSpouse]"
  GRY_marriage_proposal_EQS: "$GRY_marriage_proposal$"
  GRY_marriage_proposal_desc: "[FROM.GetSpouseDesc]"
@@ -170,6 +172,7 @@
  GRY_marriage_proposal_STW_desc: "Proposal to §CSTW§! desc"
  GRY_marriage_proposal_TAL_desc: "Proposal to §CTAL§! desc"
  GRY_marriage_proposal_WIT_desc: "Proposal to §CWIT§! desc"
+ GRY_get_married_mission: "Consummate the Marriage"
 
  ## EXCAVATION
   increase_coal_extraction_in_buzzovyna: "Increase Coal Extraction in [611.GetName]"
@@ -306,16 +309,24 @@
  WFAS_gryphia.16.d_WIT: "(unique declined event desc: WIT)"
  WFAS_gryphia.16.a: "How unfortunate."
 
- WFAS_gryphia.17.t: "The Wedding Ceremony"
- WFAS_gryphia.17.d_ARA: "(unique desc ARA)"
- WFAS_gryphia.17.d_AVI: "(unique desc AVI)"
- WFAS_gryphia.17.d_BAN: "(unique desc BAN)"
- WFAS_gryphia.17.d_CYA: "(unique desc CYA)"
- WFAS_gryphia.17.d_JER: "(unique desc JER)"
- WFAS_gryphia.17.d_KAT: "(unique desc KAT)"
- WFAS_gryphia.17.d_MER: "(unique desc MER)"
- WFAS_gryphia.17.d_STW: "(unique desc STW)"
- WFAS_gryphia.17.a: "Cheers to the newlyweds!"
+ WFAS_gryphia.17.t: "One Lonely Cossack"
+ WFAS_gryphia.17.d: "Borad is sad because he has no wife."
+ WFAS_gryphia.17.a: "Very sad."
+
+ WFAS_gryphia.18.t: "The Wedding Ceremony"
+ WFAS_gryphia.18.d_ARA: "(unique desc ARA)"
+ WFAS_gryphia.18.d_AVI: "(unique desc AVI)"
+ WFAS_gryphia.18.d_BAN: "(unique desc BAN)"
+ WFAS_gryphia.18.d_CYA: "(unique desc CYA)"
+ WFAS_gryphia.18.d_JER: "(unique desc JER)"
+ WFAS_gryphia.18.d_KAT: "(unique desc KAT)"
+ WFAS_gryphia.18.d_MER: "(unique desc MER)"
+ WFAS_gryphia.18.d_STW: "(unique desc STW)"
+ WFAS_gryphia.18.a: "Cheers to the newlyweds!"
+
+ WFAS_gryphia.19.t: "A Bitter Disappointment"
+ WFAS_gryphia.19.d: "Borad has failed to marry his bride."
+ WFAS_gryphia.19.a: "What a shame."
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.
@@ -434,6 +445,7 @@
  monarch_of_all_zaphzia_3_desc: "$prestige_gain_var_monarch$\n  §L$monarch_of_all_zaphzia_1$ Description§!\n"
  cossack_prince: "Cossack Prince"
  cossack_prince_desc: "  §L$cossack_prince$ Description§!\n"
+ lone_cossack: "Lone Cossack"
 
 ### FLAGS ###
  hryf_chose_monarchy: "Monarchy was chosen"
@@ -453,6 +465,7 @@
  GRY_kravelets_wins_tt: "§G[GRY_yeven_krawvelets.GetName] wins the election!§!" # §O
 
  petition_to_archons: "Sends a petition to the Archons requesting to conduct the coronation ceremony."
+ bride_yes: "§H[GRY_borad_grifnitsky.GetName]§! has found [GRY_borad_grifnitsky.GetHerselfHimself] a bride"
 
  modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"
  prestige_gain: "Prestige Gain"

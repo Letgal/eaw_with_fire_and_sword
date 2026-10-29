@@ -278,10 +278,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {
@@ -340,10 +339,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {
@@ -402,10 +400,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {
@@ -464,10 +461,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {
@@ -526,10 +522,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {
@@ -588,10 +583,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {
@@ -650,10 +644,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'JER_spouse' (WFAS)"
-			country_event = WFAS_gryphia.17
+			country_event = WFAS_gryphia.18
 		}
 	}
 	focus = {

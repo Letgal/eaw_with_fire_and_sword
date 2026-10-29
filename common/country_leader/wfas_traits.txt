@@ -38,7 +38,12 @@ leader_traits = {
 		high_command_cost_factor = -0.25
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
-		cavalry_attack_factor = 0.1 # (*) lol. ~ L.H.
+		cavalry_attack_factor = 0.1
 		custom_modifier_tooltip = cossack_prince_desc
+	}
+	lone_cossack = {
+		random = no
+		stability_factor = -0.15
+		political_power_gain = -0.15
 	}
 }

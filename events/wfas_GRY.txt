@@ -451,7 +451,7 @@ country_event = {
 		name = WFAS_gryphia.13.a
 		set_country_flag = hryf_marriage_unlocked
 		unlock_decision_category_tooltip = GRY_marital_matters
-		#activate_mission = GRY_marriage_mission
+		activate_mission = GRY_find_spouse_mission
 		custom_effect_tooltip = unlock_spouse_focuses_on_accept
 	}
 }
@@ -614,6 +614,7 @@ country_event = {
 		name = WFAS_gryphia.15.a
 		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = unlock_spouse_focuses
+		activate_mission = GRY_get_married_mission
 	}
 }
 country_event = {
@@ -707,36 +708,9 @@ country_event = {
 			custom_effect_tooltip = { localization_key = EFFECT_ADD_EQUIPMENT_TO_STOCKPILE_FOREIGN_PRODUCER AMOUNT = 1 PRODUCER = [EQS.GetAdjective] EQUIPMENT = explosive_cake }
 		}
 country_event = {
-	id = WFAS_gryphia.17 # The Wedding Ceremony
+	id = WFAS_gryphia.17 # One Lonely Cossack
 	title = WFAS_gryphia.17.t
-	desc = {
-		text = WFAS_gryphia.17.d_AVI
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian } } }
-	}
-	desc = {
-		text = WFAS_gryphia.17.d_ARA
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = ARA_margareth_featherin } } }
-	}
-	desc = {
-		text = WFAS_gryphia.17.d_CYA
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel } } }
-	}
-	desc = {
-		text = WFAS_gryphia.17.d_BAN
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest } } }
-	}
-	desc = {
-		text = WFAS_gryphia.17.d_STW
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = STW_regina_eagleclaw } } }
-	}
-	desc = {
-		text = WFAS_gryphia.17.d_KAT
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } } }
-	}
-	desc = {
-		text = WFAS_gryphia.17.d_JER
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = JER_vivienne_discret } } }
-	}
+	desc = WFAS_gryphia.17.d
 	picture = GFX_event_griffon_mountain
 
 	fire_only_once = yes
@@ -746,8 +720,65 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.17.a
+		add_country_leader_trait = lone_cossack
 	}
 }
+country_event = {
+	id = WFAS_gryphia.18 # The Wedding Ceremony
+	title = WFAS_gryphia.18.t
+	desc = {
+		text = WFAS_gryphia.18.d_AVI
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian } } }
+	}
+	desc = {
+		text = WFAS_gryphia.18.d_ARA
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = ARA_margareth_featherin } } }
+	}
+	desc = {
+		text = WFAS_gryphia.18.d_CYA
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel } } }
+	}
+	desc = {
+		text = WFAS_gryphia.18.d_BAN
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest } } }
+	}
+	desc = {
+		text = WFAS_gryphia.18.d_STW
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = STW_regina_eagleclaw } } }
+	}
+	desc = {
+		text = WFAS_gryphia.18.d_KAT
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } } }
+	}
+	desc = {
+		text = WFAS_gryphia.18.d_JER
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = JER_vivienne_discret } } }
+	}
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.18' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.18.a
+	}
+}
+country_event = {
+	id = WFAS_gryphia.19 # A Bitter Disappointment
+	title = WFAS_gryphia.19.t
+	desc = WFAS_gryphia.19.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.19' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.19.a
+		add_political_power = -999
 	}
 }
 
