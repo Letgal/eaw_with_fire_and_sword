@@ -513,6 +513,10 @@ country_event = {
 		ai_chance = {
 			base = 1
 			modifier = {
+				FROM = { has_country_flag = hryf_spouse_no_refuse }
+				factor = 0
+			}
+			modifier = {
 				factor = 3
 				tag = JER
 			}
