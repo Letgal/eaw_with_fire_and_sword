@@ -699,9 +699,9 @@ focus_tree = {
 		id = GRY_expand_the_siches_autonomy
 		icon = GFX_focus_GRY_Sich_1
 		prerequisite = { focus = GRY_keep_those_promises }
-		relative_position_id = GRY_destroy_commies
+		relative_position_id = GRY_keep_those_promises
 		x = -2
-		y = -1
+		y = 1
 		cost = 10
 		#search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = {
@@ -738,178 +738,12 @@ focus_tree = {
 		# (*) +10% recruit factor, +5% att, +5% def -5% resrch speed, -5% fac output
 	}
 	focus = {
-		id = GRY_gathering_the_lands
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_keep_those_promises }
-		relative_position_id = GRY_keep_those_promises
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'gathering_the_lands' (WFAS)"
-			add_war_support = 0.1
-		}
-	}
-	focus = {
-		id = GRY_destroy_commies
-		icon = GFX_goal_broken_red_star # (:) no icon
-		prerequisite = { focus = GRY_gathering_the_lands }
-		relative_position_id = GRY_gathering_the_lands
-		x = -4
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'destroy_commies' (WFAS)" }
-	}
-	focus = {
-		id = GRY_organizing_subject_govs
-		icon = GFX_goal_unknown
-		prerequisite = { focus = GRY_destroy_commies }
-		relative_position_id = GRY_destroy_commies
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'organizing_subject_govs' (WFAS)" }
-	}
-	focus = {
-		id = GRY_economic_union
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_gathering_the_lands }
-		relative_position_id = GRY_gathering_the_lands
-		x = -1
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'economic_union' (WFAS)"
-			# create Evian Union faction, decisions: union wiþ unaligned and harmonists
-		}
-	}
-	focus = {
-		id = GRY_integrate_politics
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_economic_union }
-		relative_position_id = GRY_economic_union
-		x = -1
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'economic_union' (WFAS)"
-			# decisions to "integrate the member states' politics", turn þem into dominions, add spirit "Political Integration" - PP gain +10%, auton gain -0.5
-		}
-	}
-	focus = {
-		id = GRY_secure_the_union
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_economic_union }
-		relative_position_id = GRY_economic_union
-		x = 1
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'secure_the_union' (WFAS)"
-			# create Evian Union faction, decisions: union wiþ unaligned and harmonists
-		}
-	}
-	focus = {
-		id = GRY_economical_integration
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_integrate_politics }
-		prerequisite = { focus = GRY_secure_the_union }
-		relative_position_id = GRY_integrate_politics
-		x = 0
-		y = 1
-		cost = 10
-		#available = { has_completed_focus = GRY_first_successes }
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'economical_integration' (WFAS)"
-			# decision category, see appropriate file
-		}
-	}
-	focus = {
-		id = GRY_uniting_the_borders
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_integrate_politics }
-		prerequisite = { focus = GRY_secure_the_union }
-		relative_position_id = GRY_secure_the_union
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = {
-			log = "([GetDate]) [ROOT.GetTag]: focus 'uniting_the_borders' (WFAS)"
-			# create Evian Union faction, decisions: union wiþ unaligned and harmonists
-		}
-	}
-	focus = {
-		id = GRY_riverland_friendship
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_gathering_the_lands }
-		mutually_exclusive = { focus = GRY_reclaim_polshavina }
-		relative_position_id = GRY_gathering_the_lands
-		x = 2
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'riverland_friendship' (WFAS)" }
-	}
-	focus = {
-		id = GRY_bulwark_against_radicalism
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_riverland_friendship }
-		relative_position_id = GRY_riverland_friendship
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'bulwark_against_radicalism' (WFAS)" }
-	}
-	focus = {
-		id = GRY_reclaim_polshavina
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_gathering_the_lands }
-		mutually_exclusive = { focus = GRY_riverland_friendship }
-		relative_position_id = GRY_gathering_the_lands
-		x = 4
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'reclaim_polshavina' (WFAS)" }
-	}
-	focus = {
-		id = GRY_wittenland_kurin
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_reclaim_polshavina }
-		relative_position_id = GRY_reclaim_polshavina
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'wittenland_kurin' (WFAS)" }
-	}
-	focus = {
-		id = GRY_integrating_the_tribes
-		icon = GFX_goal_unknown # (:) no icon
-		prerequisite = { focus = GRY_wittenland_kurin }
-		relative_position_id = GRY_wittenland_kurin
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'integrating_the_tribes' (WFAS)" }
-	}
-	focus = {
 		id = GRY_tax_the_rich
 		icon = GFX_focus_GRY_taxes
 		prerequisite = { focus = GRY_keep_those_promises }
-		relative_position_id = GRY_reclaim_polshavina
+		relative_position_id = GRY_keep_those_promises
 		x = 2
-		y = -1
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'tax_the_rich' (WFAS)" }
