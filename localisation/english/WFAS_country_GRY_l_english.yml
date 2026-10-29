@@ -306,6 +306,17 @@
  WFAS_gryphia.16.d_WIT: "(unique declined event desc: WIT)"
  WFAS_gryphia.16.a: "How unfortunate."
 
+ WFAS_gryphia.17.t: "The Wedding Ceremony"
+ WFAS_gryphia.17.d_ARA: "(unique desc ARA)"
+ WFAS_gryphia.17.d_AVI: "(unique desc AVI)"
+ WFAS_gryphia.17.d_BAN: "(unique desc BAN)"
+ WFAS_gryphia.17.d_CYA: "(unique desc CYA)"
+ WFAS_gryphia.17.d_JER: "(unique desc JER)"
+ WFAS_gryphia.17.d_KAT: "(unique desc KAT)"
+ WFAS_gryphia.17.d_MER: "(unique desc MER)"
+ WFAS_gryphia.17.d_STW: "(unique desc STW)"
+ WFAS_gryphia.17.a: "Cheers to the newlyweds!"
+
  ## CHORNA RADA
  # I wanna die. ~ L.H.
  WFAS_chorna_rada.1.t: "First Convention of the Chorna Rada"

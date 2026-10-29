@@ -279,7 +279,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'spouse_AVI' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_AVI_focus_1
@@ -338,7 +341,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_spouse' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_ARA_focus_1
@@ -397,7 +403,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_spouse' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_CYA_focus_1
@@ -456,7 +465,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_spouse' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_BAN_focus_1
@@ -515,7 +527,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_spouse' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_STW_focus_1
@@ -574,7 +589,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_spouse' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_KAT_focus_1
@@ -633,7 +651,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_spouse' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'JER_spouse' (WFAS)"
+			country_event = WFAS_gryphia.17
+		}
 	}
 	focus = {
 		id = GRY_JER_focus_1
