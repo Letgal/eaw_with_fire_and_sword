@@ -181,62 +181,62 @@ defined_text = {
 	name = GetSpouseDesc
 	text = {
 		trigger = { tag = ARA }
-		localization_key = GRY_marriage_proposal_desc_ARA
+		localization_key = GRY_marriage_proposal_ARA_desc
 	}
 	text = {
 		trigger = { tag = AVI }
-		localization_key = GRY_marriage_proposal_desc_AVI
+		localization_key = GRY_marriage_proposal_AVI_desc
 	}
 	text = {
 		trigger = { tag = BAN }
-		localization_key = GRY_marriage_proposal_desc_BAN
+		localization_key = GRY_marriage_proposal_BAN_desc
 	}
 	text = {
 		trigger = { tag = CYA }
-		localization_key = GRY_marriage_proposal_desc_CYA
+		localization_key = GRY_marriage_proposal_CYA_desc
 	}
 	text = {
 		trigger = { tag = FAL }
-		localization_key = GRY_marriage_proposal_desc_FAL
+		localization_key = GRY_marriage_proposal_FAL_desc
 	}
 	text = {
 		trigger = { tag = FLO }
-		localization_key = GRY_marriage_proposal_desc_FLO
+		localization_key = GRY_marriage_proposal_FLO_desc
 	}
 	text = {
 		trigger = { tag = HIP }
-		localization_key = GRY_marriage_proposal_desc_HIP
+		localization_key = GRY_marriage_proposal_HIP_desc
 	}
 	text = {
 		trigger = { tag = NCH }
-		localization_key = GRY_marriage_proposal_desc_NCH
+		localization_key = GRY_marriage_proposal_NCH_desc
 	}
 	text = {
 		trigger = { tag = JER }
-		localization_key = GRY_marriage_proposal_desc_JER
+		localization_key = GRY_marriage_proposal_JER_desc
 	}
 	text = {
 		trigger = { tag = MER }
-		localization_key = GRY_marriage_proposal_desc_MER
+		localization_key = GRY_marriage_proposal_MER_desc
 	}
 	text = {
 		trigger = { tag = KAT }
-		localization_key = GRY_marriage_proposal_desc_KAT
+		localization_key = GRY_marriage_proposal_KAT_desc
 	}
 	text = {
 		trigger = { tag = OLV }
-		localization_key = GRY_marriage_proposal_desc_OLV
+		localization_key = GRY_marriage_proposal_OLV_desc
 	}
 	text = {
 		trigger = { tag = STW }
-		localization_key = GRY_marriage_proposal_desc_STW
+		localization_key = GRY_marriage_proposal_STW_desc
 	}
 	text = {
 		trigger = { tag = TAL }
-		localization_key = GRY_marriage_proposal_desc_TAL
+		localization_key = GRY_marriage_proposal_TAL_desc
 	}
 	text = {
 		trigger = { tag = WIT }
-		localization_key = GRY_marriage_proposal_desc_WIT
+		localization_key = GRY_marriage_proposal_WIT_desc
 	}
 }

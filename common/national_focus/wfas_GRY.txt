@@ -9,7 +9,7 @@ focus_tree = {
 			NOT = {
 				has_government = communism
 				has_country_flag = GRY_neutral_rebellion
-				has_country_flag = debug_screw_you
+				has_country_flag = focus_flag_EAW
 			}
 		}
 	}
@@ -293,7 +293,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_protectionism' (WFAS)" }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_1' (WFAS)" }
 	}
 	focus = {
 		id = GRY_AVI_focus_2
@@ -304,7 +304,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_conducting_the_balls' (WFAS)" }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_2' (WFAS)" }
 	}
 	focus = {
 		id = GRY_AVI_focus_3
@@ -315,7 +315,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_princes_philosophical_academy' (WFAS)" }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_3' (WFAS)" }
 	}
 	focus = {
 		id = GRY_AVI_focus_4
@@ -326,7 +326,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_influence_the_nobility' (WFAS)" }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_4' (WFAS)" }
 	}
 	focus = {
 		id = GRY_ARA_spouse

@@ -6,7 +6,7 @@ focus_tree = {
 		#modifier = {
 		#	add = 15
 		#	original_tag = LUS
-		#	NOT = { has_country_flag = debug_screw_you }
+		#	NOT = { has_country_flag = focus_flag_EAW }
 		#}
 	}
 	continuous_focus_position = { x = 50 y = 1500 }

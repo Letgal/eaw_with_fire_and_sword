@@ -6,10 +6,10 @@ debug_decisions = {
 				original_tag = LUS
 			}
 		}
-		visible = { has_country_flag = debug_screw_you }
+		visible = { has_country_flag = focus_flag_EAW }
 		available = { is_ai = no }
 		complete_effect = {
-			clr_country_flag = debug_screw_you
+			clr_country_flag = focus_flag_EAW
 			if = {
 				limit = { original_tag = GRY }
 				load_focus_tree = wfas_GRY_focus
@@ -27,10 +27,10 @@ debug_decisions = {
 				original_tag = LUS
 			}
 		}
-		visible = { NOT = { has_country_flag = debug_screw_you } }
+		visible = { NOT = { has_country_flag = focus_flag_EAW } }
 		available = { is_ai = no }
 		complete_effect = {
-			set_country_flag = debug_screw_you
+			set_country_flag = focus_flag_EAW
 			if = {
 				limit = { original_tag = GRY }
 				load_focus_tree = GRY_focus
@@ -62,9 +62,9 @@ debug_decisions = {
 		allowed = { original_tag = GRY }
 		visible = { has_country_leader = { character = GRY_borad_grifnitsky } }
 		complete_effect = {
-			add_timed_idea = { idea = GRY_coronation_costs_1_temp months = 9 }
+			add_timed_idea = { idea = GRY_coronation_costs_1_temp months = 3 }
 			add_timed_idea = { idea = GRY_coronation_costs_2_temp months = 6 }
-			add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 3 }
+			add_timed_idea = { idea = GRY_coronation_costs_3_temp months = 9 }
 			add_timed_idea = { idea = GRY_coronation_costs_4_temp months = 3 }
 		}
 	}

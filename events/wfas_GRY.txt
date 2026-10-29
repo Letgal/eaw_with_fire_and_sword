@@ -694,7 +694,7 @@ country_event = {
 	}
 
 	option = {
-		name = WFAS_gryphia.15.a
+		name = WFAS_gryphia.16.a
 		custom_effect_tooltip = refund_tt
 		add_political_power = var:marry_cost_@FROM
 		if = {
