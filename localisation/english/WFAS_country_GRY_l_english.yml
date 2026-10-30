@@ -198,6 +198,16 @@
  wfas_GRY_cultural_revival: "Cultural Revival"
  wfas_GRY_cultural_programs_idea: "Cultural Programs"
 
+  # HRYF_MARRIAGE
+  GRY_AVI_protectionism: "Protectionism"
+  GRY_AVI_princely_academy_of_philosophy: "The Princely Academy of Philosophy"
+  GRY_AVI_leverage_over_nobility: "Leverage over the Nobility"
+  GRY_ARA_tasting_the_vinko: "Tasting the Wine"
+  GRY_ARA_vinko_industry: "Wine Industry"
+  GRY_ARA_narodna_varta: "Narodna Varta"
+  GRY_ARA_cult_of_speed: "$GRY_ARA_focus_3$"
+  GRY_ARA_benessere: "$GRY_ARA_focus_4$"
+
   # Economic
   GRY_srodna_pratsya: "Srodna Pratsya" # Skovoroda's 'Congenial Work'
   GRY_ready_for_the_modernity: "Ready for the Demands of Modernity"
@@ -327,6 +337,10 @@
  WFAS_gryphia.19.t: "A Bitter Disappointment"
  WFAS_gryphia.19.d: "Borad has failed to marry his bride."
  WFAS_gryphia.19.a: "What a shame."
+
+ WFAS_gryphia.20.t: "A Ball"
+ WFAS_gryphia.20.d: "A happy event. Let's do this every year."
+ WFAS_gryphia.20.a: ":)"
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.

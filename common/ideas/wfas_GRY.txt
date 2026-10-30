@@ -188,6 +188,73 @@ ideas = {
 			}
 		}
 
+		# HRYF_MARRIAGE
+		GRY_AVI_protectionism = {
+			# focus: GRY_AVI_focus_1
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		GRY_AVI_princely_academy_of_philosophy = {
+			# focus: GRY_AVI_focus_3
+			picture = PLACEHOLDER_idea_icon
+			modifier = { research_speed_factor = 0.1 }
+			# (*) to finalize: thaumaturgical special project speed
+		}
+		GRY_AVI_leverage_over_nobility = {
+			# focus: GRY_AVI_focus_4
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				political_power_factor = 0.15
+				subjects_autonomy_gain = -0.05
+			}
+		}
+		GRY_ARA_tasting_the_vinko = {
+			# focus: GRY_ARA_focus_1
+			picture = PLACEHOLDER_idea_icon
+			modifier = { stability_weekly = -0.05 }
+		}
+		GRY_ARA_vinko_industry = {
+			# (*) replaces `tasting_the_vinko` after ca. 200 days
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_factor = 0.05
+				trade_opinion_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		GRY_ARA_narodna_varta = {
+			# focus: GRY_ARA_focus_2
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.2
+				resistance_damage_to_garrison = -0.1
+				resistance_growth = -0.1
+				enemy_operative_detection_chance_factor = 0.1
+			}
+		}
+		GRY_ARA_cult_of_speed = {
+			# focus: GRY_ARA_focus_3
+			picture = PLACEHOLDER_idea_icon
+			modifier = { army_speed_factor = 0.05 }
+			# (*) add more, look for other `_speed_factor`s
+		}
+		GRY_ARA_benessere = {
+			# focus: GRY_ARA_focus_4
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				political_power_gain = 0.05
+				democratic_drift = 0.05
+				monthly_population = 0.15
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
 		# HRYF_ECONOMIC
 		GRY_srodna_pratsya_1 = {
 			# focus: GRY_community_creation

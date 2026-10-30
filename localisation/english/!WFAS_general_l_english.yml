@@ -24,6 +24,7 @@
 ### TOOLTIPS ###
  EFFECT_UNLOCK_DECISION_FREE: "Unlocks £decision_icon_free free decision: $NAME|H$."
  EFFECT_UNLOCK_DECISION_SUBCATEGORY: "Unlocks $NAME|H$ £decision_icon_small decisions in the $CATEGORY|H$ category."
+ EFFECT_UNLOCK_DECISION_SUBCATEGORY_NULL: "Unlocks £decision_icon_small decisions in the $CATEGORY|H$ category."
  has_happened_tt: "§HHas happened:§!\n" # (*) stolen from my RCW mod :)
  refund_tt: "§HRefunded:§!\n"
 

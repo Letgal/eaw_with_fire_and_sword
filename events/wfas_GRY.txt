@@ -781,5 +781,23 @@ country_event = {
 		add_political_power = -999
 	}
 }
+country_event = {
+	id = WFAS_gryphia.20 # AVI: A Ball
+	title = WFAS_gryphia.20.t
+	desc = WFAS_gryphia.20.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.20' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.20.a
+		add_political_power = 50
+		add_stability = 0.05
+		hidden_effect = { country_event = { id = WFAS_gryphia.20 years = 1 } }
+	}
+}
 
 # (*) add narrative & flavor events for monarchy & republic. ~ L.H.
