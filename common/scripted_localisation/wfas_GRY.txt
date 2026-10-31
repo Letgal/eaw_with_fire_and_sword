@@ -5,152 +5,152 @@ defined_text = {
 			tag = ARA
 			has_country_leader = { character = ARA_margareth_featherin }
 		}
-		localization_key = GRY_margareth_ruling
+		localization_key = ARA_margareth_name_title
 	}
 	text = {
 		trigger = {
 			tag = ARA
 			has_character = ARA_margareth_featherin
 		}
-		localization_key = GRY_margareth
+		localization_key = ARA_margareth_name
 	}
 	text = {
 		trigger = {
 			tag = AVI
 			has_country_leader = { character = AVI_lady_katrina_avian }
 		}
-		localization_key = GRY_katrina_ruling
+		localization_key = AVI_katrina_name_title
 	}
 	text = {
 		trigger = {
 			tag = AVI
 			has_character = AVI_lady_katrina_avian
 		}
-		localization_key = GRY_katrina
+		localization_key = AVI_katrina_name
 	}
 	text = {
 		trigger = {
 			tag = BAN
 			has_country_leader = { character = BAN_cyrille_bluecrest }
 		}
-		localization_key = GRY_cyrille_ruling
+		localization_key = BAN_cyrille_name_title
 	}
 	text = {
 		trigger = {
 			tag = BAN
 			has_character = BAN_cyrille_bluecrest
 		}
-		localization_key = GRY_cyrille
+		localization_key = BAN_cyrille_name
 	}
 	text = {
 		trigger = {
 			tag = CYA
 			has_country_leader = { character = CYA_countess_taillow_sumpfkiel }
 		}
-		localization_key = GRY_taillow_ruling
+		localization_key = CYA_taillow_name_title
 	}
 	text = {
 		trigger = {
 			tag = CYA
 			has_character = CYA_countess_taillow_sumpfkiel
 		}
-		localization_key = GRY_taillow
+		localization_key = CYA_taillow_name
 	}
 	text = {
 		trigger = { tag = EQS }
-		localization_key = EQS_princess_luna
+		localization_key = EQS_princess_luna_name
 	}
 	text = {
 		trigger = {
 			tag = FAL
 			has_country_leader = { character = FAL_princess_maximilliana }
 		}
-		localization_key = GRY_maximilliana_ruling
+		localization_key = FAL_maximilliana_name_title
 	}
 	text = {
 		trigger = {
 			tag = FAL
 			has_character = FAL_princess_maximilliana
 		}
-		localization_key = GRY_maximilliana
+		localization_key = FAL_maximilliana_name
 	}
 	text = {
 		trigger = {
 			tag = FLO
 			has_country_leader = { character = FLO_anna_de_indigo }
 		}
-		localization_key = GRY_anna_ruling
+		localization_key = FLO_anna_name_title
 	}
 	text = {
 		trigger = {
 			tag = FLO
 			has_character = FLO_anna_de_indigo
 		}
-		localization_key = GRY_anna
+		localization_key = FLO_anna_name
 	}
 	text = {
 		trigger = { tag = HIP }
-		localization_key = HIP_queen_novo
+		localization_key = HIP_queen_novo_name
 	}
 	text = {
 		trigger = { tag = NCH }
-		localization_key = NCH_queen_gytha
+		localization_key = NCH_queen_gytha_name
 	}
 	text = {
 		trigger = {
 			OR = { tag = JER tag = MER }
 			has_country_leader = { character = JER_vivienne_discret }
 		}
-		localization_key = GRY_vivienne_ruling
+		localization_key = JER_vivienne_name_title # (>) for Queen; add Empress
 	}
 	text = {
 		trigger = {
 			OR = { tag = JER tag = MER }
 			has_character = JER_vivienne_discret
 		}
-		localization_key = GRY_vivienne
+		localization_key = JER_vivienne_name
 	}
 	text = {
 		trigger = {
 			tag = KAT
 			has_country_leader = { character = KAT_princess_diellza_von_katerinburg }
 		}
-		localization_key = GRY_diellza_ruling
+		localization_key = KAT_diellza_name_title
 	}
 	text = {
 		trigger = {
 			tag = KAT
 			has_character = KAT_princess_diellza_von_katerinburg
 		}
-		localization_key = GRY_diellza
+		localization_key = KAT_diellza_name
 	}
 	text = {
 		trigger = {
 			tag = OLV
 			has_country_leader = { character = OLV_jarl_ygritte_bylgjasdottir }
 		}
-		localization_key = GRY_ygritte_ruling
+		localization_key = OLV_ygritte_name_title # (>) for Jarl; add Queen
 	}
 	text = {
 		trigger = {
 			tag = OLV
 			has_character = OLV_jarl_ygritte_bylgjasdottir
 		}
-		localization_key = GRY_ygritte
+		localization_key = OLV_ygritte_name
 	}
 	text = {
 		trigger = {
 			tag = STW
 			has_country_leader = { character = STW_regina_eagleclaw }
 		}
-		localization_key = GRY_regina_ruling
+		localization_key = STW_regina_name_title
 	}
 	text = {
 		trigger = {
 			tag = STW
 			has_character = STW_regina_eagleclaw
 		}
-		localization_key = GRY_regina
+		localization_key = STW_regina_name
 	}
 	text = {
 		trigger = {
@@ -160,7 +160,7 @@ defined_text = {
 				has_idea = TAL_duchess_ginerva_pl
 			}
 		}
-		localization_key = GRY_ginevra_ruling
+		localization_key = TAL_ginevra_name_title
 	}
 	text = {
 		trigger = {
@@ -170,11 +170,11 @@ defined_text = {
 				has_idea = TAL_duchess_ginerva_pl
 			}
 		}
-		localization_key = GRY_ginevra
+		localization_key = TAL_ginevra_name
 	}
 	text = {
 		trigger = { tag = WIT }
-		localization_key = GRY_white_star
+		localization_key = WIT_white_star_name
 	}
 }
 defined_text = {
