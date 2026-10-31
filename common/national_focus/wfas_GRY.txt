@@ -456,8 +456,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_2' (WFAS)" }
+		search_filters = { FOCUS_FILTER_RESOURCES FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_2' (WFAS)"
+			random_owned_state = { add_resource = { type = oil amount = 8 state = THIS } }
+			add_tech_bonus = { category = cat_synth_oil bonus = 1 uses = 3 }
+		}
 	}
 	focus = {
 		id = GRY_CYA_focus_3
@@ -467,8 +471,11 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_3' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_3' (WFAS)"
+			add_ideas = GRY_CYA_open_door_policy
+			# (>) decisions to recruit professionals of different races.
+		}
 	}
 	focus = {
 		id = GRY_CYA_focus_4
@@ -478,8 +485,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_4' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_4' (WFAS)"
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				if = {
+					limit = { has_intelligence_agency = no }
+					create_intelligence_agency = yes
+				}
+				add_ideas = GRY_CYA_military_intel_department_lar
+				else = { add_ideas = GRY_CYA_military_intel_department }
+			}
+		}
 	}
 	focus = {
 		id = GRY_BAN_spouse
