@@ -2,6 +2,7 @@ ideas = {
 	country = {
 		# GOTO:
 		# HRYF_MONARCHY
+		# HRYF_MARRIAGE
 		# HRYF_ECONOMIC
 
 		wfas_GRY_independent_siches = {

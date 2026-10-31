@@ -186,21 +186,22 @@ focus_tree = {
 
 	# SERFDOM_QUESTION
 	focus = {
-		id = LUS_dealing_with_the_hunger
+		id = LUS_dealing_with_the_famine
 		icon = GFX_goal_griffon_rice
 		prerequisite = { focus = LUS_create_the_diet }
 		relative_position_id = LUS_create_the_diet
 		x = -5 y = 1
 		cost = 12
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'dealing_with_the_hunger' (WFAS)" }
+		bypass = { NOT = { has_country_flag = famine } }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'dealing_with_the_famine' (WFAS)" }
 	}
 	focus = {
 		id = LUS_abolish_serfdom
 		icon = GFX_HON_peace_in_our_time
-		prerequisite = { focus = LUS_dealing_with_the_hunger }
+		prerequisite = { focus = LUS_dealing_with_the_famine }
 		mutually_exclusive = { focus = LUS_preserve_serfdom }
-		relative_position_id = LUS_dealing_with_the_hunger
+		relative_position_id = LUS_dealing_with_the_famine
 		x = -1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -209,9 +210,9 @@ focus_tree = {
 	focus = {
 		id = LUS_preserve_serfdom
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = LUS_dealing_with_the_hunger }
+		prerequisite = { focus = LUS_dealing_with_the_famine }
 		mutually_exclusive = { focus = LUS_abolish_serfdom }
-		relative_position_id = LUS_dealing_with_the_hunger
+		relative_position_id = LUS_dealing_with_the_famine
 		x = 1 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -262,14 +263,14 @@ focus_tree = {
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'defense_of_lushi' (WFAS)" }
 	}
 	focus = {
-		id = LUS_lushian_wit
+		id = LUS_lushian_ingenuity
 		icon = GFX_goal_double_research
 		prerequisite = { focus = LUS_defense_of_lushi }
 		relative_position_id = LUS_defense_of_lushi
 		x = 0 y = 2
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'lushian_wit' (WFAS)" }
+		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'lushian_ingenuity' (WFAS)" }
 	}
 	focus = {
 		id = LUS_revise_the_levy_system
@@ -360,7 +361,6 @@ focus_tree = {
 		x = -4 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'airforce_foundations' (WFAS)" }
 	}
 	focus = {
@@ -371,7 +371,6 @@ focus_tree = {
 		x = 4 y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		available = { has_country_leader = { character = LUS_prince_gerar_whitecrest } }
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'navy_foundations' (WFAS)" }
 	}
 
