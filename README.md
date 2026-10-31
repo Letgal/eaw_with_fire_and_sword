@@ -6,4 +6,6 @@
 (possible `[PCWM]` stands for *Prywhenian Civil War Module*&trade;)
 + `(WFAS [PCWM] ~)` – WFAS change to an EAW file
 + `(!)` – error
++ `(?)` – needs or may need a readjustment
++ `(>)` – to do
 + `(*)` – other note

@@ -6,7 +6,7 @@
 
 	fallback_name = "Peasant Levy"
 	#ordered = {
-	#	# (*) kept from EAW. replace later. ~ L.H.
+	#	# (>) kept from EAW. replace later. ~ L.H.
 	#	1 = { "%dst Peasant Group of Talvona" }
 	#	2 = { "%dnd Peasant Group of Gryphem" }
 	#	3 = { "%drd Peasant Group of Lumium" }
@@ -28,7 +28,7 @@ LUS_MIL_01 = {
 
 	fallback_name = "%d. Militia Brigade"
 	ordered = {
-		# (*) kept from EAW. replace later. ~ L.H.
+		# (>) kept from EAW. replace later. ~ L.H.
 		1 = { "%dst Militia Brigade 'Strong'" }
 		2 = { "%dnd Militia Brigade 'Loyal'" }
 		3 = { "%drd Militia Brigade 'Courteous'" }
@@ -82,7 +82,7 @@ LUS_KNI_01 = {
 
 	fallback_name = "%d. Hussar Regiment"
 	ordered = {
-		# (*) kept from EAW. replace later. ~ L.H.
+		# (>) kept from EAW. replace later. ~ L.H.
 		1 = { "Guards of Lumium" }
 		2 = { "Order of the Lucky Clover" }
 		3 = { "Order of the Green Knights" }
