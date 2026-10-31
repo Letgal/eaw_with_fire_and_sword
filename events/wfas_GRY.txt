@@ -751,8 +751,22 @@ country_event = {
 		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } } }
 	}
 	desc = {
+		text = WFAS_gryphia.18.d_MER
+		trigger = {
+			var:global.hryf_spouse_TAG = {
+				tag = MER
+				event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+			}
+		}
+	}
+	desc = {
 		text = WFAS_gryphia.18.d_JER
-		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = JER_vivienne_discret } } }
+		trigger = {
+			var:global.hryf_spouse_TAG = {
+				tag = JER
+				event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+			}
+		}
 	}
 	picture = GFX_event_griffon_mountain
 
@@ -782,9 +796,50 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.20 # AVI: A Ball
+	id = WFAS_gryphia.20 # Happy Married Life Forever
 	title = WFAS_gryphia.20.t
-	desc = WFAS_gryphia.20.d
+	desc = {
+		text = WFAS_gryphia.20.d_AVI
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian } } }
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_ARA
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = ARA_margareth_featherin } } }
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_CYA
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel } } }
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_BAN
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest } } }
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_STW
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = STW_regina_eagleclaw } } }
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_KAT
+		trigger = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } } }
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_MER
+		trigger = {
+			var:global.hryf_spouse_TAG = {
+				tag = MER
+				event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+			}
+		}
+	}
+	desc = {
+		text = WFAS_gryphia.20.d_JER
+		trigger = {
+			var:global.hryf_spouse_TAG = {
+				tag = JER
+				event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+			}
+		}
+	}
 	picture = GFX_event_griffon_mountain
 
 	fire_only_once = no
@@ -794,9 +849,24 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.20.a
+	}
+}
+country_event = {
+	id = WFAS_gryphia.21 # AVI: A Ball
+	title = WFAS_gryphia.21.t
+	desc = WFAS_gryphia.21.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.21' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.21.a
 		add_political_power = 50
 		add_stability = 0.05
-		hidden_effect = { country_event = { id = WFAS_gryphia.20 years = 1 } }
+		hidden_effect = { country_event = { id = WFAS_gryphia.21 years = 1 } }
 	}
 }
 
