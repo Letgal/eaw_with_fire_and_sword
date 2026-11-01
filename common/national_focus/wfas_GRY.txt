@@ -407,7 +407,8 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_3' (WFAS)"
-			add_ideas = GRY_ARA_cult_of_speed
+			custom_effect_tooltip = country_speeds_up
+			hidden_effect = { add_ideas = GRY_ARA_cult_of_speed }
 		}
 	}
 	focus = {
@@ -529,7 +530,34 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_1' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_1' (WFAS)"
+			add_ideas = GRY_BAN_modern_chivalry
+			division_template = {
+				name = "Knights Bachelor"
+				priority = 2
+				division_names_group = GRY_KNI_01
+				regiments = {
+					knights = { x = 0 y = 0 }
+					knights = { x = 0 y = 1 }
+					knights = { x = 0 y = 2 }
+					knights = { x = 0 y = 3 }
+					knights = { x = 1 y = 0 }
+					knights = { x = 1 y = 1 }
+					knights = { x = 1 y = 2 }
+					knights = { x = 1 y = 3 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+			create_unit = { # (!)
+				division = "name = \"Knights Bachelor\" division_template = \"Knights Bachelor\" start_experience_factor = 0.3"
+				owner = ROOT
+				count = 2
+			}
+		}
 	}
 	focus = {
 		id = GRY_BAN_focus_2
@@ -540,7 +568,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_2' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_2' (WFAS)"
+			# (>) add effects into tech.
+		}
 	}
 	focus = {
 		id = GRY_BAN_focus_3
@@ -551,7 +582,10 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_3' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_3' (WFAS)"
+			add_ideas = GRY_BAN_shaking_up_the_nobility
+		}
 	}
 	focus = {
 		id = GRY_BAN_focus_4

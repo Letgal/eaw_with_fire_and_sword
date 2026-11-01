@@ -311,6 +311,37 @@ ideas = {
 				enemy_operative_detection_chance_factor = 0.1
 			}
 		}
+		GRY_BAN_modern_chivalry = {
+			# focus: GRY_BAN_focus_1
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				modifier_army_sub_unit_knights_attack_factor = 0.1
+				modifier_army_sub_unit_knights_defence_factor = 0.1
+			}
+			research_bonus = { knights_tech = 0.2 }
+		}
+		GRY_BAN_shaking_up_the_nobility = {
+			# focus: GRY_BAN_focus_3
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_factor = -0.025
+				war_support_factor = 0.025
+				conscription_factor = 0.075
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		GRY_BAN_peace_in_the_countryside = {
+			# focus: GRY_BAN_focus_4
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industry_air_damage_factor = -0.15
+			}
+		}
 
 		# HRYF_ECONOMIC
 		GRY_srodna_pratsya_1 = {

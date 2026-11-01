@@ -315,7 +315,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = BAN }
-					has_country_leader = { character = BAN_cyrille_bluecrest }
+					has_character = BAN_cyrille_bluecrest
 				}
 				else_if = {
 					limit = { tag = CYA }
