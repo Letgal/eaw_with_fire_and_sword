@@ -267,7 +267,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = HIP }
-					has_country_leader = { character = HIP_queen_novo }
+					has_character = HIP_queen_novo
 				}
 				else_if = {
 					limit = { OR = { tag = JER tag = MER } }
@@ -279,7 +279,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = NCH }
-					has_country_leader = { character = NCH_queen_gytha }
+					has_character = NCH_queen_gytha
 				}
 				else_if = {
 					limit = { tag = OLV }
@@ -298,7 +298,7 @@ GRY_marital_matters = {
 				}
 				else_if = {
 					limit = { tag = WIT }
-					has_country_leader = { character = WIT_white_star }
+					has_character = WIT_white_star
 				}
 			}
 		}

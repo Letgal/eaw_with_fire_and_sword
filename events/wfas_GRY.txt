@@ -172,7 +172,7 @@ country_event = {
 
 	fire_only_once = no
 	is_triggered_only = yes
-	trigger = { original_tag = GRY } # (!) BAND-AID. dunno if þis'll fix it. needs testing and debugging. ~ L.H.
+	trigger = { original_tag = GRY } # (?) BAND-AID. dunno if þis'll fix it. needs testing and debugging. ~ L.H.
 
 	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.6' (WFAS)" }
 
