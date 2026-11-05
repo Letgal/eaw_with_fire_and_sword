@@ -190,6 +190,10 @@ ideas = {
 		}
 
 		# HRYF_MARRIAGE
+		GRY_AVI_spirit_1 = {
+			picture = GRY_Katya_portrait
+			modifier = { }
+		}
 		GRY_AVI_protectionism = {
 			# focus: GRY_AVI_focus_1
 			picture = PLACEHOLDER_idea_icon
@@ -213,6 +217,10 @@ ideas = {
 				political_power_factor = 0.15
 				subjects_autonomy_gain = -0.05 # (?) may need adjustment. ~ L.H.
 			}
+		}
+		GRY_ARA_spirit_1 = {
+			picture = GRY_Margo_Portrait
+			modifier = { }
 		}
 		GRY_ARA_tasting_the_vinko = {
 			# focus: GRY_ARA_focus_1
@@ -278,6 +286,10 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
+		GRY_CYA_spirit_1 = {
+			picture = GRY_Taillow_portrait
+			modifier = { }
+		}
 		GRY_CYA_open_door_policy = {
 			# focus: GRY_CYA_focus_3
 			picture = PLACEHOLDER_idea_icon
@@ -311,6 +323,10 @@ ideas = {
 				enemy_operative_detection_chance_factor = 0.1
 			}
 		}
+		GRY_BAN_spirit_1 = {
+			picture = GRY_Cyri_portrait
+			modifier = { }
+		}
 		GRY_BAN_modern_chivalry = {
 			# focus: GRY_BAN_focus_1
 			picture = PLACEHOLDER_idea_icon
@@ -341,6 +357,18 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				industry_air_damage_factor = -0.15
 			}
+		}
+		GRY_STW_spirit_1 = {
+			picture = GRY_Regina_portrait
+			modifier = { }
+		}
+		GRY_KAT_spirit_1 = {
+			picture = GRY_Sonechko_portrait
+			modifier = { }
+		}
+		GRY_JER_spirit_1 = {
+			picture = PLACEHOLDER_idea_icon
+			modifier = { }
 		}
 
 		# HRYF_ECONOMIC

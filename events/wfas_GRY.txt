@@ -778,6 +778,48 @@ country_event = {
 
 	option = {
 		name = WFAS_gryphia.18.a
+		if = {
+			limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = AVI_lady_katrina_avian } } }
+			add_ideas = GRY_AVI_spirit_1
+		}
+		if = {
+			limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = ARA_margareth_featherin } } }
+			add_ideas = GRY_ARA_spirit_1
+		}
+		if = {
+			limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = CYA_countess_taillow_sumpfkiel } } }
+			add_ideas = GRY_CYA_spirit_1
+		}
+		if = {
+			limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = BAN_cyrille_bluecrest } } }
+			add_ideas = GRY_BAN_spirit_1
+		}
+		if = {
+			limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = STW_regina_eagleclaw } } }
+			add_ideas = GRY_STW_spirit_1
+		}
+		#if = {
+		#	limit = { var:global.hryf_spouse_TAG = { event_target:hryf_spouse = { is_character = KAT_princess_diellza_von_katerinburg } } }
+		#	add_ideas = GRY_KAT_spirit_1
+		#}
+		#if = {
+		#	limit = {
+		#		var:global.hryf_spouse_TAG = {
+		#			tag = MER
+		#			event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+		#		}
+		#	}
+		#	add_ideas = GRY_JER_spirit_1
+		#}
+		#if = {
+		#	limit = {
+		#		var:global.hryf_spouse_TAG = {
+		#			tag = JER
+		#			event_target:hryf_spouse = { is_character = JER_vivienne_discret }
+		#		}
+		#	}
+		#	add_ideas = GRY_JER_spirit_1
+		#}
 	}
 }
 country_event = {
