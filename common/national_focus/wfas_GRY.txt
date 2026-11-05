@@ -282,6 +282,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -293,6 +294,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESOURCES }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_1' (WFAS)"
 			add_ideas = GRY_AVI_protectionism
@@ -311,6 +318,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_2' (WFAS)"
 			country_event = WFAS_gryphia.20
@@ -325,6 +338,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_3' (WFAS)"
 			add_research_slot = 1
@@ -339,6 +358,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_4' (WFAS)"
 			add_ideas = GRY_AVI_leverage_over_nobility
@@ -360,6 +385,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -370,6 +396,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_1' (WFAS)"
 			random_owned_state = {
@@ -392,6 +424,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_2' (WFAS)"
 			add_ideas = GRY_ARA_narodna_varta
@@ -405,6 +443,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_3' (WFAS)"
 			custom_effect_tooltip = country_speeds_up
@@ -419,6 +463,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_4' (WFAS)"
 			add_ideas = GRY_ARA_benessere
@@ -440,6 +490,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -451,6 +502,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_1' (WFAS)" }
 	}
 	focus = {
@@ -462,6 +519,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_RESOURCES FOCUS_FILTER_RESEARCH }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_2' (WFAS)"
 			random_owned_state = { add_resource = { type = oil amount = 8 state = THIS } }
@@ -476,6 +539,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_3' (WFAS)"
 			add_ideas = GRY_CYA_open_door_policy
@@ -490,6 +559,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_focus_4' (WFAS)"
 			if = {
@@ -519,6 +594,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -530,6 +606,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_1' (WFAS)"
 			add_ideas = GRY_BAN_modern_chivalry
@@ -568,6 +650,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_2' (WFAS)"
 			# (>) add effects into tech.
@@ -582,6 +670,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_3' (WFAS)"
 			add_ideas = GRY_BAN_shaking_up_the_nobility
@@ -596,6 +690,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_4' (WFAS)" }
 	}
 	focus = {
@@ -614,6 +714,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -625,6 +726,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_1' (WFAS)" }
 	}
 	focus = {
@@ -636,6 +743,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_2' (WFAS)" }
 	}
 	focus = {
@@ -647,6 +760,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_3' (WFAS)" }
 	}
 	focus = {
@@ -658,6 +777,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_4' (WFAS)" }
 	}
 	focus = {
@@ -676,6 +801,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -687,6 +813,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_1' (WFAS)" }
 	}
 	focus = {
@@ -698,6 +830,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_2' (WFAS)" }
 	}
 	focus = {
@@ -709,6 +847,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_3' (WFAS)" }
 	}
 	focus = {
@@ -720,6 +864,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_focus_4' (WFAS)" }
 	}
 	focus = {
@@ -738,6 +888,7 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'JER_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
+			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -749,6 +900,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_1' (WFAS)" }
 	}
 	focus = {
@@ -760,6 +917,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_2' (WFAS)" }
 	}
 	focus = {
@@ -771,6 +934,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_3' (WFAS)" }
 	}
 	focus = {
@@ -782,6 +951,12 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = spouse_will_complete
+			}
+		}
 		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'JER_focus_4' (WFAS)" }
 	}
 	focus = {

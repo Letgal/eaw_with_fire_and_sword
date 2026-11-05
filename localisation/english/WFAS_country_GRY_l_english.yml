@@ -482,6 +482,7 @@
 
  petition_to_archons: "Sends a petition to the Archons requesting to conduct the coronation ceremony."
  bride_yes: "§H[GRY_borad_grifnitsky.GetName]§! has found [GRY_borad_grifnitsky.GetHerselfHimself] a bride"
+ spouse_will_complete: "This focus will be started and eventually completed by your spouse"
  country_speeds_up: "[ROOT.GetNonIdeologyNameDefCap] speeds up!"
 
  modify_idea_cultural_revival: "Modify §H$wfas_GRY_cultural_revival$§! by"

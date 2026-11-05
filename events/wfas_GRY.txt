@@ -1,4 +1,5 @@
 add_namespace = WFAS_gryphia
+add_namespace = WFAS_gryphia_hidden
 
 country_event = {
 	id = WFAS_gryphia.1 # 50 Years of Hetman's Rule
@@ -871,3 +872,87 @@ country_event = {
 }
 
 # (>) add narrative & flavor events for monarchy & republic. ~ L.H.
+
+### HIDDEN EVENTS (WFAS_gryphia_hidden NAMESPACE) ###
+country_event = {
+	id = WFAS_gryphia_hidden.1 # (*) triggers the next spouse focus. emulates vanilla GER's Inner Circle mechanic. ~ L.H.
+	hidden = yes
+
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = { has_event_target = hryf_spouse }
+
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia_hidden.1' (WFAS)"
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = spouse_focus_1
+				}
+				set_variable = { spouse_focus = 1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = spouse_focus_2
+						NOT = { has_country_flag = spouse_focus_1 }
+					}
+				}
+				set_variable = { spouse_focus = 2 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = spouse_focus_3
+				}
+				set_variable = { spouse_focus = 3 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = spouse_focus_4
+						NOT = { has_country_flag = spouse_focus_3 }
+					}
+				}
+				set_variable = { spouse_focus = 4 }
+			}
+		}
+		meta_effect = {
+			debug = yes
+			N = "[?spouse_focus|0]"
+			TAG = "[?global.hryf_spouse_TAG.GetTag]"
+			text = {
+				set_country_flag = spouse_focus_[N]
+				activate_shine_on_focus = GRY_[TAG]_focus_[N]
+			}
+		}
+		country_event = { id = WFAS_gryphia_hidden.2 days = 70 }
+	}
+}
+country_event = {
+	id = WFAS_gryphia_hidden.2 # (*) completes the active spouse focus. emulates vanilla GER's Inner Circle mechanic. ~ L.H.
+	hidden = yes
+
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = { has_event_target = hryf_spouse }
+
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia_hidden.2' (WFAS)"
+		meta_effect = {
+			debug = yes
+			N = "[?spouse_focus|0]"
+			TAG = "[?global.hryf_spouse_TAG.GetTag]"
+			text = {
+				deactivate_shine_on_focus = GRY_[TAG]_focus_[N]
+				complete_national_focus = { focus = GRY_[TAG]_focus_[N] use_side_message = yes }
+				clear_variable = spouse_focus
+				#clr_country_flag = spouse_focus_[N]
+			}
+		}
+		country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 }
+	}
+}
