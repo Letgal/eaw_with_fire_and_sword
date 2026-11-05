@@ -797,7 +797,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = WFAS_gryphia.20 # Happy Married Life Forever
+	id = WFAS_gryphia.20 # Happily Ever After
 	title = WFAS_gryphia.20.t
 	desc = {
 		text = WFAS_gryphia.20.d_AVI
@@ -953,6 +953,15 @@ country_event = {
 				#clr_country_flag = spouse_focus_[N]
 			}
 		}
-		country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 }
+		if = {
+			limit = {
+				has_country_flag = spouse_focus_1
+				has_country_flag = spouse_focus_2
+				has_country_flag = spouse_focus_3
+				has_country_flag = spouse_focus_4
+			}
+			country_event = { id = WFAS_gryphia.20 days = 140 }
+		}
+		else = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 	}
 }

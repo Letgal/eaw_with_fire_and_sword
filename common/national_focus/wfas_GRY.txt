@@ -326,7 +326,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_focus_2' (WFAS)"
-			country_event = WFAS_gryphia.20
+			country_event = WFAS_gryphia.21
 		}
 	}
 	focus = {
