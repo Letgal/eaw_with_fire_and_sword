@@ -36,7 +36,7 @@
 
 ### CHARACTERS ###
  ## GRY: COUNTRY LEADERS
-  GRY_hetman_calas_bulba: "Kalas Bulba"
+  GRY_hetman_calas_bulba: "Hetman Kalas Bulba"
   GRY_pavel_vereskopadsky: "Pavlo Vereskopadsky"
   GRY_yeven_krawvelets: "Yevhen Kravelets"
   GRY_borad_grifnitsky: "Borad Hryfnytsky"
@@ -51,3 +51,10 @@
  EFFECT_UNLOCK_DECISION: "Unlocks £decision_icon_small decision: $NAME|H$.$EFFECT$"
  EFFECT_UNLOCK_DECISION_BOP: "Unlocks £decision_icon_small Balance of Power decision: $NAME|H$.$EFFECT$"
  EFFECT_UNLOCK_DECISION_CATEGORY: "Unlocks $NAME|H$ £decision_icon_small decisions."
+
+ BYPASS_FOCUS: "§OBypass§!"
+ BYPASS_FOCUS_TRIGER: "§TThe following will §Obypass§! the focus$AUTOMATIC_BYPASS_DISABLED$:§!" # (RCW) updated
+ FOCUS_WILL_PAUSE: "§gThis focus will §Ypause§! if the requirements are not met.§!" # (RCW)
+ FOCUS_WILL_CANCEL: "§gThis focus will cancel if the requirements are not met.§!" # (RCW)
+ FOCUS_WILL_BYPASS_IF_UNAVAILABLE: "§gThis focus will §Obypass§! if the requirements are not met.§!" # (RCW)
+ FOCUS_WILL_CONTINUE: "§gThis focus will §Gcontinue§! even when the requirements are no longer met.§!" # (RCW)

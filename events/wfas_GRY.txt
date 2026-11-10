@@ -90,7 +90,11 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.4' (WFAS)" }
+	immediate = {
+		log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.4' (WFAS)"
+		set_country_flag = keep_focuses_unlocked
+		mark_focus_tree_layout_dirty = yes
+	}
 
 	option = {
 		name = WFAS_gryphia.4.a
@@ -608,7 +612,7 @@ country_event = {
 				STW_regina_eagleclaw = { save_global_event_target_as = hryf_spouse }
 			}
 		}
-		log = "([GetDate]) [ROOT.GetTag]: [hryf_spouse.GetName] at [?global.hryf_spouse_TAG:GetTag] saved as event target 'hryf_spouse' (WFAS)"
+		log = "([GetDate]) [ROOT.GetTag]: saved [hryf_spouse.GetName] @ [?global.hryf_spouse_TAG:GetTag] as event target 'hryf_spouse' (WFAS)"
 	}
 
 	option = {
