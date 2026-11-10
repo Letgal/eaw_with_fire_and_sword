@@ -41,6 +41,7 @@ debug_decisions = {
 			}
 		}
 	}
+	wfas_refresh_country_focus = { complete_effect = { mark_focus_tree_layout_dirty = yes } }
 
 	wfas_GRY_chorna_rada_status = {
 		allowed = { original_tag = GRY }
@@ -142,10 +143,12 @@ debug_decisions = {
 		allowed = { original_tag = GRY }
 		visible = {
 			has_country_leader = { character = GRY_borad_grifnitsky }
-			has_country_flag = hryf_marriage_unlocked
+			OR = {
+				has_country_flag = hryf_marriage_unlocked
+				has_event_target = hryf_spouse
+			}
 		}
 		available = {
-			has_country_flag = hryf_marriage_unlocked
 			has_event_target = hryf_spouse
 			var:global.hryf_spouse_TAG = {
 				event_target:hryf_spouse = {
@@ -168,10 +171,18 @@ debug_decisions = {
 		allowed = { original_tag = GRY }
 		visible = {
 			has_country_leader = { character = GRY_borad_grifnitsky }
-			has_event_target = hryf_spouse
+			OR = {
+				has_country_flag = hryf_marriage_unlocked
+				has_event_target = hryf_spouse
+			}
 			NOT = { has_country_flag = hryf_spouse_focuses_faster }
 		}
-		available = { has_event_target = hryf_spouse }
+		available = {
+			OR = {
+				has_country_flag = hryf_marriage_unlocked
+				has_event_target = hryf_spouse
+			}
+		}
 		complete_effect = { set_country_flag = hryf_spouse_focuses_faster }
 	}
 	wfas_GRY_hryf_spouse_focuses_faster_NOT = {

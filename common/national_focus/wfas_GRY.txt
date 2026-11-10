@@ -1658,7 +1658,7 @@ focus_tree = {
 		id = GRY_vereskopadsky_wins
 		icon = GFX_focus_GRY_Veresk_trap
 		allow_branch = {
-			has_completed_focus = GRY_the_raid
+			has_country_flag = keep_focuses_unlocked
 			NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_kravelets_wins }
 		}
 		prerequisite = { focus = GRY_convene_the_chorna_rada }
@@ -1691,7 +1691,7 @@ focus_tree = {
 		id = GRY_kravelets_wins
 		icon = GFX_goal_ideology_national_populist
 		allow_branch = {
-			has_completed_focus = GRY_the_raid
+			has_country_flag = keep_focuses_unlocked
 			NOT = { has_completed_focus = GRY_hryfnytsky_wins has_completed_focus = GRY_vereskopadsky_wins }
 		}
 		prerequisite = { focus = GRY_convene_the_chorna_rada }

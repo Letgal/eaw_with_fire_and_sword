@@ -571,7 +571,6 @@ country_event = {
 		text = WFAS_gryphia.15.d_STW
 		trigger = { FROM = { tag = STW } }
 	}
-	desc = WFAS_gryphia.15.d
 	picture = GFX_event_griffon_mountain
 
 	fire_only_once = yes
@@ -712,6 +711,8 @@ country_event = {
 			add_equipment_to_stockpile = { type = infantry_equipment amount = 100 producer = EQS }
 			custom_effect_tooltip = { localization_key = EFFECT_ADD_EQUIPMENT_TO_STOCKPILE_FOREIGN_PRODUCER AMOUNT = 1 PRODUCER = [EQS.GetAdjective] EQUIPMENT = explosive_cake }
 		}
+	}
+}
 country_event = {
 	id = WFAS_gryphia.17 # One Lonely Cossack
 	title = WFAS_gryphia.17.t
@@ -809,26 +810,19 @@ country_event = {
 		#if = {
 		#	limit = {
 		#		var:global.hryf_spouse_TAG = {
-		#			tag = MER
+		#			OR = { tag = MER tag = JER }
 		#			event_target:hryf_spouse = { is_character = JER_vivienne_discret }
 		#		}
 		#	}
 		#	add_ideas = GRY_JER_spirit_1
 		#}
-		#if = {
-		#	limit = {
-		#		var:global.hryf_spouse_TAG = {
-		#			tag = JER
-		#			event_target:hryf_spouse = { is_character = JER_vivienne_discret }
-		#		}
-		#	}
-		#	add_ideas = GRY_JER_spirit_1
-		#}
-		if = {
-			limit = { has_country_flag = hryf_spouse_focuses_faster }
-			country_event = { id = WFAS_gryphia_hidden.1 days = 3 }
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = hryf_spouse_focuses_faster }
+				country_event = { id = WFAS_gryphia_hidden.1 days = 3 }
+			}
+			else = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
-		else = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 	}
 }
 country_event = {
