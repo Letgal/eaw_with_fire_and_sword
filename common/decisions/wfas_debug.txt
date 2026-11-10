@@ -145,4 +145,20 @@ debug_decisions = {
 		}
 		complete_effect = { mark_focus_tree_layout_dirty = yes }
 	}
+	wfas_GRY_hryf_spouse_focuses_faster = {
+		allowed = { original_tag = GRY }
+		visible = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			NOT = { has_country_flag = hryf_spouse_focuses_faster }
+		}
+		complete_effect = { set_country_flag = hryf_spouse_focuses_faster }
+	}
+	wfas_GRY_hryf_spouse_focuses_faster_NOT = {
+		allowed = { original_tag = GRY }
+		visible = {
+			has_country_leader = { character = GRY_borad_grifnitsky }
+			has_country_flag = hryf_spouse_focuses_faster
+		}
+		complete_effect = { clr_country_flag = hryf_spouse_focuses_faster }
+	}
 }

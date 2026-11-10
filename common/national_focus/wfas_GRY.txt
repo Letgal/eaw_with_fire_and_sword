@@ -282,7 +282,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'AVI_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -385,7 +384,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -490,7 +488,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'CYA_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -594,7 +591,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -714,7 +710,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -801,7 +796,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'KAT_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {
@@ -888,7 +882,6 @@ focus_tree = {
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'JER_spouse' (WFAS)"
 			country_event = WFAS_gryphia.18
-			hidden_effect = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 		}
 	}
 	focus = {

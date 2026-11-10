@@ -820,6 +820,11 @@ country_event = {
 		#	}
 		#	add_ideas = GRY_JER_spirit_1
 		#}
+		if = {
+			limit = { has_country_flag = hryf_spouse_focuses_faster }
+			country_event = { id = WFAS_gryphia_hidden.1 days = 3 }
+		}
+		else = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 	}
 }
 country_event = {
@@ -971,7 +976,11 @@ country_event = {
 				activate_shine_on_focus = GRY_[TAG]_focus_[N]
 			}
 		}
-		country_event = { id = WFAS_gryphia_hidden.2 days = 70 }
+		if = {
+			limit = { has_country_flag = hryf_spouse_focuses_faster }
+			country_event = { id = WFAS_gryphia_hidden.2 days = 2 }
+		}
+		else = { country_event = { id = WFAS_gryphia_hidden.2 days = 70 } }
 	}
 }
 country_event = {
@@ -1001,8 +1010,22 @@ country_event = {
 				has_country_flag = spouse_focus_2
 				has_country_flag = spouse_focus_3
 				has_country_flag = spouse_focus_4
+				has_country_flag = hryf_spouse_focuses_faster
+			}
+			country_event = { id = WFAS_gryphia.20 days = 6 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = spouse_focus_1
+				has_country_flag = spouse_focus_2
+				has_country_flag = spouse_focus_3
+				has_country_flag = spouse_focus_4
 			}
 			country_event = { id = WFAS_gryphia.20 days = 140 }
+		}
+		else_if = {
+			limit = { has_country_flag = hryf_spouse_focuses_faster }
+			country_event = { id = WFAS_gryphia_hidden.1 days = 3 }
 		}
 		else = { country_event = { id = WFAS_gryphia_hidden.1 days = 75 random_days = 45 } }
 	}
