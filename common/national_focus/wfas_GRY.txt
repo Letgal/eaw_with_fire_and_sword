@@ -401,15 +401,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'ARA_focus_1' (WFAS)"
-			random_owned_state = {
-				# (>) make it twice
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			random_industrial_complex_plus_build_slot = yes
+			random_industrial_complex_plus_build_slot = yes
 			add_ideas = GRY_ARA_tasting_the_vinko
 		}
 	}
@@ -600,7 +593,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
@@ -653,7 +645,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_2' (WFAS)"
-			# (>) add effects into tech.
+			set_technology = { WFAS_mountain_warfare = 1 }
+			# (>) add tooltip with modifiers.
 		}
 	}
 	focus = {
@@ -664,7 +657,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
@@ -684,14 +676,16 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
 				tooltip = spouse_will_complete
 			}
 		}
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_4' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'BAN_focus_4' (WFAS)"
+			add_ideas = GRY_BAN_peace_in_the_countryside
+		}
 	}
 	focus = {
 		id = GRY_STW_spouse
@@ -719,14 +713,16 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
 				tooltip = spouse_will_complete
 			}
 		}
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_1' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_1' (WFAS)"
+			add_ideas = GRY_STW_subsidies_for_the_farmers
+		}
 	}
 	focus = {
 		id = GRY_STW_focus_2
@@ -736,14 +732,16 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
 				tooltip = spouse_will_complete
 			}
 		}
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_2' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_2' (WFAS)"
+			add_ideas = GRY_STW_council_of_nobles
+		}
 	}
 	focus = {
 		id = GRY_STW_focus_3
@@ -753,14 +751,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
 				tooltip = spouse_will_complete
 			}
 		}
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_3' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_3' (WFAS)"
+			add_ideas = GRY_STW_younger_sister
+			# (>) NAP decisions with non-radical countries.
+		}
 	}
 	focus = {
 		id = GRY_STW_focus_4
@@ -770,14 +771,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		available = {
 			custom_trigger_tooltip = {
 				always = no
 				tooltip = spouse_will_complete
 			}
 		}
-		completion_reward = { log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_4' (WFAS)" }
+		completion_reward = {
+			log = "([GetDate]) [ROOT.GetTag]: focus 'STW_focus_4' (WFAS)"
+			add_ideas = GRY_STW_radio_eney
+			# (>) bonuses to radio tech and radio special projects (RADAR).
+			# (>) maybe events reacting to the situations in the world.
+		}
 	}
 	focus = {
 		id = GRY_KAT_spouse

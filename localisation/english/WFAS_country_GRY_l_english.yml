@@ -207,6 +207,10 @@
   GRY_BAN_shaking_up_the_nobility: "Shaking Up the Nobility"
   GRY_BAN_peace_in_the_countryside: "Peace in the Countryside"
   GRY_STW_spirit_1: "$STW_regina_name_title$"
+  GRY_STW_subsidies_for_the_farmers: "$GRY_STW_focus_1$"
+  GRY_STW_council_of_nobles: "$GRY_STW_focus_2$"
+  GRY_STW_younger_sister: "$GRY_STW_focus_3$"
+  GRY_STW_radio_eney: "$GRY_STW_focus_4$"
   GRY_KAT_spirit_1: "$KAT_diellza_name_title$"
   GRY_JER_spirit_1: "$JER_vivienne_name_title$"
 
@@ -354,6 +358,10 @@
  WFAS_gryphia.21.t: "A Ball"
  WFAS_gryphia.21.d: "A happy event. Let's do this every year."
  WFAS_gryphia.21.a: ":)"
+
+ WFAS_gryphia.22.t: "The [ROOT.GetAdjective] Wine Industry"
+ WFAS_gryphia.22.d: "Vínko moje milé, vínečko moje sladučké <333"
+ WFAS_gryphia.22.a: "Pil by som ho a pil..."
 
  ## CHORNA RADA
  # I wanna die. ~ L.H.

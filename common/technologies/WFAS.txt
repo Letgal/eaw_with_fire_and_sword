@@ -1,0 +1,19 @@
+technologies = {
+	WFAS_mountain_warfare = {
+		allow = { always = no }
+		category_all_infantry = {
+			# (?) dunno about these. ~ L.H.
+			attrition = -0.1
+			combat_width_factor = -0.16666
+			# (*) these below do work. ~ L.H.
+			hills = {
+				movement = 0.05
+				defence = 0.05
+			}
+			mountain = {
+				attack = 0.05
+				defence = 0.1
+			}
+		}
+	}
+}

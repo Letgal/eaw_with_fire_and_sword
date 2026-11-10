@@ -225,10 +225,10 @@ ideas = {
 		GRY_ARA_tasting_the_vinko = {
 			# focus: GRY_ARA_focus_1
 			picture = PLACEHOLDER_idea_icon
-			modifier = { stability_weekly = -0.05 }
+			modifier = { stability_weekly = -0.0005 }
+			on_add = { country_event = { id = WFAS_gryphia.22 days = 180 random_days = 40 } }
 		}
 		GRY_ARA_vinko_industry = {
-			# (>) replaces `tasting_the_vinko` after ca. 200 days
 			picture = PLACEHOLDER_idea_icon
 			modifier = {
 				stability_factor = 0.05
@@ -273,7 +273,6 @@ ideas = {
 				refit_speed = 0.05
 				air_maximum_speed_factor = 0.05
 			}
-			# (>) add more, look for other `_speed_factor`s
 		}
 		GRY_ARA_benessere = {
 			# focus: GRY_ARA_focus_4
@@ -361,6 +360,47 @@ ideas = {
 		GRY_STW_spirit_1 = {
 			picture = GRY_Regina_portrait
 			modifier = { }
+		}
+		GRY_STW_subsidies_for_the_farmers = {
+			# focus: GRY_STW_focus_1
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				political_power_factor = 0.05
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				custom_modifier_tooltip = strawberry_production_tt
+			}
+		}
+		GRY_STW_council_of_nobles = {
+			# focus: GRY_STW_focus_2
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				political_power_factor = 0.15 # (?) cut one to 0.1? ~ L.H.
+				subjects_autonomy_gain = -0.05 # (?) may need adjustment. ~ L.H.
+				democratic_drift = 0.05
+			}
+		}
+		GRY_STW_younger_sister = {
+			# focus: GRY_STW_focus_3
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				opinion_gain_monthly_factor = 0.2
+				improve_relations_maintain_cost_factor = -0.5
+				fascism_acceptance = 25 # (?) should be the other way around? ~ L.H.
+				communism_acceptance = 25
+				democratic_acceptance = 25
+				neutrality_acceptance = 25
+			}
+		}
+		GRY_STW_radio_eney = {
+			# focus: GRY_STW_focus_4
+			picture = PLACEHOLDER_idea_icon
+			modifier = {
+				stability_weekly = 0.001
+				political_power_factor = 0.15 # (?) cut one to 0.1? ~ L.H.
+				democratic_drift = 0.05
+			}
 		}
 		GRY_KAT_spirit_1 = {
 			picture = GRY_Sonechko_portrait

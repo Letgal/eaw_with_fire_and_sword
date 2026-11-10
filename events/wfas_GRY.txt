@@ -921,6 +921,22 @@ country_event = {
 		hidden_effect = { country_event = { id = WFAS_gryphia.21 years = 1 } }
 	}
 }
+country_event = {
+	id = WFAS_gryphia.22 # ARA: Wine Industry
+	title = WFAS_gryphia.22.t
+	desc = WFAS_gryphia.22.d
+	picture = GFX_event_griffon_mountain
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = { log = "([GetDate]) [ROOT.GetTag]: event 'WFAS_gryphia.22' (WFAS)" }
+
+	option = {
+		name = WFAS_gryphia.22.a
+		swap_ideas = { remove_idea = GRY_ARA_tasting_the_vinko add_idea = GRY_ARA_vinko_industry }
+	}
+}
 
 # (>) add narrative & flavor events for monarchy & republic. ~ L.H.
 

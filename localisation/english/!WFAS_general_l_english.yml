@@ -13,6 +13,10 @@
  FOCUS_FILTER_AIR_DOCTRINE: "Air Doctrine" # (RCW)
  FOCUS_FILTER_NO_EFFECTS: "No Effects" # (RCW)
 
+### MODIFIERS & THEIR LOC ###
+ strawberry_production: "Strawberry Production Rate" # (>) add a text icon, haha. ~ L.H.
+ strawberry_production_tt: "$strawberry_production$: §G+10%§!"
+
 ### OPINION MODIFIERS ###
  opinion_prywhenians: "Filthy Prywhenians"
  opinion_pry_commies: "Vile Communists" # or Treacherous
