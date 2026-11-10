@@ -240,3 +240,11 @@ defined_text = {
 		localization_key = GRY_marriage_proposal_WIT_desc
 	}
 }
+defined_text = {
+	name = GetCyrilleState
+	text = {
+		trigger = { has_country_leader = { character = BAN_cyrille_bluecrest } }
+		localization_key = GRY_marriage_proposal_BAN_desc_1
+	}
+	text = { localization_key = GRY_marriage_proposal_BAN_desc_2 }
+}
