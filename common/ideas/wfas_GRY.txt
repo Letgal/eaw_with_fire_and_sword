@@ -122,22 +122,22 @@ ideas = {
 		GRY_coronation_costs_1_temp = {
 			name = GRY_coronation_costs
 			picture = PLACEHOLDER_idea_icon
-			modifier = { consumer_goods_factor = 0.05 }
+			modifier = { consumer_goods_factor = 0.025 }
 		}
 		GRY_coronation_costs_2_temp = {
 			name = GRY_coronation_costs
 			picture = PLACEHOLDER_idea_icon
-			modifier = { consumer_goods_factor = 0.15 }
+			modifier = { consumer_goods_factor = 0.075 }
 		}
 		GRY_coronation_costs_3_temp = {
 			name = GRY_coronation_costs
 			picture = PLACEHOLDER_idea_icon
-			modifier = { consumer_goods_factor = 0.25 }
+			modifier = { consumer_goods_factor = 0.15 }
 		}
 		GRY_coronation_costs_4_temp = {
 			name = GRY_coronation_costs
 			picture = PLACEHOLDER_idea_icon
-			modifier = { consumer_goods_factor = 0.1 }
+			modifier = { consumer_goods_factor = 0.06 }
 		}
 		GRY_donations_to_the_church = {
 			picture = PLACEHOLDER_idea_icon

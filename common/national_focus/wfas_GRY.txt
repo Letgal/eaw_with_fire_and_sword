@@ -227,11 +227,50 @@ focus_tree = {
 			has_country_leader = { character = GRY_borad_grifnitsky }
 			has_country_flag = hryf_chose_monarchy
 			has_country_flag = coronation_costs_decided
+			if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 1 } }
+				has_political_power > 19.999
+			}
+			else_if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 2 } }
+				has_political_power > 79.999
+			}
+			else_if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 3 } }
+				has_political_power > 139.999
+			}
+			else_if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 4 } }
+				has_political_power > 59.999
+			}
 		}
+		continue_if_invalid = yes
 		search_filters = { FOCUS_FILTER_STABILITY }
+		select_effect = {
+			log = "([GetDate]) [ROOT.GetTag]: 'hetmans_coronation' focus SELECTED (WFAS)"
+			if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 1 } }
+				add_political_power = -20
+				add_timed_idea = { idea = GRY_coronation_costs_1_temp days = 70 }
+			}
+			else_if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 2 } }
+				add_political_power = -80
+				add_timed_idea = { idea = GRY_coronation_costs_2_temp days = 70 }
+			}
+			else_if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 3 } }
+				add_political_power = -140
+				add_timed_idea = { idea = GRY_coronation_costs_3_temp days = 70 }
+			}
+			else_if = {
+				limit = { has_country_flag = { flag = coronation_costs value = 4 } }
+				add_political_power = -60
+				add_timed_idea = { idea = GRY_coronation_costs_4_temp days = 70 }
+			}
+		}
 		completion_reward = {
 			log = "([GetDate]) [ROOT.GetTag]: focus 'hetmans_coronation' (WFAS)"
-			mark_focus_tree_layout_dirty = yes
 			country_event = WFAS_gryphia.12
 		}
 	}
