@@ -4,6 +4,7 @@ debug_decisions = {
 			OR = {
 				original_tag = GRY
 				original_tag = LUS
+				original_tag = MER
 			}
 		}
 		visible = { has_country_flag = focus_flag_EAW }
@@ -18,6 +19,10 @@ debug_decisions = {
 				limit = { original_tag = LUS }
 				load_focus_tree = wfas_LUS_focus
 			}
+			else_if = {
+				limit = { original_tag = MER }
+				load_focus_tree = MER_exile_focus_tree
+			}
 		}
 	}
 	wfas_load_focus_EAW = {
@@ -25,6 +30,7 @@ debug_decisions = {
 			OR = {
 				original_tag = GRY
 				original_tag = LUS
+				original_tag = MER
 			}
 		}
 		visible = { NOT = { has_country_flag = focus_flag_EAW } }
@@ -38,6 +44,10 @@ debug_decisions = {
 			else_if = {
 				limit = { original_tag = LUS }
 				load_focus_tree = Lushi_focus
+			}
+			else_if = {
+				limit = { original_tag = MER }
+				load_focus_tree = generic_griffon_focus
 			}
 		}
 	}

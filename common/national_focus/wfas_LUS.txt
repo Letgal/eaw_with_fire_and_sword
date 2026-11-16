@@ -3,11 +3,14 @@ focus_tree = {
 
 	country = {
 		factor = 0
-		#modifier = {
-		#	add = 15
-		#	original_tag = LUS
-		#	NOT = { has_country_flag = focus_flag_EAW }
-		#}
+		modifier = {
+			add = 15
+			original_tag = LUS
+		}
+		modifier = {
+			factor = 0
+			has_country_flag = focus_flag_EAW
+		}
 	}
 	continuous_focus_position = { x = 50 y = 1500 }
 

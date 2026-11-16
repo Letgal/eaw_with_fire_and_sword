@@ -9,8 +9,11 @@ focus_tree = {
 			NOT = {
 				has_government = communism
 				has_country_flag = GRY_neutral_rebellion
-				has_country_flag = focus_flag_EAW
 			}
+		}
+		modifier = {
+			factor = 0
+			has_country_flag = focus_flag_EAW
 		}
 	}
 	continuous_focus_position = { x = 0 y = 2000 }
@@ -220,7 +223,7 @@ focus_tree = {
 		prerequisite = { focus = GRY_whats_next }
 		mutually_exclusive = { focus = GRY_preparation_for_the_election }
 		relative_position_id = GRY_whats_next
-		x = -12
+		x = -7
 		y = 1
 		cost = 10
 		available = {

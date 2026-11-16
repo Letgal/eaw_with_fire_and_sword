@@ -7,6 +7,10 @@ focus_tree = {
 			add = 100
 			tag = MER
 		}
+		modifier = {
+			factor = 0
+			has_country_flag = focus_flag_EAW
+		}
 	}
 
 	shared_focus = RIV_dreams_of_a_federation
