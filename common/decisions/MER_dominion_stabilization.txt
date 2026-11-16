@@ -1,0 +1,1540 @@
+MER_dominion_stabilization_category = {
+	MER_dominion_stabilization_lvl1 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 1 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 1 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 365		# рівень гарнізону 1 -> 365 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					remove_ideas = MER_garrison_deficit_1
+					add_ideas = MER_garrison_deficit_2
+					set_variable = { var = MER_garrison_deficit_level value = 2 }
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_dominion_stabilization_lvl2 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 2 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 2 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 220		# рівень гарнізону 2 -> 220 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					remove_ideas = MER_garrison_deficit_2
+					add_ideas = MER_garrison_deficit_3
+					set_variable = { var = MER_garrison_deficit_level value = 3 }
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_dominion_stabilization_lvl3 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 3 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 3 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 150		# рівень гарнізону 3 -> 150 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					remove_ideas = MER_garrison_deficit_3
+					add_ideas = MER_garrison_deficit_4
+					set_variable = { var = MER_garrison_deficit_level value = 4 }
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_dominion_stabilization_lvl4 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 4 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 4 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 120		# рівень гарнізону 4 -> 120 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					remove_ideas = MER_garrison_deficit_4
+					add_ideas = MER_garrison_deficit_5
+					set_variable = { var = MER_garrison_deficit_level value = 5 }
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_dominion_stabilization_lvl5 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 5 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 5 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 90		# рівень гарнізону 5 -> 90 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					remove_ideas = MER_garrison_deficit_5
+					add_ideas = MER_garrison_deficit_6
+					set_variable = { var = MER_garrison_deficit_level value = 6 }
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_dominion_stabilization_lvl6 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 6 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 6 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 60		# рівень гарнізону 6 -> 60 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					remove_ideas = MER_garrison_deficit_6
+					add_ideas = MER_garrison_deficit_7
+					set_variable = { var = MER_garrison_deficit_level value = 7 }
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_dominion_stabilization_lvl7 = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { tag = MER }
+
+		activation = {
+			has_completed_focus = MER_focus_pearl_of_empire
+			check_variable = { var = MER_garrison_deficit_level value = 7 compare = equals }
+		}
+		cancel_trigger = {
+			NOT = { check_variable = { var = MER_garrison_deficit_level value = 7 compare = equals } }
+		}
+
+		available = { always = no }		# ніколи не "виконується" достроково - завжди йде до кінця таймера
+		is_good = no
+		days_mission_timeout = 30		# рівень гарнізону 7 -> 30 днів
+
+		timeout_effect = {
+			random_list = {
+				50 = {	# погіршення повстання місцевих
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } }
+							remove_ideas = MER_pony_unrest_1
+							add_ideas = MER_pony_unrest_2
+							set_variable = { var = MER_pony_unrest_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } }
+							remove_ideas = MER_pony_unrest_2
+							add_ideas = MER_pony_unrest_3
+							set_variable = { var = MER_pony_unrest_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } }
+							remove_ideas = MER_pony_unrest_3
+							add_ideas = MER_pony_unrest_4
+							set_variable = { var = MER_pony_unrest_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } }
+							remove_ideas = MER_pony_unrest_4
+							add_ideas = MER_pony_unrest_5
+							set_variable = { var = MER_pony_unrest_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } }
+							remove_ideas = MER_pony_unrest_5
+							add_ideas = MER_pony_unrest_6
+							set_variable = { var = MER_pony_unrest_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } }
+							remove_ideas = MER_pony_unrest_6
+							add_ideas = MER_pony_unrest_7
+							set_variable = { var = MER_pony_unrest_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_unrest_tt
+				}
+				30 = {	# погіршення гарнізону
+					hidden_effect = {
+					# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_garrison_tt
+				}
+				20 = {	# погіршення інфраструктури
+					hidden_effect = {
+						if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } }
+							remove_ideas = MER_rebel_infra_1
+							add_ideas = MER_rebel_infra_2
+							set_variable = { var = MER_rebel_infra_level value = 2 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } }
+							remove_ideas = MER_rebel_infra_2
+							add_ideas = MER_rebel_infra_3
+							set_variable = { var = MER_rebel_infra_level value = 3 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } }
+							remove_ideas = MER_rebel_infra_3
+							add_ideas = MER_rebel_infra_4
+							set_variable = { var = MER_rebel_infra_level value = 4 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } }
+							remove_ideas = MER_rebel_infra_4
+							add_ideas = MER_rebel_infra_5
+							set_variable = { var = MER_rebel_infra_level value = 5 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } }
+							remove_ideas = MER_rebel_infra_5
+							add_ideas = MER_rebel_infra_6
+							set_variable = { var = MER_rebel_infra_level value = 6 }
+						}
+						else_if = {
+							limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } }
+							remove_ideas = MER_rebel_infra_6
+							add_ideas = MER_rebel_infra_7
+							set_variable = { var = MER_rebel_infra_level value = 7 }
+						}
+						# рівень 7 - вже максимум, без змін
+					}
+					custom_effect_tooltip = MER_dominion_infra_tt
+				}
+			}
+		}
+	}
+
+	MER_mobilize_local_garrisons_25 = {
+		icon = GFX_decision_generic_manpower
+		visible = { has_completed_focus = MER_focus_local_garrisons }
+
+		custom_cost_trigger = { command_power > 24 }
+		custom_cost_text = MER_cost_cp_25
+
+		days_remove = 30		# час виконання
+		days_re_enable = 30	# кд (дешевший варіант)
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			add_manpower = 100
+			random = {
+				chance = 25
+				hidden_effect = {
+					if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 7 compare = equals } }
+						remove_ideas = MER_garrison_deficit_7
+						add_ideas = MER_garrison_deficit_6
+						set_variable = { var = MER_garrison_deficit_level value = 6 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 6 compare = equals } }
+						remove_ideas = MER_garrison_deficit_6
+						add_ideas = MER_garrison_deficit_5
+						set_variable = { var = MER_garrison_deficit_level value = 5 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 5 compare = equals } }
+						remove_ideas = MER_garrison_deficit_5
+						add_ideas = MER_garrison_deficit_4
+						set_variable = { var = MER_garrison_deficit_level value = 4 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 4 compare = equals } }
+						remove_ideas = MER_garrison_deficit_4
+						add_ideas = MER_garrison_deficit_3
+						set_variable = { var = MER_garrison_deficit_level value = 3 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 3 compare = equals } }
+						remove_ideas = MER_garrison_deficit_3
+						add_ideas = MER_garrison_deficit_2
+						set_variable = { var = MER_garrison_deficit_level value = 2 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 2 compare = equals } }
+						remove_ideas = MER_garrison_deficit_2
+						add_ideas = MER_garrison_deficit_1
+						set_variable = { var = MER_garrison_deficit_level value = 1 }
+					}
+					# рівень 1 - вже найкращий, без змін
+				}
+				custom_effect_tooltip = MER_dominion_garrison_improve_tt
+			}
+		}
+	}
+
+	MER_mobilize_local_garrisons_50 = {
+		icon = GFX_decision_generic_manpower
+		visible = { has_completed_focus = MER_focus_local_garrisons }
+
+		custom_cost_trigger = { command_power > 49 }
+		custom_cost_text = MER_cost_cp_50
+
+		days_remove = 30		# час виконання
+		days_re_enable = 60	# кд (дорожчий варіант)
+
+		complete_effect = {
+			hidden_effect = { add_command_power = -50 }
+		}
+
+		remove_effect = {
+			add_manpower = 250
+			random = {
+				chance = 50
+				hidden_effect = {
+					if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 7 compare = equals } }
+						remove_ideas = MER_garrison_deficit_7
+						add_ideas = MER_garrison_deficit_6
+						set_variable = { var = MER_garrison_deficit_level value = 6 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 6 compare = equals } }
+						remove_ideas = MER_garrison_deficit_6
+						add_ideas = MER_garrison_deficit_5
+						set_variable = { var = MER_garrison_deficit_level value = 5 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 5 compare = equals } }
+						remove_ideas = MER_garrison_deficit_5
+						add_ideas = MER_garrison_deficit_4
+						set_variable = { var = MER_garrison_deficit_level value = 4 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 4 compare = equals } }
+						remove_ideas = MER_garrison_deficit_4
+						add_ideas = MER_garrison_deficit_3
+						set_variable = { var = MER_garrison_deficit_level value = 3 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 3 compare = equals } }
+						remove_ideas = MER_garrison_deficit_3
+						add_ideas = MER_garrison_deficit_2
+						set_variable = { var = MER_garrison_deficit_level value = 2 }
+					}
+					else_if = {
+						limit = { check_variable = { var = MER_garrison_deficit_level value = 2 compare = equals } }
+						remove_ideas = MER_garrison_deficit_2
+						add_ideas = MER_garrison_deficit_1
+						set_variable = { var = MER_garrison_deficit_level value = 1 }
+					}
+					# рівень 1 - вже найкращий, без змін
+				}
+				custom_effect_tooltip = MER_dominion_garrison_improve_tt
+			}
+			random = {
+				chance = 10
+				hidden_effect = {
+					country_event = { id = MER_pearl.6 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_possible_escalation_tt
+			}
+		}
+	}
+
+	# ============================================================
+	# Розблоковується MER_focus_aquileian_colonists
+	# ============================================================
+	MER_mobilize_aquileian_colonists = {
+		icon = GFX_decision_generic_manpower
+		visible = { has_completed_focus = MER_focus_aquileian_colonists }
+
+		cost = 75
+		days_remove = 120		# час виконання - гарантоване покращення гарнізону приходить лише через 120д
+		days_re_enable = 30	# кд
+
+		complete_effect = {
+			add_manpower = 400
+			random = {
+				chance = 10
+				hidden_effect = {
+					country_event = { id = MER_pearl.7 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_noble_demands_tt
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = { check_variable = { var = MER_garrison_deficit_level value = 7 compare = equals } }
+					remove_ideas = MER_garrison_deficit_7
+					add_ideas = MER_garrison_deficit_6
+					set_variable = { var = MER_garrison_deficit_level value = 6 }
+				}
+				else_if = {
+					limit = { check_variable = { var = MER_garrison_deficit_level value = 6 compare = equals } }
+					remove_ideas = MER_garrison_deficit_6
+					add_ideas = MER_garrison_deficit_5
+					set_variable = { var = MER_garrison_deficit_level value = 5 }
+				}
+				else_if = {
+					limit = { check_variable = { var = MER_garrison_deficit_level value = 5 compare = equals } }
+					remove_ideas = MER_garrison_deficit_5
+					add_ideas = MER_garrison_deficit_4
+					set_variable = { var = MER_garrison_deficit_level value = 4 }
+				}
+				else_if = {
+					limit = { check_variable = { var = MER_garrison_deficit_level value = 4 compare = equals } }
+					remove_ideas = MER_garrison_deficit_4
+					add_ideas = MER_garrison_deficit_3
+					set_variable = { var = MER_garrison_deficit_level value = 3 }
+				}
+				else_if = {
+					limit = { check_variable = { var = MER_garrison_deficit_level value = 3 compare = equals } }
+					remove_ideas = MER_garrison_deficit_3
+					add_ideas = MER_garrison_deficit_2
+					set_variable = { var = MER_garrison_deficit_level value = 2 }
+				}
+				else_if = {
+					limit = { check_variable = { var = MER_garrison_deficit_level value = 2 compare = equals } }
+					remove_ideas = MER_garrison_deficit_2
+					add_ideas = MER_garrison_deficit_1
+					set_variable = { var = MER_garrison_deficit_level value = 1 }
+				}
+				# рівень 1 - вже найкращий, без змін
+			}
+			custom_effect_tooltip = MER_dominion_garrison_improve_tt
+		}
+	}
+
+	MER_invite_griffonian_colonists = {
+		icon = GFX_decision_generic_manpower
+		visible = { has_completed_focus = MER_focus_aquileian_colonists }
+
+		cost = 150
+		days_remove = 60		# час виконання - на цей час зайнята 1 цив. фабрика
+		days_re_enable = 60	# кд
+
+		modifier = {
+			civilian_factory_use = 1	# нативний "займає N фабрик на час дії" - авто-знімається по days_remove
+		}
+
+		complete_effect = {
+			add_manpower = 1000
+			random = {
+				chance = 1
+				hidden_effect = {
+					country_event = { id = MER_pearl.8 hours = 6 }
+				}
+				custom_effect_tooltip = MER_pearl_8_tt
+			}
+			random = {
+				chance = 1
+				hidden_effect = {
+					country_event = { id = MER_pearl.9 hours = 6 }
+				}
+				custom_effect_tooltip = MER_pearl_9_tt
+			}
+			random = {
+				chance = 1
+				hidden_effect = {
+					country_event = { id = MER_pearl.10 hours = 6 }
+				}
+				custom_effect_tooltip = MER_pearl_10_tt
+			}
+		}
+	}
+
+	# ============================================================
+	# Доступне, поки активна MER_dominion_crisis (масштабне повстання)
+	# ============================================================
+	MER_reduce_dominion_crisis = {
+		icon = GFX_decision_generic_civil_support
+		visible = { has_idea = MER_dominion_crisis }
+
+		cost = 50
+
+		complete_effect = {
+			# TODO: рушій HOI4 не дає напряму "скоротити залишок таймера ідеї
+			# навпіл" - тому знімаємо ідею і накладаємо її знову з half від
+			# ПОВНОЇ тривалості (140/2=70), а не від фактичного залишку.
+			remove_ideas = MER_dominion_crisis
+			add_timed_idea = { idea = MER_dominion_crisis days = 70 }
+		}
+	}
+
+	# ============================================================
+	# Заглушка - деталі ефекту чекають окремого опису.
+	# Видимість поки що = як у решти рішень другого фокуса; скажеш,
+	# якщо має бути інша умова.
+	# ============================================================
+	MER_mobilize_local_nobility = {
+		icon = GFX_decision_generic_civil_support
+		visible = { has_completed_focus = MER_focus_aquileian_colonists }
+
+		cost = 100
+		days_remove = 90		# час виконання
+		days_re_enable = 60	# кд
+
+		remove_effect = {
+			add_manpower = 250
+			add_stability = -0.01
+		}
+	}
+
+	# ============================================================
+	# Розблоковується MER_focus_prisoner_repair_brigades
+	# ============================================================
+	MER_deploy_metropole_prisoners = {
+		icon = GFX_decision_generic_civil_support
+		visible = { has_completed_focus = MER_focus_prisoner_repair_brigades }
+
+		cost = 50
+		days_remove = 240		# час виконання
+		days_re_enable = 30	# кд
+
+		remove_effect = {
+			hidden_effect = {
+				if = { limit = { check_variable = { var = MER_rebel_infra_level value = 7 compare = equals } } remove_ideas = MER_rebel_infra_7 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_2 set_variable = { var = MER_rebel_infra_level value = 2 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_1 set_variable = { var = MER_rebel_infra_level value = 1 } }
+				# рівень 1 - вже найкращий, без змін
+			}
+			custom_effect_tooltip = MER_dominion_infra_improve_tt
+		}
+	}
+
+	MER_deploy_local_prisoners = {
+		icon = GFX_decision_generic_civil_support
+		visible = { has_completed_focus = MER_focus_prisoner_repair_brigades }
+
+		cost = 100
+		days_remove = 180		# час виконання
+		days_re_enable = 30	# кд
+
+		remove_effect = {
+			hidden_effect = {
+				if = { limit = { check_variable = { var = MER_rebel_infra_level value = 7 compare = equals } } remove_ideas = MER_rebel_infra_7 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_2 set_variable = { var = MER_rebel_infra_level value = 2 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_1 set_variable = { var = MER_rebel_infra_level value = 1 } }
+				# рівень 1 - вже найкращий, без змін
+			}
+			custom_effect_tooltip = MER_dominion_infra_improve_tt
+
+			random = {
+				chance = 5
+				hidden_effect = {
+					country_event = { id = MER_pearl.11 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_sabotage_possible_tt
+			}
+			random = {
+				chance = 5
+				hidden_effect = {
+					country_event = { id = MER_pearl.12 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_escape_possible_tt
+			}
+		}
+	}
+
+	# ============================================================
+	# Розблоковується MER_focus_foreign_contractors
+	# ============================================================
+	MER_deploy_griffonian_construction_companies = {
+		icon = GFX_decision_generic_construction
+		visible = { has_completed_focus = MER_focus_foreign_contractors }
+
+		cost = 50
+		days_remove = 120		# час виконання - на цей час зайняті 3 цив. фабрики
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		complete_effect = {
+			random = {
+				chance = 2
+				hidden_effect = {
+					country_event = { id = MER_pearl.13 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_theft_possible_tt
+			}
+			random = {
+				chance = 2
+				hidden_effect = {
+					country_event = { id = MER_pearl.14 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_investment_possible_tt
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				if = { limit = { check_variable = { var = MER_rebel_infra_level value = 7 compare = equals } } remove_ideas = MER_rebel_infra_7 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_2 set_variable = { var = MER_rebel_infra_level value = 2 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_1 set_variable = { var = MER_rebel_infra_level value = 1 } }
+			}
+			custom_effect_tooltip = MER_dominion_infra_improve_tt
+		}
+	}
+
+	MER_deploy_equestrian_construction_companies = {
+		icon = GFX_decision_generic_construction
+		visible = { has_completed_focus = MER_focus_foreign_contractors }
+
+		available = {
+			NOT = { EQS = { is_at_war = yes } }
+			EQS = { has_opinion = { target = ROOT value > 30 } }
+		}
+
+		cost = 120
+		days_remove = 200		# час виконання
+		days_re_enable = 60	# кд
+
+		complete_effect = {
+			random = {
+				chance = 5
+				hidden_effect = {
+					country_event = { id = MER_pearl.15 hours = 6 }
+				}
+				custom_effect_tooltip = MER_dominion_eqs_scandal_possible_tt
+			}
+		}
+
+		remove_effect = {
+			random_owned_state = {
+				limit = { free_building_slots = { building = industrial_complex size > 0 } }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			custom_effect_tooltip = MER_dominion_eqs_factory_built_tt
+		}
+	}
+
+	MER_deploy_arabian_oil_companies = {
+		icon = GFX_decision_generic_construction
+		visible = { has_completed_focus = MER_focus_foreign_contractors }
+
+		cost = 80
+		days_remove = 240		# час виконання
+		days_re_enable = 60	# кд
+
+		remove_effect = {
+			random_list = {
+				50 = {	# нафта
+					hidden_effect = {
+						random_owned_state = {
+							limit = { always = yes }
+							add_resource = { type = oil amount = 4 }
+						}
+					}
+					custom_effect_tooltip = MER_dominion_oil_found_tt
+				}
+				20 = {	# НПЗ + комірка будівництва
+					hidden_effect = {
+						random_owned_state = {
+							limit = { always = yes }
+							# TODO: тип "oil_refinery" - перевір точний building id у EaW,
+							# у ванільній грі такої будівлі немає (є лише synthetic_refinery)
+							add_building_construction = { type = synthetic_refinery level = 1 instant_build = yes }
+							add_extra_state_shared_building_slots = 1
+						}
+					}
+					custom_effect_tooltip = MER_dominion_refinery_built_tt
+				}
+				20 = {	# лише комірка будівництва
+					hidden_effect = {
+						random_owned_state = {
+							limit = { always = yes }
+							add_extra_state_shared_building_slots = 1
+						}
+					}
+					custom_effect_tooltip = MER_dominion_slot_added_tt
+				}
+				10 = {	# провал угоди
+					hidden_effect = {
+						country_event = { id = MER_pearl.16 hours = 6 }
+					}
+					custom_effect_tooltip = MER_dominion_deal_disrupted_tt
+				}
+			}
+		}
+	}
+
+	# ============================================================
+	# Розблоковується MER_focus_counter_insurgency
+	# ============================================================
+	MER_form_commando_squad = {
+		icon = GFX_decision_generic_military_sphere
+		visible = {
+			has_completed_focus = MER_focus_counter_insurgency
+			NOT = { has_country_flag = MER_commando_squad_formed }
+		}
+
+		custom_cost_trigger = { army_experience > 4 }
+		custom_cost_text = MER_cost_ae_5
+
+		days_remove = 30		# час виконання
+
+		complete_effect = {
+			hidden_effect = {
+				add_army_experience = -5
+				add_manpower = -200
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -50
+					producer = ROOT
+				}
+				set_country_flag = MER_commando_squad_formed
+			}
+			custom_effect_tooltip = MER_commando_squad_forming_tt
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				country_event = { id = MER_pearl.17 hours = 6 }
+			}
+			custom_effect_tooltip = MER_commando_squad_result_tt
+		}
+	}
+
+	MER_counter_insurgency_operation = {
+		icon = GFX_decision_generic_military_sphere
+		visible = {
+			has_completed_focus = MER_focus_counter_insurgency
+			has_country_flag = MER_commando_decisions_unlocked
+		}
+
+		custom_cost_trigger = { command_power > 39 }
+		custom_cost_text = MER_cost_cp_40
+
+		# Вартість людьми/гвинтівками росте на +200/+50 за кожне виконання
+		# MER_train_additional_rangers (0..5 разів)
+		available = {
+			OR = {
+				AND = { check_variable = { var = MER_ranger_training_count value = 0 compare = equals } manpower > 199 has_equipment = { infantry_equipment > 49 } }
+				AND = { check_variable = { var = MER_ranger_training_count value = 1 compare = equals } manpower > 399 has_equipment = { infantry_equipment > 99 } }
+				AND = { check_variable = { var = MER_ranger_training_count value = 2 compare = equals } manpower > 599 has_equipment = { infantry_equipment > 149 } }
+				AND = { check_variable = { var = MER_ranger_training_count value = 3 compare = equals } manpower > 799 has_equipment = { infantry_equipment > 199 } }
+				AND = { check_variable = { var = MER_ranger_training_count value = 4 compare = equals } manpower > 999 has_equipment = { infantry_equipment > 249 } }
+				AND = { check_variable = { var = MER_ranger_training_count value = 5 compare = equals } manpower > 1199 has_equipment = { infantry_equipment > 299 } }
+			}
+		}
+
+		days_remove = 90		# час виконання
+
+		complete_effect = {
+			hidden_effect = {
+				if = { limit = { check_variable = { var = MER_ranger_training_count value = 0 compare = equals } } add_manpower = -200 add_equipment_to_stockpile = { type = infantry_equipment amount = -50 producer = ROOT } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 1 compare = equals } } add_manpower = -400 add_equipment_to_stockpile = { type = infantry_equipment amount = -100 producer = ROOT } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 2 compare = equals } } add_manpower = -600 add_equipment_to_stockpile = { type = infantry_equipment amount = -150 producer = ROOT } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 3 compare = equals } } add_manpower = -800 add_equipment_to_stockpile = { type = infantry_equipment amount = -200 producer = ROOT } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 4 compare = equals } } add_manpower = -1000 add_equipment_to_stockpile = { type = infantry_equipment amount = -250 producer = ROOT } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 5 compare = equals } } add_manpower = -1200 add_equipment_to_stockpile = { type = infantry_equipment amount = -300 producer = ROOT } }
+			}
+			custom_effect_tooltip = MER_counter_insurgency_deploying_tt
+		}
+
+		# Відсотки успіху ростуть з кожним завершенням MER_train_additional_rangers
+		# (рівень 4 і 5 використовують однакову, найкращу таблицю)
+		remove_effect = {
+			if = {
+				limit = { check_variable = { var = MER_ranger_training_count value = 0 compare = equals } }
+			random_list = {
+				30 = {	# успіх
+					hidden_effect = {
+						country_event = { id = MER_pearl.18 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_18_tt
+				}
+				30 = {	# успіх високою ціною
+					hidden_effect = {
+						country_event = { id = MER_pearl.19 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_19_tt
+				}
+				30 = {	# провал
+					hidden_effect = {
+						country_event = { id = MER_pearl.20 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_20_tt
+				}
+				10 = {	# загін зник
+					hidden_effect = {
+						country_event = { id = MER_pearl.21 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_21_tt
+				}
+			}
+			}
+			else_if = {
+				limit = { check_variable = { var = MER_ranger_training_count value = 1 compare = equals } }
+			random_list = {
+				35 = {	# успіх
+					hidden_effect = {
+						country_event = { id = MER_pearl.18 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_18_tt
+				}
+				30 = {	# успіх високою ціною
+					hidden_effect = {
+						country_event = { id = MER_pearl.19 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_19_tt
+				}
+				25 = {	# провал
+					hidden_effect = {
+						country_event = { id = MER_pearl.20 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_20_tt
+				}
+				10 = {	# загін зник
+					hidden_effect = {
+						country_event = { id = MER_pearl.21 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_21_tt
+				}
+			}
+			}
+			else_if = {
+				limit = { check_variable = { var = MER_ranger_training_count value = 2 compare = equals } }
+			random_list = {
+				35 = {	# успіх
+					hidden_effect = {
+						country_event = { id = MER_pearl.18 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_18_tt
+				}
+				35 = {	# успіх високою ціною
+					hidden_effect = {
+						country_event = { id = MER_pearl.19 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_19_tt
+				}
+				25 = {	# провал
+					hidden_effect = {
+						country_event = { id = MER_pearl.20 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_20_tt
+				}
+				5 = {	# загін зник
+					hidden_effect = {
+						country_event = { id = MER_pearl.21 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_21_tt
+				}
+			}
+			}
+			else_if = {
+				limit = { check_variable = { var = MER_ranger_training_count value = 3 compare = equals } }
+			random_list = {
+				40 = {	# успіх
+					hidden_effect = {
+						country_event = { id = MER_pearl.18 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_18_tt
+				}
+				35 = {	# успіх високою ціною
+					hidden_effect = {
+						country_event = { id = MER_pearl.19 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_19_tt
+				}
+				20 = {	# провал
+					hidden_effect = {
+						country_event = { id = MER_pearl.20 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_20_tt
+				}
+				5 = {	# загін зник
+					hidden_effect = {
+						country_event = { id = MER_pearl.21 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_21_tt
+				}
+			}
+			}
+			else_if = {
+				limit = { check_variable = { var = MER_ranger_training_count value = 4 compare = equals } }
+			random_list = {
+				45 = {	# успіх
+					hidden_effect = {
+						country_event = { id = MER_pearl.18 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_18_tt
+				}
+				40 = {	# успіх високою ціною
+					hidden_effect = {
+						country_event = { id = MER_pearl.19 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_19_tt
+				}
+				15 = {	# провал
+					hidden_effect = {
+						country_event = { id = MER_pearl.20 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_20_tt
+				}
+			}
+			}
+			else_if = {
+				limit = { check_variable = { var = MER_ranger_training_count value = 5 compare = equals } }
+			random_list = {
+				50 = {	# успіх
+					hidden_effect = {
+						country_event = { id = MER_pearl.18 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_18_tt
+				}
+				35 = {	# успіх високою ціною
+					hidden_effect = {
+						country_event = { id = MER_pearl.19 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_19_tt
+				}
+				15 = {	# провал
+					hidden_effect = {
+						country_event = { id = MER_pearl.20 hours = 6 }
+					}
+					custom_effect_tooltip = MER_pearl_20_tt
+				}
+			}
+			}
+		}
+	}
+
+	MER_train_additional_rangers = {
+		icon = GFX_decision_generic_military_sphere
+		visible = {
+			has_completed_focus = MER_focus_counter_insurgency
+			has_country_flag = MER_commando_decisions_unlocked
+		}
+		available = {
+			check_variable = { var = MER_ranger_training_count value = 5 compare = less_than }
+			manpower > 199
+			has_equipment = { infantry_equipment > 49 }
+		}
+
+		days_remove = 60		# час виконання
+		days_re_enable = 180	# кд
+
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -200
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -50
+					producer = ROOT
+				}
+			}
+			custom_effect_tooltip = MER_train_rangers_tt
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				add_to_variable = { var = MER_ranger_training_count value = 1 }
+				if = { limit = { check_variable = { var = MER_ranger_training_count value = 1 compare = equals } } set_technology = { 1252 = 1 } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 2 compare = equals } } set_technology = { 1253 = 1 } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 3 compare = equals } } set_technology = { 1254 = 1 } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 4 compare = equals } } set_technology = { 1255 = 1 } }
+				else_if = { limit = { check_variable = { var = MER_ranger_training_count value = 5 compare = equals } } set_technology = { 1256 = 1 } }
+			}
+			custom_effect_tooltip = MER_train_rangers_result_tt
+		}
+	}
+
+}

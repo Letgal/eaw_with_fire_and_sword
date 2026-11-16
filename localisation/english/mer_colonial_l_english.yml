@@ -1,0 +1,412 @@
+﻿l_english:
+
+ # --- Focuses ---
+ MER_focus_pearl_of_empire: "Pearl of the Empire"
+ MER_focus_pearl_of_empire_desc: "The colonies are to become the jewel of Les Meridiennes' empire — a grand, years-long undertaking to bind them fully to the crown, whatever the cost to those who already live there."
+ MER_pearl_of_empire_tt: "The colonies are formally integrated into the empire"
+
+ MER_focus_colonial_infrastructure: "Develop Colonial Infrastructure"
+ MER_focus_colonial_infrastructure_desc: "Roads, ports, and rail will bind the colonies to the homeland — and let us extract far more than we currently do."
+ MER_colonial_infrastructure_tt: "Colonial infrastructure improved"
+
+ MER_focus_colonial_trade_boards: "Establish Colonial Trade Boards"
+ MER_focus_colonial_trade_boards_desc: "Formal trade boards will regulate — and profit from — the flow of goods out of our overseas holdings."
+ MER_colonial_trade_boards_tt: "Colonial trade boards established"
+
+ MER_focus_griffon_settlement: "Encourage Griffon Settlement"
+ MER_focus_griffon_settlement_desc: "Griffon settlers, loyal to the crown, will secure our hold over the colonies — whatever the locals may think of it."
+ MER_griffon_settlement_tt: "Griffon settlement encouraged"
+
+ MER_focus_pony_discontent_realization: "The Grumbling Grows Louder"
+ MER_focus_pony_discontent_realization_desc: "It can no longer be ignored: the pony population of our colonies resents griffon rule. Something must be done."
+ MER_pony_discontent_realization_tt: "The unrest can no longer be denied"
+
+ MER_focus_iron_hoof: "An Iron Hoof"
+ MER_focus_iron_hoof_desc: "Order will be restored — by force, if that is what it takes."
+ MER_iron_hoof_tt: "The colonial administration cracks down"
+
+ MER_focus_path_of_reconciliation: "A Path to Reconciliation"
+ MER_focus_path_of_reconciliation_desc: "Better a loyal colony than a resentful one. Concessions will be made."
+ MER_path_of_reconciliation_tt: "Concessions are made to the pony population"
+
+ # --- Ideas ---
+ MER_pony_unrest: "Pony Population Unrest"
+ MER_pony_unrest_desc: "The pony majority in our colonies chafes under griffon rule, and it shows."
+
+ MER_pony_suppression: "Colonies Under the Hoof"
+ MER_pony_suppression_desc: "Order is enforced, but resentment simmers beneath the surface."
+
+ MER_pony_reconciliation: "Colonial Reconciliation"
+ MER_pony_reconciliation_desc: "A fragile but genuine peace has been struck between griffon rulers and pony subjects."
+
+ # --- Events ---
+ MER_colonial.1.t: "New Faces on the Docks"
+ MER_colonial.1.d: "Ships arrive weekly now, carrying griffon families eager for land and opportunity in the colonies. The locals watch from a distance, saying little — for now."
+ MER_colonial.1.a: "Progress has its price"
+ MER_colonial.1.a.tt: "The settlement program continues"
+
+ MER_colonial.2.t: "The Colonies Speak"
+ MER_colonial.2.d: "What began as murmurs has become open grievance. Pony communities across the colonies are organizing, petitioning, and in some towns, refusing to cooperate with griffon officials at all."
+ MER_colonial.2.a: "We must not appear weak"
+ MER_colonial.2.a.tt: "Preparations begin for a firmer hand"
+ MER_colonial.2.b: "Better to listen now than fight later"
+ MER_colonial.2.b.tt: "Preparations begin for talks and concessions"
+
+ # --- Graded pony unrest spirit (MER_focus_pearl_of_empire chain) ---
+ MER_pony_unrest_1: "Loyal Colonial Subjects"
+ MER_pony_unrest_1_desc: "The pony population of the colonies has, against all odds, come to embrace griffon rule."
+
+ MER_pony_unrest_2: "An Uneasy Calm"
+ MER_pony_unrest_2_desc: "Neither content nor rebellious, the colonial population simply endures."
+
+ MER_pony_unrest_3: "Quiet Grumbling"
+ MER_pony_unrest_3_desc: "Discontent murmurs through pony communities in the colonies, though it has yet to boil over."
+
+ MER_pony_unrest_4: "Colonial Discontent"
+ MER_pony_unrest_4_desc: "Resentment toward griffon rule runs deep among the colonies' pony majority."
+
+ MER_pony_unrest_5: "Open Resentment"
+ MER_pony_unrest_5_desc: "Griffon authority is openly mocked and resisted across the colonial territories."
+
+ MER_pony_unrest_6: "Simmering Rebellion"
+ MER_pony_unrest_6_desc: "Local officials report that entire districts have become effectively ungovernable."
+
+ MER_pony_unrest_7: "On the Brink of Revolt"
+ MER_pony_unrest_7_desc: "The colonies teeter on the edge of open uprising against griffon rule."
+
+ # --- Pearl of the Empire event chain (day 70 / 100 / 115) ---
+ MER_pearl.1.t: "The Garrison Withdraws"
+ MER_pearl.1.d: "Citing the growing costs of empire, Aquileia has quietly withdrawn its garrison from the islands it once helped patrol, leaving griffon administrators to police the colonies with far fewer soldiers than before."
+ MER_pearl.1.a: "We shall manage without them"
+
+ MER_pearl.2.t: "The Colonies Rise"
+ MER_pearl.2.d: "With Aquileia's soldiers gone, pony communities across the islands have seized the moment, driving off griffon overseers in several districts and openly defying colonial authority."
+ MER_pearl.2.a: "This will not stand unanswered"
+
+ MER_pearl.3.t: "Roads Burned, Bridges Broken"
+ MER_pearl.3.d: "Emboldened rebels have torched supply depots and sabotaged roads and bridges across the colonies, setting construction projects back by months and leaving administrators scrambling to restore basic infrastructure."
+ MER_pearl.3.a: "We will rebuild"
+ MER_pearl.3.a.tt: "The reconstruction effort begins"
+
+ # --- Track: garrison deficit (army debuff, own 7-level gradation) ---
+ MER_garrison_deficit_1: "Islands Firmly Held"
+ MER_garrison_deficit_1_desc: "Despite the reduced garrison, colonial forces hold the islands with confidence and skill."
+ MER_garrison_deficit_2: "Garrison at Minimum Strength"
+ MER_garrison_deficit_2_desc: "What remains of the colonial garrison is stretched thin, but for now it holds."
+ MER_garrison_deficit_3: "Undermanned Garrison"
+ MER_garrison_deficit_3_desc: "With Aquileia's soldiers gone, the remaining colonial forces struggle to cover the islands adequately."
+ MER_garrison_deficit_4: "Garrison in Crisis"
+ MER_garrison_deficit_4_desc: "The colonial garrison is dangerously undermanned, and morale among the remaining troops is faltering."
+ MER_garrison_deficit_5: "Islands Barely Defended"
+ MER_garrison_deficit_5_desc: "Entire stretches of coastline and countryside go unpatrolled for lack of available soldiers."
+ MER_garrison_deficit_6: "Collapse of Colonial Order"
+ MER_garrison_deficit_6_desc: "Without an effective garrison, colonial authority exists in name only across much of the islands."
+ MER_garrison_deficit_7: "No Effective Garrison"
+ MER_garrison_deficit_7_desc: "The islands are, for all practical purposes, undefended."
+
+ # --- Track: rebel infrastructure damage (own 7-level gradation) ---
+ MER_rebel_infra_1: "Infrastructure Flourishing"
+ MER_rebel_infra_1_desc: "Roads, ports, and bridges across the colonies are in excellent repair, easing supply and freeing factories for real production."
+ MER_rebel_infra_2: "Infrastructure Holding Steady"
+ MER_rebel_infra_2_desc: "Colonial infrastructure has suffered no lasting damage."
+ MER_rebel_infra_3: "Sabotaged Supply Lines"
+ MER_rebel_infra_3_desc: "Rebel sabotage has damaged key roads and depots, slowing construction, straining supply, and forcing more factories onto stopgap civilian production."
+ MER_rebel_infra_4: "Crumbling Colonial Infrastructure"
+ MER_rebel_infra_4_desc: "Repeated attacks on bridges and rail lines have left colonial infrastructure in a poor state, with supply lines stretched thin and construction badly delayed."
+ MER_rebel_infra_5: "Infrastructure in Ruins"
+ MER_rebel_infra_5_desc: "Large stretches of road and rail lie destroyed, badly hampering construction and forcing supply and factories to compensate at real cost."
+ MER_rebel_infra_6: "Colonial Infrastructure Collapsing"
+ MER_rebel_infra_6_desc: "Almost nothing built in the colonies survives rebel attacks for long, and supply lines barely function."
+ MER_rebel_infra_7: "No Functioning Infrastructure"
+ MER_rebel_infra_7_desc: "Colonial infrastructure has effectively ceased to exist outside the largest garrison towns, crippling supply, construction, and production alike."
+
+ # --- Dominion stabilization decision category & missions ---
+ MER_dominion_stabilization_category: "Dominion Stabilization"
+ MER_dominion_stabilization_category_desc: "With the garrison stretched thin, unrest in the colonies is only a matter of time. How quickly things unravel depends on how undermanned the garrison currently is."
+
+ MER_dominion_stabilization_lvl3: "Colonial Watch: Undermanned Garrison"
+ MER_dominion_stabilization_lvl3_desc: "The garrison is stretched but holding. Colonial administrators watch nervously for the first signs of real trouble."
+
+ MER_dominion_stabilization_lvl4: "Colonial Watch: Garrison in Crisis"
+ MER_dominion_stabilization_lvl4_desc: "With the garrison in crisis, colonial authority is fraying faster than administrators can respond."
+
+ MER_dominion_stabilization_lvl5: "Colonial Watch: Islands Barely Defended"
+ MER_dominion_stabilization_lvl5_desc: "Entire districts go unpatrolled. It is only a matter of time before something gives."
+
+ MER_dominion_stabilization_lvl6: "Colonial Watch: Collapse of Order"
+ MER_dominion_stabilization_lvl6_desc: "Colonial authority exists in name only across much of the islands. The situation could deteriorate at any moment."
+
+ MER_dominion_stabilization_lvl7: "Colonial Watch: No Effective Garrison"
+ MER_dominion_stabilization_lvl7_desc: "With the islands effectively undefended, every week that passes without disaster is a small mercy."
+
+ # --- Dominion stabilization outcome tooltips ---
+ MER_dominion_unrest_tt: "Increase in the number of rebellions"
+ MER_dominion_garrison_tt: "Garrison deterioration"
+ MER_dominion_infra_tt: "Infrastructure deterioration"
+
+ # --- 4 new focuses branching from Pearl of Empire ---
+ MER_focus_local_garrisons: "Recruit Locals into the Garrisons"
+ MER_focus_local_garrisons_desc: "Ponies willing to serve, even under griffon command, can help fill the ranks the departed garrison left empty — though arming those you rule is never without risk."
+ MER_focus_local_garrisons_tt: "Local recruitment into the colonial garrisons begins"
+
+ MER_focus_aquileian_colonists: "Mobilize Colonists from Aquileia"
+ MER_focus_aquileian_colonists_desc: "Colonists from Aquileia, eager for land and opportunity, could help ease the strain on the garrison and the treasury alike - if the price of bringing them here does not prove too steep."
+
+ MER_focus_prisoner_repair_brigades: "Establish Prisoner Repair Brigades"
+ MER_focus_prisoner_repair_brigades_desc: "TODO - placeholder description."
+
+ MER_focus_foreign_contractors: "Seek Foreign Construction Contractors"
+ MER_focus_foreign_contractors_desc: "TODO - placeholder description."
+
+ # --- MER_pearl.5 / MER_pearl.6 ---
+ MER_pearl.5.t: "An Uneasy Peace"
+ MER_pearl.5.d: "Word of the new garrison policy spreads quickly. Many ponies resent serving the very administration they distrust, and griffon officers grumble about arming a population they were sent to control."
+ MER_pearl.5.a: "It is a necessary risk"
+
+ MER_pearl.6.t: "The Southern Islands Rise"
+ MER_pearl.6.d: "A garrison unit, recruited from the very population it was meant to help control, mutinies and joins an uprising sweeping the southern islands. By the time order is restored, entire villages lie abandoned or burned, and the treasury has paid dearly to contain the damage."
+ MER_pearl.6.a: "Restore order at any cost"
+
+ # --- Dominion stabilization: new decisions ---
+ MER_mobilize_local_garrisons_25: "Mobilize Local Garrisons (Small Levy)"
+ MER_mobilize_local_garrisons_25_desc: "Call up a modest number of local recruits to ease the manpower strain on the colonial garrison."
+ MER_cost_cp_25: "£command_power §Y25§!"
+ MER_cost_cp_25_blocked: "£command_power §R25§!"
+ MER_cost_cp_25_tooltip: "Costs £command_power §Y25§!"
+
+ MER_mobilize_local_garrisons_50: "Mobilize Local Garrisons (Full Levy)"
+ MER_mobilize_local_garrisons_50_desc: "Call up a full local levy for the colonial garrison. More effective, but arming this many locals at once is not without danger."
+ MER_cost_cp_50: "£command_power §Y50§!"
+ MER_cost_cp_50_blocked: "£command_power §R50§!"
+ MER_cost_cp_50_tooltip: "Costs £command_power §Y50§!"
+
+ MER_dominion_garrison_improve_tt: "Garrison strength improves"
+
+ # --- MER_dominion_crisis (timed idea from MER_pearl.6) ---
+ MER_dominion_crisis: "Southern Islands Uprising"
+ MER_dominion_crisis_desc: "The scale of the uprising and the cost of suppressing it have badly shaken confidence in the colonial administration."
+
+ # --- Second focus: mobilize/invite colonists decisions ---
+ MER_mobilize_aquileian_colonists: "Mobilize Colonists from Aquileia"
+ MER_mobilize_aquileian_colonists_desc: "Bring in colonists already settled in Aquileia. It will take time to see the garrison benefit, but the manpower comes at once - and not everyone will welcome the newcomers."
+
+ MER_invite_griffonian_colonists: "Invite Colonists from Griffonia"
+ MER_invite_griffonian_colonists_desc: "Offer land and opportunity to griffons willing to relocate to the colonies. A generous levy of manpower, paid for by diverting a factory's worth of production for a couple of months - and not without its share of embarrassments along the way."
+
+ MER_reduce_dominion_crisis: "Ease the Southern Islands Crisis"
+ MER_reduce_dominion_crisis_desc: "Spend political capital to calm nerves and speed the recovery from the uprising in the south."
+
+ MER_dominion_possible_escalation_tt: "Possible escalation"
+ MER_dominion_noble_demands_tt: "Possible noble demands for compensation"
+ MER_dominion_factory_restored_tt: "Diverted factory returns to normal production"
+
+ MER_pearl_8_tt: "Possible incident among the colonists"
+ MER_pearl_9_tt: "Possible unrest among the colonists"
+ MER_pearl_10_tt: "Possible incident at sea"
+
+ # --- MER_pearl.7: nobles demand compensation ---
+ MER_pearl.7.t: "The Nobility Demands Its Due"
+ MER_pearl.7.d: "Word of the new colonists has reached the ears of the local nobility, who insist that any newcomers taking up land or trade must first compensate those whose interests they disturb. The treasury, and no small number of factories, will feel the cost."
+ MER_pearl.7.a: "Pay them what they ask"
+
+ # --- MER_pearl.8: the pineapple pizza incident ---
+ MER_pearl.8.t: "A Culinary Catastrophe"
+ MER_pearl.8.d: "A group of newly arrived Wingbardian colonists is left reeling after a local cook serves them pizza topped with pineapple. What should have been a simple welcome dinner turns into a diplomatic embarrassment, as outraged letters make their way back to Wingbardy."
+ MER_pearl.8.a: "This was clearly a mistake"
+
+ # --- MER_pearl.9: locals robbed ---
+ MER_pearl.9.t: "Trouble on the Docks"
+ MER_pearl.9.d: "Some of the newly arrived settlers take matters into their own hands, robbing local merchants and homes before the colonial authorities can intervene. The affair does little for public order or the government's standing."
+ MER_pearl.9.a: "This will be dealt with"
+
+ # --- MER_pearl.10: ships plundered ---
+ MER_pearl.10.t: "Ships Lost at Sea"
+ MER_pearl.10.d: "A group of colonists, still loyal to old grudges, seize the opportunity to raid Equestrian merchant shipping near the colonies. Equestria demands compensation, and the colonial administration has little choice but to pay."
+ MER_pearl.10.a: "Pay the compensation"
+
+ # --- Timed compensation ideas ---
+ MER_noble_compensation_demands: "Noble Compensation Demands"
+ MER_noble_compensation_demands_desc: "Paying off the local nobility has diverted resources that would otherwise go toward real production."
+ MER_ships_compensation: "Compensating Equestria for Lost Ships"
+ MER_ships_compensation_desc: "The payments owed to Equestria for the lost shipping are being drawn straight from the colonies' production."
+
+ MER_mobilize_local_nobility: "Mobilize the Local Nobility"
+ MER_mobilize_local_nobility_desc: "Rally the local nobility to the crown's cause. It takes time to bear fruit, and not everyone will thank you for the added political friction."
+
+ # --- Decisions-unlocked focus note ---
+ MER_decisions_unlocked_tt: "Unlocks new decisions in the Dominion Stabilization category"
+
+ # --- MER_deploy_metropole_prisoners / MER_deploy_local_prisoners ---
+ MER_deploy_metropole_prisoners: "Deploy Metropole Prisoners"
+ MER_deploy_metropole_prisoners_desc: "Put prisoners shipped over from the homeland to work repairing colonial infrastructure. Slow, but reliable."
+
+ MER_deploy_local_prisoners: "Deploy Local Prisoners"
+ MER_deploy_local_prisoners_desc: "Put locally held prisoners to work on colonial infrastructure. Faster than shipping in prisoners from the homeland - but using local labor this way is not without risk."
+
+ MER_dominion_infra_improve_tt: "Colonial infrastructure improves"
+ MER_dominion_sabotage_possible_tt: "Possible sabotage"
+ MER_dominion_escape_possible_tt: "Possible escape attempt"
+
+ # --- MER_pearl.11: sabotage ---
+ MER_pearl.11.t: "Sabotage in the Work Camps"
+ MER_pearl.11.d: "Prisoners assigned to infrastructure repair sabotage the very projects they were meant to complete, undoing weeks of work in a single night before the damage is even discovered."
+ MER_pearl.11.a: "This is a serious setback"
+
+ # --- MER_pearl.12: escape and shootout ---
+ MER_pearl.12.t: "Breakout"
+ MER_pearl.12.d: "A group of prisoners overpowers their guards and makes a break for it, fleeing into the countryside. What follows is a running firefight with garrison troops that leaves infrastructure damaged, the local population further unsettled, and no shortage of empty barracks beds."
+ MER_pearl.12.a: "Hunt them down"
+
+ # --- MER_deploy_griffonian_construction_companies ---
+ MER_deploy_griffonian_construction_companies: "Deploy Griffonian Construction Companies"
+ MER_deploy_griffonian_construction_companies_desc: "Bring in construction firms from Griffonia to work on colonial infrastructure. Diverts three civilian factories' worth of production for the duration."
+
+ MER_dominion_theft_possible_tt: "Possible theft of tools and materials"
+ MER_dominion_investment_possible_tt: "Possible outside investment"
+
+ MER_pearl.13.t: "Tools and Materials Gone Missing"
+ MER_pearl.13.d: "Many of the construction workers brought in turn out to be refugees from the civil war in Prayven. Desperate and distrustful of their new employers, a group of them makes off with tools and building materials in the night, vanishing before anyone can stop them."
+ MER_pearl.13.a: "This will set us back"
+
+ MER_pearl.14.t: "An Unexpected Investment"
+ MER_pearl.14.d: "Griffon investors from Wingbardy, impressed by the pace of construction, quietly pour their own funds into one of the colonial projects, expanding it well beyond what was originally planned."
+ MER_pearl.14.a: "Their generosity is appreciated"
+
+ # --- MER_deploy_equestrian_construction_companies ---
+ MER_deploy_equestrian_construction_companies: "Deploy Equestrian Construction Companies"
+ MER_deploy_equestrian_construction_companies_desc: "Contract Equestrian firms to build a new factory in the colonies. Only possible while Equestria is at peace and looks favorably upon us."
+
+ MER_dominion_eqs_scandal_possible_tt: "Possible diplomatic incident with Equestria"
+ MER_dominion_eqs_factory_built_tt: "A new factory is built"
+
+ MER_pearl.15.t: "Builders with Divided Loyalties"
+ MER_pearl.15.d: "Some of the Equestrian construction crews turn out to have more sympathy for the colonies' rebellious ponies than for their griffon employers, quietly funneling tools, supplies, and information to the rebellion. When word reaches Equestria, the diplomatic fallout is immediate."
+ MER_pearl.15.a: "This complicates matters"
+
+ # --- MER_deploy_arabian_oil_companies ---
+ MER_deploy_arabian_oil_companies: "Deploy Arabian Oil Companies"
+ MER_deploy_arabian_oil_companies_desc: "Contract Arabian oil companies to survey and develop the colonies' oil potential."
+
+ MER_dominion_oil_found_tt: "Oil deposits discovered"
+ MER_dominion_refinery_built_tt: "A refinery and new building slot are added"
+ MER_dominion_slot_added_tt: "A new building slot is added"
+ MER_dominion_deal_disrupted_tt: "The deal is disrupted"
+
+ MER_pearl.16.t: "Rebels Sabotage the Deal"
+ MER_pearl.16.d: "Rebel sympathizers infiltrate the negotiations with the Arabian oil companies, leaking terms and stoking fears that spook the investors. The deal collapses in acrimony, and the political fallout at home is immediate."
+ MER_pearl.16.a: "A costly failure"
+
+ # --- MER_focus_counter_insurgency ---
+ MER_focus_counter_insurgency: "Counter-Insurgency"
+ MER_focus_counter_insurgency_desc: "With the garrison finally strong enough, it is time to take the fight to the rebels directly rather than simply reacting to them."
+
+ # --- MER_form_commando_squad ---
+ MER_form_commando_squad: "Form a Commando Squad"
+ MER_form_commando_squad_desc: "Pull soldiers and rifles from the line to form a dedicated commando unit trained for operations against the rebels."
+ MER_cost_ae_5: "£army_experience §Y5§!"
+ MER_cost_ae_5_blocked: "£army_experience §R5§!"
+ MER_cost_ae_5_tooltip: "Costs £army_experience §Y5§!"
+ MER_commando_squad_forming_tt: "The commando squad begins training"
+ MER_commando_squad_result_tt: "The commando squad returns"
+
+ MER_pearl.17.t: "The Commandos Return"
+ MER_pearl.17.d: "The newly formed commando squad completes its training and returns to active duty, hardened and ready. Officers who trained alongside them are eager to formalize what they've learned into proper ranger doctrine."
+ MER_pearl.17.a: "A valuable investment"
+
+ # --- MER_counter_insurgency_operation ---
+ MER_counter_insurgency_operation: "Counter-Insurgency Operation"
+ MER_counter_insurgency_operation_desc: "Send the commando squad into the field against the rebels. Success is far from guaranteed, and failure can be costly."
+ MER_cost_cp_40: "£command_power §Y40§!"
+ MER_cost_cp_40_blocked: "£command_power §R40§!"
+ MER_cost_cp_40_tooltip: "Costs £command_power §Y40§!"
+ MER_counter_insurgency_deploying_tt: "The squad deploys into the field"
+
+ MER_pearl_18_tt: "The operation concludes"
+ MER_pearl_19_tt: "The operation concludes, at a cost"
+ MER_pearl_20_tt: "The operation fails"
+ MER_pearl_21_tt: "The squad's fate is unknown"
+
+ MER_pearl.18.t: "A Clean Victory"
+ MER_pearl.18.d: "The commando squad strikes deep into rebel-held territory, breaking up a major cell with minimal losses. Most of the unit returns intact, and the rebellion's momentum visibly falters."
+ MER_pearl.18.a: "Well done"
+
+ MER_pearl.19.t: "Victory, at a Price"
+ MER_pearl.19.d: "The operation succeeds in scattering the rebels, but not without cost - the squad returns badly depleted, its equipment battered from weeks of hard fighting in unfamiliar terrain."
+ MER_pearl.19.a: "A costly but necessary victory"
+
+ MER_pearl.20.t: "The Operation Fails"
+ MER_pearl.20.d: "The commando squad walks into a well-prepared ambush and is forced into a fighting retreat. Most of the unit is lost, along with the bulk of its equipment, and the rebels remain firmly in control of their territory."
+ MER_pearl.20.a: "A bitter failure"
+
+ MER_pearl.21.t: "Vanished Without a Trace"
+ MER_pearl.21.d: "The commando squad fails to report in on schedule. A search party eventually finds their camp, ransacked and abandoned, with no sign of the squad itself. Word of the disaster spreads quickly, emboldening the rebellion."
+ MER_pearl.21.a: "This is a grim outcome"
+
+ # --- MER_train_additional_rangers ---
+ MER_train_additional_rangers: "Train Additional Rangers"
+ MER_train_additional_rangers_desc: "Expand the ranger program with another batch of trained soldiers, improving future counter-insurgency operations - though each subsequent batch costs the operation more in manpower and equipment."
+ MER_train_rangers_tt: "A new batch of rangers begins training"
+ MER_train_rangers_result_tt: "The rangers complete their training"
+
+ MER_dominion_stabilization_lvl1: "Colonial Watch: Firm Control"
+ MER_dominion_stabilization_lvl1_desc: "The garrison is at full strength and firmly in control - but even the best-defended colony is never entirely without risk."
+
+ MER_dominion_stabilization_lvl2: "Colonial Watch: Garrison Well-Staffed"
+ MER_dominion_stabilization_lvl2_desc: "The garrison is close to full strength. The risk of serious trouble is low, but not zero."
+
+ # --- MER_pearl.22: refugee crisis begins (triggered by JER_revolution_begun) ---
+ MER_pearl.22.t: "War in Aquileia"
+ MER_pearl.22.d: "Word reaches Les Meridiennes that civil war has broken out in Aquileia. Ships from the mainland are already arriving with the first trickle of those fleeing the fighting - a trickle that officials fear will soon become a flood."
+ MER_pearl.22.a: "We should prepare for what's coming"
+
+ # --- MER_pearl.23: republicans win, the crown falls ---
+ MER_pearl.23.t: "The Aquileian Crown Falls"
+ MER_pearl.23.d: "Word arrives that the crown has fallen in Aquileia - the Second Aquileian Revolution has ended in victory for the revolutionaries, and a new republic now stands where the monarchy once ruled. In the chaos, Les Meridiennes finds itself entirely on its own for the first time, its old ties to the mainland severed for good."
+ MER_pearl.23.a: "A new chapter begins"
+
+ # --- MER_pearl.24: monarchists win, republicans defeated ---
+ MER_pearl.24.t: "The Revolution Is Crushed"
+ MER_pearl.24.d: "Word arrives that the Second Aquileian Revolution has ended in defeat for the revolutionaries - the crown holds firm in Aquileia, its authority battered but intact. Amid the upheaval, however, Les Meridiennes finds itself entirely on its own for the first time, its old ties to the mainland severed for good."
+ MER_pearl.24.a: "A new chapter begins"
+
+ # --- Refugee influx chain (MER_pearl.25-27) ---
+ MER_pearl.25.t: "Ships on the Horizon"
+ MER_pearl.25.d: "With the crown fallen in Aquileia, the first ships arrive in Les Meridiennes' harbors, crowded with those who fled the revolution - nobles, officers, loyal officials, and their families, carrying what little they could save. The port authorities are overwhelmed before the first day is out."
+ MER_pearl.25.a: "Find room for them"
+
+ MER_pearl.26.t: "Wave After Wave"
+ MER_pearl.26.d: "The ships keep coming. Every week brings more refugees from the mainland, filling the docks, the boarding houses, and the streets. Local prices climb, tempers fray, and the colonial administration struggles to house, feed, and register the newcomers."
+ MER_pearl.26.a: "There must be a limit"
+
+ MER_pearl.27.t: "A Crisis of Migration"
+ MER_pearl.27.d: "What began as a trickle has become a flood. Les Meridiennes can no longer ignore the strain: entire districts have been remade by the newcomers, social tensions run high, and yet the islands are suddenly home to more hands and more mouths than ever before."
+ MER_pearl.27.a: "The islands must adapt"
+
+ MER_migrant_crisis: "Migrant Crisis"
+ MER_migrant_crisis_desc: "A great wave of refugees has reshaped the islands. Social tensions are high, but the population is growing quickly."
+
+ # --- Hidden refugee branch (unlocked by MER_pearl.27) ---
+ MER_refugee_branch_unlocked_tt: "A new political branch of focuses becomes available"
+
+ MER_focus_refugee_camps: "Open Refugee Camps"
+ MER_focus_refugee_camps_desc: "The flood of refugees cannot be left to sleep in the streets. Camps on the outskirts of the towns will at least give the newcomers shelter, and the administration some measure of control."
+
+ MER_focus_receive_feudals: "Receive the Feudal Lords with Honors"
+ MER_focus_receive_feudals_desc: "Among the refugees are great lords from the mainland, who expect to be treated as the nobility they were. Receiving them with due honors may win their loyalty - at a price."
+
+ MER_focus_evacuation_aid: "Help the Companies with Evacuation"
+ MER_focus_evacuation_aid_desc: "Aquileian trading companies are trying to save what they can of their ships, goods, and records. Helping them evacuate would earn gratitude - and a great deal of valuable cargo."
+
+ # --- Revanchism in the camps (MER_pearl.28) and spirit stage 2 ---
+ MER_pearl.28.t: "Bitterness in the Camps"
+ MER_pearl.28.d: "In the crowded refugee camps, grief is curdling into resentment. Exiled officers and dispossessed nobles gather around cookfires, trading grievances and plans, and speak openly of the day they will return to the mainland and take back what was theirs. The camp guards pretend not to hear."
+ MER_pearl.28.a: "Let them talk, for now"
+ MER_revanchism_tt: "Revanchist sentiment grows faster among the refugees"
+ MER_migrant_crisis_tt: "The refugee crisis settles over the islands"
+
+ MER_migrant_crisis_2: "Migrant Crisis"
+ MER_migrant_crisis_2_desc: "A great wave of refugees has reshaped the islands. Social tensions are high, the population is growing quickly, and in the camps bitterness over the lost homeland is hardening into revanchism."
+
+ # --- MER party name: Supremacy (fascism group) is called Revanchism ---
+ MER_fascism_party: "Revanchism"
+ MER_fascism_party_long: "Revanchism"

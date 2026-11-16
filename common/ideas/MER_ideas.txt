@@ -1,0 +1,335 @@
+# =========================================================================
+# MER — Нацдухи пов'язані з колоніальною гілкою
+# Вставити в ideas = { country = { ... } } вашого common/national_spirit файлу
+# TODO: іконки (GFX_idea_...) замінити на власні
+#
+# Три НЕЗАЛЕЖНІ градуйовані треки (кожен — 7 ідей, тільки одна з них активна
+# одночасно в межах свого треку). Перемикання рівнів робиться напряму в
+# events/MER_events.txt (set_variable + remove_ideas/add_ideas на option),
+# БЕЗ common/scripted_effects — той підхід не спрацював у цій версії гри.
+#   Рівень 1: +5% (найкращий стан)   Рівень 2: нейтральний (0%)
+#   Рівень 3: -5% (стартовий для всіх трьох треків)
+#   Рівень 4: -10%   Рівень 5: -15%   Рівень 6: -20%   Рівень 7: -25%
+#
+# MER_pony_unrest_1..7    — "бунтуючі місцеві" (MER_pearl.2): conscription_factor,
+#                           stability_factor, war_support_factor
+# MER_garrison_deficit_1..7 — армія (MER_pearl.1): army_core_defence_factor,
+#                           conscription_factor, army_org_factor
+# MER_rebel_infra_1..7    — інфраструктура (MER_pearl.3): production_speed_buildings_factor,
+#                           consumer_goods_factor, supply_consumption_factor
+# =========================================================================
+
+ideas = {
+	country = {
+
+		MER_pony_unrest_1 = {
+			picture = GFX_idea_generic_good_populace
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		MER_pony_unrest_2 = {
+			picture = GFX_idea_generic_neutral_populace
+			removal_cost = -1
+			modifier = {
+			}
+		}
+
+		MER_pony_unrest_3 = {
+			picture = GFX_idea_generic_bad_populace
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		MER_pony_unrest_4 = {
+			picture = GFX_idea_generic_bad_populace
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.10
+				stability_factor = -0.10
+				war_support_factor = -0.10
+			}
+		}
+
+		MER_pony_unrest_5 = {
+			picture = GFX_idea_generic_bad_populace
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.15
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+		}
+
+		MER_pony_unrest_6 = {
+			picture = GFX_idea_generic_very_bad_populace
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.20
+				stability_factor = -0.20
+				war_support_factor = -0.20
+			}
+		}
+
+		MER_pony_unrest_7 = {
+			picture = GFX_idea_generic_very_bad_populace
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.25
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			}
+		}
+
+		MER_pony_suppression = {
+			picture = GFX_idea_generic_military_police
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = -0.10
+				political_power_factor = -0.10
+				# Придушення тримає порядок ціною лояльності на довгу дистанцію
+			}
+		}
+
+		MER_pony_reconciliation = {
+			picture = GFX_idea_generic_national_unity
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				# TODO: за бажання — легкий штраф грифонській елітній підтримці,
+				# щоб примирення теж мало ціну
+			}
+		}
+
+	}
+}
+
+# =========================================================================
+# MER — Два НЕЗАЛЕЖНІ градуйовані треки (кожен має власну градацію,
+# один одного не зачіпають і не використовують MER_pony_unrest_*)
+# Перемикаються виключно через common/scripted_effects/MER_scripted_effects.txt
+# =========================================================================
+
+ideas = {
+	country = {
+
+		# --- Трек: армійський дебаф (гарнізон покинув острови) ------------
+		# Модифікатори перевірені по офіційній документації HOI4:
+		# army_core_defence_factor, conscription_factor, army_org_factor
+		MER_garrison_deficit_1 = {
+			picture = GFX_idea_generic_good_army
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		MER_garrison_deficit_2 = {
+			picture = GFX_idea_generic_neutral_army
+			removal_cost = -1
+			modifier = { }
+		}
+		MER_garrison_deficit_3 = {
+			picture = GFX_idea_generic_bad_army
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = -0.05
+				conscription_factor = -0.05
+				army_org_factor = -0.05
+			}
+		}
+		MER_garrison_deficit_4 = {
+			picture = GFX_idea_generic_bad_army
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = -0.10
+				conscription_factor = -0.10
+				army_org_factor = -0.10
+			}
+		}
+		MER_garrison_deficit_5 = {
+			picture = GFX_idea_generic_bad_army
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = -0.15
+				conscription_factor = -0.15
+				army_org_factor = -0.15
+			}
+		}
+		MER_garrison_deficit_6 = {
+			picture = GFX_idea_generic_very_bad_army
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = -0.20
+				conscription_factor = -0.20
+				army_org_factor = -0.20
+			}
+		}
+		MER_garrison_deficit_7 = {
+			picture = GFX_idea_generic_very_bad_army
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = -0.25
+				conscription_factor = -0.25
+				army_org_factor = -0.25
+			}
+		}
+
+		# --- Трек: інфраструктурний дебаф (шкода від повстанців) ----------
+		# Ключі перевірені документально: production_speed_buildings_factor,
+		# consumer_goods_factor, supply_consumption_factor.
+		# Знак протилежний для consumer_goods_factor і supply_consumption_factor:
+		# для них "погано" = додатне значення (більше споживання/більше на
+		# споживчі товари), тому на рівні 1 (найкращому) вони від'ємні.
+		MER_rebel_infra_1 = {
+			picture = GFX_idea_generic_good_construction
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+		MER_rebel_infra_2 = {
+			picture = GFX_idea_generic_neutral_construction
+			removal_cost = -1
+			modifier = { }
+		}
+		MER_rebel_infra_3 = {
+			picture = GFX_idea_generic_bad_construction
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.05
+				supply_consumption_factor = 0.05
+			}
+		}
+		MER_rebel_infra_4 = {
+			picture = GFX_idea_generic_bad_construction
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.10
+				supply_consumption_factor = 0.10
+			}
+		}
+		MER_rebel_infra_5 = {
+			picture = GFX_idea_generic_bad_construction
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.15
+				supply_consumption_factor = 0.15
+			}
+		}
+		MER_rebel_infra_6 = {
+			picture = GFX_idea_generic_very_bad_construction
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.20
+				supply_consumption_factor = 0.20
+			}
+		}
+		MER_rebel_infra_7 = {
+			picture = GFX_idea_generic_very_bad_construction
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.25
+				consumer_goods_factor = 0.25
+				supply_consumption_factor = 0.25
+			}
+		}
+
+	}
+}
+
+# =========================================================================
+# MER — Тимчасовий (140 днів) нацдух від масштабного повстання
+# (MER_pearl.6, наслідок 10%-го провалу MER_mobilize_local_garrisons_50)
+# =========================================================================
+
+ideas = {
+	country = {
+
+		MER_dominion_crisis = {
+			picture = GFX_idea_generic_bad_populace
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.10
+				war_support_factor = -0.10
+			}
+		}
+
+	}
+}
+
+# =========================================================================
+# MER — Тимчасові ідеї-компенсації (120 днів кожна)
+# =========================================================================
+
+ideas = {
+	country = {
+
+		MER_noble_compensation_demands = {
+			picture = GFX_idea_generic_bad_construction
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		MER_ships_compensation = {
+			picture = GFX_idea_generic_bad_construction
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+
+	}
+}
+
+# =========================================================================
+# MER - Міграційна криза (MER_pearl.27, наплив біженців від революції в JER)
+# Постійна (без таймера).
+# =========================================================================
+
+ideas = {
+	country = {
+
+		MER_migrant_crisis = {
+			picture = GFX_idea_generic_bad_populace
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				monthly_population = 0.40
+				fascism_drift = 0.10		# "Зверхність" (Supremacy) = fascism у EaW
+			}
+		}
+
+		# Посилена версія після MER_pearl.28 (реваншизм у таборах): +0.05 до дрифту
+		MER_migrant_crisis_2 = {
+			picture = GFX_idea_generic_bad_populace
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				monthly_population = 0.40
+				fascism_drift = 0.15
+			}
+		}
+
+	}
+}

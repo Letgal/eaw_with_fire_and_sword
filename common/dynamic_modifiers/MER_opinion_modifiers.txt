@@ -1,0 +1,18 @@
+####################################################################
+# MER — Opinion modifier для інциденту з ананасами на піці
+# Зберегти як common/opinion_modifiers/MER_opinion_modifiers.txt
+####################################################################
+
+opinion_modifiers = {
+
+	MER_pineapple_pizza_incident = {
+		value = -25
+		# без decay - лишається, поки не буде прибрано вручну
+	}
+
+	MER_equestrian_construction_scandal = {
+		value = -20
+		# без decay - лишається, поки не буде прибрано вручну
+	}
+
+}

@@ -1,0 +1,11 @@
+####################################################################
+# MER — Категорія рішень "Стабілізація домініону"
+# Зберегти як common/decisions/categories/MER_decisions_categories.txt
+####################################################################
+
+MER_dominion_stabilization_category = {
+	allowed = { tag = MER }
+	visible = { has_completed_focus = MER_focus_pearl_of_empire }
+	icon = decision_category_generic
+	priority = 50
+}

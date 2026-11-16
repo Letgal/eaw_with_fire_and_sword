@@ -1,0 +1,2851 @@
+focus_tree = {
+	id = MER_exile_focus_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = MER
+		}
+	}
+
+	shared_focus = RIV_dreams_of_a_federation
+
+	default = no
+	reset_on_civilwar = no
+
+	continuous_focus_position = { x = 25 y = 1350 }
+
+	########################
+	####### COLONIAL #######
+	########################
+	# ============================================================
+	# КОРІНЬ ГІЛКИ: 140-денний фокус (20 тижнів; тут cost = тижні).
+	# select_effect спрацьовує ОДРАЗУ при виборі фокуса (не при
+	# завершенні) і планує події:
+	#   день 0-70   — нічого не відбувається
+	#   день 70     — гарнізон Аквілеї покидає острови (MER_pearl.1)
+	#   день 100    — повстанці піднімаються через відсутність гарнізону (MER_pearl.2)
+	#   день 115    — повстанці шкодять інфраструктурі (MER_pearl.3)
+	# Наступні фокуси гілки (після цього кореня) прибрані —
+	# займемось ними окремо.
+	# ============================================================
+	focus = {
+		id = MER_focus_pearl_of_empire
+		icon = GFX_goal_generic_colonization
+		x = 4
+		y = 0
+		cost = 20				# 20 тижнів = 140 днів
+
+		select_effect = {
+			country_event = { id = MER_pearl.1 days = 70 }
+			country_event = { id = MER_pearl.2 days = 100 }
+			country_event = { id = MER_pearl.3 days = 115 }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_pearl_of_empire"
+			add_political_power = 100
+			add_stability = 0.02
+			custom_effect_tooltip = MER_pearl_of_empire_tt
+		}
+	}
+
+	# ============================================================
+	# 4 фокуси-нащадки кореня, у 2 взаємовиключні пари.
+	# Деталізовано поки що лише перший (MER_focus_local_garrisons).
+	# Інші 3 - заглушки під майбутнє наповнення.
+	# ============================================================
+
+	# --- Пара 1 ------------------------------------------------
+	focus = {
+		id = MER_focus_local_garrisons
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = MER_focus_pearl_of_empire
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MER_focus_pearl_of_empire }
+		mutually_exclusive = { focus = MER_focus_aquileian_colonists }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_local_garrisons"
+			custom_effect_tooltip = MER_focus_local_garrisons_tt
+			custom_effect_tooltip = MER_decisions_unlocked_tt
+			hidden_effect = {
+				country_event = { id = MER_pearl.5 hours = 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = MER_focus_aquileian_colonists
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = MER_focus_pearl_of_empire
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MER_focus_pearl_of_empire }
+		mutually_exclusive = { focus = MER_focus_local_garrisons }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_aquileian_colonists"
+			custom_effect_tooltip = MER_decisions_unlocked_tt
+			# TODO: заглушка - наповнимо окремо
+		}
+	}
+
+	# --- Пара 2 ------------------------------------------------
+	focus = {
+		id = MER_focus_prisoner_repair_brigades
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = MER_focus_pearl_of_empire
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MER_focus_pearl_of_empire }
+		mutually_exclusive = { focus = MER_focus_foreign_contractors }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_prisoner_repair_brigades"
+			custom_effect_tooltip = MER_decisions_unlocked_tt
+			# Відкриває MER_deploy_metropole_prisoners / MER_deploy_local_prisoners
+			# у MER_dominion_stabilization_category (через їхній власний visible)
+		}
+	}
+
+	focus = {
+		id = MER_focus_foreign_contractors
+		icon = GFX_goal_generic_trade
+		relative_position_id = MER_focus_pearl_of_empire
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MER_focus_pearl_of_empire }
+		mutually_exclusive = { focus = MER_focus_prisoner_repair_brigades }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_foreign_contractors"
+			custom_effect_tooltip = MER_decisions_unlocked_tt
+			# Відкриває MER_deploy_griffonian_construction_companies /
+			# MER_deploy_equestrian_construction_companies /
+			# MER_deploy_arabian_oil_companies у MER_dominion_stabilization_category
+		}
+	}
+
+	# ============================================================
+	# По центру гілки, під усіма 4 - потребує гарнізон рівня 1 або 2
+	# (тобто ситуація вже під контролем)
+	# ============================================================
+	focus = {
+		id = MER_focus_counter_insurgency
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = MER_focus_pearl_of_empire
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MER_focus_pearl_of_empire }
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_counter_insurgency"
+			custom_effect_tooltip = MER_decisions_unlocked_tt
+			# Відкриває MER_form_commando_squad / MER_counter_insurgency_operation /
+			# MER_train_additional_rangers у MER_dominion_stabilization_category
+		}
+	}
+
+	# ============================================================
+	# ПРИХОВАНА політична гілка нижче колоніальної.
+	# Видима після MER_pearl.25 (перша хвиля біженців, прапорець MER_refugee_branch_unlocked).
+	# Кожен фокус: -5% стабільності, +5% Зверхності (fascism), населення столиці (1196).
+	# ============================================================
+	focus = {
+		id = MER_focus_refugee_camps
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = MER_focus_counter_insurgency
+		x = 0
+		y = 2
+		cost = 10
+		allow_branch = { has_country_flag = MER_refugee_branch_unlocked }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_refugee_camps"
+			add_stability = -0.05
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			1196 = { add_manpower = 5000 }
+			# Реваншизм у таборах - окрема подія
+			hidden_effect = {
+				country_event = { id = MER_pearl.28 hours = 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = MER_focus_receive_feudals
+		icon = GFX_goal_generic_national_unity
+		relative_position_id = MER_focus_refugee_camps
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MER_focus_refugee_camps }
+		allow_branch = { has_country_flag = MER_refugee_branch_unlocked }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_receive_feudals"
+			add_stability = -0.05
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			1196 = { add_manpower = 5000 }
+		}
+	}
+
+	focus = {
+		id = MER_focus_evacuation_aid
+		icon = GFX_goal_generic_trade
+		relative_position_id = MER_focus_refugee_camps
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MER_focus_refugee_camps }
+		allow_branch = { has_country_flag = MER_refugee_branch_unlocked }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_focus_evacuation_aid"
+			add_stability = -0.05
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			1196 = { add_manpower = 5000 }
+		}
+	}
+
+	########################
+	####### INDUSTRY #######
+	########################
+	focus = {
+		id = MER_griffon_industrial_effort
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_production
+		x = 10
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1010.1.1
+				OR = {
+					# really small nations won't use it right away
+					num_of_controlled_states < 2
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_industrial_effort"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_cottage_industry
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MER_griffon_industrial_effort }
+		relative_position_id = MER_griffon_industrial_effort
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_cottage_industry"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = MER_griffon_roads
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = MER_griffon_cottage_industry }
+		relative_position_id = MER_griffon_cottage_industry
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_roads"
+			hidden_effect = {
+				if = { limit = { check_variable = { var = MER_rebel_infra_level value = 7 compare = equals } } remove_ideas = MER_rebel_infra_7 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_2 set_variable = { var = MER_rebel_infra_level value = 2 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_1 set_variable = { var = MER_rebel_infra_level value = 1 } }
+			}
+			custom_effect_tooltip = MER_dominion_infra_improve_tt
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = MER_griffon_boost_economy
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = MER_griffon_roads }
+		x = 0
+		y = 1
+		relative_position_id = MER_griffon_roads
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_boost_economy"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			decrease_poverty = yes
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_industrial_revolution
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MER_griffon_boost_economy}
+		x = 0
+		y = 1
+		relative_position_id = MER_griffon_boost_economy
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+		 		all_owned_state = {
+		 			free_building_slots = {
+		 				building = industrial_complex
+		 				size < 1
+		 				include_locked = yes
+		 			}
+				}
+			}
+			does_not_has_poverty = yes
+			has_modern_society = yes
+			NOT = {
+				has_idea = primitive_economy
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_industrial_revolution"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_idea = primitive_economy
+				}
+				swap_ideas = {
+					remove_idea = primitive_economy
+					add_idea = civilian_economy
+				}
+			}
+			decrease_poverty = yes
+			increase_society_development = yes
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_education_reform
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_griffon_books
+		prerequisite = { focus = MER_griffon_industrial_revolution}
+		x = -1
+		y = 1
+		relative_position_id = MER_griffon_industrial_revolution
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			NOT = { has_idea = poor_science_base }
+			does_not_has_illiteracy = yes
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_education_reform"
+			hidden_effect = { set_country_flag = better_science_base_unlocked }
+			if = {
+				limit = { has_idea = poor_science_base }
+				add_ideas = better_science_base
+			}
+			decrease_illiteracy = yes
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_railway
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = MER_griffon_industrial_revolution }
+		relative_position_id = MER_griffon_industrial_revolution
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+			does_not_has_poverty = yes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_railway"
+			hidden_effect = {
+				if = { limit = { check_variable = { var = MER_rebel_infra_level value = 7 compare = equals } } remove_ideas = MER_rebel_infra_7 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_2 set_variable = { var = MER_rebel_infra_level value = 2 } }
+				else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_1 set_variable = { var = MER_rebel_infra_level value = 1 } }
+			}
+			custom_effect_tooltip = MER_dominion_infra_improve_tt
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			decrease_poverty = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = MER_griffon_economic_boom
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = MER_griffon_railway }
+		prerequisite = { focus = MER_griffon_education_reform }
+		x = -1
+		y = 1
+		relative_position_id = MER_griffon_railway
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+			does_not_has_poverty = yes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_economic_boom"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			decrease_poverty = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = MER_griffon_industrial_effort_ii
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MER_griffon_economic_boom }
+		x = 1
+		y = 1
+		relative_position_id = MER_griffon_economic_boom
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+			num_of_factories > 14
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_industrial_effort_ii"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			decrease_poverty = yes
+			increase_society_development = yes
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_new_factories
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MER_griffon_industrial_effort_ii }
+		x = 0
+		y = 1
+		relative_position_id = MER_griffon_industrial_effort_ii
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+			does_not_has_poverty = yes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_new_factories"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			decrease_poverty = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = MER_griffon_modernise_society
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MER_griffon_new_factories }
+		x = 0
+		y = 1
+		relative_position_id = MER_griffon_new_factories
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			has_modern_society = yes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_modernise_society"
+			increase_society_development = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_science_effort
+		icon = GFX_focus_research
+		prerequisite = { focus = MER_griffon_economic_boom}
+		x = -1
+		y = 1
+		relative_position_id = MER_griffon_economic_boom
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+			num_of_factories > 14
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			amount_research_slots > 1
+			NOT = { has_idea = better_science_base }
+			does_not_has_illiteracy = yes
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_science_effort"
+			if = {
+				limit = {
+					amount_research_slots < 2
+				}
+				add_research_slot = 1
+			}
+			hidden_effect = { set_country_flag = big_science_base_unlocked }
+			if = {
+				limit = { has_idea = better_science_base }
+				add_ideas = big_science_base
+			}
+			decrease_illiteracy = yes
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_science_effort_ii
+		icon = GFX_focus_research
+		prerequisite = { focus = MER_griffon_science_effort}
+		x = 0
+		y = 1
+		relative_position_id = MER_griffon_science_effort
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+			num_of_factories > 14
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			amount_research_slots > 2
+			NOT = { has_idea = big_science_base }
+			has_idea = proper_science_base
+			does_not_has_illiteracy = yes
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_science_effort_ii"
+			if = {
+				limit = {
+					amount_research_slots < 3
+				}
+				add_research_slot = 1
+			}
+			hidden_effect = { set_country_flag = proper_science_base_unlocked }
+			if = {
+				limit = { has_idea = big_science_base }
+				add_ideas = proper_science_base
+			}
+			decrease_illiteracy = yes
+		}
+	}
+
+	focus = {
+		id = MER_griffon_universities
+		icon = GFX_focus_research
+		prerequisite = { focus = MER_griffon_science_effort_ii }
+		relative_position_id = MER_griffon_science_effort_ii
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+			num_of_factories > 14
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			amount_research_slots > 3
+			does_not_has_illiteracy = yes
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_universities"
+			if = {
+				limit = {
+					amount_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			decrease_illiteracy = yes
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_scientific_breakthrough
+		icon = GFX_focus_research
+		prerequisite = { focus = MER_griffon_universities }
+		prerequisite = { focus = MER_griffon_modernise_society }
+		relative_position_id = MER_griffon_universities
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			amount_research_slots > 4
+			does_not_has_illiteracy = yes
+			has_modern_society = yes
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_scientific_breakthrough"
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			decrease_illiteracy = yes
+			increase_society_development = yes
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_arms_effort
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MER_griffon_industrial_effort }
+		relative_position_id = MER_griffon_industrial_effort
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_arms_effort"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MER_griffon_arms_effort_ii
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MER_griffon_arms_effort }
+		prerequisite = { focus = MER_griffon_industrial_revolution }
+		relative_position_id = MER_griffon_industrial_revolution
+		x = 3
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_arms_effort_ii"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MER_griffon_arms_effort_iii
+		available = {
+			OR = {
+				has_idea = MER_rebel_infra_1
+				has_idea = MER_rebel_infra_2
+			}
+		}
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MER_griffon_arms_effort_ii }
+		prerequisite = { focus = MER_griffon_new_factories }
+		relative_position_id = MER_griffon_new_factories
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = no
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_arms_effort_iii"
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_in_home_area = yes
+						is_core_of = ROOT ## Prioritise cores in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then cores not in home area.
+					}
+					else_if = {
+						limit = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+						is_in_home_area = yes ## Then non-cores in home area, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	########################
+	#######   ARMY   #######
+	########################
+	focus = {
+		id = MER_griffon_expand_army
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 14
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_expand_army"
+			army_experience = 25
+			land_infantry_mastery_doctrine_50 = yes
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				folder = land 
+				name = MER_griffon_expand_army
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_improved_weapons
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MER_griffon_expand_army }
+		relative_position_id = MER_griffon_expand_army
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_improved_weapons"
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.15
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_artillery_effort
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = MER_griffon_improved_weapons }
+		relative_position_id = MER_griffon_improved_weapons
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_artillery_effort"
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.15
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_special_forces
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = MER_griffon_artillery_effort }
+		prerequisite = { focus = MER_griffon_traditonal_warfair focus = MER_griffon_modern_warfair }
+		relative_position_id = MER_griffon_artillery_effort
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_special_forces"
+			add_ideas = special_forces
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "No Compromise, No Surrender"					
+						has_dlc = "Arms Against Tyranny"
+					}
+				}
+				set_temp_variable = { temp_track = 1 }
+				set_temp_variable = { temp_value = 75 }
+				specforce_mastery_doctrine_effect = yes
+				add_tech_bonus = {
+					name = special_forces_bonus
+					bonus = 0.75
+					uses = 1
+					category = special_forces_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = special_forces_bonus
+					bonus = 1.0
+					uses = 1
+					category = special_forces_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_doctrine_advancement
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MER_griffon_special_forces }
+		prerequisite = { focus = MER_griffon_local_tank_production focus = MER_griffon_tank_licenses }
+		relative_position_id = MER_griffon_artillery_effort
+		x = 2
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_doctrine_advancement"
+			if = {
+				limit = { has_idea = FAT_unruly_army_idea }
+				remove_ideas = FAT_unruly_army_idea
+			}
+			if = {
+				limit = { has_idea = FAT_unruly_army_idea1 }
+				remove_ideas = FAT_unruly_army_idea1
+			}
+			if = {
+				limit = { has_idea = FAT_unruly_army_idea2 }
+				remove_ideas = FAT_unruly_army_idea2
+			}
+			army_experience = 25
+			land_infantry_mastery_doctrine_50 = yes
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				folder = land 
+				name = MER_griffon_doctrine_advancement
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_support
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_support_equipment
+		prerequisite = { focus = MER_griffon_expand_army }
+		relative_position_id = MER_griffon_expand_army
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_support"
+			add_tech_bonus = {
+				name = MER_griffon_support
+				bonus = 1.0
+				uses = 2
+				category = engineers_tech
+				category = recon_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_traditonal_warfair
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_griffon_knights
+		prerequisite = { focus = MER_griffon_support }
+		relative_position_id = MER_griffon_support
+		mutually_exclusive = { focus = MER_griffon_modern_warfair }
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_traditonal_warfair"
+			if = {
+				limit = { is_griffon_race = yes }
+				add_tech_bonus = {
+					name = griffon_knights
+					bonus = 1.0
+					uses = 1
+					category = knights_tech
+				}
+			}
+			else_if = {
+				limit = { is_pony_race = yes }
+				add_tech_bonus = {
+					name = pegasi
+					bonus = 1.0
+					uses = 1
+					category = pegasi_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = magical_bonus
+					bonus = 0.65
+					uses = 1
+					category = magical_tech
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_modern_warfair
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = MER_griffon_expand_army }
+		mutually_exclusive = { focus = MER_griffon_traditonal_warfair }
+		relative_position_id = MER_griffon_traditonal_warfair
+		x = 2
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_modern_warfair"
+			add_tech_bonus = {
+				name = motorized_bonus
+				uses = 1
+				bonus = 1.0
+				category = motorized_equipment
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_local_tank_production
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = MER_griffon_modern_warfair }
+		mutually_exclusive = { focus = MER_griffon_tank_licenses }
+		relative_position_id = MER_griffon_modern_warfair
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_local_tank_production"
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_tank_licenses
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = MER_griffon_modern_warfair }
+		mutually_exclusive = { focus = MER_griffon_local_tank_production }
+		x = 2
+		y = 1
+		relative_position_id = MER_griffon_modern_warfair
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_tank_licenses"
+			add_ideas = griffon_tank_licenses
+		}
+	}
+	########################
+	#######   AIR    #######
+	########################
+	focus = {
+		id = MER_griffon_aviation_effort
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_build_airforce
+		x = 22
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_aviation_effort"
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			air_fighter_mastery_doctrine_50 = yes
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				folder = air 
+				name = MER_griffon_aviation_effort
+			}
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_fighter_focus
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = MER_griffon_aviation_effort }
+		mutually_exclusive = { focus = MER_griffon_bomber_focus }
+		mutually_exclusive = { focus = MER_griffon_purchase_foreign }
+		relative_position_id = MER_griffon_aviation_effort
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_fighter_focus"
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_air
+					category = medium_air
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+					category = cat_heavy_fighter
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_fighter_focus_2
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = MER_griffon_bomber_focus focus = MER_griffon_fighter_focus }
+		mutually_exclusive = { focus = MER_griffon_bomber_focus_2 }
+		relative_position_id = MER_griffon_fighter_focus
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_fighter_focus_2"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.35
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 0.5
+					uses = 1
+					category = light_air
+					category = medium_air
+				}
+				add_tech_bonus = {
+					name = cat_air_guns
+					bonus = 0.5
+					uses = 1
+					category = cat_air_guns
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+					category = cat_heavy_fighter
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_bomber_focus
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = MER_griffon_aviation_effort }
+		mutually_exclusive = { focus = MER_griffon_fighter_focus }
+		mutually_exclusive = { focus = MER_griffon_purchase_foreign }
+		relative_position_id = MER_griffon_aviation_effort
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_bomber_focus"
+			if = {
+				limit = {
+				   has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = medium_air
+					bonus = 1.0
+					uses = 1
+					category = medium_air
+					category = heavy_air
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = tactical_bomber
+					bonus = 1.0
+					uses = 1
+					category = tactical_bomber
+					category = cat_strategic_bomber
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_bomber_focus_2
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = MER_griffon_bomber_focus focus = MER_griffon_fighter_focus }
+		mutually_exclusive = { focus = MER_griffon_fighter_focus_2 }
+		relative_position_id = MER_griffon_bomber_focus
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_bomber_focus_2"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.35
+			}
+			if = {
+				limit = {
+				   has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = medium_air
+					bonus = 0.5
+					uses = 1
+					category = medium_air
+					category = heavy_air
+				}
+				add_tech_bonus = {
+					name = plane_modules_tech
+					bonus = 0.5
+					uses = 1
+					category = plane_modules_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = tactical_bomber
+					bonus = 1.0
+					uses = 1
+					category = tactical_bomber
+					category = cat_strategic_bomber
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_aviation_effort_2
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = MER_griffon_bomber_focus_2 focus = MER_griffon_fighter_focus_2 focus = MER_griffon_fighter_competition focus = MER_griffon_bomber_competition  }
+		relative_position_id = MER_griffon_bomber_focus_2
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_aviation_effort_2"
+			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			air_fighter_mastery_doctrine_50 = yes
+			add_mastery_bonus = {
+				bonus = 0.2
+				days = 180
+				folder = air 
+				name = MER_griffon_aviation_effort_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MER_griffon_purchase_foreign
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = MER_griffon_aviation_effort }
+		mutually_exclusive = { focus = MER_griffon_bomber_focus focus = MER_griffon_fighter_focus }
+		x = 4
+		y = 1
+		relative_position_id = MER_griffon_aviation_effort
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_purchase_foreign"
+			add_ideas = griffon_air_licenses
+		}
+	}
+
+	focus = {
+		id = MER_griffon_fighter_competition
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = MER_griffon_purchase_foreign }
+		x = -1
+		y = 1
+		relative_position_id = MER_griffon_purchase_foreign
+
+		cost = 1
+
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+			NOT = {
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					has_tech = improved_small_airframe
+					has_tech = improved_medium_airframe
+				}
+				else = {
+					has_tech = fighter3
+					has_tech = heavy_fighter3
+				}
+			}
+			OR = {
+				GRI = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROOT = yes
+							is_available_heavy_fighter_ROOT = yes
+						}
+					}
+				}
+				JER = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROOT = yes
+							is_available_heavy_fighter_ROOT = yes
+						}
+					}
+				}
+				WNG = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROOT = yes
+							is_available_heavy_fighter_ROOT = yes
+						}
+					}
+				}
+				LCT = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROOT = yes
+							is_available_heavy_fighter_ROOT = yes
+						}
+					}
+				}
+				event_target:equestria = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_ROOT = yes
+							is_available_heavy_fighter_ROOT = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_fighter_competition"
+			country_event = griffonian.150
+		}
+	}
+
+	focus = {
+		id = MER_griffon_bomber_competition
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = MER_griffon_purchase_foreign }
+		x = 1
+		y = 1
+		relative_position_id = MER_griffon_purchase_foreign
+
+		cost = 10
+
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+			NOT = {
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					has_tech = improved_small_airframe
+					has_tech = improved_medium_airframe
+				}
+				else = {
+					has_tech = CAS3
+					has_tech = tactical_bomber3
+				}
+			}
+			OR = {
+				GRI = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_ROOT = yes
+							is_available_tac_ROOT = yes
+						}
+					}
+				}
+				JER = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_ROOT = yes
+							is_available_tac_ROOT = yes
+						}
+					}
+				}
+				WNG = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_ROOT = yes
+							is_available_tac_ROOT = yes
+						}
+					}
+				}
+				LCT = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_ROOT = yes
+							is_available_tac_ROOT = yes
+						}
+					}
+				}
+				event_target:equestria = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_ROOT = yes
+							is_available_tac_ROOT = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_bomber_competition"
+			country_event = griffonian.160
+		}
+	}
+	########################
+	#######   SEA    #######
+	########################
+	focus = {
+		id = MER_griffon_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 30
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+			any_controlled_state_is_coastal = yes
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_naval_effort"
+			navy_experience = 25
+			random_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					if = {
+						limit = {
+							controller = {
+								any_owned_state = {
+									is_coastal = yes
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_controlled_by = ROOT
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_owned_by = ROOT
+						is_core_of = ROOT ## Prioritise owned cores.
+					}
+					else_if = {
+						limit = {
+							controller = {
+								any_controlled_state = {
+									is_coastal = yes
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_core_of = ROOT
+								}
+							}
+						}
+						is_core_of = ROOT ## Then controlled cores.
+					}
+					else_if = {
+						limit = {
+							controller = {
+								any_owned_state = {
+									is_coastal = yes
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_controlled_by = ROOT
+								}
+							}
+						}
+						is_owned_by = ROOT ## Then owned non-cores, if this fails too it goes to a random state.
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = MER_griffon_flexible_navy
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = MER_griffon_naval_effort }
+		mutually_exclusive = { focus = MER_griffon_large_navy }
+		relative_position_id = MER_griffon_naval_effort
+		x = -1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_flexible_navy"
+
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_convoy_raiding
+				track = submarines
+				name = MER_griffon_flexible_navy
+			}
+
+			naval_subs_mastery_doctrine_50 = yes
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_large_navy
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = MER_griffon_naval_effort }
+		mutually_exclusive = { focus = MER_griffon_flexible_navy }
+		relative_position_id = MER_griffon_naval_effort
+		x = 1
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_large_navy"
+
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_fleet_in_being
+				track = capital_ships
+				name = MER_griffon_large_navy
+			}
+			naval_capships_mastery_doctrine_25 = yes
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_submarine_effort
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = MER_griffon_flexible_navy focus = MER_griffon_large_navy }
+		relative_position_id = MER_griffon_large_navy
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_submarine_effort"
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_cruiser_effort
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = MER_griffon_large_navy focus = MER_griffon_flexible_navy }
+		relative_position_id = MER_griffon_flexible_navy
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_cruiser_effort"
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ca_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_destroyer_effort
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = MER_griffon_submarine_effort }
+		relative_position_id = MER_griffon_submarine_effort
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_destroyer_effort"
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = MER_griffon_capital_ships_effort
+		available = {
+			OR = {
+				has_idea = MER_garrison_deficit_1
+				has_idea = MER_garrison_deficit_2
+			}
+		}
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = MER_griffon_cruiser_effort }
+		relative_position_id = MER_griffon_cruiser_effort
+		x = 0
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MER_griffon_capital_ships_effort"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+
+}

@@ -1,0 +1,669 @@
+####################################################################
+# MER — Лор-івенти колоніальної гілки
+# Зберегти як events/MER_colonial.txt і додати
+#     add_namespace = MER_colonial
+# в кінець вашого common namespaces (або на початок цього файлу,
+# якщо events завантажуються напряму)
+####################################################################
+
+add_namespace = MER_colonial
+
+# ПРИМІТКА: MER_colonial.1 і .2 наразі нікуди не викликаються — фокуси, які
+# їх запускали (MER_focus_griffon_settlement, MER_focus_pony_discontent_realization),
+# видалено з дерева й будуть перероблені окремо. Лишив події тут про запас.
+
+# --- Fires from: MER_focus_griffon_settlement -----------------------------
+country_event = {
+	id = MER_colonial.1
+	title = MER_colonial.1.t
+	desc = MER_colonial.1.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_colonial.1.a
+		custom_effect_tooltip = MER_colonial.1.a.tt
+		# Нічого механічно — гравець просто визнає ситуацію
+	}
+}
+
+# --- Fires from: MER_focus_pony_discontent_realization --------------------
+country_event = {
+	id = MER_colonial.2
+	title = MER_colonial.2.t
+	desc = MER_colonial.2.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_colonial.2.a	# "Потрібна тверда рука"
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = MER_colonial.2.a.tt
+	}
+	option = {
+		name = MER_colonial.2.b	# "Потрібен діалог"
+		ai_chance = { factor = 50 }
+		custom_effect_tooltip = MER_colonial.2.b.tt
+	}
+}
+
+####################################################################
+# MER — Ланцюг подій фокуса "Перлина імперії" (MER_focus_pearl_of_empire)
+# Плануються через select_effect самого фокуса (70/100/115 днів
+# після його вибору), не через completion_reward.
+#   день 0-70  — нічого не відбувається
+#   день 70    — гарнізон покидає острови -> MER_garrison_deficit, рівень 3
+#   день 100   — повстанці підіймаються (наратив, без власного дебафу)
+#   день 115   — повстанці шкодять інфраструктурі -> MER_rebel_infra, рівень 3
+####################################################################
+
+add_namespace = MER_pearl
+
+# --- День 70: гарнізон Аквілеї залишає острови -----------------------------
+country_event = {
+	id = MER_pearl.1
+	title = MER_pearl.1.t
+	desc = MER_pearl.1.d
+	picture = GFX_report_event_generic_military_movement
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.1.a
+		set_variable = { var = MER_garrison_deficit_level value = 3 }
+		add_ideas = MER_garrison_deficit_3
+	}
+}
+
+# --- День 100 (+30 від MER_pearl.1): повстанці підіймаються -----------------
+# Дає ідею "MER_pony_unrest" (бунтуючі місцеві) — той трек, що раніше не
+# використовувався. Рівень 3 — так само, як старт у двох інших треків.
+country_event = {
+	id = MER_pearl.2
+	title = MER_pearl.2.t
+	desc = MER_pearl.2.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.2.a
+		set_variable = { var = MER_pony_unrest_level value = 3 }
+		add_ideas = MER_pony_unrest_3
+	}
+}
+
+# --- День 115 (+15 від MER_pearl.2): повстанці шкодять інфраструктурі ------
+country_event = {
+	id = MER_pearl.3
+	title = MER_pearl.3.t
+	desc = MER_pearl.3.d
+	picture = GFX_report_event_generic_construction
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.3.a
+		set_variable = { var = MER_rebel_infra_level value = 3 }
+		add_ideas = MER_rebel_infra_3
+	}
+}
+# --- Fires from: MER_focus_local_garrisons completion ----------------------
+# Наративна подія - без механічного ефекту. Фокус окремо через свій
+# completion_reward відкриває MER_mobilize_local_garrisons_25/_50 у
+# common/decisions/MER_dominion_stabilization.txt
+country_event = {
+	id = MER_pearl.5
+	title = MER_pearl.5.t
+	desc = MER_pearl.5.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.5.a
+		add_political_power = -60
+	}
+}
+
+# --- Fires from: MER_mobilize_local_garrisons_50 (10% chance) --------------
+# НЕ fire_only_once - рішення можна брати повторно, тож ризик спрацьовує
+# щоразу окремо.
+country_event = {
+	id = MER_pearl.6
+	title = MER_pearl.6.t
+	desc = MER_pearl.6.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.6.a
+		1198 = {
+			# add_manpower у скоупі стейту = населення стейту (підтверджено
+			# офіційною вікі: "manpower = X is the total population of the state")
+			add_manpower = -750
+		}
+		add_manpower = -500
+		add_timed_idea = { idea = MER_dominion_crisis days = 140 }
+	}
+}
+
+# --- Fires from: MER_mobilize_aquileian_colonists (10% chance) -------------
+country_event = {
+	id = MER_pearl.7
+	title = MER_pearl.7.t
+	desc = MER_pearl.7.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.7.a
+		add_timed_idea = { idea = MER_noble_compensation_demands days = 120 }
+	}
+}
+
+# --- Fires from: MER_invite_griffonian_colonists (1% chance, комедійна) ----
+country_event = {
+	id = MER_pearl.8
+	title = MER_pearl.8.t
+	desc = MER_pearl.8.d
+	picture = GFX_report_event_generic_civilian_action
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.8.a
+		add_political_power = -50
+		WNG = { add_opinion_modifier = { target = ROOT modifier = MER_pineapple_pizza_incident } }
+	}
+}
+
+# --- Fires from: MER_invite_griffonian_colonists (1% chance) ---------------
+country_event = {
+	id = MER_pearl.9
+	title = MER_pearl.9.t
+	desc = MER_pearl.9.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.9.a
+		add_political_power = -25
+		add_stability = -0.01
+	}
+}
+
+# --- Fires from: MER_invite_griffonian_colonists (1% chance) ---------------
+country_event = {
+	id = MER_pearl.10
+	title = MER_pearl.10.t
+	desc = MER_pearl.10.d
+	picture = GFX_report_event_generic_navy
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.10.a
+		add_timed_idea = { idea = MER_ships_compensation days = 120 }
+	}
+}
+
+# --- Fires from: MER_deploy_local_prisoners (5% chance) --------------------
+country_event = {
+	id = MER_pearl.11
+	title = MER_pearl.11.t
+	desc = MER_pearl.11.d
+	picture = GFX_report_event_generic_construction
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.11.a
+		# Саботаж забирає ДВА рівні інфраструктури (капується на 7)
+		if = { limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } } remove_ideas = MER_rebel_infra_1 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_7 set_variable = { var = MER_rebel_infra_level value = 7 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_7 set_variable = { var = MER_rebel_infra_level value = 7 } }
+		# рівень 7 - вже максимум, без змін
+	}
+}
+
+# --- Fires from: MER_deploy_local_prisoners (5% chance) --------------------
+country_event = {
+	id = MER_pearl.12
+	title = MER_pearl.12.t
+	desc = MER_pearl.12.d
+	picture = GFX_report_event_generic_military_movement
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.12.a
+		if = { limit = { check_variable = { var = MER_rebel_infra_level value = 7 compare = equals } } } # рівень 7 - вже максимум, без змін
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } } remove_ideas = MER_rebel_infra_1 add_ideas = MER_rebel_infra_2 set_variable = { var = MER_rebel_infra_level value = 2 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_7 set_variable = { var = MER_rebel_infra_level value = 7 } }
+
+		if = { limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } } remove_ideas = MER_pony_unrest_1 add_ideas = MER_pony_unrest_2 set_variable = { var = MER_pony_unrest_level value = 2 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } } remove_ideas = MER_pony_unrest_2 add_ideas = MER_pony_unrest_3 set_variable = { var = MER_pony_unrest_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } } remove_ideas = MER_pony_unrest_3 add_ideas = MER_pony_unrest_4 set_variable = { var = MER_pony_unrest_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } } remove_ideas = MER_pony_unrest_4 add_ideas = MER_pony_unrest_5 set_variable = { var = MER_pony_unrest_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } } remove_ideas = MER_pony_unrest_5 add_ideas = MER_pony_unrest_6 set_variable = { var = MER_pony_unrest_level value = 6 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } } remove_ideas = MER_pony_unrest_6 add_ideas = MER_pony_unrest_7 set_variable = { var = MER_pony_unrest_level value = 7 } }
+		# рівень 7 - вже максимум, без змін
+
+		add_manpower = -200
+	}
+}
+
+# --- Fires from: MER_deploy_griffonian_construction_companies (2%) --------
+country_event = {
+	id = MER_pearl.13
+	title = MER_pearl.13.t
+	desc = MER_pearl.13.d
+	picture = GFX_report_event_generic_construction
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.13.a
+		if = { limit = { check_variable = { var = MER_rebel_infra_level value = 1 compare = equals } } remove_ideas = MER_rebel_infra_1 add_ideas = MER_rebel_infra_3 set_variable = { var = MER_rebel_infra_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 2 compare = equals } } remove_ideas = MER_rebel_infra_2 add_ideas = MER_rebel_infra_4 set_variable = { var = MER_rebel_infra_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 3 compare = equals } } remove_ideas = MER_rebel_infra_3 add_ideas = MER_rebel_infra_5 set_variable = { var = MER_rebel_infra_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 4 compare = equals } } remove_ideas = MER_rebel_infra_4 add_ideas = MER_rebel_infra_6 set_variable = { var = MER_rebel_infra_level value = 6 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 5 compare = equals } } remove_ideas = MER_rebel_infra_5 add_ideas = MER_rebel_infra_7 set_variable = { var = MER_rebel_infra_level value = 7 } }
+		else_if = { limit = { check_variable = { var = MER_rebel_infra_level value = 6 compare = equals } } remove_ideas = MER_rebel_infra_6 add_ideas = MER_rebel_infra_7 set_variable = { var = MER_rebel_infra_level value = 7 } }
+		# рівень 7 - вже максимум, без змін
+	}
+}
+
+# --- Fires from: MER_deploy_griffonian_construction_companies (2%) --------
+country_event = {
+	id = MER_pearl.14
+	title = MER_pearl.14.t
+	desc = MER_pearl.14.d
+	picture = GFX_report_event_generic_construction
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.14.a
+		random_owned_state = {
+			limit = { free_building_slots = { building = infrastructure size > 0 } }
+			add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+		}
+	}
+}
+
+# --- Fires from: MER_deploy_equestrian_construction_companies (5%) --------
+country_event = {
+	id = MER_pearl.15
+	title = MER_pearl.15.t
+	desc = MER_pearl.15.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.15.a
+		if = { limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } } remove_ideas = MER_pony_unrest_1 add_ideas = MER_pony_unrest_2 set_variable = { var = MER_pony_unrest_level value = 2 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } } remove_ideas = MER_pony_unrest_2 add_ideas = MER_pony_unrest_3 set_variable = { var = MER_pony_unrest_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } } remove_ideas = MER_pony_unrest_3 add_ideas = MER_pony_unrest_4 set_variable = { var = MER_pony_unrest_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } } remove_ideas = MER_pony_unrest_4 add_ideas = MER_pony_unrest_5 set_variable = { var = MER_pony_unrest_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } } remove_ideas = MER_pony_unrest_5 add_ideas = MER_pony_unrest_6 set_variable = { var = MER_pony_unrest_level value = 6 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } } remove_ideas = MER_pony_unrest_6 add_ideas = MER_pony_unrest_7 set_variable = { var = MER_pony_unrest_level value = 7 } }
+		# рівень 7 - вже максимум, без змін
+
+		EQS = { add_opinion_modifier = { target = ROOT modifier = MER_equestrian_construction_scandal } }
+	}
+}
+
+# --- Fires from: MER_deploy_arabian_oil_companies (10%) --------------------
+country_event = {
+	id = MER_pearl.16
+	title = MER_pearl.16.t
+	desc = MER_pearl.16.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.16.a
+		add_political_power = -100
+	}
+}
+
+# --- Fires from: MER_form_commando_squad (after 30 days) -------------------
+country_event = {
+	id = MER_pearl.17
+	title = MER_pearl.17.t
+	desc = MER_pearl.17.d
+	picture = GFX_report_event_generic_military_movement
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.17.a
+		add_manpower = 200
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 50
+			producer = ROOT
+		}
+		set_technology = { 1251 = 1 }
+		set_country_flag = MER_commando_decisions_unlocked
+	}
+}
+
+# --- Fires from: MER_counter_insurgency_operation (30% - успіх) ------------
+country_event = {
+	id = MER_pearl.18
+	title = MER_pearl.18.t
+	desc = MER_pearl.18.d
+	picture = GFX_report_event_generic_military_movement
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.18.a
+		add_manpower = 190
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 35
+			producer = ROOT
+		}
+		if = { limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } } remove_ideas = MER_pony_unrest_2 add_ideas = MER_pony_unrest_1 set_variable = { var = MER_pony_unrest_level value = 1 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } } remove_ideas = MER_pony_unrest_3 add_ideas = MER_pony_unrest_2 set_variable = { var = MER_pony_unrest_level value = 2 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } } remove_ideas = MER_pony_unrest_4 add_ideas = MER_pony_unrest_3 set_variable = { var = MER_pony_unrest_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } } remove_ideas = MER_pony_unrest_5 add_ideas = MER_pony_unrest_4 set_variable = { var = MER_pony_unrest_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } } remove_ideas = MER_pony_unrest_6 add_ideas = MER_pony_unrest_5 set_variable = { var = MER_pony_unrest_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 7 compare = equals } } remove_ideas = MER_pony_unrest_7 add_ideas = MER_pony_unrest_6 set_variable = { var = MER_pony_unrest_level value = 6 } }
+		# рівень 1 - вже найкращий, без змін
+	}
+}
+
+# --- Fires from: MER_counter_insurgency_operation (30% - успіх дорогою ціною) ---
+country_event = {
+	id = MER_pearl.19
+	title = MER_pearl.19.t
+	desc = MER_pearl.19.d
+	picture = GFX_report_event_generic_military_movement
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.19.a
+		add_manpower = 120
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 15
+			producer = ROOT
+		}
+		if = { limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } } remove_ideas = MER_pony_unrest_2 add_ideas = MER_pony_unrest_1 set_variable = { var = MER_pony_unrest_level value = 1 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } } remove_ideas = MER_pony_unrest_3 add_ideas = MER_pony_unrest_2 set_variable = { var = MER_pony_unrest_level value = 2 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } } remove_ideas = MER_pony_unrest_4 add_ideas = MER_pony_unrest_3 set_variable = { var = MER_pony_unrest_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } } remove_ideas = MER_pony_unrest_5 add_ideas = MER_pony_unrest_4 set_variable = { var = MER_pony_unrest_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } } remove_ideas = MER_pony_unrest_6 add_ideas = MER_pony_unrest_5 set_variable = { var = MER_pony_unrest_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 7 compare = equals } } remove_ideas = MER_pony_unrest_7 add_ideas = MER_pony_unrest_6 set_variable = { var = MER_pony_unrest_level value = 6 } }
+		# рівень 1 - вже найкращий, без змін
+	}
+}
+
+# --- Fires from: MER_counter_insurgency_operation (30% - провал) -----------
+country_event = {
+	id = MER_pearl.20
+	title = MER_pearl.20.t
+	desc = MER_pearl.20.d
+	picture = GFX_report_event_generic_military_movement
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.20.a
+		add_manpower = 50
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5
+			producer = ROOT
+		}
+	}
+}
+
+# --- Fires from: MER_counter_insurgency_operation (10% - загін зник) -------
+country_event = {
+	id = MER_pearl.21
+	title = MER_pearl.21.t
+	desc = MER_pearl.21.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.21.a
+		if = { limit = { check_variable = { var = MER_pony_unrest_level value = 1 compare = equals } } remove_ideas = MER_pony_unrest_1 add_ideas = MER_pony_unrest_2 set_variable = { var = MER_pony_unrest_level value = 2 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 2 compare = equals } } remove_ideas = MER_pony_unrest_2 add_ideas = MER_pony_unrest_3 set_variable = { var = MER_pony_unrest_level value = 3 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 3 compare = equals } } remove_ideas = MER_pony_unrest_3 add_ideas = MER_pony_unrest_4 set_variable = { var = MER_pony_unrest_level value = 4 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 4 compare = equals } } remove_ideas = MER_pony_unrest_4 add_ideas = MER_pony_unrest_5 set_variable = { var = MER_pony_unrest_level value = 5 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 5 compare = equals } } remove_ideas = MER_pony_unrest_5 add_ideas = MER_pony_unrest_6 set_variable = { var = MER_pony_unrest_level value = 6 } }
+		else_if = { limit = { check_variable = { var = MER_pony_unrest_level value = 6 compare = equals } } remove_ideas = MER_pony_unrest_6 add_ideas = MER_pony_unrest_7 set_variable = { var = MER_pony_unrest_level value = 7 } }
+		# рівень 7 - вже максимум, без змін
+	}
+}
+
+####################################################################
+# MER — Наплив біженців через громадянську війну в Аквілеї (JER)
+# Тригер: JER_revolution_begun - глобальний прапорець, який ставиться
+# рішенням JER_revolution_mission (common/decisions/JER_decisions.txt),
+# коли гравець (JER/JEB/JRR/VIN/JFT) свідомо запалює війну.
+# Це "подія-пульсар": не triggered_only, перевіряється раз на день,
+# і одноразово спрацьовує, коли прапорець з'являється.
+####################################################################
+
+country_event = {
+	id = MER_pearl.22
+	title = MER_pearl.22.t
+	desc = MER_pearl.22.d
+	picture = GFX_report_event_generic_civilian_action
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = MER
+		has_global_flag = JER_revolution_begun
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = MER_pearl.22.a
+	}
+}
+
+# --- MER здобуває незалежність (наслідок Другої аквілейської революції) ----
+# Громадянська війна фіксована на 3 лютого, тож замість загального
+# is_subject_of-пульсара просто перевіряємо на 15 лютого (1008.2.15) хто
+# зрештою при владі в JER:
+#   ruling_party = democratic -> перемогли республіканці (aquileia.16)
+#   ruling_party = neutrality -> перемогли монархісти (aquileia.46)
+# В обох випадках гра сама вже виконала end_puppet = MER раніше.
+
+# --- Падіння аквілейської корони (перемогли республіканці) -----------------
+country_event = {
+	id = MER_pearl.23
+	title = MER_pearl.23.t
+	desc = MER_pearl.23.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = MER
+		date > 1008.2.14
+		NOT = { is_subject_of = JER }
+		JER = { has_government = democratic }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = MER_pearl.23.a
+		# Починає ланцюг MER_pearl.25 -> .26 -> .27 (наплив біженців)
+		hidden_effect = {
+			country_event = { id = MER_pearl.25 days = 5 }
+		}
+	}
+}
+
+# --- Республіканці зазнали поразки (перемогли монархісти) ------------------
+country_event = {
+	id = MER_pearl.24
+	title = MER_pearl.24.t
+	desc = MER_pearl.24.d
+	picture = GFX_report_event_generic_diplomacy
+
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = MER
+		date > 1008.2.14
+		NOT = { is_subject_of = JER }
+		JER = { has_government = neutrality }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = MER_pearl.24.a
+	}
+}
+
+####################################################################
+# MER - Наплив біженців від Другої аквілейської революції
+# Ланцюг стартує з MER_pearl.23 (JER = democratic, "гармоністи" перемогли):
+#   .25 (+5д після .23) -> .26 (+30д) -> .27 (+30д, вішає MER_migrant_crisis)
+# Кожна подія: -2% стабільності і населення столиці (стейт 1196): 5000/7500/10000.
+# .25 (перша хвиля) відкриває приховану гілку фокусів (прапорець MER_refugee_branch_unlocked).
+# .27 вішає дух MER_migrant_crisis; MER_pearl.28 (після MER_focus_refugee_camps) посилює його.
+# Суми/інтервали - припущення.
+####################################################################
+
+country_event = {
+	id = MER_pearl.25
+	title = MER_pearl.25.t
+	desc = MER_pearl.25.d
+	picture = GFX_report_event_generic_civilian_action
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.25.a
+		add_stability = -0.02
+		1196 = { add_manpower = 5000 }
+		hidden_effect = {
+			country_event = { id = MER_pearl.26 days = 30 }
+			# Перша хвиля біженців відкриває приховану гілку фокусів.
+			# allow_branch перевіряється лише на старті гри - mark_focus_tree_layout_dirty оновлює дерево
+			set_country_flag = MER_refugee_branch_unlocked
+			mark_focus_tree_layout_dirty = yes
+		}
+		custom_effect_tooltip = MER_refugee_branch_unlocked_tt
+	}
+}
+
+country_event = {
+	id = MER_pearl.26
+	title = MER_pearl.26.t
+	desc = MER_pearl.26.d
+	picture = GFX_report_event_generic_civilian_action
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.26.a
+		add_stability = -0.02
+		1196 = { add_manpower = 7500 }
+		hidden_effect = {
+			country_event = { id = MER_pearl.27 days = 30 }
+		}
+	}
+}
+
+country_event = {
+	id = MER_pearl.27
+	title = MER_pearl.27.t
+	desc = MER_pearl.27.d
+	picture = GFX_report_event_generic_civilian_action
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.27.a
+		add_stability = -0.02
+		1196 = { add_manpower = 10000 }
+		# Якщо реваншизм у таборах (MER_pearl.28) встиг статись раніше -
+		# одразу даємо посилену версію духу
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = MER_revanchism_ready }
+				add_ideas = MER_migrant_crisis_2
+			}
+			else = {
+				add_ideas = MER_migrant_crisis
+			}
+		}
+		custom_effect_tooltip = MER_migrant_crisis_tt
+	}
+}
+
+# --- Fires from: MER_focus_refugee_camps completion ------------------------
+# У таборах біженців зріє реваншизм: дух MER_migrant_crisis переходить на
+# посилену версію (fascism_drift 0.10 -> 0.15). Якщо духу ще немає (подія
+# .27 не встигла), ставимо прапорець - .27 одразу додасть посилену версію.
+country_event = {
+	id = MER_pearl.28
+	title = MER_pearl.28.t
+	desc = MER_pearl.28.d
+	picture = GFX_report_event_generic_civil_unrest
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MER_pearl.28.a
+		hidden_effect = {
+			set_country_flag = MER_revanchism_ready
+			if = {
+				limit = { has_idea = MER_migrant_crisis }
+				remove_ideas = MER_migrant_crisis
+				add_ideas = MER_migrant_crisis_2
+			}
+		}
+		custom_effect_tooltip = MER_revanchism_tt
+	}
+}
