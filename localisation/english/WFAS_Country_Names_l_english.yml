@@ -1,0 +1,28 @@
+﻿l_english:
+LAN:0 "Lanureta"
+LAN_DEF:0 "Lanureta"
+LAN_ADJ:0 "Lanuretian"
+
+PTG:0 "Pythagoros"
+PTG_DEF:0 "Pythagoros"
+PTG_ADJ:0 "Pythagorian"
+
+CHL:0 "Chloropeia"
+CHL_DEF:0 "Chloropeia"
+CHL_ADJ:0 "Chloropian"
+
+BLS:0 "Balisemont"
+BLS_DEF:0 "Balisemont"
+BLS_ADJ:0 "Balisemontian"
+
+COL:0 "Ecole"
+COL_DEF:0 "Ecole"
+COL_ADJ:0 "Ecolian"
+
+NFR:0 "Night Forest Autonomy"
+NFR_DEF:0 "Night Forest Autonomy"
+NFR_ADJ:0 "Night Forestian" #(!)
+
+OPN:0 "Opinicus Order"
+OPN_DEF:0 "Opinicus Order"
+OPN_ADJ:0 "Opinicus"

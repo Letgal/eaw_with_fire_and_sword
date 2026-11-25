@@ -1,0 +1,22 @@
+state = {
+    id = 1219
+    name = "STATE_1219"
+
+    history = {
+        owner = NFR
+        add_core_of = NFR
+
+        buildings = {
+            infrastructure = 2
+        }
+    }
+
+    provinces = {
+        13173 5196 2176 12944 8205 2196
+    }
+
+    manpower = 24000
+    buildings_max_level_factor = 1.000
+    state_category = rural
+    local_supplies = 0.0
+}

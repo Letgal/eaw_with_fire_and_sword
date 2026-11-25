@@ -1,0 +1,22 @@
+state={
+	id=1215
+	name="STATE_1215"
+
+	provinces={
+		1321 8183 10246
+	}
+
+	manpower=12340
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = NFR
+		add_core_of = NFR
+
+		victory_points = { 8183 1 }
+	}
+	resources={
+		coal = 1
+	}
+}

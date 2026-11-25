@@ -1,0 +1,24 @@
+state={
+	id=1214
+	name="STATE_1214"
+
+	provinces={
+		934 3814 3881 6837 6898 10252 11855 11886
+	}
+
+	manpower=78500
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = LAN
+		add_core_of = LAN
+
+		victory_points = { 3814 1 }
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+}

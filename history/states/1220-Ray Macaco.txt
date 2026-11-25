@@ -1,0 +1,34 @@
+state={
+	id=1220
+	name="STATE_1220"
+
+	provinces={
+		4315 7363 7447 8067 10274 12275
+	}
+
+	manpower=67790
+	state_category = town
+	buildings_max_level_factor=1.00
+
+	history = {
+		owner = COL
+		add_core_of = COL
+
+		victory_points = { 12275 3 }
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+			3147 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	resources={
+		steel=8
+		aluminium=9
+		tungsten=5
+	}
+}

@@ -1,0 +1,19 @@
+state={
+	id=1216
+	name="STATE_1216"
+
+	provinces={
+		4416 10130 10278
+	}
+
+	manpower=31300
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = NFR
+		add_core_of = NFR
+
+		victory_points = { 10130 1 }
+	}
+}

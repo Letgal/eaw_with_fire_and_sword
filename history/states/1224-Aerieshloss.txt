@@ -1,0 +1,31 @@
+state={
+	id=1224
+	name="STATE_1224"
+
+	provinces={
+		1929 2072 7372 7931 9986 12241
+	}
+
+	manpower=89709
+	state_category=pastoral
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = OPN
+		add_core_of = OPN
+
+		victory_points = { 12241 1 }
+
+		buildings = {
+			12241 = {
+				bunker = 2
+			}
+		}
+	}
+
+	resources={
+		steel=3
+		tungsten=7
+		aluminium=4
+	}
+}

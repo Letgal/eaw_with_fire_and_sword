@@ -1,0 +1,22 @@
+state={
+	id=1223
+	name="STATE_1223"
+
+	provinces={
+		1622 7465 7619 10171 10511
+	}
+
+	manpower=31000
+	state_category = rural
+	buildings_max_level_factor=1.00
+
+	history = {
+		owner = OPN
+		add_core_of = OPN
+	}
+
+	resources={
+		steel=2
+		aluminium=1
+	}
+}

@@ -1,0 +1,17 @@
+state={
+	id=1221
+	name="STATE_1221"
+
+	provinces={
+		9137 7658 10149 1268
+	}
+
+	manpower=31300
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = NFR
+		add_core_of = NFR
+	}
+}

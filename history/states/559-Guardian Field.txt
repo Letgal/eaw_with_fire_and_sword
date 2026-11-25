@@ -1,0 +1,21 @@
+state={
+	id=559
+	name="STATE_559"
+
+	provinces={
+		3934 4514 6852 6893 9781 9788 9927 11815
+	}
+
+	manpower=165600
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = NFR
+		add_core_of = NFR
+
+		buildings = {
+			infrastructure = 2
+		}
+	}
+}

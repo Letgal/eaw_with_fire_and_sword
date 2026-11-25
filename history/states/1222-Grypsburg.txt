@@ -1,0 +1,19 @@
+state={
+	id=1222
+	name="STATE_1222"
+
+	provinces={
+		9962
+	}
+
+	manpower=42200
+	state_category=pastoral
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = OPN
+		add_core_of = OPN
+
+		victory_points = { 9962 1 }
+	}
+}

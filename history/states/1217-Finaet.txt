@@ -1,0 +1,21 @@
+state={
+	id=1217
+	name="STATE_1217"
+
+	provinces={
+		7303
+	}
+
+	manpower=17200
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = PTG
+		add_core_of = PTG	
+
+		buildings = {
+			infrastructure = 2
+		}
+	}
+}

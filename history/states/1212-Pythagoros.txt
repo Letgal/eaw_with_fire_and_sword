@@ -1,0 +1,33 @@
+state={
+	id=1212
+	name="STATE_1212"
+
+	provinces={
+		1396 7347 12176
+	}
+
+	manpower=1367009
+	state_category=large_city
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = PTG
+		add_core_of = PTG	
+
+		victory_points = { 7347 10 }
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+
+			7347 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	resources={
+		steel=10
+	}
+}

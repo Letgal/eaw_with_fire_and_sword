@@ -1,0 +1,22 @@
+state={
+	id=623
+	name="STATE_623"
+
+	provinces={
+		3109 4128 10071 10883 10951 12824
+	}
+
+	manpower=32000
+	state_category=pastoral
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = NFR
+		add_core_of = NFR
+			}
+
+	resources={
+		steel=2
+		aluminium=6
+	}
+}

@@ -1,0 +1,7 @@
+LAN = "countries/Lanureta.txt"
+PTG = "countries/Pythagoros.txt"
+CHL = "countries/Chlropeia.txt"
+BLS = "countries/Balisemont.txt"
+COL = "countries/Ecole.txt"
+NFR = "countries/NightForest.txt"
+OPN = "countries/Opinicus.txt"
