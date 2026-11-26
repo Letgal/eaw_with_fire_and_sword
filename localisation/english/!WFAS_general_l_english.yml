@@ -1,5 +1,7 @@
 ﻿l_english:
 ### COUNTRY SELECTION ###
+ WFAS_BOOKMARK: "£WFAS_bookmark_icon£"
+ WFAS_BOOKMARK_TT: "§7Evi Valley - With Fire and Sword§!\n\n\n\n\n\n\n£WFAS_bookmark_art£\n\n\n\n\n\n\n§LDescription§!"
  wfas_GRY_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRY_GATHERING_STORM_DESC$"
  wfas_LUS_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$LUS_GATHERING_STORM_DESC$"
  wfas_GRU_bookmark_desc: "\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$GRU_GATHERING_STORM_DESC$"

@@ -8,12 +8,86 @@ bookmarks = {
 		default = yes
 
 		filters = { label }
-		label_order = { CSS_EquestriaFilter CSS_GriffoniaFilter CSS_ZebricaFilter }
+		label_order = { WFAS_BOOKMARK CSS_GriffoniaFilter CSS_EquestriaFilter CSS_ZebricaFilter }
 
 		sort_unplayed_first = no            # defaults to yes: countries with unplayed content are listed first
 		include_majors_in_minor_list = no   # defaults to yes: when a filter is active, majors also show in the mini list
 		apply_filter_to_majors = yes        # defaults to no: when yes, the major row also respects the filter (only majors matching it are shown)
-		
+
+		### WITH FIRE AND SWORD ###
+		"GRY"={
+			history = "wfas_GRY_bookmark_desc"
+			ideology = neutrality
+			label = { WFAS_BOOKMARK }
+			ideas = {
+				GRY_landed_gentry
+				wfas_GRY_independent_siches
+				wfas_GRY_communist_rebels_1
+			}
+			focuses = {
+				GRY_great_anniversary
+				GRY_hetmans_coronation
+				#GRU_the_knights_resurgent
+			}
+		}
+		"LUS"={
+			history = "wfas_LUS_bookmark_desc"
+			ideology = neutrality
+			label = { WFAS_BOOKMARK }
+			ideas = {
+				LUS_aristocracy
+				LUS_serfdom
+				LUS_levy_system
+			}
+			focuses = {
+				LUS_create_lord_council
+				LUS_lushian_constitution
+				LUS_proclaim_new_kingdom
+			}
+		}
+		"GRW"={
+			history = "wfas_GRW_bookmark_desc"
+			ideology = communism
+			label = { WFAS_BOOKMARK }
+			ideas = {
+				prywhen_civil_war
+				GRW_risk_of_famine
+			}
+			focuses = {
+				GRW_industrial_buildup
+				GRW_global_revolution
+				GRW_the_griffon_union
+			}
+		}
+		"BRF"={
+			history = "wfas_BRF_bookmark_desc"
+			ideology = neutrality
+			label = { WFAS_BOOKMARK }
+			ideas = {
+				prywhen_civil_war_brf
+				GRW_risk_of_famine
+			}
+			focuses = {
+				BRF_new_beginings
+				BRF_long_live
+				BRF_thorny_path
+			}
+		}
+		"GRU"={
+			history = "wfas_GRU_bookmark_desc"
+			ideology = neutrality
+			label = { WFAS_BOOKMARK }
+			ideas = {
+				GRU_knightly_orders
+				GRU_southcont_company
+			}
+			focuses = {
+				GRU_the_company_takes_over
+				GRU_the_council_holds
+				GRU_the_knights_resurgent
+			}
+		}
+
 		# Jump to (use Ctrl+F):
 		# (1) Equus
 		# (2) Griffonia
@@ -245,82 +319,7 @@ bookmarks = {
 		# |  $$$$$$/| $$  | $$ /$$$$$$| $$      | $$     |  $$$$$$/| $$ \  $$ /$$$$$$| $$  | $$
 		#  \______/ |__/  |__/|______/|__/      |__/      \______/ |__/  \__/|______/|__/  |__/
 
-		# (WFAS ~) to present current and future scope countries
-		"GRY"={
-			history = "wfas_GRY_bookmark_desc"
-			ideology = neutrality
-			label = { CSS_GriffoniaFilter }
-			ideas = {
-				GRY_landed_gentry
-				wfas_GRY_independent_siches
-				wfas_GRY_communist_rebels_1
-			}
-			focuses = {
-				GRY_great_anniversary
-				GRY_hetmans_coronation
-				#GRU_the_knights_resurgent
-			}
-		}
-		"LUS"={
-			history = "wfas_LUS_bookmark_desc"
-			ideology = neutrality
-			label = { CSS_GriffoniaFilter }
-			ideas = {
-				feudalism
-				LUS_prywhen_communist_influence
-				LUS_levy_system
-			}
-			focuses = {
-				LUS_create_lord_council
-				LUS_lushian_constitution
-				LUS_proclaim_new_kingdom
-			}
-		}
-		"GRW"={
-			history = "wfas_GRW_bookmark_desc"
-			ideology = communism
-			label = { CSS_GriffoniaFilter }
-			ideas = {
-				prywhen_civil_war
-				GRW_risk_of_famine
-			}
-			focuses = {
-				GRW_industrial_buildup
-				GRW_global_revolution
-				GRW_the_griffon_union
-			}
-		}
-		"BRF"={
-			history = "wfas_BRF_bookmark_desc"
-			ideology = neutrality
-			label = { CSS_GriffoniaFilter }
-			ideas = {
-				prywhen_civil_war_brf
-				GRW_risk_of_famine
-			}
-			focuses = {
-				BRF_new_beginings
-				BRF_long_live
-				BRF_thorny_path
-			}
-		}
-		"GRU"={
-			history = "wfas_GRU_bookmark_desc"
-			ideology = neutrality
-			label = { CSS_GriffoniaFilter }
-			ideas = {
-				GRU_knightly_orders
-				GRU_southcont_company
-			}
-			focuses = {
-				GRU_the_company_takes_over
-				GRU_the_council_holds
-				GRU_the_knights_resurgent
-			}
-		}
-
 		"GRI"={
-			minor = yes
 			history = "GRI_GATHERING_STORM_DESC"
 			ideology = neutrality
 			label = { CSS_GriffoniaFilter }
@@ -336,7 +335,6 @@ bookmarks = {
 			}
 		}
 		"JER"={
-			minor = yes
 			history = "JER_GATHERING_STORM_DESC"
 			ideology = neutrality
 			label = { CSS_GriffoniaFilter }
@@ -351,7 +349,6 @@ bookmarks = {
 			}
 		}
 		"WNG"={
-			minor = yes
 			history = "WNG_GATHERING_STORM_DESC"
 			ideology = neutrality
 			label = { CSS_GriffoniaFilter }
@@ -367,7 +364,6 @@ bookmarks = {
 			}
 		}
 		"FAT"={
-			minor = yes
 			history = "FAT_GATHERING_STORM_DESC"
 			ideology = neutrality
 			label = { CSS_GriffoniaFilter }
@@ -383,7 +379,6 @@ bookmarks = {
 			}
 		}
 		"RCT"={
-			minor = yes
 			history = "RCT_GATHERING_STORM_DESC"
 			ideology = democratic
 			label = { CSS_GriffoniaFilter }
@@ -398,23 +393,22 @@ bookmarks = {
 				RCT_fabian_strategy
 			}
 		}
-		#"TRD"={
-		#	history = "TRD_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		TRD_the_iron_chancellor
-		#		TRD_the_riches_of_skyfall
-		#		TRD_social_inequality
-		#	}
-		#	focuses = {
-		#		TRD_the_trade_union_congress
-		#		TRD_bow_to_the_empire
-		#		TRD_the_death_of_guichard_2
-		#	}
-		#}
+		"TRD"={
+			history = "TRD_GATHERING_STORM_DESC"
+			ideology = neutrality
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				TRD_the_iron_chancellor
+				TRD_the_riches_of_skyfall
+				TRD_social_inequality
+			}
+			focuses = {
+				TRD_the_trade_union_congress
+				TRD_bow_to_the_empire
+				TRD_the_death_of_guichard_2
+			}
+		 }
 		"EQC"={
-			minor = yes
 			history = "EQC_GATHERING_STORM_DESC"
 			ideology = democratic
 			label = { CSS_GriffoniaFilter }
@@ -486,39 +480,39 @@ bookmarks = {
 				FRN_rise_of_the_downtrodden
 			}
 		}
-		#"TAL"={
-		#	minor = yes
-		#	history = "TAL_GATHERING_STORM_DESC"
-		#	ideology = democratic
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		TAL_duchess_ginerva
-		#		TAL_coal_clause
-		#		TAL_declining_economy
-		#	}
-		#	focuses = {
-		#		TAL_proclaim_to_be_economic_powerhouse
-		#		TAL_abolish_monarchy_FLT
-		#		TAL_restore_cult
-		#	}
-		#}
+		"TAL"={
+			minor = yes
+			history = "TAL_GATHERING_STORM_DESC"
+			ideology = democratic
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				TAL_duchess_ginerva
+				TAL_coal_clause
+				TAL_declining_economy
+			}
+			focuses = {
+				TAL_proclaim_to_be_economic_powerhouse
+				TAL_abolish_monarchy_FLT
+				TAL_restore_cult
+			}
+		}
 		#In the Shadow of the Mountains 1.8
-		#"HLQ"={
-		#	minor = yes
-		#	history = "HLQ_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		HLQ_knights_1
-		#		HLQ_reformists
-		#		HLQ_pony_minorities
-		#	}
-		#	focuses = {
-		#	    HLQ_siegfrieds_retirement
-		#		HLQ_groverist_takeover
-		#		HLQ_the_coup_of_national_salvation
-		#	}
-		#}
+		"HLQ"={
+			minor = yes
+			history = "HLQ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				HLQ_knights_1
+				HLQ_reformists
+				HLQ_pony_minorities
+			}
+			focuses = {
+			    HLQ_siegfrieds_retirement
+				HLQ_groverist_takeover
+				HLQ_the_coup_of_national_salvation
+			}
+		}
 		"LNS"={
 			minor = yes
 			history = "LNS_GATHERING_STORM_DESC"
@@ -563,36 +557,36 @@ bookmarks = {
 				BAR_avaiting_bright_future
 			}
 		}
-		#"OLV"={
-		#	minor = yes
-		#	history = "OLV_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		primitive_economy
-		#	}
-		#	focuses = {
-		#		OLV_rule_of_the_law
-		#		OLV_rule_of_the_crown
-		#		OLV_rule_of_the_strongest
-		#	}
-		#}
-		#"BAK"={
-		#	minor = yes
-		#	history = "BAK_GATHERING_STORM_DESC"
-		#	ideology = democratic
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		BAK_shipbuilding
-		#		BAK_bastion_of_democracy
-		#		BAK_elections
-		#	}
-		#	focuses = {
-		#		BAK_communists_win
-		#		BAK_admirality_takeover
-		#		BAK_harmony_win
-		#	}
-		#}
+		"OLV"={
+			minor = yes
+			history = "OLV_GATHERING_STORM_DESC"
+			ideology = neutrality
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				primitive_economy
+			}
+			focuses = {
+				OLV_rule_of_the_law
+				OLV_rule_of_the_crown
+				OLV_rule_of_the_strongest
+			}
+		}
+		"BAK"={
+			minor = yes
+			history = "BAK_GATHERING_STORM_DESC"
+			ideology = democratic
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				BAK_shipbuilding
+				BAK_bastion_of_democracy
+				BAK_elections
+			}
+			focuses = {
+				BAK_communists_win
+				BAK_admirality_takeover
+				BAK_harmony_win
+			}
+		}
 		"ZES"={
 			minor = yes
 			history = "ZES_GATHERING_STORM_DESC"
@@ -624,22 +618,22 @@ bookmarks = {
 				YAL_to_the_barricades
 			}
 		 }
-        #"ANG"={
-		#	minor = yes
-		#	history = "ANG_GATHERING_STORM_DESC"
-		#	ideology = fascism
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		ANG_anarchists
-		#		ANG_cults
-		#		ANG_underdeveloped_economy
-		#	}
-		#	focuses = {
-		#		ANG_loyal_nobility
-		#		ANG_local_councils
-		#		ANG_stronghold_of_republicanism
-		#	}
-		#}
+         "ANG"={
+			minor = yes
+			history = "ANG_GATHERING_STORM_DESC"
+			ideology = fascism
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				ANG_anarchists
+				ANG_cults
+				ANG_underdeveloped_economy
+			}
+			focuses = {
+				ANG_loyal_nobility
+				ANG_local_councils
+				ANG_stronghold_of_republicanism
+			}
+		}
          "PYT"={
 			minor = yes
 			history = "PYT_GATHERING_STORM_DESC"
@@ -656,22 +650,22 @@ bookmarks = {
 				PYT_harmony_prevails
 			}
 		}
-        #"ROU"={
-		#	minor = yes
-		#	history = "ROU_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	label = { CSS_GriffoniaFilter }
-		#	ideas = {
-		#		ROU_eyr_archonate
-		#		ROU_free_city
-		#		ROU_church_dominated_education
-		#	}
-		#	focuses = {
-		#		ROU_fight_for_romau
-		#		ROU_the_holy_state
-		#		ROU_the_republicans
-		#	}
-		#}
+        "ROU"={
+			minor = yes
+			history = "ROU_GATHERING_STORM_DESC"
+			ideology = neutrality
+			label = { CSS_GriffoniaFilter }
+			ideas = {
+				ROU_eyr_archonate
+				ROU_free_city
+				ROU_church_dominated_education
+			}
+			focuses = {
+				ROU_fight_for_romau
+				ROU_the_holy_state
+				ROU_the_republicans
+			}
+		}
         "HAU"={
 			minor = yes
 			history = "HAU_GATHERING_STORM_DESC"

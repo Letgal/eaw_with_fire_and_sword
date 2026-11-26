@@ -8,6 +8,16 @@ spriteTypes = {
 	#	name = "GFX_frontend_mod_alpha"
 	#	texturefile = "gfx/interface/wfas_banner_alpha.dds"
 	#}
+	spriteType = {
+		name = "GFX_WFAS_bookmark_icon"
+		texturefile = "gfx/interface/country_selection_screen/bookmark_WFAS_icon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_WFAS_bookmark_art"
+		texturefile = "gfx/interface/country_selection_screen/bookmark_WFAS_art.dds"
+		legacy_lazy_load = no
+	}
 
 	# TEXTICONS
 	spriteType = {
